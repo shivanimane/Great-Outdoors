@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.greatoutdoor.addtocart.dao.CartDao;
 import com.greatoutdoor.addtocart.model.Cart;
 import com.greatoutdoor.addtocart.model.CartBean;
 import com.greatoutdoor.addtocart.model.Order;
@@ -43,8 +44,8 @@ public class OrderController {
 		return status;
 	}
 	
-	@PostMapping("/placeOrder")
-	public String placeOrder(@RequestParam String userId, @RequestParam String addressId , @RequestParam double totalCost) {
+	@PostMapping("/placeOrder/{userId}/{addressId}/{totalCost}")
+	public String placeOrder(@PathVariable String userId, @PathVariable String addressId , @PathVariable double totalCost) {
 		
 		if(userId==null || addressId==null) {
 			return "User or Address does not match";
@@ -62,10 +63,8 @@ public class OrderController {
 	
 	@PostMapping("/removeFromCart")
 	public String removeItemFromCart(@RequestBody CartBean cart){
-		
-		
 		if(cart==null || cart.getProductId()==null || cart.getQuantity()==0 || cart.getUserId()==null) { 
-			return "cart or product does not exist";
+			return "Does not Exist";
 		}
 		
 		String status = "Item removed successfully!";		
@@ -74,11 +73,11 @@ public class OrderController {
 		
 	}
 	
-	@DeleteMapping("/removeProductByUserIdProductId")
-	public String removeProductByUserIdProductId(@RequestParam String userId , @RequestParam String productId){
+	@DeleteMapping("/removeProductByUserIdProductId/{userId}/{productId}")
+	public String removeProductByUserIdProductId(@PathVariable String userId , @PathVariable String productId){
+		 
 		
-		
-		if(userId==null || userId==null ) { 
+		if(userId==null || productId==null ) { 
 			return "cart or product does not exist";
 		}
 		
@@ -88,8 +87,8 @@ public class OrderController {
 		
 	}
 	
-	@GetMapping("/getAllProductsByUserId")
-	List<Product> getAllProductsByUserId(@RequestParam String userId){
+	@GetMapping("/getAllProductsByUserId/{userId}")
+	List<Product> getAllProductsByUserId(@PathVariable String userId){
 		return orderAndCartService.getAllProductsByUserId(userId);
 	}
 	
