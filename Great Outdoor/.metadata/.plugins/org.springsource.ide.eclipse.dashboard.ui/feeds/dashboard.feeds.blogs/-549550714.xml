@@ -5,7 +5,128 @@
   <link rel="self" href="https://spring.io/blog.atom" />
   <id>http://spring.io/blog.atom</id>
   <icon>https://spring.io/favicon.ico</icon>
-  <updated>2020-10-26T16:52:09Z</updated>
+  <updated>2020-10-27T20:53:00Z</updated>
+  <entry>
+    <title>This Week in Spring - October 27th, 2020</title>
+    <link rel="alternate" href="https://spring.io/blog/2020/10/27/this-week-in-spring-october-27th-2020" />
+    <category term="engineering" label="Engineering" />
+    <author>
+      <name>Josh Long</name>
+    </author>
+    <id>tag:spring.io,2020-10-27:4241</id>
+    <updated>2020-10-27T20:53:00Z</updated>
+    <content type="html">&lt;p&gt;Hi, Spring fans! Welcome to another installment of &lt;em&gt;This Week in Spring&lt;/em&gt;! It&amp;rsquo;s already nearly November in this crazy rollercoaster ride that is 2020. Crazy. &lt;/p&gt;
+&lt;p&gt;We&amp;rsquo;ve got a ton of stuff to get to so let&amp;rsquo;s waste not a second more.&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href="https://spring.io/blog/2020/10/27/spring-framework-5-3-goes-ga"&gt;Spring Framework 5.3 goes GA&lt;/a&gt; This is a &lt;em&gt;huge&lt;/em&gt; release, and the most important thing we&amp;rsquo;ll look at today. Go read this post first. This release includes a &lt;em&gt;ton&lt;/em&gt; of new features!&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://spring.io/blog/2020/10/22/a-bootiful-podcast-optic-ceo-aidan-cunniffe-on-openapi-contract-testing-and-so-much-more"&gt;A Bootiful Podcast: Optic CEO Aidan Cunniffe on OpenAPI, contract testing, and so much more&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;I loved this case study that talks about how VMware (my employer) uses Kotlin &lt;a href="https://kotlinlang.org/lp/mobile/case-studies/vmware/"&gt;Case Studies: VMware - Kotlin Multiplatform Mobile &lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://spring.io/blog/2020/10/26/case-study-aggregator-function-and-processor"&gt;Case Study: Aggregator Function and Processor&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://twitter.com/devfestromania/status/1318551497035161601?s=12"&gt;Check out my DevFest Romania presentation - &lt;em&gt;Bootiful Kotlin&lt;/em&gt;&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://twitter.com/myfear/status/1319723269747081216?s=12"&gt; The Maven Daemon is kind of like the Gradle deamon in that its a long-running process (but one compiled using GraalVM) that can greatly speed-up the use of Apache Maven&lt;/a&gt;. Anecdotally, I&amp;rsquo;m seeing folks talk about reducing their larger, multi-module builds to 1/3 of the time.&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://www.cloudfoundry.org/blog/cloud-foundrys-proven-developer-experience-comes-to-kubernetes-with-cf-for-k8s-1-0/"&gt;Cloud Foundry’s Proven Developer Experience Comes to Kubernetes with cf-for-k8s 1.0 | Cloud Foundry&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://blogs.vmware.com/opensource/2020/10/27/choosing-a-linux-distribution/"&gt;Confessions: Choosing a Linux Distribution&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://twitter.com/jvmdeveloperid/status/1318694885562535937?s=12"&gt;I’m so looking forward to the JLove conference and I hope you&amp;rsquo;ll join us&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://inside.java/2020/10/23/jep-392-proposed-to-target-jdk16/"&gt;JEP proposed to target JDK 16: 392: Packaging Tool&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://inside.java/2020/10/26/jep-393-proposed-to-target-jdk16/"&gt;JEP proposed to target JDK 16: 393: Foreign-Memory Access API (Third Incubator)&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;I&amp;rsquo;ll be doing a webinar for &lt;a href="https://twitter.com/intellijidea/status/1318825553990873099?s=21"&gt;JetBrains (makers of IntelliJ IDEA) - &amp;lsquo;Bootiful Kotlin&amp;rsquo; - Wednesday, Nov 11th 2020, 9 - 10 am CST. Check out this blog post for session details and registration&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://www.infoq.com/news/2020/10/qcon-plus-software-leaders/"&gt;Join Gene Kim, Michael Nygard, Elisabeth Hendrickson, me, and 54 Other Software Leaders at QCon Plus&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://devblogs.microsoft.com/cosmosdb/latest-documentation-releases-for-azure-cosmos-db/?WT.mc_id=social-social-adpolak"&gt;Latest documentation releases for Azure Cosmos DB and the Spring Data Azure CosmosDB release&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://twitter.com/javaatmicrosoft/status/1320845192564408326?s=12"&gt;Microsoft wants to know your use of Spring&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://inside.java/2020/10/27/new-candidate-jep-396/"&gt;New candidate JEP: 396: Strongly Encapsulate JDK Internals by Default&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://youtu.be/1KshF3_u_KA"&gt;Paul Czarkowski demonstrates CF-4-K8s (CloudFoundry on Kubernetes). It’s the quintessential Tanzu demonstration. Watch as Paul uses Tanzu Mission Control to deploy a Tanzu Kubernetes distribution, Harbor (the container registry), and to then deploy CF-4-K8s (Cloud Foundry on Kubernetes) in.. 22 minutes!&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://twitter.com/mgrzejszczak/status/1319318784981803014?s=12"&gt;Some big changes coming to Spring Cloud Sleuth&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://spring.io/blog/2020/10/27/spring-framework-5-2-10-and-5-1-19-available-now"&gt;Spring Framework 5.2.10 and 5.1.19 available now&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://spring.io/blog/2020/10/27/spring-tools-4-8-1-released"&gt;Spring Tools 4.8.1 released&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://spring.io/guides/topicals/spring-on-kubernetes/"&gt;Check out our new topical guide, &lt;em&gt;Spring on Kubernetes&lt;/em&gt;, written by our own Ryan Baxter&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://twitter.com/springcentral/status/1320674537399308288"&gt;Mark Heckler was recently on the &lt;em&gt;Path to Principal&lt;/em&gt; podcast discussing software development, Spring, and the upcoming release of his book Spring Boot: Up and Running. Listen here &lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://github.com/spencergibb/spring-cloud-bus-rsocket-sample"&gt; Check out this awesome sample app that uses &lt;code&gt;spring-cloud-bus&lt;/code&gt; with RSocket Routing as the transport&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;!-- rendered by Sagan Renderer Service --&gt;</content>
+  </entry>
+  <entry>
+    <title>Spring Framework 5.3 goes GA</title>
+    <link rel="alternate" href="https://spring.io/blog/2020/10/27/spring-framework-5-3-goes-ga" />
+    <category term="releases" label="Releases" />
+    <author>
+      <name>Juergen Hoeller</name>
+    </author>
+    <id>tag:spring.io,2020-10-27:4238</id>
+    <updated>2020-10-27T17:28:00Z</updated>
+    <content type="html">&lt;p&gt;Dear Spring community,&lt;/p&gt;
+&lt;p&gt;On behalf of the Spring Framework team and our contributors, it is my pleasure to announce that Spring Framework 5.3 is generally available from &lt;a href="https://repo.spring.io"&gt;repo.spring.io&lt;/a&gt; as well as Maven Central!&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href="https://github.com/spring-projects/spring-framework/wiki/What's-New-in-Spring-Framework-5.x#whats-new-in-version-53"&gt;What&amp;rsquo;s New&lt;/a&gt; in Spring Framework 5.3&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://github.com/spring-projects/spring-framework/wiki/Upgrading-to-Spring-Framework-5.x#upgrading-to-version-53"&gt;Upgrading&lt;/a&gt; to Spring Framework 5.3&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Spring Framework 5.3 requires JDK 8 or higher and specifically embraces &lt;a href="http://openjdk.java.net/projects/jdk/15/"&gt;JDK 15&lt;/a&gt; as the latest OpenJDK release, e.g. with binding support for record classes. As the last feature branch of the 5.x generation, the 5.3.x line is set up for an extended support phase, including JDK 17 LTS next year.&lt;/p&gt;
+&lt;p&gt;The immediate Spring Boot 2.4 and next year&amp;rsquo;s Spring Boot 2.5 release will be based on this framework generation, as well as the incubating support for &lt;a href="https://github.com/spring-projects-experimental/spring-graalvm-native"&gt;Spring native executables on GraalVM&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;This release includes core &lt;a href="https://r2dbc.io/"&gt;R2DBC&lt;/a&gt; support in the spring-r2dbc module, serving as the foundation for Spring Data R2DBC, and introduces query result streaming for JdbcTemplate. It also comes with &lt;a href="https://github.com/Kotlin/kotlinx.serialization"&gt;Kotlin multiplatform serialization&lt;/a&gt; support for web and messaging endpoints with JSON payloads, and with &lt;a href="https://github.com/rsocket/rsocket-java#rsocket"&gt;RSocket 1.1&lt;/a&gt; support taking advantage of the new RSocketClient and exposing load-balancing.&lt;/p&gt;
+&lt;p&gt;Spring MVC users can get better performance with PathPattern parsing (see Rossen&amp;rsquo;s &lt;a href="https://spring.io/blog/2020/06/30/url-matching-with-pathpattern-in-spring-mvc"&gt;blog post&lt;/a&gt;). For test scenarios, we provide a unified API for MockMvc as well as full HTTP tests, and MockMvc comes with a revised Kotlin DSL. On the WebFlux side, a fully reactive message reader for multipart requests is included now, as well as a WebClient connector for &lt;a href="https://hc.apache.org/httpcomponents-client-5.0.x/"&gt;Apache Http Components 5&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Spring Framework 5.3 is a recommended upgrade for all 5.x and 4.x users. It establishes a stable and future-proof production branch with extended maintenance until 2024, serving as the successor of the equally long-lived 4.3.x line which will reach its end of maintenance soon (December 2020).&lt;/p&gt;
+&lt;p&gt;Cheers,&lt;br/&gt;Juergen&lt;/p&gt;
+&lt;!-- rendered by Sagan Renderer Service --&gt;</content>
+  </entry>
+  <entry>
+    <title>Spring Tools 4.8.1 released</title>
+    <link rel="alternate" href="https://spring.io/blog/2020/10/27/spring-tools-4-8-1-released" />
+    <category term="releases" label="Releases" />
+    <author>
+      <name>Martin Lippert</name>
+    </author>
+    <id>tag:spring.io,2020-10-27:4240</id>
+    <updated>2020-10-27T15:36:03Z</updated>
+    <content type="html">&lt;p&gt;Dear Spring Community,&lt;/p&gt;
+&lt;p&gt;I am happy to announce the 4.8.1 release of the Spring Tools 4 for Eclipse, Visual Studio Code, and Theia.&lt;/p&gt;&lt;h4&gt;&lt;a href="#quick-reminder" class="anchor" name="quick-reminder"&gt;&lt;/a&gt;quick reminder&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;the Eclipse-based distribution of the Spring Tools 4 requires a JDK11 (or newer) to run on&lt;/li&gt;
+  &lt;li&gt;the Eclipse-based distribution ships with an embedded JDK15 runtime, no need to install or configure a specific JDK to run the IDE on anymore&lt;/li&gt;
+&lt;/ul&gt;&lt;h4&gt;&lt;a href="#additional-changes-and-fixes" class="anchor" name="additional-changes-and-fixes"&gt;&lt;/a&gt;additional changes and fixes&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;em&gt;(Spring Boot)&lt;/em&gt; new: Added support for Spring Boot multi-document properties files (&lt;a href="https://github.com/spring-projects/sts4/issues/533"&gt;#533&lt;/a&gt;)&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;(Spring Boot)&lt;/em&gt; fixed: Support escaping of map keys with &amp;lsquo;[]&amp;rsquo; in Spring Boot property yaml files&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;(Spring Boot)&lt;/em&gt; fixed: Tolerate &amp;lsquo;.[&amp;rsquo; for map navigation in .properties file&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;(Eclipse)&lt;/em&gt; improvement: support container image creation and container deployment of Spring Boot apps without maven wrapper&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;(Eclipse)&lt;/em&gt; improvement: better process label for live hovers from boot apps running in docker&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;(Eclipse)&lt;/em&gt; improvement: allow docker-deployed boot apps to find each other (via simple network setup inside of docker)&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;(Eclipse)&lt;/em&gt; improvement: automatically disable code hotswap when running a Spring Boot app with devtools in debug mode (to avoid conflicts between devtools and hot swap both try to update code in the running process)&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;(Eclipse)&lt;/em&gt; update: updated embedded JRE to JDK15, including the src.zip now&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;(Eclipse)&lt;/em&gt; update: re-organized Spring-related preference pages&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;(Eclipse)&lt;/em&gt; update: removed &lt;code&gt;-Xverify:none&lt;/code&gt; and &lt;code&gt;-noverify&lt;/code&gt; from the default fast startup settings for boot app launch configs&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;(Eclipse)&lt;/em&gt; update: default PWS endpoint URL removed from the dialog to create Cloud Foundry targets in the boot dashboard (since PWS is going away)&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;(Eclipse)&lt;/em&gt; fixed: errors appear in log when pausing docker containers&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;(Eclipse)&lt;/em&gt; fixed: do not show breakpoint warning when starting up a Spring Boot app&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;(Eclipse)&lt;/em&gt; fixed: added missing high-res and dark-mode-compatible icons for docker support in Spring Boot dashboard&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;(Eclipse)&lt;/em&gt; fixed: sometimes live hovers do not show up automatically after launching a boot app in docker&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;(Eclipse)&lt;/em&gt; fixed: improved stability when deploying multiple apps simultaneously to docker via the boot dashboard&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;(Eclipse)&lt;/em&gt; fixed: problem showing live request mappings for eureka-based apps&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;(Eclipse)&lt;/em&gt; fixed: dropdown in Spring Symbols view shows up with transparent background on Linux&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;(Concourse)&lt;/em&gt; fixed: support pipeline directory as well see (&lt;a href="https://github.com/spring-projects/sts4/issues/525"&gt;#525&lt;/a&gt;)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;To download the distribution for Eclipse and find links to the marketplace entries for Visual Studio Code and Theia, please go visit:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Spring Tools 4: &lt;a href="https://spring.io/tools/"&gt;https://spring.io/tools/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Detailed changes can be found here: &lt;a href="https://github.com/spring-projects/sts4/wiki/Changelog#2020-10-23-481-release-incl-language-servers-version-1230"&gt;https://github.com/spring-projects/sts4/wiki/Changelog#2020-10-23-481-release-incl-language-servers-version-1230&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Spring Tools 4.8.2 is scheduled to be released in late November 2020.&lt;/p&gt;
+&lt;p&gt;Enjoy!&lt;/p&gt;
+&lt;!-- rendered by Sagan Renderer Service --&gt;</content>
+  </entry>
+  <entry>
+    <title>Spring Framework 5.2.10 and 5.1.19 available now</title>
+    <link rel="alternate" href="https://spring.io/blog/2020/10/27/spring-framework-5-2-10-and-5-1-19-available-now" />
+    <category term="releases" label="Releases" />
+    <author>
+      <name>Stéphane Nicoll</name>
+    </author>
+    <id>tag:spring.io,2020-10-27:4239</id>
+    <updated>2020-10-27T14:31:23Z</updated>
+    <content type="html">&lt;p&gt;On behalf of the team and everyone who has contributed, I am pleased to announce that Spring Framework &lt;code&gt;5.2.10&lt;/code&gt; and &lt;code&gt;5.1.19&lt;/code&gt; are available now.&lt;/p&gt;
+&lt;p&gt;Spring Framework &lt;code&gt;5.2.10&lt;/code&gt; includes &lt;a href="https://github.com/spring-projects/spring-framework/releases/tag/v5.2.10.RELEASE"&gt;27 fixes and improvements&lt;/a&gt;. Spring Framework 5.1.19 includes &lt;a href="https://github.com/spring-projects/spring-framework/releases/tag/v5.1.19.RELEASE"&gt;16 selected fixes and improvements&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Stay tuned for Spring Framework 5.3 GA and follow-up Spring Boot releases &lt;code&gt;2.1.18&lt;/code&gt;, &lt;code&gt;2.2.11&lt;/code&gt;, &lt;code&gt;2.3.5&lt;/code&gt;, and &lt;code&gt;2.4.0-RC1&lt;/code&gt;!&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://projects.spring.io/spring-framework/"&gt;Project Page&lt;/a&gt; | &lt;a href="https://github.com/spring-projects/spring-framework"&gt;GitHub&lt;/a&gt; | &lt;a href="https://github.com/spring-projects/spring-framework/issues"&gt;Issues&lt;/a&gt; | &lt;a href="https://docs.spring.io/spring-framework/docs/5.2.10.RELEASE/spring-framework-reference"&gt;Documentation&lt;/a&gt;&lt;/p&gt;
+&lt;!-- rendered by Sagan Renderer Service --&gt;</content>
+  </entry>
   <entry>
     <title>Case Study: Aggregator Function and Processor</title>
     <link rel="alternate" href="https://spring.io/blog/2020/10/26/case-study-aggregator-function-and-processor" />
@@ -1121,87 +1242,6 @@ azure.cosmos.primary.key=your-primary-cosmosDb-key
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;!-- rendered by Sagan Renderer Service --&gt;</content>
-  </entry>
-  <entry>
-    <title>A Bootiful Podcast: Long time Spring Framework engineer Arjen Poutsma on Spring's web support, Scala, API Design, Reactive programming and more</title>
-    <link rel="alternate" href="https://spring.io/blog/2020/10/02/a-bootiful-podcast-long-time-spring-framework-engineer-arjen-poutsma-on-spring-s-web-support-scala-api-design-reactive-programming-and-more" />
-    <category term="engineering" label="Engineering" />
-    <author>
-      <name>Josh Long</name>
-    </author>
-    <id>tag:spring.io,2020-10-02:4220</id>
-    <updated>2020-10-02T00:36:45Z</updated>
-    <content type="html">&lt;p&gt;Hi, Spring fans! Welcome to another installment of &lt;em&gt;A Bootiful Podcast&lt;/em&gt;. In this installment &lt;a href="http://twitter.com/starbuxman"&gt;Josh Long (@starbuxman)&lt;/a&gt; talks to longtime Spring Framework engineer &lt;a href="http://twitter.com/poutsma"&gt;Arjen Poutsma (@poutsma)&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;iframe title="Longtime Spring Framework engineer  Arjen Poutsma on Spring's web support, Scala, API Design, Reactive programming and more" height="122" width="100%" style="border: none;" scrolling="no" data-name="pb-iframe-player" src="https://www.podbean.com/media/player/rvi8t-edf3a9?from=pb6admin&amp;download=1&amp;version=1&amp;auto=0&amp;share=1&amp;download=1&amp;rtl=0&amp;fonts=Helvetica&amp;skin=1&amp;pfauth=&amp;btn-skin=107"&gt;&lt;/iframe&gt;&lt;/p&gt;
-&lt;!-- rendered by Sagan Renderer Service --&gt;</content>
-  </entry>
-  <entry>
-    <title>Premiering: Cloud Native Java, Redux</title>
-    <link rel="alternate" href="https://spring.io/blog/2020/10/01/premiering-cloud-native-java-redux" />
-    <category term="engineering" label="Engineering" />
-    <author>
-      <name>Josh Long</name>
-    </author>
-    <id>tag:spring.io,2020-10-01:4219</id>
-    <updated>2020-10-01T08:29:49Z</updated>
-    <content type="html">&lt;iframe width="560" height="315" src="https://www.youtube.com/embed/M9GNcAzBk9g" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen&gt;&lt;/iframe&gt;
-&lt;p&gt;Join Spring developer advocate &lt;a href="http://twitter.com/starbuxman"&gt; Josh Long (@starbuxman) &lt;/a&gt; for a guided tour of a ton of the features, patterns, and principles in Spring Cloud and Spring Boot that support you when building production-optimized, cloud native Java applications&lt;/p&gt;
-&lt;!-- rendered by Sagan Renderer Service --&gt;</content>
-  </entry>
-  <entry>
-    <title>This Week in Spring - September 29th, 2020</title>
-    <link rel="alternate" href="https://spring.io/blog/2020/09/29/this-week-in-spring-september-29th-2020" />
-    <category term="engineering" label="Engineering" />
-    <author>
-      <name>Josh Long</name>
-    </author>
-    <id>tag:spring.io,2020-09-29:4218</id>
-    <updated>2020-09-29T23:01:49Z</updated>
-    <content type="html">&lt;p&gt;Hi, Spring fans! Welcome to another awesome week in Spring! Can you believe we&amp;rsquo;re staring down October, 2020 already? I can&amp;rsquo;t. Time sure flies&amp;hellip;. or something. There&amp;rsquo;s a lot to get to so let&amp;rsquo;s get to it.&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href="https://twitter.com/springcentral/status/1311003143359148032"&gt;Spring Cloud LoadBalancer replaces the Netflix Ribbon, provides a pluggable algorithm, reactive support, and extensible configuration.&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://twitter.com/springcentral/status/1310656805991743488"&gt;Interested in knowing about the 10 Itemprocessors that out of the box Spring Batch has? Watch the full session here&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://spring.io/blog/2020/09/24/sentry-cto-david-cramer-on-automated-error-capture-and-analysis"&gt;Sentry CTO David Cramer on Automated Error Capture and Analysis&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://spring.io/blog/2020/09/29/spring-cloud-data-flow-2-7-0-m1-and-2-6-3-released"&gt;Spring Cloud Data Flow 2.7.0-M1 and 2.6.3 Released&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://programming.love/spring-is-a-season-of-programming-love-with-josh-long/"&gt;Spring is a season of Programming Love with Josh Long – Programming Love&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://blogs.vmware.com/opensource/2020/09/29/steven-rostedt-on-the-linux-kernels-hello-world/"&gt;Steven Rostedt on the Linux Kernel’s “Hello World”&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://blog.jetbrains.com/kotlin/2020/09/the-dark-secrets-of-fast-compilation-for-kotlin/?mkt_tok=eyJpIjoiWVRnd1pqUmtZemsyTmpVNSIsInQiOiJqZFJ5Mkg4TWdUSlRwVmJoQTNRNnBjOVlnQlZhZjFKdzhTN3IyNWc1YjF4SGpYU0s1S2ZOT0h2TnhzMXNNdE9cL1ZVbXAzUEFYR09DR1ROU0pzb08yYmN4czBneEZIK3FkeU9uZ3h1TGE4UGpOZnlZb1BMWVZRMURnc256dmduMWcifQ%3D%3D"&gt;The Dark Secrets of Fast Compilation for Kotlin – Kotlin Blog | JetBrains&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://twitter.com/snicoll/status/1308658297944395776?s=12"&gt;The Wavefront documentation has been updated with more information on Spring Boot&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;Happy &lt;a href="https://www.youtube.com/embed/rRGdspXfUU0?start=4"&gt;25th Anniversary NYJavaSIG&lt;/a&gt;!&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://blogs.vmware.com/vmworld/2020/09/a-customer-community-like-no-other-vmware-champions.html"&gt;A Customer Community Like No Other: VMware Champions&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://github.com/spring-projects-experimental/spring-graalvm-native/pull/287#issuecomment-697256664"&gt;Add Hints and example for Data Neo4j. by michael-simons · Pull Request #287 · spring-projects-experimental/spring-graalvm-native&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://spring.io/blog/2020/09/29/case-study-remote-file-ingest-with-spring-cloud-data-flow"&gt;Case Study: Remote File Ingest with Spring Cloud Data Flow&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://blogs.vmware.com/vmworld/2020/09/destination-vmworld-vision-innovation-track.html"&gt;Destination VMworld – Vision &amp;amp; Innovation Track&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://salaboy.com/2020/09/24/kubecon-spring-one-2020-from-monoliths-to-k8s/"&gt;KubeCon &amp;amp; Spring One 2020: From Monoliths to K8s – Salaboy (Open Source Knowledge)&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://appleinsider.com/articles/20/09/22/microsoft-contributes-to-java-port-for-apple-silicon-macs"&gt;Microsoft contributes to Java port for Apple silicon Macs | Appleinsider&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://inside.java/2020/09/25/new-candidate-jep391/"&gt;New candidate JEP: 391: macOS/AArch64 Port&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://inside.java/2020/09/25/new-candidate-jep392/"&gt;New candidate JEP: 392: Packaging Tool&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://inside.java/2020/09/29/new-candidate-jep393/"&gt;New candidate JEP: 393: Foreign-Memory Access API (3rd Incubator)&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://inside.java/2020/09/24/venkat-subramaniam-interview/"&gt;Venkat Subramaniam: Java is changing in a responsible manner&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;!-- rendered by Sagan Renderer Service --&gt;</content>
-  </entry>
-  <entry>
-    <title>Spring Cloud Data Flow 2.7.0-M1 and 2.6.3 Released</title>
-    <link rel="alternate" href="https://spring.io/blog/2020/09/29/spring-cloud-data-flow-2-7-0-m1-and-2-6-3-released" />
-    <category term="engineering" label="Engineering" />
-    <author>
-      <name>Ilayaperumal Gopinathan</name>
-    </author>
-    <id>tag:spring.io,2020-09-29:4217</id>
-    <updated>2020-09-29T17:53:12Z</updated>
-    <content type="html">&lt;p&gt;Spring Cloud Data Flow team is pleased to announce the release of 2.7.0-M1 and 2.6.3&lt;/p&gt;
-&lt;p&gt;While the release 2.6.3 has &lt;a href="https://github.com/spring-cloud/spring-cloud-dataflow/releases/tag/v2.6.3"&gt;the bug fixes&lt;/a&gt;, the first milestone of 2.7.0 has the following enhancements:&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;SCDF dashboard re-design using VMware Clarity toolkit&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;SCDF dashboard is re-designed using &lt;a href="https://clarity.design/"&gt;VMware Clarity design system&lt;/a&gt;. This is a complete rewrite of SCDF dashboard GUI to get the benefits of the Clarity design.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Spring Boot 2.3.2 Update&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;SCDF server components are now updated to use Spring Boot 2.3.2 release.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Wavefront integration&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;Spring Cloud Data Flow dashboards for streams, tasks and SCDF server components are available in VMware Wavefront dashboards for integrations. The configurations required to setup the wavefront integration are simplified at the SCDF as well. &lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Deprecation of Helm Hub Chart&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;Helm charts for SCDF are now deprecated and moved into &lt;a href="https://github.com/bitnami/charts/tree/master/bitnami/spring-cloud-dataflow"&gt;Bitnami OSS charts&lt;/a&gt;&lt;/p&gt;&lt;h2&gt;&lt;a href="#stay-in-touch-hellip" class="anchor" name="stay-in-touch-hellip"&gt;&lt;/a&gt;Stay in touch&amp;hellip;&lt;/h2&gt;
-&lt;p&gt;As always, we welcome feedback and contributions, so please reach out to us on &lt;a href="https://stackoverflow.com/questions/tagged/spring-cloud-dataflow"&gt;Stack Overflow&lt;/a&gt; or &lt;a href="https://github.com/spring-cloud/spring-cloud-dataflow/issues"&gt;GitHub&lt;/a&gt; or via &lt;a href="https://gitter.im/spring-cloud/spring-cloud-dataflow"&gt;Gitter&lt;/a&gt;.&lt;/p&gt;
 &lt;!-- rendered by Sagan Renderer Service --&gt;</content>
   </entry>
 </feed>

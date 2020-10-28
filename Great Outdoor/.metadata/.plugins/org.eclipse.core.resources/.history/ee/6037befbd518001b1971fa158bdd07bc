@@ -1,0 +1,5 @@
+package com.greatoutdoor.usermanagementsystem.dao;
+
+public class RegistrationRepository {
+
+}

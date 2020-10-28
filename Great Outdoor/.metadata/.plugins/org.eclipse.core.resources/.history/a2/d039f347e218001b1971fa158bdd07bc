@@ -1,0 +1,33 @@
+package com.greatoutdoor.usermanagementsystem.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.greatoutdoor.usermanagementsystem.model.User;
+import com.greatoutdoor.usermanagementsystem.service.RegistrationService;
+
+@RestController
+public class RegistrationController {
+
+	
+	@Autowired
+	private RegistrationService service;
+	
+	@GetMapping("/registerUser")
+	public User registerUser(@RequestBody User user) throws Exception {
+		String tempEmailId = user.getEmail();
+		if(tempEmailId != null && !"".equals(tempEmailId)) {
+			User userObj = service.fetchUserByEmail(tempEmailId);
+			if(userObj != null) {
+				throw new Exception("User with ");
+			}
+		}
+		 User userObj=null;
+		 userObj = service.saveUser(userObj);
+		return userObj;
+		
+}
+}
