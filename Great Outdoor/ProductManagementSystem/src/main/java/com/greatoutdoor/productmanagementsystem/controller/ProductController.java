@@ -44,6 +44,18 @@ public class ProductController {
 	 * Add a Product
 	 * @param product
 	 * @return String
+	 * {
+        "productId": "101",
+        "price": 50.5,
+        "colour": "green",
+        "dimension": "erf",
+        "specification": "dggcn",
+        "manufacture": "dewf",
+        "quantity": 5,
+        "productCategory": 4,
+        "productName": "adsf"
+    },
+    
 	 */
 	@PostMapping("/addProduct")
 	String addProduct(@RequestBody Product product) {

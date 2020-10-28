@@ -7,6 +7,7 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -37,6 +38,17 @@ public class AddressController {
 		return addressService.viewAllAddresss();
 	}
 
+	/*
+	 * {
+	"addressId":"a-101",
+	 "retailerId":"r-101",
+	 "buildingNo":"501",
+	 "city":"pune",
+	 "state":"Maharastra",
+	 "field":"dsgfb",
+	"zip":"411057"    
+}
+	 */
 	@PostMapping("/addAddress")
 	String addAddress(@RequestBody Address address) {
 		String status="Address added";
@@ -58,8 +70,8 @@ public class AddressController {
 	}
 	
 	
-	@PostMapping("/deleteAddress")
-	String deleteAddress(@RequestParam String addressId) {
+	@PostMapping("/deleteAddress/{addressId}")
+	String deleteAddress(@PathVariable String addressId) {
 		if(addressService.deleteAddress(addressId)) {
 			return"Address Deleted Successfully";
 		}
