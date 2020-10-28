@@ -33,6 +33,7 @@ public class ProductServiceImpl implements ProductService{
 	public boolean addProduct(Product product) {
 		String prodId = "PRODUCT"+productDao.count();
 		product.setProductId(prodId);
+		productDao.save(product);
 		return true;
 	}
 
