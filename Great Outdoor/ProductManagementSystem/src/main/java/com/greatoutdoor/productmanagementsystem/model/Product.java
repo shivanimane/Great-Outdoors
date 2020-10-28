@@ -24,6 +24,35 @@ public class Product {
 	public Product() {
 		// TODO Auto-generated constructor stub
 	}
+	
+	
+
+	/**
+	 * @param productId
+	 * @param price
+	 * @param colour
+	 * @param dimension
+	 * @param specification
+	 * @param manufacture
+	 * @param quantity
+	 * @param productCategory
+	 * @param productName
+	 */
+	public Product(String productId, double price, String colour, String dimension, String specification,
+			String manufacture, int quantity, int productCategory, String productName) {
+		super();
+		this.productId = productId;
+		this.price = price;
+		this.colour = colour;
+		this.dimension = dimension;
+		this.specification = specification;
+		this.manufacture = manufacture;
+		this.quantity = quantity;
+		this.productCategory = productCategory;
+		this.productName = productName;
+	}
+
+
 
 	/**
 	 * @return the productId
