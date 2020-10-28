@@ -46,7 +46,7 @@ public class OrderAndCartServiceImpl implements OrderAndCartService {
 	@Autowired
 	RestTemplate restTemplate;
 
-	private String productURL = "http://localhost:5053/product";
+	private String productURL = "http://localhost:8003/product";
 
 	@Override
 	public boolean addItemToCart(CartBean cartItem) {
@@ -173,20 +173,32 @@ public class OrderAndCartServiceImpl implements OrderAndCartService {
 
 	@Override
 	public List<Product> getAllProductsByUserId(String userId) {
-		// TODO Auto-generated method stub
-		return null;
+		List<Cart> listCartItems = cartDao.getAllProducts(userId);
+		List<Product> listProducts = new ArrayList<>();
+		
+		Iterator<Cart> itr = listCartItems.iterator();
+		int index = 0;
+		
+		while (itr.hasNext()) {
+			Product product = restTemplate.getForObject(productURL+"/getProductById?productId="+listCartItems.get(index).getProductId(),
+					Product.class);
+			product.setQuantity(listCartItems.get(index).getQuantity());
+			listProducts.add(product);
+			index++;
+			itr.next();
+		}
+		return listProducts;
 	}
 
 	@Override
 	public void removeProductByUserIdProductId(String userId, String productId) {
-		// TODO Auto-generated method stub
+		cartDao.removeItemFromCart(userId, productId);
 
 	}
 
 	@Override
 	public List<Order> getAllOrdersByUserId(String userId) {
-		// TODO Auto-generated method stub
-		return null;
+		return orderDao.getAllOrders(userId);
 	}
 
 	@Override
