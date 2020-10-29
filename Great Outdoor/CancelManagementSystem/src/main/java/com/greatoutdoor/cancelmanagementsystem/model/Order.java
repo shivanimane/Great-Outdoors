@@ -4,12 +4,6 @@
 package com.greatoutdoor.cancelmanagementsystem.model;
 
 import java.util.Date;
-
-/**
- * @author Shivani
- * 
- *
- */
 public class Order {
 	/**
 	 * OrderId

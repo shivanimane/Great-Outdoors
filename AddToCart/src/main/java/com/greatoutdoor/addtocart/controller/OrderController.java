@@ -32,6 +32,7 @@ public class OrderController {
 	@Autowired
 	OrderAndCartService orderAndCartService;
 	
+	@PostMapping("/addToCart")
 	public String addItemToCart(@RequestBody CartBean cart) {
 		if(cart==null || cart.getProductId().trim().length() == 0 || cart.getQuantity()==0 ) {
 			return "Item already exists";

@@ -3,11 +3,7 @@
  */
 package com.greatoutdoor.cancelmanagementsystem.service;
 
-/**
- * @author Shivani
 
- *
- */
 public interface CancelService {
 	/**
 	 * To Cancel an Order that is placed
