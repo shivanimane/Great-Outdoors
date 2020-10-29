@@ -103,12 +103,10 @@ public class ProductController {
 	
 	@GetMapping("/getProductById/{productId}")
 	List<Product> getProductById(){
-<<<<<<< HEAD
+
 		return productService.viewAllProducts();
-=======
-	return productService.viewAllProducts();
->>>>>>> 1af28b733565511c8e5a2405bcdcdd6e852d8bc9
-	
+
+		
 	}
 
 
