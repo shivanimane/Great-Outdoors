@@ -30,4 +30,9 @@ build/
 !**/src/test/**/build/
 
 ### VS Code ###
+<<<<<<< HEAD
+.vscode/
+.metadata
+=======
 .vscode/ .metadata
+>>>>>>> 1af28b733565511c8e5a2405bcdcdd6e852d8bc9
