@@ -68,10 +68,12 @@ public class OrderAndCartServiceImpl implements OrderAndCartService {
 	}
 
 	@Override
-	public boolean removeItemFromCart(CartBean cartItem) {
-		Cart cart = new Cart(cartItem.getUserId(), cartItem.getProductId(), cartItem.getQuantity());
-		cartDao.delete(cart);
-		return true;
+	public boolean removeItemFromCartByUserId(String userId) {
+		if(cartDao.findById(userId).isPresent()) {
+			cartDao.deleteById(userId);
+			return true;
+		}
+		return false;
 	}
 
 	@Override
@@ -130,9 +132,16 @@ public class OrderAndCartServiceImpl implements OrderAndCartService {
 	}
 
 	@Override
-	public void cancelOrderByOrderId(String orderId) {
-		orderProductMapDao.deleteOrderByOrderId(orderId); 
-		orderDao.deleteById(orderId);
+	public boolean cancelOrderByOrderId(String orderId) {
+		
+		if(orderProductMapDao.count()==0 || orderDao.count()==0 || orderProductMapDao.getAllOrdersByOrderId(orderId)==null) {
+			return false;
+		} else {
+			orderProductMapDao.deleteOrderByOrderId(orderId); 
+			orderDao.deleteById(orderId);
+			return true;
+		}
+		
 	}
 
 	@Override
@@ -156,9 +165,12 @@ public class OrderAndCartServiceImpl implements OrderAndCartService {
 	}
 
 	@Override
-	public void cancelProductByOrderIdProductId(String orderId, String productId) {
-
+	public boolean cancelProductByOrderIdProductId(String orderId, String productId) {
+		if(orderProductMapDao.getAllOrdersByOrderIdProductId(orderId, productId)==null) {
+			return false;
+		}
 		orderProductMapDao.deleteOrderByOrderIdProductId(orderId, productId);
+		return true;
 	}
 
 	@Override
@@ -198,6 +210,9 @@ public class OrderAndCartServiceImpl implements OrderAndCartService {
 
 	@Override
 	public List<Order> getAllOrdersByUserId(String userId) {
+		if(orderDao.getAllOrders(userId).isEmpty()) {
+			return null;
+		}
 		return orderDao.getAllOrders(userId);
 	}
 

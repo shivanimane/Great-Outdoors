@@ -3,6 +3,7 @@
  */
 package com.greatoutdoor.addtocart.model;
 
+import java.io.Serializable;
 import java.util.Date;
 
 import javax.persistence.Column;
@@ -17,7 +18,7 @@ import javax.persistence.Table;
  */
 @Entity
 @Table(name = "order_table")
-public class Order {
+public class Order implements Serializable{
 	/**
 	 * OrderId
 	 * UserId

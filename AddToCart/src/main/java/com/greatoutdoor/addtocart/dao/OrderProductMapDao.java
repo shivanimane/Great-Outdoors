@@ -59,7 +59,7 @@ public interface OrderProductMapDao extends CrudRepository<OrderProductMap, Stri
 	 * @return
 	 */
 	@Modifying
-	@Query("SELECT opm FROM OrderProductMapD opm WHERE opm.orderId=:orderId and opm.productId=:productId")
+	@Query("SELECT opm FROM OrderProductMap opm WHERE opm.orderId=:orderId and opm.productId=:productId")
 	@Transactional
 	List<OrderProductMap> getAllOrdersByOrderIdProductId(String orderId, String productId);
 }

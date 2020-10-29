@@ -13,6 +13,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.greatoutdoor.addtocart.exception.NullParameterException;
+import com.greatoutdoor.addtocart.exception.OrderNotFoundException;
 import com.greatoutdoor.addtocart.model.Order;
 import com.greatoutdoor.addtocart.model.Orders;
 import com.greatoutdoor.addtocart.service.OrderAndCartService;
@@ -29,46 +31,61 @@ public class OrderProductCancelController {
 	@Autowired
 	OrderAndCartService orderAndCartService;
 	
-	@GetMapping("/getOrders/{orderId}")
-	public Orders getAllOrdersWithOrderId(@PathVariable String orderId){
+	/**
+	 *  localhost:8006/order/getOrders?orderId=ORD1113417
+	 * @param orderId
+	 * @return
+	 */
+	@GetMapping("/getOrders")
+	public Orders getAllOrdersWithOrderId(@RequestParam String orderId){
 		
-		if(orderId==null) {
-			return null;
+		if(orderAndCartService.getAllOrdersByOrderId(orderId)==null) {
+			throw new NullParameterException("Null request, please provide correct orderId!");
+		} else {
+			return orderAndCartService.getAllOrdersByOrderId(orderId);
 		}
-		return orderAndCartService.getAllOrdersByOrderId(orderId);
+		
 	}
 	
-	@PostMapping("/cancelOrder/{orderId}")
-	public String cancelOrder(@PathVariable String orderId ) {
+	@PostMapping("/cancelOrder")
+	public String cancelOrder(@RequestParam String orderId ) {
 		if(orderId==null) {
-			return null;
+			throw new NullParameterException("Null request, please provide orderId!");
+		}
+		if(orderAndCartService.cancelOrderByOrderId(orderId)==false) {
+			throw new OrderNotFoundException("Order does not exist");
 		}
 		orderAndCartService.cancelOrderByOrderId(orderId);
 		return "successfully removed";
 	}
 	
-	@GetMapping("/getOrders/{orderId}/{productId}")
-	public Orders getAllOrdersWithOrderIdProductId(@PathVariable String orderId , @RequestParam String productId){
+	@GetMapping("/getOrdersByOrderIdProductId")
+	public Orders getAllOrdersWithOrderIdProductId(@RequestParam String orderId , @RequestParam String productId){
 		if(orderId==null || productId==null) {
-			return null;
+			throw new NullParameterException("Null request, please provide  orderId and productId!");
 		}
 		return orderAndCartService.getAllOrdersByOrderIdProductId(orderId , productId);
 	}
 	
-	@PostMapping("/cancelProduct/{orderId}/{productId}")
-	public String cancelOrderProduct(@PathVariable String orderId , @PathVariable String productId ) {
+	@PostMapping("/cancelProduct")
+	public String cancelOrderProduct(@RequestParam String orderId , @RequestParam String productId ) {
 		if(orderId==null || productId==null) {
-			return null;
+			throw new NullParameterException("Null request, please provide  orderId and productId!");
 		}
-		orderAndCartService.cancelProductByOrderIdProductId(orderId, productId);
+		if(orderAndCartService.cancelProductByOrderIdProductId(orderId, productId)==false) {
+			throw new OrderNotFoundException("Order Not Found");
+		}
 		return "successfully removed";
 	}
 	
-	@GetMapping("/getOrders/{userId}")
+	@GetMapping("/getAllOrdersByUserId")
 	public List<Order> getAllOrders(@RequestParam String userId){
 		
 		if(userId==null) {
-			return null;
+			throw new NullParameterException("Null request, please provide  userID!");
+		}
+		if(orderAndCartService.getAllOrdersByUserId(userId)==null) {
+			throw new NullParameterException("User Id is Incorrect");
 		}
 		return orderAndCartService.getAllOrdersByUserId(userId);
 	}

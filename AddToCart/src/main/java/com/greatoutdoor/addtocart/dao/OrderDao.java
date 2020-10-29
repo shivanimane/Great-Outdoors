@@ -28,7 +28,7 @@ public interface OrderDao extends CrudRepository<Order, String> {
 	 * @return
 	 */
 	@Modifying
-	@Query("SELECT order FROM OrderDTO order WHERE order.userId=:userId")
+	@Query("SELECT order FROM Order order WHERE order.userId=:userId")
 	@Transactional
 	List<Order> getAllOrders(String userId);
 }
