@@ -3108,3 +3108,42 @@ Caused by: java.io.EOFException: input contained no data
 2020-10-29 16:54:18,412 [Worker-191: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
 2020-10-29 16:54:18,413 [Worker-191: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
 2020-10-29 16:54:18,414 [Worker-191: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Deepali\Documents\GitHub\Great-Outdoors\Great Outdoor\AddressManagementSystem\src\test\resources
+2020-10-29 18:22:37,874 [Worker-219: Update Maven projects configuration] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update started
+2020-10-29 18:22:38,494 [Worker-219: Update Maven projects configuration] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.example:GreatOutdoors:0.0.1-SNAPSHOT @ C:\Users\Deepali\Documents\GitHub\Great-Outdoors\Great Outdoor\WishlistManagementSystem\pom.xml.
+2020-10-29 18:22:39,326 [Worker-219: Update Maven projects configuration] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /WishlistManagementSystem/src/main/java
+2020-10-29 18:22:39,326 [Worker-219: Update Maven projects configuration] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /WishlistManagementSystem/src/main/resources
+2020-10-29 18:22:39,330 [Worker-219: Update Maven projects configuration] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /WishlistManagementSystem/src/main/resources
+2020-10-29 18:22:39,337 [Worker-219: Update Maven projects configuration] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /WishlistManagementSystem/src/test/java
+2020-10-29 18:22:40,145 [Worker-219: Update Maven projects configuration] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update completed: 2 sec
+2020-10-29 18:22:40,909 [Worker-219: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-10-29 18:22:40,909 [Worker-219: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2020-10-29 18:22:40,909 [Worker-219: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-10-29 18:22:40,909 [Worker-219: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-10-29 18:22:40,909 [Worker-219: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Deepali\Documents\GitHub\Great-Outdoors\Great Outdoor\WishlistManagementSystem\src\test\resources
+2020-10-29 18:22:42,106 [Worker-222: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-10-29 18:22:42,106 [Worker-222: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-10-29 18:22:42,106 [Worker-222: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-10-29 18:22:42,106 [Worker-222: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-10-29 18:22:42,106 [Worker-222: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Deepali\Documents\GitHub\Great-Outdoors\Great Outdoor\WishlistManagementSystem\src\test\resources
+2020-10-29 18:23:07,528 [Worker-221: Update Maven projects configuration] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update started
+2020-10-29 18:23:07,887 [Worker-221: Update Maven projects configuration] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.example:GreatOutdoors:0.0.1-SNAPSHOT @ C:\Users\Deepali\Documents\GitHub\Great-Outdoors\AddToCart\pom.xml.
+2020-10-29 18:23:08,877 [Worker-221: Update Maven projects configuration] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /AddToCart/src/main/java
+2020-10-29 18:23:08,877 [Worker-221: Update Maven projects configuration] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /AddToCart/src/main/resources
+2020-10-29 18:23:08,877 [Worker-221: Update Maven projects configuration] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /AddToCart/src/main/resources
+2020-10-29 18:23:08,892 [Worker-221: Update Maven projects configuration] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /AddToCart/src/test/java
+2020-10-29 18:23:09,431 [Worker-221: Update Maven projects configuration] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update completed: 1 sec
+2020-10-29 18:23:09,900 [Worker-218: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-10-29 18:23:09,901 [Worker-218: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2020-10-29 18:23:09,902 [Worker-218: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-10-29 18:23:09,903 [Worker-218: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-10-29 18:23:09,904 [Worker-218: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Deepali\Documents\GitHub\Great-Outdoors\AddToCart\src\test\resources
+2020-10-29 18:23:11,132 [Worker-221: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-10-29 18:23:11,132 [Worker-221: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-10-29 18:23:11,132 [Worker-221: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-10-29 18:23:11,132 [Worker-221: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-10-29 18:23:11,132 [Worker-221: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Deepali\Documents\GitHub\Great-Outdoors\AddToCart\src\test\resources
+2020-10-29 18:23:50,674 [Worker-220: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-10-29 18:23:50,674 [Worker-220: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2020-10-29 18:23:50,674 [Worker-220: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-10-29 18:23:50,674 [Worker-220: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-10-29 18:23:50,674 [Worker-220: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Deepali\Documents\GitHub\Great-Outdoors\Great Outdoor\WishlistManagementSystem\src\test\resources
