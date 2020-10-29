@@ -4,6 +4,7 @@
 package com.greatoutdoor.productmanagementsystem.controller;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -102,13 +103,20 @@ public class ProductController {
 	
 	@GetMapping("/getProductById/{productId}")
 	List<Product> getProductById(){
+<<<<<<< HEAD
 		return productService.viewAllProducts();
+=======
+	return productService.viewAllProducts();
+>>>>>>> 1af28b733565511c8e5a2405bcdcdd6e852d8bc9
 	
 	}
 
 
 //	
-//	@GetMapping("/getProductById/{productId}")
+	@GetMapping("/getProductById")
+	Optional<Product> getProductById(@RequestParam String productId){
+		return productService.getProductById(productId);
+	}
 //	List<Product> getProductById
 
 
