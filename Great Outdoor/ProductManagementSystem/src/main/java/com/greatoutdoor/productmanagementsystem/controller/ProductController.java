@@ -98,7 +98,7 @@ public class ProductController {
 		return "Failed to update product!";
 		
 	}
-<<<<<<< HEAD
+
 	
 	@GetMapping("/getProductById/{productId}")
 	List<Product> getProductById(){
@@ -106,10 +106,10 @@ public class ProductController {
 	
 	}
 
-=======
+
 //	
 //	@GetMapping("/getProductById/{productId}")
 //	List<Product> getProductById
->>>>>>> 6ef51e56546cab37643031db7ab0b504679987a4
+
 
 }
