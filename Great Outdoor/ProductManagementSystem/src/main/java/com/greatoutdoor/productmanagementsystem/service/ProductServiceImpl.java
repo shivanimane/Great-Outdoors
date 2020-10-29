@@ -53,5 +53,10 @@ public class ProductServiceImpl implements ProductService{
 		productDao.deleteById(productId);
 		return true;
 	}
+
+	@Override
+	public Optional<Product> getProductById(String productId) {
+		return productDao.findById(productId);
+	}
 	
 }

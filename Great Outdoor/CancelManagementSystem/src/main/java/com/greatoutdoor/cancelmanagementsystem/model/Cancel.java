@@ -54,14 +54,15 @@ public class Cancel {
 	 * @param productId
 	 * @param orderCancelStatus
 	 */
-	public Cancel(String productuin, Date orderCancelTime, String orderid, String userId, String productId,
+
+	public Cancel(String orderid, String userId, String productId, String productuin, Date orderCancelTime,
 			int orderCancelStatus) {
 		super();
-		this.productuin = productuin;
-		this.orderCancelTime = orderCancelTime;
 		this.orderid = orderid;
 		this.userId = userId;
 		this.productId = productId;
+		this.productuin = productuin;
+		this.orderCancelTime = orderCancelTime;
 		this.orderCancelStatus = orderCancelStatus;
 	}
 
