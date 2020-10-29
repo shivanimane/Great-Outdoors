@@ -5,6 +5,7 @@ package com.greatoutdoor.addtocart.controller;
 
 import java.util.List;
 
+import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -19,6 +20,8 @@ import com.greatoutdoor.addtocart.model.Order;
 import com.greatoutdoor.addtocart.model.Orders;
 import com.greatoutdoor.addtocart.service.OrderAndCartService;
 
+import io.swagger.annotations.ApiOperation;
+
 /**
  * @author Shivani
 
@@ -28,6 +31,8 @@ import com.greatoutdoor.addtocart.service.OrderAndCartService;
 @RequestMapping("/order")
 public class OrderProductCancelController {
 	
+	private static final Logger logger = Logger.getLogger(OrderProductCancelController.class);
+	
 	@Autowired
 	OrderAndCartService orderAndCartService;
 	
@@ -36,6 +41,11 @@ public class OrderProductCancelController {
 	 * @param orderId
 	 * @return
 	 */
+	@ApiOperation(
+			value = "Get All Products using OrderId",
+			notes = "Get all products for an order with this API",
+			response = Orders.class
+			)
 	@GetMapping("/getOrders")
 	public Orders getAllOrdersWithOrderId(@RequestParam String orderId){
 		
@@ -47,6 +57,10 @@ public class OrderProductCancelController {
 		
 	}
 	
+	@ApiOperation(
+			value = "Cancel an order using orderID",
+			response = String.class
+			)
 	@PostMapping("/cancelOrder")
 	public String cancelOrder(@RequestParam String orderId ) {
 		if(orderId==null) {
@@ -59,6 +73,10 @@ public class OrderProductCancelController {
 		return "successfully removed";
 	}
 	
+	@ApiOperation(
+			value = "Get Orders by orderId and productId",
+			response = String.class
+			)
 	@GetMapping("/getOrdersByOrderIdProductId")
 	public Orders getAllOrdersWithOrderIdProductId(@RequestParam String orderId , @RequestParam String productId){
 		if(orderId==null || productId==null) {
@@ -67,6 +85,10 @@ public class OrderProductCancelController {
 		return orderAndCartService.getAllOrdersByOrderIdProductId(orderId , productId);
 	}
 	
+	@ApiOperation(
+			value = "Cancel a product using orderId and productId",
+			response = String.class
+			)
 	@PostMapping("/cancelProduct")
 	public String cancelOrderProduct(@RequestParam String orderId , @RequestParam String productId ) {
 		if(orderId==null || productId==null) {
@@ -78,6 +100,10 @@ public class OrderProductCancelController {
 		return "successfully removed";
 	}
 	
+	@ApiOperation(
+			value = "Get All Orders by UserId",
+			response = String.class
+			)
 	@GetMapping("/getAllOrdersByUserId")
 	public List<Order> getAllOrders(@RequestParam String userId){
 		
