@@ -3,11 +3,7 @@
  */
 package com.greatoutdoor.cancelmanagementsystem.model;
 
-/**
- * @author Shivani
 
- *
- */
 public class OrderProductMap {
 	private String productUIN;
 	private  String orderId;

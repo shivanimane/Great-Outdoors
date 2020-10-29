@@ -45,7 +45,7 @@ public interface OrderAndCartService {
 	 * @param cartItem
 	 * @return
 	 */
-	boolean removeItemFromCart(CartBean cartItem);
+	boolean removeItemFromCartByUserId(String userId);
 	
 	/**
 	 * Update Quantity of Existing Product
@@ -72,7 +72,7 @@ public interface OrderAndCartService {
 	 * Cancel an Order that is placed
 	 * @param orderId
 	 */
-	void cancelOrderByOrderId(String orderId);
+	boolean cancelOrderByOrderId(String orderId);
 	
 	/**
 	 * Get All Orders as List by Order ID
@@ -94,7 +94,7 @@ public interface OrderAndCartService {
 	 * @param orderId
 	 * @param productId
 	 */
-	void cancelProductByOrderIdProductId(String orderId, String productId);
+	boolean cancelProductByOrderIdProductId(String orderId, String productId);
 	
 	long getOrderTableSize();
 	

@@ -16,6 +16,8 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.greatoutdoor.addtocart.dao.CartDao;
+import com.greatoutdoor.addtocart.exception.CrudException;
+import com.greatoutdoor.addtocart.exception.NullParameterException;
 import com.greatoutdoor.addtocart.model.Cart;
 import com.greatoutdoor.addtocart.model.CartBean;
 import com.greatoutdoor.addtocart.model.Order;
@@ -37,18 +39,18 @@ public class OrderController {
 	@PostMapping("/addToCart")
 	public String addItemToCart(@RequestBody CartBean cart) {
 		if(cart==null || cart.getProductId().trim().length() == 0 || cart.getQuantity()==0 ) {
-			return "Item already exists";
+			throw new NullParameterException("Null request, please provide cart details!");
 		}
 		String status = "Item added Succefully";
 		orderAndCartService.addItemToCart(cart);
 		return status;
 	}
 	
-	@PostMapping("/placeOrder/{userId}/{addressId}/{totalCost}")
-	public String placeOrder(@PathVariable String userId, @PathVariable String addressId , @PathVariable double totalCost) {
+	@PostMapping("/placeOrder")
+	public String placeOrder(@RequestParam String userId, @RequestParam String addressId , @RequestParam double totalCost) {
 		
 		if(userId==null || addressId==null) {
-			return "User or Address does not match";
+			throw new NullParameterException("Null request, please provide userId and addressId!");
 		}
 		
 		String status = "Order placed successfully";
@@ -56,29 +58,31 @@ public class OrderController {
 		order.setAddressId(addressId);
 		order.setUserId(userId);
 		order.setTotalcost(totalCost);
-		orderAndCartService.registerOrder(order);
-		return status;
-	
-	}
-	
-	@PostMapping("/removeFromCart")
-	public String removeItemFromCart(@RequestBody CartBean cart){
-		if(cart==null || cart.getProductId()==null || cart.getQuantity()==0 || cart.getUserId()==null) { 
-			return "Does not Exist";
+		if(orderAndCartService.registerOrder(order)==false) {
+			return "Cart Not Found";
 		}
-		
-		String status = "Item removed successfully!";		
-		orderAndCartService.removeItemFromCart(cart);
-		return status;
+			return status;
 		
 	}
+	
+//	@PostMapping("/removeFromCartByUserId")
+//	public String removeItemFromCart(@RequestParam String userId){
+//		if(userId==null) { 
+//			throw new NullParameterException("Null request, please provide correct cart details to remove item from cart!");
+//		}
+//		
+//		String status = "Item removed successfully!";		
+//		orderAndCartService.removeItemFromCartByUserId(userId);
+//		return status;
+//		
+//	}
 	
 	@DeleteMapping("/removeProductByUserIdProductId/{userId}/{productId}")
 	public String removeProductByUserIdProductId(@PathVariable String userId , @PathVariable String productId){
 		 
 		
 		if(userId==null || productId==null ) { 
-			return "cart or product does not exist";
+			throw new NullParameterException("Null request, please provide user Id and product Id to remove iteam from cart!");
 		}
 		
 		String status = "Item removed successfully!";		
@@ -106,7 +110,7 @@ public class OrderController {
 			return "successfully changed";
 		}
 		else {
-			return "Failed to change quantity";
+			throw new CrudException("fail to change the quantity");
 		}
 	}
 	
