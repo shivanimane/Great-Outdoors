@@ -14,14 +14,12 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
+
+import com.greatoutdoor.productmanagementsystem.exception.NullParameterException;
 import com.greatoutdoor.productmanagementsystem.model.Product;
 import com.greatoutdoor.productmanagementsystem.service.ProductService;
 
-/**
- * @author Shivani
 
- *
- */
 
 @RestController
 @RequestMapping("/product")
@@ -59,6 +57,9 @@ public class ProductController {
 	 */
 	@PostMapping("/addProduct")
 	String addProduct(@RequestBody Product product) {
+		if(product.getProductId().trim().length()==0) {
+			throw new NullParameterException("Please provide Product id");
+		}
 		String status = "Product has been added";
 		
 		
