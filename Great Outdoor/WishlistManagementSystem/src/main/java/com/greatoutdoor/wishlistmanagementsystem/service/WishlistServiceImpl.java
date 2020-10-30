@@ -45,10 +45,13 @@ public class WishlistServiceImpl implements WishlistService {
 	
 	@Override
 	public boolean deleteProduct(Wishlist removeItem) {
-		
+		if(removeItem.getProductId()==null){
+			return false;
+		}
+		else {
 		repository.delete(removeItem);
 
-		return true;
+		return true;}
 	}
 	
 	@Override

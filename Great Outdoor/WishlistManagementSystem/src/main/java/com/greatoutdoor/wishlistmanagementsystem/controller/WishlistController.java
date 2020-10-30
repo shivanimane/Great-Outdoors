@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
 
+import com.greatoutdoor.wishlistmanagementsystem.exception.CrudException;
 import com.greatoutdoor.wishlistmanagementsystem.exception.NullParameterException;
 import com.greatoutdoor.wishlistmanagementsystem.model.Product;
 import com.greatoutdoor.wishlistmanagementsystem.model.Wishlist;
@@ -51,7 +52,10 @@ public class WishlistController {
 		}
 		
 		String status= "Removed item";
-	     service.deleteProduct(removeItem);
+	     if(service.deleteProduct(removeItem)==false) {
+	    	 throw new CrudException("Product Id not found");
+	     }
+	     else
 		   return status;
 	
 	}

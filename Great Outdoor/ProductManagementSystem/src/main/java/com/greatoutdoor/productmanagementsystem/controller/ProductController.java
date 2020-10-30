@@ -59,6 +59,7 @@ public class ProductController {
 	String addProduct(@RequestBody Product product) {
 		if(product.getProductId().trim().length()==0) {
 			throw new NullParameterException("Please provide Product id");
+			
 		}
 		String status = "Product has been added";
 		
@@ -67,7 +68,9 @@ public class ProductController {
 			return status;
 		}
 		
-		return "Failed to add product!";
+		else {
+			return "Failed to add product!";
+		}
 		
 	}
 	

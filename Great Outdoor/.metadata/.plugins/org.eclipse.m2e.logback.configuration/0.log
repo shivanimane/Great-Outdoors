@@ -2933,3 +2933,542 @@ org.eclipse.core.runtime.CoreException: Could not resolve artifact log4j:log4j:j
 2020-10-29 22:15:54,846 [Worker-628: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
 2020-10-29 22:15:54,849 [Worker-628: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
 2020-10-29 22:15:54,849 [Worker-628: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\user\Documents\Great-Outdoors\Great Outdoor\ProductManagementSystem\src\test\resources
+2020-10-29 22:50:56,357 [Worker-652: Building workspace] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.example:GreatOutdoors:0.0.1-SNAPSHOT @ C:\Users\user\Documents\Great-Outdoors\AddToCart\pom.xml.
+2020-10-29 22:51:05,867 [Worker-652: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://oss.jfrog.org/artifactory/oss-snapshot-local/log4j/log4j/1.2.17/log4j-1.2.17.pom
+2020-10-29 22:51:10,709 [Worker-652: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/log4j/log4j/1.2.17/log4j-1.2.17.pom
+2020-10-29 22:51:11,475 [Worker-652: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/log4j/log4j/1.2.17/log4j-1.2.17.pom
+2020-10-29 22:51:12,250 [Worker-652: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://oss.jfrog.org/artifactory/oss-snapshot-local/io/springfox/springfox-swagger-ui/3.0.0-SNAPSHOT/maven-metadata.xml
+2020-10-29 22:51:12,656 [Worker-652: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://oss.jfrog.org/artifactory/oss-snapshot-local/io/springfox/springfox-swagger-ui/3.0.0-SNAPSHOT/maven-metadata.xml
+2020-10-29 22:51:13,323 [Worker-652: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://oss.jfrog.org/artifactory/oss-snapshot-local/io/springfox/springfox-swagger-ui/3.0.0-SNAPSHOT/springfox-swagger-ui-3.0.0-20200714.030225-111.pom
+2020-10-29 22:51:13,734 [Worker-652: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://oss.jfrog.org/artifactory/oss-snapshot-local/io/springfox/springfox-swagger-ui/3.0.0-SNAPSHOT/springfox-swagger-ui-3.0.0-20200714.030225-111.pom
+2020-10-29 22:51:14,397 [Worker-652: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://oss.jfrog.org/artifactory/oss-snapshot-local/io/springfox/springfox-spring-webmvc/3.0.0-SNAPSHOT/maven-metadata.xml
+2020-10-29 22:51:14,794 [Worker-652: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://oss.jfrog.org/artifactory/oss-snapshot-local/io/springfox/springfox-spring-webmvc/3.0.0-SNAPSHOT/maven-metadata.xml
+2020-10-29 22:51:15,249 [Worker-652: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://oss.jfrog.org/artifactory/oss-snapshot-local/io/springfox/springfox-spring-webmvc/3.0.0-SNAPSHOT/springfox-spring-webmvc-3.0.0-20200714.030225-104.pom
+2020-10-29 22:51:15,783 [Worker-652: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://oss.jfrog.org/artifactory/oss-snapshot-local/io/springfox/springfox-spring-webmvc/3.0.0-SNAPSHOT/springfox-spring-webmvc-3.0.0-20200714.030225-104.pom
+2020-10-29 22:51:16,253 [Worker-652: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://oss.jfrog.org/artifactory/oss-snapshot-local/io/springfox/springfox-spi/3.0.0-SNAPSHOT/maven-metadata.xml
+2020-10-29 22:51:16,735 [Worker-652: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://oss.jfrog.org/artifactory/oss-snapshot-local/io/springfox/springfox-spi/3.0.0-SNAPSHOT/maven-metadata.xml
+2020-10-29 22:51:17,181 [Worker-652: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://oss.jfrog.org/artifactory/oss-snapshot-local/io/springfox/springfox-spi/3.0.0-SNAPSHOT/springfox-spi-3.0.0-20200714.030223-112.pom
+2020-10-29 22:51:17,857 [Worker-652: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://oss.jfrog.org/artifactory/oss-snapshot-local/io/springfox/springfox-spi/3.0.0-SNAPSHOT/springfox-spi-3.0.0-20200714.030223-112.pom
+2020-10-29 22:51:18,261 [Worker-652: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://oss.jfrog.org/artifactory/oss-snapshot-local/io/springfox/springfox-core/3.0.0-SNAPSHOT/maven-metadata.xml
+2020-10-29 22:51:18,672 [Worker-652: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://oss.jfrog.org/artifactory/oss-snapshot-local/io/springfox/springfox-core/3.0.0-SNAPSHOT/maven-metadata.xml
+2020-10-29 22:51:19,279 [Worker-652: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://oss.jfrog.org/artifactory/oss-snapshot-local/io/springfox/springfox-core/3.0.0-SNAPSHOT/springfox-core-3.0.0-20200714.030221-113.pom
+2020-10-29 22:51:20,441 [Worker-652: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://oss.jfrog.org/artifactory/oss-snapshot-local/io/springfox/springfox-core/3.0.0-SNAPSHOT/springfox-core-3.0.0-20200714.030221-113.pom
+2020-10-29 22:51:21,160 [Worker-652: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://oss.jfrog.org/artifactory/oss-snapshot-local/org/springframework/plugin/spring-plugin-metadata/2.0.0.RELEASE/spring-plugin-metadata-2.0.0.RELEASE.pom
+2020-10-29 22:51:21,396 [Worker-652: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/springframework/plugin/spring-plugin-metadata/2.0.0.RELEASE/spring-plugin-metadata-2.0.0.RELEASE.pom
+2020-10-29 22:51:21,729 [Worker-652: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/springframework/plugin/spring-plugin-metadata/2.0.0.RELEASE/spring-plugin-metadata-2.0.0.RELEASE.pom
+2020-10-29 22:51:22,212 [Worker-652: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://oss.jfrog.org/artifactory/oss-snapshot-local/io/springfox/springfox-schema/3.0.0-SNAPSHOT/maven-metadata.xml
+2020-10-29 22:51:22,764 [Worker-652: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://oss.jfrog.org/artifactory/oss-snapshot-local/io/springfox/springfox-schema/3.0.0-SNAPSHOT/maven-metadata.xml
+2020-10-29 22:51:23,166 [Worker-652: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://oss.jfrog.org/artifactory/oss-snapshot-local/io/springfox/springfox-schema/3.0.0-SNAPSHOT/springfox-schema-3.0.0-20200714.030222-112.pom
+2020-10-29 22:51:23,666 [Worker-652: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://oss.jfrog.org/artifactory/oss-snapshot-local/io/springfox/springfox-schema/3.0.0-SNAPSHOT/springfox-schema-3.0.0-20200714.030222-112.pom
+2020-10-29 22:51:24,160 [Worker-652: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://oss.jfrog.org/artifactory/oss-snapshot-local/io/springfox/springfox-spring-web/3.0.0-SNAPSHOT/maven-metadata.xml
+2020-10-29 22:51:24,634 [Worker-652: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://oss.jfrog.org/artifactory/oss-snapshot-local/io/springfox/springfox-spring-web/3.0.0-SNAPSHOT/maven-metadata.xml
+2020-10-29 22:51:25,150 [Worker-652: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://oss.jfrog.org/artifactory/oss-snapshot-local/io/springfox/springfox-spring-web/3.0.0-SNAPSHOT/springfox-spring-web-3.0.0-20200714.030224-111.pom
+2020-10-29 22:51:25,685 [Worker-652: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://oss.jfrog.org/artifactory/oss-snapshot-local/io/springfox/springfox-spring-web/3.0.0-SNAPSHOT/springfox-spring-web-3.0.0-20200714.030224-111.pom
+2020-10-29 22:51:26,243 [Worker-652: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://oss.jfrog.org/artifactory/oss-snapshot-local/io/github/classgraph/classgraph/4.8.83/classgraph-4.8.83.pom
+2020-10-29 22:51:26,493 [Worker-652: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/io/github/classgraph/classgraph/4.8.83/classgraph-4.8.83.pom
+2020-10-29 22:51:26,978 [Worker-652: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/io/github/classgraph/classgraph/4.8.83/classgraph-4.8.83.pom
+2020-10-29 22:51:27,415 [Worker-652: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://oss.jfrog.org/artifactory/oss-snapshot-local/io/springfox/springfox-swagger2/3.0.0-SNAPSHOT/maven-metadata.xml
+2020-10-29 22:51:27,833 [Worker-652: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://oss.jfrog.org/artifactory/oss-snapshot-local/io/springfox/springfox-swagger2/3.0.0-SNAPSHOT/maven-metadata.xml
+2020-10-29 22:51:28,277 [Worker-652: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://oss.jfrog.org/artifactory/oss-snapshot-local/io/springfox/springfox-swagger2/3.0.0-SNAPSHOT/springfox-swagger2-3.0.0-20200714.030226-112.pom
+2020-10-29 22:51:28,734 [Worker-652: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://oss.jfrog.org/artifactory/oss-snapshot-local/io/springfox/springfox-swagger2/3.0.0-SNAPSHOT/springfox-swagger2-3.0.0-20200714.030226-112.pom
+2020-10-29 22:51:29,386 [Worker-652: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://oss.jfrog.org/artifactory/oss-snapshot-local/io/springfox/springfox-swagger-common/3.0.0-SNAPSHOT/maven-metadata.xml
+2020-10-29 22:51:29,796 [Worker-652: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://oss.jfrog.org/artifactory/oss-snapshot-local/io/springfox/springfox-swagger-common/3.0.0-SNAPSHOT/maven-metadata.xml
+2020-10-29 22:51:30,206 [Worker-652: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://oss.jfrog.org/artifactory/oss-snapshot-local/io/springfox/springfox-swagger-common/3.0.0-SNAPSHOT/springfox-swagger-common-3.0.0-20200714.030225-112.pom
+2020-10-29 22:51:30,723 [Worker-652: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://oss.jfrog.org/artifactory/oss-snapshot-local/io/springfox/springfox-swagger-common/3.0.0-SNAPSHOT/springfox-swagger-common-3.0.0-20200714.030225-112.pom
+2020-10-29 22:51:31,386 [Worker-652: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://oss.jfrog.org/artifactory/oss-snapshot-local/io/swagger/core/v3/swagger-annotations/2.1.2/swagger-annotations-2.1.2.pom
+2020-10-29 22:51:31,644 [Worker-652: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/io/swagger/core/v3/swagger-annotations/2.1.2/swagger-annotations-2.1.2.pom
+2020-10-29 22:51:31,979 [Worker-652: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/io/swagger/core/v3/swagger-annotations/2.1.2/swagger-annotations-2.1.2.pom
+2020-10-29 22:51:32,405 [Worker-652: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://oss.jfrog.org/artifactory/oss-snapshot-local/io/swagger/core/v3/swagger-project/2.1.2/swagger-project-2.1.2.pom
+2020-10-29 22:51:32,716 [Worker-652: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/io/swagger/core/v3/swagger-project/2.1.2/swagger-project-2.1.2.pom
+2020-10-29 22:51:33,173 [Worker-652: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/io/swagger/core/v3/swagger-project/2.1.2/swagger-project-2.1.2.pom
+2020-10-29 22:51:33,681 [Worker-652: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://oss.jfrog.org/artifactory/oss-snapshot-local/io/springfox/springfox-spring-webflux/3.0.0-SNAPSHOT/maven-metadata.xml
+2020-10-29 22:51:34,107 [Worker-652: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://oss.jfrog.org/artifactory/oss-snapshot-local/io/springfox/springfox-spring-webflux/3.0.0-SNAPSHOT/maven-metadata.xml
+2020-10-29 22:51:34,512 [Worker-652: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://oss.jfrog.org/artifactory/oss-snapshot-local/io/springfox/springfox-spring-webflux/3.0.0-SNAPSHOT/springfox-spring-webflux-3.0.0-20200714.030224-104.pom
+2020-10-29 22:51:34,984 [Worker-652: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://oss.jfrog.org/artifactory/oss-snapshot-local/io/springfox/springfox-spring-webflux/3.0.0-SNAPSHOT/springfox-spring-webflux-3.0.0-20200714.030224-104.pom
+2020-10-29 22:51:35,676 [Worker-652: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://oss.jfrog.org/artifactory/oss-snapshot-local/org/mapstruct/mapstruct/1.3.1.Final/mapstruct-1.3.1.Final.pom
+2020-10-29 22:51:35,945 [Worker-652: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/mapstruct/mapstruct/1.3.1.Final/mapstruct-1.3.1.Final.pom
+2020-10-29 22:51:36,339 [Worker-652: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/mapstruct/mapstruct/1.3.1.Final/mapstruct-1.3.1.Final.pom
+2020-10-29 22:51:36,745 [Worker-652: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://oss.jfrog.org/artifactory/oss-snapshot-local/org/mapstruct/mapstruct-parent/1.3.1.Final/mapstruct-parent-1.3.1.Final.pom
+2020-10-29 22:51:37,069 [Worker-652: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/mapstruct/mapstruct-parent/1.3.1.Final/mapstruct-parent-1.3.1.Final.pom
+2020-10-29 22:51:37,812 [Worker-652: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/mapstruct/mapstruct-parent/1.3.1.Final/mapstruct-parent-1.3.1.Final.pom
+2020-10-29 22:51:38,624 [Worker-652: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://oss.jfrog.org/artifactory/oss-snapshot-local/io/springfox/springfox-data-rest/3.0.0-SNAPSHOT/maven-metadata.xml
+2020-10-29 22:51:39,044 [Worker-652: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://oss.jfrog.org/artifactory/oss-snapshot-local/io/springfox/springfox-data-rest/3.0.0-SNAPSHOT/maven-metadata.xml
+2020-10-29 22:51:39,516 [Worker-652: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://oss.jfrog.org/artifactory/oss-snapshot-local/io/springfox/springfox-data-rest/3.0.0-SNAPSHOT/springfox-data-rest-3.0.0-20200714.030222-112.pom
+2020-10-29 22:51:39,904 [Worker-652: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://oss.jfrog.org/artifactory/oss-snapshot-local/io/springfox/springfox-data-rest/3.0.0-SNAPSHOT/springfox-data-rest-3.0.0-20200714.030222-112.pom
+2020-10-29 22:51:40,924 [Worker-652: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://oss.jfrog.org/artifactory/oss-snapshot-local/log4j/log4j/1.2.17/log4j-1.2.17.jar
+2020-10-29 22:51:41,363 [Worker-652: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://oss.jfrog.org/artifactory/oss-snapshot-local/io/springfox/springfox-swagger-ui/3.0.0-SNAPSHOT/springfox-swagger-ui-3.0.0-20200714.030225-111.jar
+2020-10-29 22:52:11,451 [Worker-652: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://oss.jfrog.org/artifactory/oss-snapshot-local/io/springfox/springfox-swagger-ui/3.0.0-SNAPSHOT/springfox-swagger-ui-3.0.0-20200714.030225-111.jar
+2020-10-29 22:52:11,854 [Worker-652: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://oss.jfrog.org/artifactory/oss-snapshot-local/io/springfox/springfox-spring-webmvc/3.0.0-SNAPSHOT/springfox-spring-webmvc-3.0.0-20200714.030225-104.jar
+2020-10-29 22:52:12,566 [Worker-652: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://oss.jfrog.org/artifactory/oss-snapshot-local/io/springfox/springfox-spring-webmvc/3.0.0-SNAPSHOT/springfox-spring-webmvc-3.0.0-20200714.030225-104.jar
+2020-10-29 22:52:13,094 [Worker-652: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://oss.jfrog.org/artifactory/oss-snapshot-local/io/springfox/springfox-swagger2/3.0.0-SNAPSHOT/springfox-swagger2-3.0.0-20200714.030226-112.jar
+2020-10-29 22:52:16,181 [Worker-652: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://oss.jfrog.org/artifactory/oss-snapshot-local/io/springfox/springfox-swagger2/3.0.0-SNAPSHOT/springfox-swagger2-3.0.0-20200714.030226-112.jar
+2020-10-29 22:52:16,664 [Worker-652: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://oss.jfrog.org/artifactory/oss-snapshot-local/io/springfox/springfox-spi/3.0.0-SNAPSHOT/springfox-spi-3.0.0-20200714.030223-112.jar
+2020-10-29 22:52:17,887 [Worker-652: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://oss.jfrog.org/artifactory/oss-snapshot-local/io/springfox/springfox-spi/3.0.0-SNAPSHOT/springfox-spi-3.0.0-20200714.030223-112.jar
+2020-10-29 22:52:18,302 [Worker-652: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://oss.jfrog.org/artifactory/oss-snapshot-local/io/springfox/springfox-schema/3.0.0-SNAPSHOT/springfox-schema-3.0.0-20200714.030222-112.jar
+2020-10-29 22:52:20,316 [Worker-652: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://oss.jfrog.org/artifactory/oss-snapshot-local/io/springfox/springfox-schema/3.0.0-SNAPSHOT/springfox-schema-3.0.0-20200714.030222-112.jar
+2020-10-29 22:52:20,700 [Worker-652: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://oss.jfrog.org/artifactory/oss-snapshot-local/io/springfox/springfox-swagger-common/3.0.0-SNAPSHOT/springfox-swagger-common-3.0.0-20200714.030225-112.jar
+2020-10-29 22:52:22,758 [Worker-652: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://oss.jfrog.org/artifactory/oss-snapshot-local/io/springfox/springfox-swagger-common/3.0.0-SNAPSHOT/springfox-swagger-common-3.0.0-20200714.030225-112.jar
+2020-10-29 22:52:23,130 [Worker-652: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://oss.jfrog.org/artifactory/oss-snapshot-local/io/swagger/core/v3/swagger-annotations/2.1.2/swagger-annotations-2.1.2.jar
+2020-10-29 22:52:23,517 [Worker-652: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://oss.jfrog.org/artifactory/oss-snapshot-local/io/springfox/springfox-spring-web/3.0.0-SNAPSHOT/springfox-spring-web-3.0.0-20200714.030224-111.jar
+2020-10-29 22:52:26,505 [Worker-652: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://oss.jfrog.org/artifactory/oss-snapshot-local/io/springfox/springfox-spring-web/3.0.0-SNAPSHOT/springfox-spring-web-3.0.0-20200714.030224-111.jar
+2020-10-29 22:52:26,918 [Worker-652: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://oss.jfrog.org/artifactory/oss-snapshot-local/io/github/classgraph/classgraph/4.8.83/classgraph-4.8.83.jar
+2020-10-29 22:52:27,340 [Worker-652: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://oss.jfrog.org/artifactory/oss-snapshot-local/io/springfox/springfox-spring-webflux/3.0.0-SNAPSHOT/springfox-spring-webflux-3.0.0-20200714.030224-104.jar
+2020-10-29 22:52:27,973 [Worker-652: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://oss.jfrog.org/artifactory/oss-snapshot-local/io/springfox/springfox-spring-webflux/3.0.0-SNAPSHOT/springfox-spring-webflux-3.0.0-20200714.030224-104.jar
+2020-10-29 22:52:28,375 [Worker-652: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://oss.jfrog.org/artifactory/oss-snapshot-local/org/springframework/plugin/spring-plugin-metadata/2.0.0.RELEASE/spring-plugin-metadata-2.0.0.RELEASE.jar
+2020-10-29 22:52:28,764 [Worker-652: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://oss.jfrog.org/artifactory/oss-snapshot-local/org/mapstruct/mapstruct/1.3.1.Final/mapstruct-1.3.1.Final.jar
+2020-10-29 22:52:29,248 [Worker-652: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://oss.jfrog.org/artifactory/oss-snapshot-local/io/springfox/springfox-data-rest/3.0.0-SNAPSHOT/springfox-data-rest-3.0.0-20200714.030222-112.jar
+2020-10-29 22:52:30,613 [Worker-652: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://oss.jfrog.org/artifactory/oss-snapshot-local/io/springfox/springfox-data-rest/3.0.0-SNAPSHOT/springfox-data-rest-3.0.0-20200714.030222-112.jar
+2020-10-29 22:52:31,102 [Worker-652: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://oss.jfrog.org/artifactory/oss-snapshot-local/io/springfox/springfox-core/3.0.0-SNAPSHOT/springfox-core-3.0.0-20200714.030221-113.jar
+2020-10-29 22:52:35,007 [Worker-652: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://oss.jfrog.org/artifactory/oss-snapshot-local/io/springfox/springfox-core/3.0.0-SNAPSHOT/springfox-core-3.0.0-20200714.030221-113.jar
+2020-10-29 22:52:37,026 [Worker-652: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/log4j/log4j/1.2.17/log4j-1.2.17.jar
+2020-10-29 22:52:42,316 [Worker-652: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/log4j/log4j/1.2.17/log4j-1.2.17.jar
+2020-10-29 22:52:42,778 [Worker-652: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/io/swagger/core/v3/swagger-annotations/2.1.2/swagger-annotations-2.1.2.jar
+2020-10-29 22:52:43,361 [Worker-652: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/io/swagger/core/v3/swagger-annotations/2.1.2/swagger-annotations-2.1.2.jar
+2020-10-29 22:52:43,586 [Worker-652: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/io/github/classgraph/classgraph/4.8.83/classgraph-4.8.83.jar
+2020-10-29 22:52:48,871 [Worker-652: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/io/github/classgraph/classgraph/4.8.83/classgraph-4.8.83.jar
+2020-10-29 22:52:49,115 [Worker-652: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/springframework/plugin/spring-plugin-metadata/2.0.0.RELEASE/spring-plugin-metadata-2.0.0.RELEASE.jar
+2020-10-29 22:52:49,811 [Worker-652: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/springframework/plugin/spring-plugin-metadata/2.0.0.RELEASE/spring-plugin-metadata-2.0.0.RELEASE.jar
+2020-10-29 22:52:50,151 [Worker-652: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/mapstruct/mapstruct/1.3.1.Final/mapstruct-1.3.1.Final.jar
+2020-10-29 22:52:50,589 [Worker-652: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/mapstruct/mapstruct/1.3.1.Final/mapstruct-1.3.1.Final.jar
+2020-10-29 22:52:57,726 [Worker-652: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-10-29 22:52:57,727 [Worker-652: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2020-10-29 22:52:57,730 [Worker-652: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-10-29 22:52:57,732 [Worker-652: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-10-29 22:52:57,732 [Worker-652: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\user\Documents\Great-Outdoors\AddToCart\src\test\resources
+2020-10-29 22:52:58,136 [Worker-647: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://oss.jfrog.org/artifactory/oss-snapshot-local/antlr/antlr/2.7.7/antlr-2.7.7-sources.jar
+2020-10-29 22:52:58,140 [Worker-647: Download sources and javadoc] ERROR o.e.m.j.internal.DownloadSourcesJob - Could not download sources for antlr:antlr:2.7.7
+org.eclipse.core.runtime.CoreException: Could not resolve artifact antlr:antlr:jar:sources:2.7.7
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.lambda$4(MavenImpl.java:801) ~[org.eclipse.m2e.core_1.13.0.20190716-1624.jar:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:177) ~[org.eclipse.m2e.core_1.13.0.20190716-1624.jar:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:112) ~[org.eclipse.m2e.core_1.13.0.20190716-1624.jar:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:99) ~[org.eclipse.m2e.core_1.13.0.20190716-1624.jar:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.resolve(MavenImpl.java:769) ~[org.eclipse.m2e.core_1.13.0.20190716-1624.jar:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.resolve(MavenImpl.java:746) ~[org.eclipse.m2e.core_1.13.0.20190716-1624.jar:na]
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.download(DownloadSourcesJob.java:328) [org.eclipse.m2e.jdt_1.13.0.20190716-1624.jar:na]
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.downloadAttachments(DownloadSourcesJob.java:302) [org.eclipse.m2e.jdt_1.13.0.20190716-1624.jar:na]
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.downloadMaven(DownloadSourcesJob.java:267) [org.eclipse.m2e.jdt_1.13.0.20190716-1624.jar:na]
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.downloadFilesAndPopulateToUpdate(DownloadSourcesJob.java:231) [org.eclipse.m2e.jdt_1.13.0.20190716-1624.jar:na]
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.lambda$0(DownloadSourcesJob.java:159) [org.eclipse.m2e.jdt_1.13.0.20190716-1624.jar:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:177) ~[org.eclipse.m2e.core_1.13.0.20190716-1624.jar:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:151) ~[org.eclipse.m2e.core_1.13.0.20190716-1624.jar:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:99) ~[org.eclipse.m2e.core_1.13.0.20190716-1624.jar:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.execute(MavenImpl.java:1374) ~[org.eclipse.m2e.core_1.13.0.20190716-1624.jar:na]
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.run(DownloadSourcesJob.java:159) [org.eclipse.m2e.jdt_1.13.0.20190716-1624.jar:na]
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63) ~[org.eclipse.core.jobs_3.10.500.v20190620-1426.jar:na]
+2020-10-29 22:53:00,949 [Worker-647: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://oss.jfrog.org/artifactory/oss-snapshot-local/com/fasterxml/jackson/core/jackson-databind/2.11.2/jackson-databind-2.11.2-sources.jar
+2020-10-29 22:53:01,793 [Worker-647: Download sources and javadoc] ERROR o.e.m.j.internal.DownloadSourcesJob - Could not download sources for com.fasterxml.jackson.core:jackson-databind:2.11.2
+org.eclipse.core.runtime.CoreException: Could not resolve artifact com.fasterxml.jackson.core:jackson-databind:jar:sources:2.11.2
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.lambda$4(MavenImpl.java:801) ~[org.eclipse.m2e.core_1.13.0.20190716-1624.jar:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:177) ~[org.eclipse.m2e.core_1.13.0.20190716-1624.jar:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:112) ~[org.eclipse.m2e.core_1.13.0.20190716-1624.jar:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:99) ~[org.eclipse.m2e.core_1.13.0.20190716-1624.jar:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.resolve(MavenImpl.java:769) ~[org.eclipse.m2e.core_1.13.0.20190716-1624.jar:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.resolve(MavenImpl.java:746) ~[org.eclipse.m2e.core_1.13.0.20190716-1624.jar:na]
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.download(DownloadSourcesJob.java:328) [org.eclipse.m2e.jdt_1.13.0.20190716-1624.jar:na]
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.downloadAttachments(DownloadSourcesJob.java:302) [org.eclipse.m2e.jdt_1.13.0.20190716-1624.jar:na]
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.downloadMaven(DownloadSourcesJob.java:267) [org.eclipse.m2e.jdt_1.13.0.20190716-1624.jar:na]
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.downloadFilesAndPopulateToUpdate(DownloadSourcesJob.java:231) [org.eclipse.m2e.jdt_1.13.0.20190716-1624.jar:na]
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.lambda$0(DownloadSourcesJob.java:159) [org.eclipse.m2e.jdt_1.13.0.20190716-1624.jar:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:177) ~[org.eclipse.m2e.core_1.13.0.20190716-1624.jar:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:151) ~[org.eclipse.m2e.core_1.13.0.20190716-1624.jar:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:99) ~[org.eclipse.m2e.core_1.13.0.20190716-1624.jar:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.execute(MavenImpl.java:1374) ~[org.eclipse.m2e.core_1.13.0.20190716-1624.jar:na]
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.run(DownloadSourcesJob.java:159) [org.eclipse.m2e.jdt_1.13.0.20190716-1624.jar:na]
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63) ~[org.eclipse.core.jobs_3.10.500.v20190620-1426.jar:na]
+2020-10-29 22:53:12,461 [Worker-647: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://oss.jfrog.org/artifactory/oss-snapshot-local/com/fasterxml/jackson/core/jackson-core/2.11.2/jackson-core-2.11.2-sources.jar
+2020-10-29 22:53:13,594 [Worker-647: Download sources and javadoc] ERROR o.e.m.j.internal.DownloadSourcesJob - Could not download sources for com.fasterxml.jackson.core:jackson-core:2.11.2
+org.eclipse.core.runtime.CoreException: Could not resolve artifact com.fasterxml.jackson.core:jackson-core:jar:sources:2.11.2
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.lambda$4(MavenImpl.java:801) ~[org.eclipse.m2e.core_1.13.0.20190716-1624.jar:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:177) ~[org.eclipse.m2e.core_1.13.0.20190716-1624.jar:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:112) ~[org.eclipse.m2e.core_1.13.0.20190716-1624.jar:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:99) ~[org.eclipse.m2e.core_1.13.0.20190716-1624.jar:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.resolve(MavenImpl.java:769) ~[org.eclipse.m2e.core_1.13.0.20190716-1624.jar:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.resolve(MavenImpl.java:746) ~[org.eclipse.m2e.core_1.13.0.20190716-1624.jar:na]
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.download(DownloadSourcesJob.java:328) [org.eclipse.m2e.jdt_1.13.0.20190716-1624.jar:na]
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.downloadAttachments(DownloadSourcesJob.java:302) [org.eclipse.m2e.jdt_1.13.0.20190716-1624.jar:na]
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.downloadMaven(DownloadSourcesJob.java:267) [org.eclipse.m2e.jdt_1.13.0.20190716-1624.jar:na]
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.downloadFilesAndPopulateToUpdate(DownloadSourcesJob.java:231) [org.eclipse.m2e.jdt_1.13.0.20190716-1624.jar:na]
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.lambda$0(DownloadSourcesJob.java:159) [org.eclipse.m2e.jdt_1.13.0.20190716-1624.jar:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:177) ~[org.eclipse.m2e.core_1.13.0.20190716-1624.jar:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:151) ~[org.eclipse.m2e.core_1.13.0.20190716-1624.jar:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:99) ~[org.eclipse.m2e.core_1.13.0.20190716-1624.jar:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.execute(MavenImpl.java:1374) ~[org.eclipse.m2e.core_1.13.0.20190716-1624.jar:na]
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.run(DownloadSourcesJob.java:159) [org.eclipse.m2e.jdt_1.13.0.20190716-1624.jar:na]
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63) ~[org.eclipse.core.jobs_3.10.500.v20190620-1426.jar:na]
+2020-10-29 22:53:18,925 [Worker-647: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://oss.jfrog.org/artifactory/oss-snapshot-local/com/fasterxml/jackson/core/jackson-annotations/2.11.2/jackson-annotations-2.11.2-sources.jar
+2020-10-29 22:53:21,447 [Worker-647: Download sources and javadoc] ERROR o.e.m.j.internal.DownloadSourcesJob - Could not download sources for com.fasterxml.jackson.core:jackson-annotations:2.11.2
+org.eclipse.core.runtime.CoreException: Could not resolve artifact com.fasterxml.jackson.core:jackson-annotations:jar:sources:2.11.2
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.lambda$4(MavenImpl.java:801) ~[org.eclipse.m2e.core_1.13.0.20190716-1624.jar:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:177) ~[org.eclipse.m2e.core_1.13.0.20190716-1624.jar:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:112) ~[org.eclipse.m2e.core_1.13.0.20190716-1624.jar:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:99) ~[org.eclipse.m2e.core_1.13.0.20190716-1624.jar:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.resolve(MavenImpl.java:769) ~[org.eclipse.m2e.core_1.13.0.20190716-1624.jar:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.resolve(MavenImpl.java:746) ~[org.eclipse.m2e.core_1.13.0.20190716-1624.jar:na]
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.download(DownloadSourcesJob.java:328) [org.eclipse.m2e.jdt_1.13.0.20190716-1624.jar:na]
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.downloadAttachments(DownloadSourcesJob.java:302) [org.eclipse.m2e.jdt_1.13.0.20190716-1624.jar:na]
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.downloadMaven(DownloadSourcesJob.java:267) [org.eclipse.m2e.jdt_1.13.0.20190716-1624.jar:na]
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.downloadFilesAndPopulateToUpdate(DownloadSourcesJob.java:231) [org.eclipse.m2e.jdt_1.13.0.20190716-1624.jar:na]
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.lambda$0(DownloadSourcesJob.java:159) [org.eclipse.m2e.jdt_1.13.0.20190716-1624.jar:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:177) ~[org.eclipse.m2e.core_1.13.0.20190716-1624.jar:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:151) ~[org.eclipse.m2e.core_1.13.0.20190716-1624.jar:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:99) ~[org.eclipse.m2e.core_1.13.0.20190716-1624.jar:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.execute(MavenImpl.java:1374) ~[org.eclipse.m2e.core_1.13.0.20190716-1624.jar:na]
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.run(DownloadSourcesJob.java:159) [org.eclipse.m2e.jdt_1.13.0.20190716-1624.jar:na]
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63) ~[org.eclipse.core.jobs_3.10.500.v20190620-1426.jar:na]
+2020-10-29 22:53:25,326 [Worker-647: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://oss.jfrog.org/artifactory/oss-snapshot-local/ch/qos/logback/logback-classic/1.2.3/logback-classic-1.2.3-sources.jar
+2020-10-29 22:53:25,330 [Worker-647: Download sources and javadoc] ERROR o.e.m.j.internal.DownloadSourcesJob - Could not download sources for ch.qos.logback:logback-classic:1.2.3
+org.eclipse.core.runtime.CoreException: Could not resolve artifact ch.qos.logback:logback-classic:jar:sources:1.2.3
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.lambda$4(MavenImpl.java:801) ~[org.eclipse.m2e.core_1.13.0.20190716-1624.jar:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:177) ~[org.eclipse.m2e.core_1.13.0.20190716-1624.jar:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:112) ~[org.eclipse.m2e.core_1.13.0.20190716-1624.jar:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:99) ~[org.eclipse.m2e.core_1.13.0.20190716-1624.jar:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.resolve(MavenImpl.java:769) ~[org.eclipse.m2e.core_1.13.0.20190716-1624.jar:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.resolve(MavenImpl.java:746) ~[org.eclipse.m2e.core_1.13.0.20190716-1624.jar:na]
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.download(DownloadSourcesJob.java:328) [org.eclipse.m2e.jdt_1.13.0.20190716-1624.jar:na]
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.downloadAttachments(DownloadSourcesJob.java:302) [org.eclipse.m2e.jdt_1.13.0.20190716-1624.jar:na]
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.downloadMaven(DownloadSourcesJob.java:267) [org.eclipse.m2e.jdt_1.13.0.20190716-1624.jar:na]
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.downloadFilesAndPopulateToUpdate(DownloadSourcesJob.java:231) [org.eclipse.m2e.jdt_1.13.0.20190716-1624.jar:na]
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.lambda$0(DownloadSourcesJob.java:159) [org.eclipse.m2e.jdt_1.13.0.20190716-1624.jar:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:177) ~[org.eclipse.m2e.core_1.13.0.20190716-1624.jar:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:151) ~[org.eclipse.m2e.core_1.13.0.20190716-1624.jar:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:99) ~[org.eclipse.m2e.core_1.13.0.20190716-1624.jar:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.execute(MavenImpl.java:1374) ~[org.eclipse.m2e.core_1.13.0.20190716-1624.jar:na]
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.run(DownloadSourcesJob.java:159) [org.eclipse.m2e.jdt_1.13.0.20190716-1624.jar:na]
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63) ~[org.eclipse.core.jobs_3.10.500.v20190620-1426.jar:na]
+2020-10-29 22:53:27,634 [Worker-647: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://oss.jfrog.org/artifactory/oss-snapshot-local/ch/qos/logback/logback-core/1.2.3/logback-core-1.2.3-sources.jar
+2020-10-29 22:53:28,165 [Worker-647: Download sources and javadoc] ERROR o.e.m.j.internal.DownloadSourcesJob - Could not download sources for ch.qos.logback:logback-core:1.2.3
+org.eclipse.core.runtime.CoreException: Could not resolve artifact ch.qos.logback:logback-core:jar:sources:1.2.3
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.lambda$4(MavenImpl.java:801) ~[org.eclipse.m2e.core_1.13.0.20190716-1624.jar:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:177) ~[org.eclipse.m2e.core_1.13.0.20190716-1624.jar:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:112) ~[org.eclipse.m2e.core_1.13.0.20190716-1624.jar:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:99) ~[org.eclipse.m2e.core_1.13.0.20190716-1624.jar:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.resolve(MavenImpl.java:769) ~[org.eclipse.m2e.core_1.13.0.20190716-1624.jar:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.resolve(MavenImpl.java:746) ~[org.eclipse.m2e.core_1.13.0.20190716-1624.jar:na]
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.download(DownloadSourcesJob.java:328) [org.eclipse.m2e.jdt_1.13.0.20190716-1624.jar:na]
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.downloadAttachments(DownloadSourcesJob.java:302) [org.eclipse.m2e.jdt_1.13.0.20190716-1624.jar:na]
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.downloadMaven(DownloadSourcesJob.java:267) [org.eclipse.m2e.jdt_1.13.0.20190716-1624.jar:na]
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.downloadFilesAndPopulateToUpdate(DownloadSourcesJob.java:231) [org.eclipse.m2e.jdt_1.13.0.20190716-1624.jar:na]
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.lambda$0(DownloadSourcesJob.java:159) [org.eclipse.m2e.jdt_1.13.0.20190716-1624.jar:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:177) ~[org.eclipse.m2e.core_1.13.0.20190716-1624.jar:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:151) ~[org.eclipse.m2e.core_1.13.0.20190716-1624.jar:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:99) ~[org.eclipse.m2e.core_1.13.0.20190716-1624.jar:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.execute(MavenImpl.java:1374) ~[org.eclipse.m2e.core_1.13.0.20190716-1624.jar:na]
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.run(DownloadSourcesJob.java:159) [org.eclipse.m2e.jdt_1.13.0.20190716-1624.jar:na]
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63) ~[org.eclipse.core.jobs_3.10.500.v20190620-1426.jar:na]
+2020-10-29 22:53:31,757 [Worker-647: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://oss.jfrog.org/artifactory/oss-snapshot-local/org/apache/logging/log4j/log4j-to-slf4j/2.13.3/log4j-to-slf4j-2.13.3-sources.jar
+2020-10-29 22:53:31,761 [Worker-647: Download sources and javadoc] ERROR o.e.m.j.internal.DownloadSourcesJob - Could not download sources for org.apache.logging.log4j:log4j-to-slf4j:2.13.3
+org.eclipse.core.runtime.CoreException: Could not resolve artifact org.apache.logging.log4j:log4j-to-slf4j:jar:sources:2.13.3
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.lambda$4(MavenImpl.java:801) ~[org.eclipse.m2e.core_1.13.0.20190716-1624.jar:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:177) ~[org.eclipse.m2e.core_1.13.0.20190716-1624.jar:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:112) ~[org.eclipse.m2e.core_1.13.0.20190716-1624.jar:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:99) ~[org.eclipse.m2e.core_1.13.0.20190716-1624.jar:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.resolve(MavenImpl.java:769) ~[org.eclipse.m2e.core_1.13.0.20190716-1624.jar:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.resolve(MavenImpl.java:746) ~[org.eclipse.m2e.core_1.13.0.20190716-1624.jar:na]
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.download(DownloadSourcesJob.java:328) [org.eclipse.m2e.jdt_1.13.0.20190716-1624.jar:na]
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.downloadAttachments(DownloadSourcesJob.java:302) [org.eclipse.m2e.jdt_1.13.0.20190716-1624.jar:na]
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.downloadMaven(DownloadSourcesJob.java:267) [org.eclipse.m2e.jdt_1.13.0.20190716-1624.jar:na]
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.downloadFilesAndPopulateToUpdate(DownloadSourcesJob.java:231) [org.eclipse.m2e.jdt_1.13.0.20190716-1624.jar:na]
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.lambda$0(DownloadSourcesJob.java:159) [org.eclipse.m2e.jdt_1.13.0.20190716-1624.jar:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:177) ~[org.eclipse.m2e.core_1.13.0.20190716-1624.jar:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:151) ~[org.eclipse.m2e.core_1.13.0.20190716-1624.jar:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:99) ~[org.eclipse.m2e.core_1.13.0.20190716-1624.jar:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.execute(MavenImpl.java:1374) ~[org.eclipse.m2e.core_1.13.0.20190716-1624.jar:na]
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.run(DownloadSourcesJob.java:159) [org.eclipse.m2e.jdt_1.13.0.20190716-1624.jar:na]
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63) ~[org.eclipse.core.jobs_3.10.500.v20190620-1426.jar:na]
+2020-10-29 22:53:38,819 [Worker-647: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://oss.jfrog.org/artifactory/oss-snapshot-local/org/apache/logging/log4j/log4j-api/2.13.3/log4j-api-2.13.3-sources.jar
+2020-10-29 22:53:38,876 [Worker-647: Download sources and javadoc] ERROR o.e.m.j.internal.DownloadSourcesJob - Could not download sources for org.apache.logging.log4j:log4j-api:2.13.3
+org.eclipse.core.runtime.CoreException: Could not resolve artifact org.apache.logging.log4j:log4j-api:jar:sources:2.13.3
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.lambda$4(MavenImpl.java:801) ~[org.eclipse.m2e.core_1.13.0.20190716-1624.jar:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:177) ~[org.eclipse.m2e.core_1.13.0.20190716-1624.jar:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:112) ~[org.eclipse.m2e.core_1.13.0.20190716-1624.jar:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:99) ~[org.eclipse.m2e.core_1.13.0.20190716-1624.jar:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.resolve(MavenImpl.java:769) ~[org.eclipse.m2e.core_1.13.0.20190716-1624.jar:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.resolve(MavenImpl.java:746) ~[org.eclipse.m2e.core_1.13.0.20190716-1624.jar:na]
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.download(DownloadSourcesJob.java:328) [org.eclipse.m2e.jdt_1.13.0.20190716-1624.jar:na]
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.downloadAttachments(DownloadSourcesJob.java:302) [org.eclipse.m2e.jdt_1.13.0.20190716-1624.jar:na]
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.downloadMaven(DownloadSourcesJob.java:267) [org.eclipse.m2e.jdt_1.13.0.20190716-1624.jar:na]
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.downloadFilesAndPopulateToUpdate(DownloadSourcesJob.java:231) [org.eclipse.m2e.jdt_1.13.0.20190716-1624.jar:na]
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.lambda$0(DownloadSourcesJob.java:159) [org.eclipse.m2e.jdt_1.13.0.20190716-1624.jar:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:177) ~[org.eclipse.m2e.core_1.13.0.20190716-1624.jar:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:151) ~[org.eclipse.m2e.core_1.13.0.20190716-1624.jar:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:99) ~[org.eclipse.m2e.core_1.13.0.20190716-1624.jar:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.execute(MavenImpl.java:1374) ~[org.eclipse.m2e.core_1.13.0.20190716-1624.jar:na]
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.run(DownloadSourcesJob.java:159) [org.eclipse.m2e.jdt_1.13.0.20190716-1624.jar:na]
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63) ~[org.eclipse.core.jobs_3.10.500.v20190620-1426.jar:na]
+2020-10-29 22:53:42,642 [Worker-657: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-10-29 22:53:42,644 [Worker-657: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2020-10-29 22:53:42,647 [Worker-657: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-10-29 22:53:42,728 [Worker-647: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://oss.jfrog.org/artifactory/oss-snapshot-local/org/slf4j/jul-to-slf4j/1.7.30/jul-to-slf4j-1.7.30-sources.jar
+2020-10-29 22:53:42,731 [Worker-647: Download sources and javadoc] ERROR o.e.m.j.internal.DownloadSourcesJob - Could not download sources for org.slf4j:jul-to-slf4j:1.7.30
+org.eclipse.core.runtime.CoreException: Could not resolve artifact org.slf4j:jul-to-slf4j:jar:sources:1.7.30
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.lambda$4(MavenImpl.java:801) ~[org.eclipse.m2e.core_1.13.0.20190716-1624.jar:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:177) ~[org.eclipse.m2e.core_1.13.0.20190716-1624.jar:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:112) ~[org.eclipse.m2e.core_1.13.0.20190716-1624.jar:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:99) ~[org.eclipse.m2e.core_1.13.0.20190716-1624.jar:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.resolve(MavenImpl.java:769) ~[org.eclipse.m2e.core_1.13.0.20190716-1624.jar:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.resolve(MavenImpl.java:746) ~[org.eclipse.m2e.core_1.13.0.20190716-1624.jar:na]
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.download(DownloadSourcesJob.java:328) [org.eclipse.m2e.jdt_1.13.0.20190716-1624.jar:na]
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.downloadAttachments(DownloadSourcesJob.java:302) [org.eclipse.m2e.jdt_1.13.0.20190716-1624.jar:na]
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.downloadMaven(DownloadSourcesJob.java:267) [org.eclipse.m2e.jdt_1.13.0.20190716-1624.jar:na]
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.downloadFilesAndPopulateToUpdate(DownloadSourcesJob.java:231) [org.eclipse.m2e.jdt_1.13.0.20190716-1624.jar:na]
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.lambda$0(DownloadSourcesJob.java:159) [org.eclipse.m2e.jdt_1.13.0.20190716-1624.jar:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:177) ~[org.eclipse.m2e.core_1.13.0.20190716-1624.jar:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:151) ~[org.eclipse.m2e.core_1.13.0.20190716-1624.jar:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:99) ~[org.eclipse.m2e.core_1.13.0.20190716-1624.jar:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.execute(MavenImpl.java:1374) ~[org.eclipse.m2e.core_1.13.0.20190716-1624.jar:na]
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.run(DownloadSourcesJob.java:159) [org.eclipse.m2e.jdt_1.13.0.20190716-1624.jar:na]
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63) ~[org.eclipse.core.jobs_3.10.500.v20190620-1426.jar:na]
+2020-10-29 22:53:42,733 [Worker-657: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-10-29 22:53:42,734 [Worker-657: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\user\Documents\Great-Outdoors\AddToCart\src\test\resources
+2020-10-29 22:53:45,785 [Worker-657: Building workspace] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.example:GreatOutdoors:0.0.1-SNAPSHOT @ C:\Users\user\Documents\Great-Outdoors\Great Outdoor\CancelManagementSystem\pom.xml.
+2020-10-29 22:53:45,853 [Worker-647: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://oss.jfrog.org/artifactory/oss-snapshot-local/jakarta/annotation/jakarta.annotation-api/1.3.5/jakarta.annotation-api-1.3.5-sources.jar
+2020-10-29 22:53:45,857 [Worker-647: Download sources and javadoc] ERROR o.e.m.j.internal.DownloadSourcesJob - Could not download sources for jakarta.annotation:jakarta.annotation-api:1.3.5
+org.eclipse.core.runtime.CoreException: Could not resolve artifact jakarta.annotation:jakarta.annotation-api:jar:sources:1.3.5
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.lambda$4(MavenImpl.java:801) ~[org.eclipse.m2e.core_1.13.0.20190716-1624.jar:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:177) ~[org.eclipse.m2e.core_1.13.0.20190716-1624.jar:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:112) ~[org.eclipse.m2e.core_1.13.0.20190716-1624.jar:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:99) ~[org.eclipse.m2e.core_1.13.0.20190716-1624.jar:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.resolve(MavenImpl.java:769) ~[org.eclipse.m2e.core_1.13.0.20190716-1624.jar:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.resolve(MavenImpl.java:746) ~[org.eclipse.m2e.core_1.13.0.20190716-1624.jar:na]
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.download(DownloadSourcesJob.java:328) [org.eclipse.m2e.jdt_1.13.0.20190716-1624.jar:na]
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.downloadAttachments(DownloadSourcesJob.java:302) [org.eclipse.m2e.jdt_1.13.0.20190716-1624.jar:na]
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.downloadMaven(DownloadSourcesJob.java:267) [org.eclipse.m2e.jdt_1.13.0.20190716-1624.jar:na]
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.downloadFilesAndPopulateToUpdate(DownloadSourcesJob.java:231) [org.eclipse.m2e.jdt_1.13.0.20190716-1624.jar:na]
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.lambda$0(DownloadSourcesJob.java:159) [org.eclipse.m2e.jdt_1.13.0.20190716-1624.jar:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:177) ~[org.eclipse.m2e.core_1.13.0.20190716-1624.jar:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:151) ~[org.eclipse.m2e.core_1.13.0.20190716-1624.jar:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:99) ~[org.eclipse.m2e.core_1.13.0.20190716-1624.jar:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.execute(MavenImpl.java:1374) ~[org.eclipse.m2e.core_1.13.0.20190716-1624.jar:na]
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.run(DownloadSourcesJob.java:159) [org.eclipse.m2e.jdt_1.13.0.20190716-1624.jar:na]
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63) ~[org.eclipse.core.jobs_3.10.500.v20190620-1426.jar:na]
+2020-10-29 22:53:47,904 [Worker-657: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-10-29 22:53:47,905 [Worker-657: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2020-10-29 22:53:47,907 [Worker-657: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-10-29 22:53:47,909 [Worker-657: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-10-29 22:53:47,909 [Worker-657: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\user\Documents\Great-Outdoors\Great Outdoor\CancelManagementSystem\src\test\resources
+2020-10-29 22:53:48,104 [Worker-647: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://oss.jfrog.org/artifactory/oss-snapshot-local/org/yaml/snakeyaml/1.26/snakeyaml-1.26-sources.jar
+2020-10-29 22:53:48,108 [Worker-647: Download sources and javadoc] ERROR o.e.m.j.internal.DownloadSourcesJob - Could not download sources for org.yaml:snakeyaml:1.26
+org.eclipse.core.runtime.CoreException: Could not resolve artifact org.yaml:snakeyaml:jar:sources:1.26
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.lambda$4(MavenImpl.java:801) ~[org.eclipse.m2e.core_1.13.0.20190716-1624.jar:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:177) ~[org.eclipse.m2e.core_1.13.0.20190716-1624.jar:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:112) ~[org.eclipse.m2e.core_1.13.0.20190716-1624.jar:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:99) ~[org.eclipse.m2e.core_1.13.0.20190716-1624.jar:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.resolve(MavenImpl.java:769) ~[org.eclipse.m2e.core_1.13.0.20190716-1624.jar:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.resolve(MavenImpl.java:746) ~[org.eclipse.m2e.core_1.13.0.20190716-1624.jar:na]
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.download(DownloadSourcesJob.java:328) [org.eclipse.m2e.jdt_1.13.0.20190716-1624.jar:na]
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.downloadAttachments(DownloadSourcesJob.java:302) [org.eclipse.m2e.jdt_1.13.0.20190716-1624.jar:na]
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.downloadMaven(DownloadSourcesJob.java:267) [org.eclipse.m2e.jdt_1.13.0.20190716-1624.jar:na]
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.downloadFilesAndPopulateToUpdate(DownloadSourcesJob.java:231) [org.eclipse.m2e.jdt_1.13.0.20190716-1624.jar:na]
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.lambda$0(DownloadSourcesJob.java:159) [org.eclipse.m2e.jdt_1.13.0.20190716-1624.jar:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:177) ~[org.eclipse.m2e.core_1.13.0.20190716-1624.jar:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:151) ~[org.eclipse.m2e.core_1.13.0.20190716-1624.jar:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:99) ~[org.eclipse.m2e.core_1.13.0.20190716-1624.jar:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.execute(MavenImpl.java:1374) ~[org.eclipse.m2e.core_1.13.0.20190716-1624.jar:na]
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.run(DownloadSourcesJob.java:159) [org.eclipse.m2e.jdt_1.13.0.20190716-1624.jar:na]
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63) ~[org.eclipse.core.jobs_3.10.500.v20190620-1426.jar:na]
+2020-10-29 22:53:50,392 [Worker-647: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://oss.jfrog.org/artifactory/oss-snapshot-local/com/fasterxml/jackson/datatype/jackson-datatype-jsr310/2.11.2/jackson-datatype-jsr310-2.11.2-sources.jar
+2020-10-29 22:53:50,397 [Worker-647: Download sources and javadoc] ERROR o.e.m.j.internal.DownloadSourcesJob - Could not download sources for com.fasterxml.jackson.datatype:jackson-datatype-jsr310:2.11.2
+org.eclipse.core.runtime.CoreException: Could not resolve artifact com.fasterxml.jackson.datatype:jackson-datatype-jsr310:jar:sources:2.11.2
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.lambda$4(MavenImpl.java:801) ~[org.eclipse.m2e.core_1.13.0.20190716-1624.jar:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:177) ~[org.eclipse.m2e.core_1.13.0.20190716-1624.jar:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:112) ~[org.eclipse.m2e.core_1.13.0.20190716-1624.jar:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:99) ~[org.eclipse.m2e.core_1.13.0.20190716-1624.jar:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.resolve(MavenImpl.java:769) ~[org.eclipse.m2e.core_1.13.0.20190716-1624.jar:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.resolve(MavenImpl.java:746) ~[org.eclipse.m2e.core_1.13.0.20190716-1624.jar:na]
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.download(DownloadSourcesJob.java:328) [org.eclipse.m2e.jdt_1.13.0.20190716-1624.jar:na]
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.downloadAttachments(DownloadSourcesJob.java:302) [org.eclipse.m2e.jdt_1.13.0.20190716-1624.jar:na]
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.downloadMaven(DownloadSourcesJob.java:267) [org.eclipse.m2e.jdt_1.13.0.20190716-1624.jar:na]
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.downloadFilesAndPopulateToUpdate(DownloadSourcesJob.java:231) [org.eclipse.m2e.jdt_1.13.0.20190716-1624.jar:na]
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.lambda$0(DownloadSourcesJob.java:159) [org.eclipse.m2e.jdt_1.13.0.20190716-1624.jar:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:177) ~[org.eclipse.m2e.core_1.13.0.20190716-1624.jar:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:151) ~[org.eclipse.m2e.core_1.13.0.20190716-1624.jar:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:99) ~[org.eclipse.m2e.core_1.13.0.20190716-1624.jar:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.execute(MavenImpl.java:1374) ~[org.eclipse.m2e.core_1.13.0.20190716-1624.jar:na]
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.run(DownloadSourcesJob.java:159) [org.eclipse.m2e.jdt_1.13.0.20190716-1624.jar:na]
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63) ~[org.eclipse.core.jobs_3.10.500.v20190620-1426.jar:na]
+2020-10-29 22:53:53,903 [Worker-647: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://oss.jfrog.org/artifactory/oss-snapshot-local/log4j/log4j/1.2.17/log4j-1.2.17-sources.jar
+2020-10-29 22:53:59,576 [Worker-647: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/log4j/log4j/1.2.17/log4j-1.2.17-sources.jar
+2020-10-29 22:54:04,945 [Worker-647: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/log4j/log4j/1.2.17/log4j-1.2.17-sources.jar
+2020-10-29 22:54:05,453 [Worker-647: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for log4j:log4j:1.2.17
+2020-10-29 22:54:06,725 [Worker-659: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-10-29 22:54:06,727 [Worker-659: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2020-10-29 22:54:06,730 [Worker-659: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-10-29 22:54:06,732 [Worker-659: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-10-29 22:54:06,733 [Worker-659: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\user\Documents\Great-Outdoors\Great Outdoor\CancelManagementSystem\src\test\resources
+2020-10-29 22:54:07,564 [Worker-647: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://oss.jfrog.org/artifactory/oss-snapshot-local/io/springfox/springfox-swagger-ui/3.0.0-SNAPSHOT/springfox-swagger-ui-3.0.0-20200713.230258-110-sources.jar
+2020-10-29 22:54:08,180 [Worker-647: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://oss.jfrog.org/artifactory/oss-snapshot-local/io/springfox/springfox-swagger-ui/3.0.0-SNAPSHOT/springfox-swagger-ui-3.0.0-20200713.230258-110-sources.jar
+2020-10-29 22:54:09,248 [Worker-647: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for io.springfox:springfox-swagger-ui:3.0.0-SNAPSHOT
+2020-10-29 22:54:10,846 [Worker-647: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://oss.jfrog.org/artifactory/oss-snapshot-local/io/springfox/springfox-spring-webmvc/3.0.0-SNAPSHOT/springfox-spring-webmvc-3.0.0-20200713.230258-103-sources.jar
+2020-10-29 22:54:11,422 [Worker-647: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://oss.jfrog.org/artifactory/oss-snapshot-local/io/springfox/springfox-spring-webmvc/3.0.0-SNAPSHOT/springfox-spring-webmvc-3.0.0-20200713.230258-103-sources.jar
+2020-10-29 22:54:11,627 [Worker-647: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for io.springfox:springfox-spring-webmvc:3.0.0-SNAPSHOT
+2020-10-29 22:54:13,298 [Worker-647: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://oss.jfrog.org/artifactory/oss-snapshot-local/io/springfox/springfox-swagger2/3.0.0-SNAPSHOT/springfox-swagger2-3.0.0-20200713.230259-111-sources.jar
+2020-10-29 22:54:14,566 [Worker-647: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://oss.jfrog.org/artifactory/oss-snapshot-local/io/springfox/springfox-swagger2/3.0.0-SNAPSHOT/springfox-swagger2-3.0.0-20200713.230259-111-sources.jar
+2020-10-29 22:54:14,794 [Worker-647: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for io.springfox:springfox-swagger2:3.0.0-SNAPSHOT
+2020-10-29 22:54:16,675 [Worker-647: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://oss.jfrog.org/artifactory/oss-snapshot-local/io/springfox/springfox-spi/3.0.0-SNAPSHOT/springfox-spi-3.0.0-20200713.230256-111-sources.jar
+2020-10-29 22:54:17,782 [Worker-647: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://oss.jfrog.org/artifactory/oss-snapshot-local/io/springfox/springfox-spi/3.0.0-SNAPSHOT/springfox-spi-3.0.0-20200713.230256-111-sources.jar
+2020-10-29 22:54:18,085 [Worker-647: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for io.springfox:springfox-spi:3.0.0-SNAPSHOT
+2020-10-29 22:54:20,466 [Worker-647: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://oss.jfrog.org/artifactory/oss-snapshot-local/io/springfox/springfox-schema/3.0.0-SNAPSHOT/springfox-schema-3.0.0-20200713.230255-111-sources.jar
+2020-10-29 22:54:21,898 [Worker-647: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://oss.jfrog.org/artifactory/oss-snapshot-local/io/springfox/springfox-schema/3.0.0-SNAPSHOT/springfox-schema-3.0.0-20200713.230255-111-sources.jar
+2020-10-29 22:54:22,069 [Worker-647: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for io.springfox:springfox-schema:3.0.0-SNAPSHOT
+2020-10-29 22:54:23,584 [Worker-647: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://oss.jfrog.org/artifactory/oss-snapshot-local/io/springfox/springfox-swagger-common/3.0.0-SNAPSHOT/springfox-swagger-common-3.0.0-20200713.230258-111-sources.jar
+2020-10-29 22:54:24,894 [Worker-647: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://oss.jfrog.org/artifactory/oss-snapshot-local/io/springfox/springfox-swagger-common/3.0.0-SNAPSHOT/springfox-swagger-common-3.0.0-20200713.230258-111-sources.jar
+2020-10-29 22:54:24,977 [Worker-647: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for io.springfox:springfox-swagger-common:3.0.0-SNAPSHOT
+2020-10-29 22:54:26,465 [Worker-647: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://oss.jfrog.org/artifactory/oss-snapshot-local/io/swagger/core/v3/swagger-annotations/2.1.2/swagger-annotations-2.1.2-sources.jar
+2020-10-29 22:54:28,338 [Worker-647: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/io/swagger/core/v3/swagger-annotations/2.1.2/swagger-annotations-2.1.2-sources.jar
+2020-10-29 22:54:29,391 [Worker-647: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/io/swagger/core/v3/swagger-annotations/2.1.2/swagger-annotations-2.1.2-sources.jar
+2020-10-29 22:54:29,539 [Worker-647: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for io.swagger.core.v3:swagger-annotations:2.1.2
+2020-10-29 22:54:31,076 [Worker-647: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://oss.jfrog.org/artifactory/oss-snapshot-local/io/springfox/springfox-spring-web/3.0.0-SNAPSHOT/springfox-spring-web-3.0.0-20200713.230257-110-sources.jar
+2020-10-29 22:54:32,830 [Worker-647: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://oss.jfrog.org/artifactory/oss-snapshot-local/io/springfox/springfox-spring-web/3.0.0-SNAPSHOT/springfox-spring-web-3.0.0-20200713.230257-110-sources.jar
+2020-10-29 22:54:33,025 [Worker-647: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for io.springfox:springfox-spring-web:3.0.0-SNAPSHOT
+2020-10-29 22:54:34,709 [Worker-647: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://oss.jfrog.org/artifactory/oss-snapshot-local/io/github/classgraph/classgraph/4.8.83/classgraph-4.8.83-sources.jar
+2020-10-29 22:54:37,241 [Worker-647: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/io/github/classgraph/classgraph/4.8.83/classgraph-4.8.83-sources.jar
+2020-10-29 22:54:42,475 [Worker-647: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/io/github/classgraph/classgraph/4.8.83/classgraph-4.8.83-sources.jar
+2020-10-29 22:54:42,634 [Worker-647: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for io.github.classgraph:classgraph:4.8.83
+2020-10-29 22:54:44,324 [Worker-647: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://oss.jfrog.org/artifactory/oss-snapshot-local/io/springfox/springfox-spring-webflux/3.0.0-SNAPSHOT/springfox-spring-webflux-3.0.0-20200713.230257-103-sources.jar
+2020-10-29 22:54:44,953 [Worker-647: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://oss.jfrog.org/artifactory/oss-snapshot-local/io/springfox/springfox-spring-webflux/3.0.0-SNAPSHOT/springfox-spring-webflux-3.0.0-20200713.230257-103-sources.jar
+2020-10-29 22:54:45,128 [Worker-647: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for io.springfox:springfox-spring-webflux:3.0.0-SNAPSHOT
+2020-10-29 22:54:46,781 [Worker-647: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://oss.jfrog.org/artifactory/oss-snapshot-local/org/springframework/plugin/spring-plugin-metadata/2.0.0.RELEASE/spring-plugin-metadata-2.0.0.RELEASE-sources.jar
+2020-10-29 22:54:48,512 [Worker-647: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/springframework/plugin/spring-plugin-metadata/2.0.0.RELEASE/spring-plugin-metadata-2.0.0.RELEASE-sources.jar
+2020-10-29 22:54:48,848 [Worker-647: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/springframework/plugin/spring-plugin-metadata/2.0.0.RELEASE/spring-plugin-metadata-2.0.0.RELEASE-sources.jar
+2020-10-29 22:54:48,999 [Worker-647: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for org.springframework.plugin:spring-plugin-metadata:2.0.0.RELEASE
+2020-10-29 22:54:50,571 [Worker-647: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://oss.jfrog.org/artifactory/oss-snapshot-local/org/mapstruct/mapstruct/1.3.1.Final/mapstruct-1.3.1.Final-sources.jar
+2020-10-29 22:54:52,521 [Worker-647: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/mapstruct/mapstruct/1.3.1.Final/mapstruct-1.3.1.Final-sources.jar
+2020-10-29 22:54:53,319 [Worker-647: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/mapstruct/mapstruct/1.3.1.Final/mapstruct-1.3.1.Final-sources.jar
+2020-10-29 22:54:53,593 [Worker-647: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for org.mapstruct:mapstruct:1.3.1.Final
+2020-10-29 22:54:55,290 [Worker-647: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://oss.jfrog.org/artifactory/oss-snapshot-local/io/springfox/springfox-data-rest/3.0.0-SNAPSHOT/springfox-data-rest-3.0.0-20200713.230254-111-sources.jar
+2020-10-29 22:54:56,717 [Worker-647: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://oss.jfrog.org/artifactory/oss-snapshot-local/io/springfox/springfox-data-rest/3.0.0-SNAPSHOT/springfox-data-rest-3.0.0-20200713.230254-111-sources.jar
+2020-10-29 22:54:56,851 [Worker-647: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for io.springfox:springfox-data-rest:3.0.0-SNAPSHOT
+2020-10-29 22:54:58,369 [Worker-647: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://oss.jfrog.org/artifactory/oss-snapshot-local/io/springfox/springfox-core/3.0.0-SNAPSHOT/springfox-core-3.0.0-20200713.230255-112-sources.jar
+2020-10-29 22:55:01,314 [Worker-647: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://oss.jfrog.org/artifactory/oss-snapshot-local/io/springfox/springfox-core/3.0.0-SNAPSHOT/springfox-core-3.0.0-20200713.230255-112-sources.jar
+2020-10-29 22:55:01,464 [Worker-647: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for io.springfox:springfox-core:3.0.0-SNAPSHOT
+2020-10-29 22:55:03,010 [Worker-647: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://oss.jfrog.org/artifactory/oss-snapshot-local/antlr/antlr/2.7.7/antlr-2.7.7-javadoc.jar
+2020-10-29 22:55:03,013 [Worker-647: Download sources and javadoc] ERROR o.e.m.j.internal.DownloadSourcesJob - Could not download javadoc for antlr:antlr:2.7.7
+org.eclipse.core.runtime.CoreException: Could not resolve artifact antlr:antlr:jar:javadoc:2.7.7
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.lambda$4(MavenImpl.java:801) ~[org.eclipse.m2e.core_1.13.0.20190716-1624.jar:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:177) ~[org.eclipse.m2e.core_1.13.0.20190716-1624.jar:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:112) ~[org.eclipse.m2e.core_1.13.0.20190716-1624.jar:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:99) ~[org.eclipse.m2e.core_1.13.0.20190716-1624.jar:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.resolve(MavenImpl.java:769) ~[org.eclipse.m2e.core_1.13.0.20190716-1624.jar:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.resolve(MavenImpl.java:746) ~[org.eclipse.m2e.core_1.13.0.20190716-1624.jar:na]
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.download(DownloadSourcesJob.java:328) [org.eclipse.m2e.jdt_1.13.0.20190716-1624.jar:na]
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.downloadAttachments(DownloadSourcesJob.java:314) [org.eclipse.m2e.jdt_1.13.0.20190716-1624.jar:na]
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.downloadMaven(DownloadSourcesJob.java:267) [org.eclipse.m2e.jdt_1.13.0.20190716-1624.jar:na]
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.downloadFilesAndPopulateToUpdate(DownloadSourcesJob.java:231) [org.eclipse.m2e.jdt_1.13.0.20190716-1624.jar:na]
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.lambda$0(DownloadSourcesJob.java:159) [org.eclipse.m2e.jdt_1.13.0.20190716-1624.jar:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:177) ~[org.eclipse.m2e.core_1.13.0.20190716-1624.jar:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:151) ~[org.eclipse.m2e.core_1.13.0.20190716-1624.jar:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:99) ~[org.eclipse.m2e.core_1.13.0.20190716-1624.jar:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.execute(MavenImpl.java:1374) ~[org.eclipse.m2e.core_1.13.0.20190716-1624.jar:na]
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.run(DownloadSourcesJob.java:159) [org.eclipse.m2e.jdt_1.13.0.20190716-1624.jar:na]
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63) ~[org.eclipse.core.jobs_3.10.500.v20190620-1426.jar:na]
+2020-10-29 22:55:03,021 [Worker-647: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for io.springfox:springfox-swagger-ui:3.0.0-SNAPSHOT
+2020-10-29 22:55:03,026 [Worker-647: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for io.springfox:springfox-spring-webmvc:3.0.0-SNAPSHOT
+2020-10-29 22:55:03,032 [Worker-647: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for io.springfox:springfox-swagger2:3.0.0-SNAPSHOT
+2020-10-29 22:55:03,037 [Worker-647: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for io.springfox:springfox-spi:3.0.0-SNAPSHOT
+2020-10-29 22:55:03,043 [Worker-647: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for io.springfox:springfox-schema:3.0.0-SNAPSHOT
+2020-10-29 22:55:03,049 [Worker-647: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for io.springfox:springfox-swagger-common:3.0.0-SNAPSHOT
+2020-10-29 22:55:03,054 [Worker-647: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for io.swagger.core.v3:swagger-annotations:2.1.2
+2020-10-29 22:55:03,060 [Worker-647: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for io.springfox:springfox-spring-web:3.0.0-SNAPSHOT
+2020-10-29 22:55:03,064 [Worker-647: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for io.github.classgraph:classgraph:4.8.83
+2020-10-29 22:55:03,070 [Worker-647: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for io.springfox:springfox-spring-webflux:3.0.0-SNAPSHOT
+2020-10-29 22:55:03,075 [Worker-647: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for org.springframework.plugin:spring-plugin-metadata:2.0.0.RELEASE
+2020-10-29 22:55:03,079 [Worker-647: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for org.mapstruct:mapstruct:1.3.1.Final
+2020-10-29 22:55:03,085 [Worker-647: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for io.springfox:springfox-data-rest:3.0.0-SNAPSHOT
+2020-10-29 22:55:03,091 [Worker-647: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for io.springfox:springfox-core:3.0.0-SNAPSHOT
+2020-10-29 22:55:03,095 [Worker-647: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for log4j:log4j:1.2.17
+2020-10-29 22:55:06,283 [Worker-660: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-10-29 22:55:06,283 [Worker-660: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-10-29 22:55:06,284 [Worker-660: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-10-29 22:55:06,286 [Worker-660: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-10-29 22:55:06,286 [Worker-660: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\user\Documents\Great-Outdoors\AddToCart\src\test\resources
+2020-10-29 22:55:06,359 [Worker-660: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-10-29 22:55:06,360 [Worker-660: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-10-29 22:55:06,360 [Worker-660: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-10-29 22:55:06,362 [Worker-660: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-10-29 22:55:06,362 [Worker-660: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\user\Documents\Great-Outdoors\Great Outdoor\CancelManagementSystem\src\test\resources
+2020-10-29 22:57:09,738 [Worker-598: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-10-29 22:57:09,739 [Worker-598: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2020-10-29 22:57:09,742 [Worker-598: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-10-29 22:57:09,745 [Worker-598: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-10-29 22:57:09,745 [Worker-598: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\user\Documents\Great-Outdoors\AddToCart\src\test\resources
+2020-10-29 22:59:10,673 [Worker-598: Building workspace] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.example:GreatOutdoors:0.0.1-SNAPSHOT @ C:\Users\user\Documents\Great-Outdoors\Great Outdoor\WishlistManagementSystem\pom.xml.
+2020-10-29 22:59:11,763 [Worker-598: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-10-29 22:59:11,763 [Worker-598: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-10-29 22:59:11,764 [Worker-598: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-10-29 22:59:11,768 [Worker-598: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-10-29 22:59:11,768 [Worker-598: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\user\Documents\Great-Outdoors\Great Outdoor\WishlistManagementSystem\src\test\resources
+2020-10-29 22:59:43,243 [Worker-659: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-10-29 22:59:43,244 [Worker-659: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2020-10-29 22:59:43,246 [Worker-659: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-10-29 22:59:43,248 [Worker-659: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-10-29 22:59:43,249 [Worker-659: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\user\Documents\Great-Outdoors\Great Outdoor\WishlistManagementSystem\src\test\resources
+2020-10-29 23:00:51,644 [Worker-662: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-10-29 23:00:51,646 [Worker-662: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2020-10-29 23:00:51,649 [Worker-662: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-10-29 23:00:51,652 [Worker-662: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-10-29 23:00:51,652 [Worker-662: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\user\Documents\Great-Outdoors\Great Outdoor\WishlistManagementSystem\src\test\resources
+2020-10-29 23:49:02,484 [Worker-674: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-10-29 23:49:02,486 [Worker-674: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2020-10-29 23:49:02,489 [Worker-674: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-10-29 23:49:02,492 [Worker-674: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-10-29 23:49:02,492 [Worker-674: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\user\Documents\Great-Outdoors\AddToCart\src\test\resources
+2020-10-29 23:54:58,475 [Worker-679: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-10-29 23:54:58,476 [Worker-679: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2020-10-29 23:54:58,479 [Worker-679: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-10-29 23:54:58,482 [Worker-679: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-10-29 23:54:58,482 [Worker-679: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\user\Documents\Great-Outdoors\Great Outdoor\WishlistManagementSystem\src\test\resources
+2020-10-29 23:57:50,705 [Worker-674: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-10-29 23:57:50,707 [Worker-674: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2020-10-29 23:57:50,710 [Worker-674: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-10-29 23:57:50,712 [Worker-674: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-10-29 23:57:50,713 [Worker-674: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\user\Documents\Great-Outdoors\Great Outdoor\WishlistManagementSystem\src\test\resources
+2020-10-30 00:10:06,111 [Worker-677: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-10-30 00:10:06,112 [Worker-677: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2020-10-30 00:10:06,115 [Worker-677: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2020-10-30 00:10:06,117 [Worker-677: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-10-30 00:10:06,117 [Worker-677: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\user\Documents\Great-Outdoors\Great Outdoor\AddressManagementSystem\src\test\resources
+2020-10-30 00:10:27,540 [Worker-686: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-10-30 00:10:27,542 [Worker-686: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2020-10-30 00:10:27,544 [Worker-686: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2020-10-30 00:10:27,546 [Worker-686: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-10-30 00:10:27,546 [Worker-686: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\user\Documents\Great-Outdoors\Great Outdoor\AddressManagementSystem\src\test\resources
+2020-10-30 00:13:05,338 [Worker-682: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-10-30 00:13:05,340 [Worker-682: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2020-10-30 00:13:05,343 [Worker-682: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2020-10-30 00:13:05,347 [Worker-682: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-10-30 00:13:05,347 [Worker-682: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\user\Documents\Great-Outdoors\Great Outdoor\AddressManagementSystem\src\test\resources
+2020-10-30 09:07:30,549 [Worker-715: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-10-30 09:07:30,551 [Worker-715: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2020-10-30 09:07:30,554 [Worker-715: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-10-30 09:07:30,556 [Worker-715: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-10-30 09:07:30,557 [Worker-715: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\user\Documents\Great-Outdoors\Great Outdoor\ProductManagementSystem\src\test\resources
+2020-10-30 09:24:28,280 [Worker-722: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-10-30 09:24:28,281 [Worker-722: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2020-10-30 09:24:28,284 [Worker-722: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-10-30 09:24:28,286 [Worker-722: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-10-30 09:24:28,286 [Worker-722: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\user\Documents\Great-Outdoors\Great Outdoor\ProductManagementSystem\src\test\resources
+2020-10-30 09:24:57,817 [Worker-725: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-10-30 09:24:57,818 [Worker-725: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2020-10-30 09:24:57,822 [Worker-725: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-10-30 09:24:57,824 [Worker-725: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-10-30 09:24:57,825 [Worker-725: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\user\Documents\Great-Outdoors\Great Outdoor\ProductManagementSystem\src\test\resources
+2020-10-30 09:26:08,345 [Worker-727: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-10-30 09:26:08,349 [Worker-727: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2020-10-30 09:26:08,356 [Worker-727: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-10-30 09:26:08,447 [Worker-727: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-10-30 09:26:08,447 [Worker-727: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\user\Documents\Great-Outdoors\Great Outdoor\ProductManagementSystem\src\test\resources
+2020-10-30 09:40:26,511 [Worker-730: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-10-30 09:40:26,512 [Worker-730: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2020-10-30 09:40:26,514 [Worker-730: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-10-30 09:40:26,518 [Worker-730: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-10-30 09:40:26,518 [Worker-730: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\user\Documents\Great-Outdoors\Great Outdoor\ProductManagementSystem\src\test\resources
+2020-10-30 09:44:58,150 [Worker-745: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-10-30 09:44:58,151 [Worker-745: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2020-10-30 09:44:58,153 [Worker-745: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-10-30 09:44:58,154 [Worker-745: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-10-30 09:44:58,154 [Worker-745: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\user\Documents\Great-Outdoors\Great Outdoor\ProductManagementSystem\src\test\resources
+2020-10-30 09:50:09,126 [Worker-766: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-10-30 09:50:09,128 [Worker-766: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2020-10-30 09:50:09,130 [Worker-766: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-10-30 09:50:09,132 [Worker-766: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-10-30 09:50:09,132 [Worker-766: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\user\Documents\Great-Outdoors\Great Outdoor\ProductManagementSystem\src\test\resources
