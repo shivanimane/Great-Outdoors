@@ -31,11 +31,7 @@ import com.greatoutdoor.addtocart.service.OrderAndCartService;
 
 import io.swagger.annotations.ApiOperation;
 
-/**
- * @author Shivani
 
- *
- */
 @RestController
 @RequestMapping("/cart")
 public class OrderController {
