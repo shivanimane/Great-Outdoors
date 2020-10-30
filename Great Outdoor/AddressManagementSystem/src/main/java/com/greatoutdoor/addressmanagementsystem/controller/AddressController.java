@@ -4,12 +4,16 @@
 package com.greatoutdoor.addressmanagementsystem.controller;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -19,6 +23,7 @@ import com.greatoutdoor.addressmanagementsystem.exception.AddressNotFound;
 import com.greatoutdoor.addressmanagementsystem.exception.NullParameterException;
 import com.greatoutdoor.addressmanagementsystem.model.Address;
 import com.greatoutdoor.addressmanagementsystem.service.AddressService;
+
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -64,48 +69,55 @@ public class AddressController {
 			value = "Post address"
 			
 			)
+	
 	@PostMapping("/addAddress")
-	String addAddress(@RequestBody Address address) throws AddressNotFound, NullParameterException {
-		if (address.getAddressId() == null)
-		{
-			throw new NullParameterException("Please provide Address Id");
-		}
-		String status="Address added";
-		
-		
-			if(addressService.addAddress(address)) {
-			return status;
+	ResponseEntity<String> addAddress(@RequestBody Address address)  {
+		addressService.addAddress(address);
+			return ResponseEntity.ok("Address has been added");
 			
-		} 
-		return "fail to add Address";
-	}
+}
+	
 	@ApiOperation(
 			value = "Update address"
 			
 			)
-	@PostMapping("/updateAddress")
-	String updateAddress(@RequestBody Address address) throws AddressNotFound {
+	@PutMapping("/updateAddress")
+	String updateAddress(@RequestBody Address address)  {
 		String status="Address Updated";
 		
 		
-			if(addressService.updateAddress(address)) {
-				return status;
+			if(addressService.updateAddress(address)==false) {
+				throw new AddressNotFound("Address not found");
 			
 		} 
-		return "Failed to update Address";
+		return "successfully update Address";
 	}
 	
 	@ApiOperation(
 			value = "Delete address"
 			
 			)
-	@PostMapping("/deleteAddress/{addressId}")
+	@DeleteMapping("/deleteAddress/{addressId}")
 	String deleteAddress(@PathVariable String addressId) throws AddressNotFound {
 		
-			if(addressService.deleteAddress(addressId)) {
+			if(addressService.deleteAddress(addressId)==false) {
+				throw new AddressNotFound("Address not found");}
+			else {
 				return"Address Deleted Successfully";
 			
 		} 
-		return "error";
+		
 	}
+	
+	@GetMapping("/getAddressById")
+	Optional<Address> getAddressById(@RequestParam String addressId){
+		if(addressService.getAddressById(addressId)==null) {
+			throw new AddressNotFound("Address Not Found");
+		} else {
+			return addressService.getAddressById(addressId);
+		}
+		
+	}
+
+	
 }

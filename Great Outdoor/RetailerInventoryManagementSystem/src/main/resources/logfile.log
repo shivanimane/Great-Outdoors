@@ -448,3 +448,35 @@ java.lang.ClassCastException: java.util.ArrayList cannot be cast to com.greatout
 2020-10-30 13:05:09.437  INFO 13564 --- [restartedMain] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
 2020-10-30 13:05:09.440  INFO 13564 --- [restartedMain] c.g.r.RetailerInventoryManagementSystem  : Started RetailerInventoryManagementSystem in 0.662 seconds (JVM running for 13924.493)
 2020-10-30 13:05:09.441  INFO 13564 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2020-10-30 13:55:20.604  INFO 13564 --- [Thread-37] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-10-30 13:55:20.609  INFO 13564 --- [Thread-37] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-10-30 13:55:20.610  INFO 13564 --- [Thread-37] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Shutdown initiated...
+2020-10-30 13:55:20.616  INFO 13564 --- [Thread-37] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Shutdown completed.
+2020-10-30 13:55:20.994  INFO 13564 --- [restartedMain] c.g.r.RetailerInventoryManagementSystem  : Starting RetailerInventoryManagementSystem on LAPTOP-0I1I76M4 with PID 13564 (C:\Users\Deepali\Documents\GitHub\Great-Outdoors\Great Outdoor\RetailerInventoryManagementSystem\target\classes started by Deepali in C:\Users\Deepali\Documents\GitHub\Great-Outdoors\Great Outdoor\RetailerInventoryManagementSystem)
+2020-10-30 13:55:20.994  INFO 13564 --- [restartedMain] c.g.r.RetailerInventoryManagementSystem  : No active profile set, falling back to default profiles: default
+2020-10-30 13:55:21.435  INFO 13564 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2020-10-30 13:55:21.459  INFO 13564 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 22ms. Found 2 JPA repository interfaces.
+2020-10-30 13:55:21.701  INFO 13564 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8002 (http)
+2020-10-30 13:55:21.701  INFO 13564 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-10-30 13:55:21.702  INFO 13564 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.38]
+2020-10-30 13:55:21.717  INFO 13564 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-10-30 13:55:21.717  INFO 13564 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 719 ms
+2020-10-30 13:55:21.769  INFO 13564 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-10-30 13:55:21.778  INFO 13564 --- [task-1] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-10-30 13:55:21.788  INFO 13564 --- [task-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-9 - Starting...
+2020-10-30 13:55:21.807  INFO 13564 --- [task-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-9 - Start completed.
+2020-10-30 13:55:21.808  INFO 13564 --- [task-1] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2020-10-30 13:55:21.852  INFO 13564 --- [task-1] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-10-30 13:55:21.852  INFO 13564 --- [task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-10-30 13:55:21.916  WARN 13564 --- [task-2] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2020-10-30 13:55:21.946  WARN 13564 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-10-30 13:55:22.084  INFO 13564 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8002 (http) with context path ''
+2020-10-30 13:55:22.085  INFO 13564 --- [restartedMain] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories…
+2020-10-30 13:55:22.096  INFO 13564 --- [restartedMain] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
+2020-10-30 13:55:22.100  INFO 13564 --- [restartedMain] c.g.r.RetailerInventoryManagementSystem  : Started RetailerInventoryManagementSystem in 1.151 seconds (JVM running for 16937.152)
+2020-10-30 13:55:22.101  INFO 13564 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2020-10-30 14:00:02.353  INFO 13564 --- [RMI TCP Connection(2)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2020-10-30 14:00:02.787  INFO 13564 --- [RMI TCP Connection(2)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-10-30 14:00:02.789  INFO 13564 --- [RMI TCP Connection(2)-127.0.0.1] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-10-30 14:00:02.790  INFO 13564 --- [RMI TCP Connection(2)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-9 - Shutdown initiated...
+2020-10-30 14:00:02.835  INFO 13564 --- [RMI TCP Connection(2)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-9 - Shutdown completed.

@@ -52,4 +52,20 @@ public class AddressServiceImpl implements AddressService {
 
 
 
+
+	@Override
+	public Optional<Address> getAddressById(String addressId) {
+		if(addressRepository.findById(addressId).isPresent())
+		{
+		return null;
+	}
+		else {
+			return addressRepository.findById(addressId);
+		}
+	
+	
+	}
+
+
+
 	}

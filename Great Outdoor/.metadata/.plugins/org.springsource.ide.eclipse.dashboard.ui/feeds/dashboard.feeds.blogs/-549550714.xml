@@ -239,6 +239,37 @@
 &lt;!-- rendered by Sagan Renderer Service --&gt;</content>
   </entry>
   <entry>
+    <title>Spring Batch 4.3 is now GA!</title>
+    <link rel="alternate" href="https://spring.io/blog/2020/10/28/spring-batch-4-3-is-now-ga" />
+    <category term="releases" label="Releases" />
+    <author>
+      <name>Mahmoud Ben Hassine</name>
+    </author>
+    <id>tag:spring.io,2020-10-29:4246</id>
+    <updated>2020-10-28T08:16:00Z</updated>
+    <content type="html">&lt;p&gt;Dear Spring Batch community,&lt;/p&gt;
+&lt;p&gt;On behalf of the team and all contributors, it is my pleasure to announce that Spring Batch 4.3 is now generally available from Maven Central!&lt;/p&gt;
+&lt;p&gt;This release comes with a number of new features, enhancements, and dependency updates. You can find the complete list of changes in the &lt;a href="https://github.com/spring-projects/spring-batch/releases/tag/4.3.0"&gt;release notes&lt;/a&gt;, but here are the major highlights:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Java records support&lt;/li&gt;
+  &lt;li&gt;GraalVM support&lt;/li&gt;
+  &lt;li&gt;New synchronized &lt;code&gt;ItemStreamWriter&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;New &lt;code&gt;JpaCursorItemReader&lt;/code&gt; Implementation&lt;/li&gt;
+  &lt;li&gt;Performance improvements in &lt;code&gt;MongoItemWriter&lt;/code&gt; and &lt;code&gt;RepositoryItemWriter&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;And more!&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;These features and enhancements have been previously detailed in the following posts:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href="https://spring.io/blog/2020/09/17/spring-batch-4-3-0-rc1-available-now"&gt;Spring Batch 4.3.0-RC1 available now!&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://spring.io/blog/2020/08/13/spring-batch-4-3-0-m2-is-out"&gt;Spring Batch 4.3.0-M2 is out!&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://spring.io/blog/2020/06/26/spring-batch-4-3-0-m1-is-released-now"&gt;Spring Batch 4.3.0-M1 is released now!&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Please note that this release is the last feature branch of the 4.x generation. The next version will be 5.0, and we will share what&amp;rsquo;s coming in it soon, so stay tuned!&lt;/p&gt;
+&lt;p&gt;I would like to thank all contributors who made this release possible! We look forward to your feedback on this release on &lt;a href="https://twitter.com/springbatch"&gt;Twitter&lt;/a&gt;, &lt;a href="https://stackoverflow.com/questions/tagged/spring-batch"&gt;StackOverflow&lt;/a&gt;, and &lt;a href="https://github.com/spring-projects/spring-batch/issues/new/choose"&gt;Github&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://spring.io/projects/spring-batch"&gt;Spring Batch Home&lt;/a&gt; | &lt;a href="https://github.com/spring-projects/spring-batch"&gt;Source on GitHub&lt;/a&gt; | &lt;a href="https://docs.spring.io/spring-batch/docs/4.3.0/reference/html/index.html"&gt;Reference Documentation&lt;/a&gt;&lt;/p&gt;
+&lt;!-- rendered by Sagan Renderer Service --&gt;</content>
+  </entry>
+  <entry>
     <title>This Week in Spring - October 27th, 2020</title>
     <link rel="alternate" href="https://spring.io/blog/2020/10/27/this-week-in-spring-october-27th-2020" />
     <category term="engineering" label="Engineering" />
@@ -849,69 +880,6 @@ Finally, we saw how we can easily switch &lt;code&gt;MessageGroupStore&lt;/code&
   &lt;li&gt;using rich DSLs such as those provided for Spring Framework&amp;rsquo;s programmatic bean registration, HTTP endpoints, and for Spring Cloud Gateway&lt;/li&gt;
   &lt;li&gt;kicking up our reactive applications a notch with coroutines&lt;/li&gt;
 &lt;/ul&gt;
-&lt;!-- rendered by Sagan Renderer Service --&gt;</content>
-  </entry>
-  <entry>
-    <title>Spring Integration 5.4 Release Candidate 1 Available</title>
-    <link rel="alternate" href="https://spring.io/blog/2020/10/14/spring-integration-5-4-release-candidate-1-available" />
-    <category term="releases" label="Releases" />
-    <author>
-      <name>Artem Bilan</name>
-    </author>
-    <id>tag:spring.io,2020-10-14:4230</id>
-    <updated>2020-10-14T19:17:45Z</updated>
-    <content type="html">&lt;div class="paragraph"&gt;
-&lt;p&gt;Dear Spring community,&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;it&amp;#8217;s my pleasure to announce the first (and the last) release candidate for Spring Integration &lt;code&gt;5.4&lt;/code&gt; generation.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;It can be downloaded from our &lt;a href="https://repo.spring.io/milestone"&gt;milestone repository&lt;/a&gt;:&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="listingblock"&gt;
-&lt;div class="content"&gt;
-&lt;pre class="prettyprint highlight"&gt;&lt;code data-lang="groovy"&gt;compile 'org.springframework.integration:spring-integration-core:5.4.0-RC1'&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;Since the previous &lt;a href="https://spring.io/blog/2020/09/16/spring-integration-5-4-milestone-3-available"&gt;milestone 3&lt;/a&gt; this release brings more into bug fixes and some internal improvements according Project Reactor changes with processors.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;The most notable features in this release are:&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="ulist"&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;The &lt;code&gt;LogAccessor&lt;/code&gt; abstraction from Spring Framework is now used internally for better code readability;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;The &lt;code&gt;ZeroMqMessageHandler&lt;/code&gt; and &lt;code&gt;ZeroMqMessageProducer&lt;/code&gt; components are now available for one-way interaction with ZeroMq;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;The &lt;code&gt;ReactiveRedisStreamMessageProducer&lt;/code&gt; now provides an error handling logic via sending an &lt;code&gt;ErrorMessage&lt;/code&gt; to the &lt;code&gt;errorChannel&lt;/code&gt;;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;The &lt;code&gt;AbstractMailReceiver&lt;/code&gt; now has an option to not fetch a &lt;code&gt;MimeMessage&lt;/code&gt; content eagerly and lets the downstream flow to decide what and how to do with such a mail message.&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;See &lt;a href="https://docs.spring.io/spring-integration/docs/5.4.0-RC1/reference/html/whats-new.html#whats-new"&gt;What&amp;#8217;s New&lt;/a&gt; in documentation for more information.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;This version is going to be pulled in the upcoming Spring Boot &lt;code&gt;2.4.0-M4&lt;/code&gt; release tomorrow.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;It is a perfect time now to report (or contribute) bugs and improvements since we are heading for GA in a couple weeks!&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;Cheers,&amp;#160;&lt;br&gt;
-Artem&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;&lt;a href="http://projects.spring.io/spring-integration/"&gt;Project Page&lt;/a&gt; | &lt;a href="https://github.com/spring-projects/spring-integration/issues"&gt;GitHub Issues&lt;/a&gt; | &lt;a href="https://github.com/spring-projects/spring-integration/blob/master/CONTRIBUTING.adoc"&gt;Contributing&lt;/a&gt; | &lt;a href="http://stackoverflow.com/questions/tagged/spring-integration"&gt;Help&lt;/a&gt; | &lt;a href="https://gitter.im/spring-projects/spring-integration"&gt;Chat&lt;/a&gt;&lt;/p&gt;
-&lt;/div&gt;
 &lt;!-- rendered by Sagan Renderer Service --&gt;</content>
   </entry>
 </feed>

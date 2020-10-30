@@ -4,6 +4,7 @@
 package com.greatoutdoor.addressmanagementsystem.service;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.stereotype.Service;
 
@@ -13,8 +14,10 @@ import com.greatoutdoor.addressmanagementsystem.model.Address;
 public interface AddressService {
 
 	List<Address> viewAllAddresss();
-	boolean addAddress(Address address)throws AddressNotFound;
-	boolean updateAddress(Address address)throws AddressNotFound;
-	boolean deleteAddress(String addressId)throws AddressNotFound;
+	boolean addAddress(Address address);
+	boolean updateAddress(Address address);
+	boolean deleteAddress(String addressId);
+	Optional<Address> getAddressById(String addressId);
+
 	
 }
