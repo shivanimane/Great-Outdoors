@@ -17,7 +17,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.greatoutdoor.retailerinventorymanagementsystem.exception.RetailerInventoryException;
 import com.greatoutdoor.retailerinventorymanagementsystem.model.RetailerInventoryBean;
-import com.greatoutdoor.retailerinventorymanagementsystem.model.RetailerInventoryDTO;
+import com.greatoutdoor.retailerinventorymanagementsystem.model.RetailerInventory;
 import com.greatoutdoor.retailerinventorymanagementsystem.service.RetailerInventoryService;
 
 
@@ -114,7 +114,7 @@ public class RetailerInventoryController {
 	
 	@ResponseBody
 	@GetMapping("/getProductRecieveTime")
-	public String getUpdateProductRecieveTimeStamp(@RequestBody RetailerInventoryDTO retailerInventoryDTO)
+	public String getUpdateProductRecieveTimeStamp(@RequestBody RetailerInventory retailerInventoryDTO)
 	{
 		String status="Product Timestamp updated";
 		try {
@@ -129,7 +129,7 @@ public class RetailerInventoryController {
 	
 	@ResponseBody
 	@GetMapping("/getProductSaleTime")
-	public String getUpdateProductSaleTimeStamp(@RequestBody RetailerInventoryDTO retailerInventoryDTO)
+	public String getUpdateProductSaleTimeStamp(@RequestBody RetailerInventory retailerInventoryDTO)
 	{
 		String status="Product Timestamp updated";
 		try {
@@ -144,8 +144,8 @@ public class RetailerInventoryController {
 	
 	@ResponseBody
 	@GetMapping("/RetailerList")
-	public List<RetailerInventoryDTO> getRetailerList () {
-		List<RetailerInventoryDTO> result = null;
+	public List<RetailerInventory> getRetailerList () {
+		List<RetailerInventory> result = null;
 		try {
 			result = this.retailerInventoryService.getListOfRetailers();
 
@@ -158,9 +158,9 @@ public class RetailerInventoryController {
 	
 
 	@GetMapping("/RetailerInventoryById")
-	public List<RetailerInventoryDTO> getRetailerInventoryById (@RequestParam String retailerId) {
+	public List<RetailerInventory> getRetailerInventoryById (@RequestParam String retailerId) {
 		
-		List<RetailerInventoryDTO> result = null;
+		List<RetailerInventory> result = null;
 		try {
 			result = this.retailerInventoryService.getInventoryById(retailerId);
 		} catch (Exception error) {

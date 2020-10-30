@@ -12,7 +12,7 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "RETAILER_INVENTORY")
-public class RetailerInventoryDTO {
+public class RetailerInventory {
 	public String retailerId;
 	public byte productCategory;
 	public String productId;
@@ -21,11 +21,11 @@ public class RetailerInventoryDTO {
 	public Calendar productDispatchTimestamp;
 	public Calendar productRecieveTimestamp;
 	public Calendar productSaleTimestamp;
-	public RetailerInventoryDTO() {
+	public RetailerInventory() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-	public RetailerInventoryDTO(String retailerId, byte productCategory, String productId, String productUniqueId,
+	public RetailerInventory(String retailerId, byte productCategory, String productId, String productUniqueId,
 			Calendar productDispatchTimestamp, Calendar productRecieveTimestamp, Calendar productSaleTimestamp) {
 		super();
 		this.retailerId = retailerId;
