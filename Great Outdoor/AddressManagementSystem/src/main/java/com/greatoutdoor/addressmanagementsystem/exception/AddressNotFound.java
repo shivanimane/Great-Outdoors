@@ -1,6 +1,6 @@
 package com.greatoutdoor.addressmanagementsystem.exception;
 
-public class AddressNotFound extends Exception{
+public class AddressNotFound extends RuntimeException{
 	public AddressNotFound() {
 		super();
 

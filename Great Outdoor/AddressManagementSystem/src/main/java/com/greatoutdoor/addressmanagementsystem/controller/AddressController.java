@@ -29,6 +29,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import io.swagger.annotations.ApiOperation;
 
 @RestController
 @RequestMapping("/address")
@@ -37,11 +38,16 @@ public class AddressController {
 	@Autowired
 	AddressService addressService;
 	private static final Logger Logger= LoggerFactory.getLogger(Address.class);
-	
+	@ApiOperation(
+			value = "View all address",
+			notes = "User can add address",
+			response = String.class
+			)
 	@GetMapping("/viewALLAddress")
 	List<Address>viewAllAddress(){
 		return addressService.viewAllAddresss();
 	}
+	
 
 	/*
 	 * {
@@ -54,6 +60,10 @@ public class AddressController {
 	"zip":"411057"    
 }
 	 */
+	@ApiOperation(
+			value = "Post address"
+			
+			)
 	@PostMapping("/addAddress")
 	String addAddress(@RequestBody Address address) throws AddressNotFound, NullParameterException {
 		if (address.getAddressId() == null)
@@ -69,7 +79,10 @@ public class AddressController {
 		} 
 		return "fail to add Address";
 	}
-	
+	@ApiOperation(
+			value = "Update address"
+			
+			)
 	@PostMapping("/updateAddress")
 	String updateAddress(@RequestBody Address address) throws AddressNotFound {
 		String status="Address Updated";
@@ -82,7 +95,10 @@ public class AddressController {
 		return "Failed to update Address";
 	}
 	
-	
+	@ApiOperation(
+			value = "Delete address"
+			
+			)
 	@PostMapping("/deleteAddress/{addressId}")
 	String deleteAddress(@PathVariable String addressId) throws AddressNotFound {
 		
