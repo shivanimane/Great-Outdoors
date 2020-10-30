@@ -695,3 +695,7 @@
 2020-10-30 15:30:18.283  INFO 13220 --- [http-nio-8005-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
 2020-10-30 15:31:31.461  WARN 13220 --- [http-nio-8005-exec-5] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.greatoutdoor.addressmanagementsystem.exception.AddressNotFound: Address Not Found]
 2020-10-30 15:32:52.357  WARN 13220 --- [http-nio-8005-exec-8] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.dao.EmptyResultDataAccessException: No class com.greatoutdoor.addressmanagementsystem.model.Address entity with id 409090 exists!]
+2020-10-30 15:41:14.218  INFO 13220 --- [Thread-34] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-10-30 15:41:14.220  INFO 13220 --- [Thread-34] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-10-30 15:41:14.220  INFO 13220 --- [Thread-34] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Shutdown initiated...
+2020-10-30 15:41:14.228  INFO 13220 --- [Thread-34] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Shutdown completed.
