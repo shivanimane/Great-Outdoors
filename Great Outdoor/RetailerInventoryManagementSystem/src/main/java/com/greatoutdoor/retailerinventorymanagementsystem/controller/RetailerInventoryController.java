@@ -5,6 +5,8 @@ package com.greatoutdoor.retailerinventorymanagementsystem.controller;
 import java.util.Calendar;
 import java.util.List;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -27,6 +29,7 @@ public class RetailerInventoryController {
 	
 	@Autowired
 	private RetailerInventoryService retailerInventoryService;
+	private static final Logger Logger= LoggerFactory.getLogger(RetailerInventoryBean.class);
 		
 	@ResponseBody
 	@GetMapping("/getDeliveryTimeReport")

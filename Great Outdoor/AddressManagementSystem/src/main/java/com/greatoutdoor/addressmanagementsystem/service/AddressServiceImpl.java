@@ -15,43 +15,59 @@ import com.greatoutdoor.addressmanagementsystem.exception.CrudException;
 
 @Service
 public class AddressServiceImpl implements AddressService {
- @Autowired 
- AddressDao addressRepository;
+	@Autowired
+	AddressDao addressRepository;
+
 	@Override
 	public List<Address> viewAllAddresss() {
 		// TODO Auto-generated method stub
 		if(addressRepository.count()==0) throw new CrudException("Please add something to wishlist");
 		return (List<Address>) addressRepository.findAll();
 	}
-	
-
-	
 
 	@Override
 	public boolean deleteAddress(String addressId) {
-		addressRepository.deleteById(addressId);
-		return true;
-		
-	}
+		if (addressRepository.findById(addressId).isEmpty()) {
+			return false;
+		} else {
 
+			addressRepository.deleteById(addressId);
+			return true;
+		}
+
+	}
 
 	@Override
 	public boolean addAddress(Address address) {
-		addressRepository.save(address);
-		return true;
-	}
-
-
-	@Override
-	public boolean updateAddress(Address address) {
-		Optional<Address> find=addressRepository.findById(address.getAddressId());
-		if(find.isPresent()) {
+		if (address.getAddressId() == null || address.getRetailerId() == null) {
+			return false;
+		} else {
 			addressRepository.save(address);
 			return true;
 		}
-		return false;
-	}
-
-
 
 	}
+
+	@Override
+	public boolean updateAddress(Address address) {
+		Optional<Address> find = addressRepository.findById(address.getAddressId());
+		if (find.isPresent()) {
+			addressRepository.save(address);
+			return true;
+		} else {
+			return false;
+		}
+
+	}
+
+	@Override
+	public Optional<Address> getAddressById(String addressId) {
+		if (addressRepository.findById(addressId).isPresent()) {
+			return addressRepository.findById(addressId);
+		} else {
+			return null;
+		}
+
+	}
+
+}

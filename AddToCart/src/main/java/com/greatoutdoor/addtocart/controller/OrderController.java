@@ -11,14 +11,18 @@ import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.greatoutdoor.addtocart.dao.CartDao;
+import com.greatoutdoor.addtocart.exception.CartNotFoundException;
 import com.greatoutdoor.addtocart.exception.CrudException;
 import com.greatoutdoor.addtocart.exception.NullParameterException;
+import com.greatoutdoor.addtocart.exception.OrderNotFoundException;
+import com.greatoutdoor.addtocart.exception.ProductNotFoundException;
 import com.greatoutdoor.addtocart.model.Cart;
 import com.greatoutdoor.addtocart.model.CartBean;
 import com.greatoutdoor.addtocart.model.Order;
@@ -92,8 +96,11 @@ public class OrderController {
 		}
 		
 		String status = "Item removed successfully!";		
-		orderAndCartService.removeProductByUserIdProductId(userId, productId);
-		return status;
+		if(orderAndCartService.removeProductByUserIdProductId(userId, productId)) {
+			return status;
+		} else {
+			throw new CartNotFoundException("Product not found in the Cart");
+		}
 		
 	}
 	
@@ -102,8 +109,13 @@ public class OrderController {
 			notes = "Retailer can view all products in the cart with this API",
 			response = List.class
 			)
-	@GetMapping("/getAllProductsByUserId/{userId}")
-	List<Product> getAllProductsByUserId(@PathVariable String userId){
+	@GetMapping("/getAllProductsByUserId")
+	List<Product> getAllProductsByUserId(@RequestParam String userId){
+		if(userId==null) {
+			throw new NullParameterException("Null Request, Please give valid userId");
+		} else if(orderAndCartService.getAllProductsByUserId(userId)==null) {
+			throw new ProductNotFoundException("Product Not Found in the Cart");
+		}
 		return orderAndCartService.getAllProductsByUserId(userId);
 	}
 	
@@ -114,9 +126,14 @@ public class OrderController {
 			notes = "Retailer can view all products in a perticular order with orderId with this API",
 			response = List.class
 			)
-	@GetMapping("/getAllOrdersByOrderId")
+	@GetMapping("/getAllProductsByOrderId")
 	List<Product> viewOrderProducts(@RequestParam String orderId){
-		return orderAndCartService.getAllProductsByOrderId(orderId);
+		if(orderAndCartService.getAllProductsByOrderId(orderId)==null) {
+			throw new OrderNotFoundException("Order not found");
+		} else {
+			return orderAndCartService.getAllProductsByOrderId(orderId);
+		}
+		
 	}
 	
 	@ApiOperation(
@@ -126,6 +143,8 @@ public class OrderController {
 			)
 	@PostMapping("/updateQuantity")
 	String updateQuantity(@RequestBody Cart cartItem) {
+		if(cartItem.getUserId()==null || cartItem.getProductId()==null)
+			throw new NullParameterException("UserId por ProductId cannot be null");
 		if(orderAndCartService.updateItemQuantity(cartItem)) {
 			return "successfully changed";
 		}
