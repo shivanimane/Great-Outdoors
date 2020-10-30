@@ -43,5 +43,10 @@ public interface CartDao extends CrudRepository<Cart, String>{
 	@Query("SELECT cart FROM Cart cart WHERE cart.userId=:userId and cart.productId=:productId")
 	@Transactional
 	List<Cart> getProductsByUserIdProductId(String userId, String productId);
+	
+	@Modifying
+	@Query("DELETE FROM Cart cart WHERE cart.userId=:userId")
+	@Transactional
+	void deleteByUserId(@Param("userId") String userId);
 
 }

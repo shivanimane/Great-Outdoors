@@ -48,9 +48,10 @@ public class OrderProductCancelController {
 			)
 	@GetMapping("/getOrders")
 	public Orders getAllOrdersWithOrderId(@RequestParam String orderId){
-		
-		if(orderAndCartService.getAllOrdersByOrderId(orderId)==null) {
-			throw new NullParameterException("Null request, please provide correct orderId!");
+		if(orderId==null) {
+			throw new NullParameterException("Null request! Please enter orderId");
+		}else if(orderAndCartService.getAllOrdersByOrderId(orderId)==null) {
+			throw new OrderNotFoundException("Order not found");
 		} else {
 			return orderAndCartService.getAllOrdersByOrderId(orderId);
 		}
@@ -70,7 +71,7 @@ public class OrderProductCancelController {
 			throw new OrderNotFoundException("Order does not exist");
 		}
 		orderAndCartService.cancelOrderByOrderId(orderId);
-		return "successfully removed";
+		return "Order Cancelled";
 	}
 	
 	@ApiOperation(
@@ -96,11 +97,12 @@ public class OrderProductCancelController {
 	public String cancelOrderProduct(@RequestParam String orderId , @RequestParam String productId ) {
 		if(orderId==null || productId==null) {
 			throw new NullParameterException("Null request, please provide  orderId and productId!");
-		}
-		if(orderAndCartService.cancelProductByOrderIdProductId(orderId, productId)==false) {
+		} else if(orderAndCartService.cancelProductByOrderIdProductId(orderId, productId)==false) {
 			throw new OrderNotFoundException("Order Not Found");
+		} else {
+			return "Product cancelled from your order";
 		}
-		return "successfully removed";
+		
 	}
 	
 	@ApiOperation(

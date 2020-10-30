@@ -97,7 +97,7 @@ public class OrderAndCartServiceImpl implements OrderAndCartService {
 		/**
 		 * Insert Items from cart to order product map table
 		 */
-		List<Cart> cartItems = (List<Cart>) cartDao.findAll();
+		List<Cart> cartItems = (List<Cart>) cartDao.getAllProducts(order.getUserId());
 		Iterator<Cart> itr = cartItems.iterator();
 		int index = 0;
 		String orderId = generateId.generateOrderId(order.getUserId());
@@ -116,20 +116,12 @@ public class OrderAndCartServiceImpl implements OrderAndCartService {
 		Order newOrder = new Order(orderId, order.getUserId(), order.getAddressId(), (byte) 0, orderInitiationTime,
 				null, order.getTotalcost());
 
-//		sendMail(newOrder);
 		orderDao.save(newOrder);
-		cartDao.deleteAll();
+		cartDao.deleteByUserId(order.getUserId());
 		
 		return true;
 	}
 
-//	private void sendMail(Order order) {
-//		Orders orderList = getAllOrdersWithOrderId(order.getOrderId());
-//		InvoiceResponse invoice = new Invoice(orderList.getOrders(), order.getAddressId(),
-//				order.getOrderInitiateTime(), order.getTotalcost(), order.getUserId());
-//		restTemplate.postForObject(invoiceURL + "//generateInvoice", invoice, String.class);
-//		return;
-//	}
 
 	@Override
 	public boolean deleteOrder(Order order) {
@@ -172,11 +164,13 @@ public class OrderAndCartServiceImpl implements OrderAndCartService {
 
 	@Override
 	public boolean cancelProductByOrderIdProductId(String orderId, String productId) {
-		if(orderProductMapDao.getAllOrdersByOrderIdProductId(orderId, productId)==null) {
+		if(orderProductMapDao.getAllOrdersByOrderIdProductId(orderId, productId).isEmpty()) {
 			return false;
+		} else {
+			orderProductMapDao.deleteOrderByOrderIdProductId(orderId, productId);
+			return true;
 		}
-		orderProductMapDao.deleteOrderByOrderIdProductId(orderId, productId);
-		return true;
+		
 	}
 
 	@Override
