@@ -3,18 +3,36 @@ package com.greatoutdoor.productmanagementsystem.model;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.validation.constraints.Max;
+import javax.validation.constraints.Min;
+import javax.validation.constraints.NotNull;
 
 @Entity
 @Table(name = "product_table")
 public class Product {
 	@Id
 	private String productId;
+	
+	@NotNull(message = "Price cannot be null")
 	private double price;
+	
+	@NotNull(message = "Color cannot be null")
 	private String colour;
+	
+	@NotNull(message = "Dimension cannot be null")
 	private String dimension;
+	
+	@NotNull(message = "Specification cannot be null")
 	private String specification;
+	
+	@NotNull(message = "Manufacturer cannot be null")
 	private String manufacture;
+	
+	@NotNull(message = "Quantity cannot be null")
 	private int quantity;
+	
+	@Min(value = 1,message = "Product Category is only between 1-5")
+	@Max(value = 5,message = "Product Category is only between 1-5")
 	private int productCategory;
 	private String productName;
 	
@@ -38,8 +56,35 @@ public class Product {
 	 * @param productCategory
 	 * @param productName
 	 */
-	public Product(String productId, double price, String colour, String dimension, String specification,
-			String manufacture, int quantity, int productCategory, String productName) {
+	
+
+
+	/**
+	 * @return the productId
+	 */
+	public String getProductId() {
+		return productId;
+	}
+
+	/**
+	 * @param productId
+	 * @param price
+	 * @param colour
+	 * @param dimension
+	 * @param specification
+	 * @param manufacture
+	 * @param quantity
+	 * @param productCategory
+	 * @param productName
+	 */
+	public Product(String productId, @NotNull(message = "Price cannot be null") double price,
+			@NotNull(message = "Color cannot be null") String colour,
+			@NotNull(message = "Dimension cannot be null") String dimension,
+			@NotNull(message = "Specification cannot be null") String specification,
+			@NotNull(message = "Manufacturer cannot be null") String manufacture,
+			@NotNull(message = "Quantity cannot be null") int quantity,
+			@Min(value = 1, message = "Product Category is only between 1-5") @Max(value = 5, message = "Product Category is only between 1-5") int productCategory,
+			String productName) {
 		super();
 		this.productId = productId;
 		this.price = price;
@@ -53,13 +98,6 @@ public class Product {
 	}
 
 
-
-	/**
-	 * @return the productId
-	 */
-	public String getProductId() {
-		return productId;
-	}
 
 	/**
 	 * @param productId the productId to set

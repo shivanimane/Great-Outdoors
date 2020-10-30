@@ -78,9 +78,15 @@ public class OrderAndCartServiceImpl implements OrderAndCartService {
 
 	@Override
 	public boolean updateItemQuantity(Cart cartItem) {
-		cartDao.updateItemInCart(cartItem.getUserId(), cartItem.getProductId(), cartItem.getQuantity());
-		return true;
+		if(cartDao.getProductsByUserIdProductId(cartItem.getUserId(), cartItem.getProductId()).isEmpty()) {
+			return false;
+		} else {
 
+			cartDao.updateItemInCart(cartItem.getUserId(), cartItem.getProductId(), cartItem.getQuantity());
+			return true;
+
+		}
+		
 	}
 
 	@Override
@@ -185,26 +191,37 @@ public class OrderAndCartServiceImpl implements OrderAndCartService {
 
 	@Override
 	public List<Product> getAllProductsByUserId(String userId) {
-		List<Cart> listCartItems = cartDao.getAllProducts(userId);
-		List<Product> listProducts = new ArrayList<>();
-		
-		Iterator<Cart> itr = listCartItems.iterator();
-		int index = 0;
-		
-		while (itr.hasNext()) {
-			Product product = restTemplate.getForObject(productURL+"/getProductById?productId="+listCartItems.get(index).getProductId(),
-					Product.class);
-			product.setQuantity(listCartItems.get(index).getQuantity());
-			listProducts.add(product);
-			index++;
-			itr.next();
+		if(cartDao.getAllProducts(userId).isEmpty()) {
+			return null;
+		} else {
+			List<Cart> listCartItems = cartDao.getAllProducts(userId);
+			List<Product> listProducts = new ArrayList<>();
+			
+			Iterator<Cart> itr = listCartItems.iterator();
+			int index = 0;
+			
+			while (itr.hasNext()) {
+				Product product = restTemplate.getForObject(productURL+"/getProductById?productId="+listCartItems.get(index).getProductId(),
+						Product.class);
+				product.setQuantity(listCartItems.get(index).getQuantity());
+				listProducts.add(product);
+				index++;
+				itr.next();
+			}
+			return listProducts;
 		}
-		return listProducts;
+	
 	}
 
 	@Override
-	public void removeProductByUserIdProductId(String userId, String productId) {
-		cartDao.removeItemFromCart(userId, productId);
+	public boolean removeProductByUserIdProductId(String userId, String productId) {
+		if(cartDao.getProductsByUserIdProductId(userId, productId).isEmpty()) {
+			return false;
+		} else {
+			cartDao.removeItemFromCart(userId, productId);
+			return true;
+		}
+		
 
 	}
 
@@ -218,20 +235,25 @@ public class OrderAndCartServiceImpl implements OrderAndCartService {
 
 	@Override
 	public List<Product> getAllProductsByOrderId(String orderId) {
-		List<OrderProductMap> orderProductMap = orderProductMapDao.getAllOrdersByOrderId(orderId);
-		List<Product> listProducts = new ArrayList<>();
-		
-		Iterator<OrderProductMap> itr = orderProductMap.iterator();
-		int index = 0;
-		while (itr.hasNext()) {
-			Product product = restTemplate.getForObject(productURL+"/getProductById?productId="+orderProductMap.get(index).getProductId(),
-					Product.class);
-			product.setQuantity(orderProductMap.get(index).getQuantity());
-			listProducts.add(product);
-			index++;
-			itr.next();
+		if(orderProductMapDao.getAllOrdersByOrderId(orderId).isEmpty()) {
+			return null;
+		} else {
+
+			List<OrderProductMap> orderProductMap = orderProductMapDao.getAllOrdersByOrderId(orderId);
+			List<Product> listProducts = new ArrayList<>();
+			
+			Iterator<OrderProductMap> itr = orderProductMap.iterator();
+			int index = 0;
+			while (itr.hasNext()) {
+				Product product = restTemplate.getForObject(productURL+"/getProductById?productId="+orderProductMap.get(index).getProductId(),
+						Product.class);
+				product.setQuantity(orderProductMap.get(index).getQuantity());
+				listProducts.add(product);
+				index++;
+				itr.next();
+			}
+			return listProducts;
 		}
-		return listProducts;
 	}
 
 }

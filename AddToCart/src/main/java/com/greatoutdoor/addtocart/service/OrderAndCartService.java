@@ -112,7 +112,7 @@ public interface OrderAndCartService {
 	 * @param userId
 	 * @param productId
 	 */
-	void removeProductByUserIdProductId(String userId, String productId);
+	boolean removeProductByUserIdProductId(String userId, String productId);
 	
 	/**
 	 * Reatiler can get All placed Orders

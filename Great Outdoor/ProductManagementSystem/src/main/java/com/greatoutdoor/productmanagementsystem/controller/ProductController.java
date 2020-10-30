@@ -6,11 +6,16 @@ package com.greatoutdoor.productmanagementsystem.controller;
 import java.util.List;
 import java.util.Optional;
 
+import javax.validation.Valid;
+
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -22,8 +27,6 @@ import com.greatoutdoor.productmanagementsystem.model.Product;
 import com.greatoutdoor.productmanagementsystem.service.ProductService;
 
 import io.swagger.annotations.ApiOperation;
-
-
 
 @RestController
 @RequestMapping("/product")
@@ -69,21 +72,20 @@ public class ProductController {
 			notes = "User can add a product using this API"
 			)
 	@PostMapping("/addProduct")
-	String addProduct(@RequestBody Product product){
-		if(product.getProductId().trim().length()==0) {
-			logger.error("Product Id incorrect /addProduct");
-			throw new NullParameterException("Please provide Product id");
-		}
-		String status = "Product has been added";
+	ResponseEntity<String> addProduct(@Valid @RequestBody Product product){
+//		if(product.getProductName().isEmpty()) {
+//			logger.error("Product Id incorrect /addProduct");
+//			throw new NullParameterException("Please provide Product Name");
+//		} 
+		productService.addProduct(product);
+		return ResponseEntity.ok("Product has been added");
+		
+//		if(productService.addProduct(product)) {
+//			return "Product has been added";
+//		}
 		
 		
-		
-		if(productService.addProduct(product)) {
-			return status;
-		}
-		
-		return "Failed to add product!";
-		
+		//return "Failed to add product!";
 	}
 	
 	/**
@@ -91,7 +93,7 @@ public class ProductController {
 	 * @param productId
 	 * @return String
 	 */
-	@PostMapping("/deleteProduct/{productId}")
+	@DeleteMapping("/deleteProduct/{productId}")
 	String deleteProduct(@PathVariable String productId) throws ProductNotFoundException{
 		if(productService.deleteProduct(productId)==false) {
 			throw new ProductNotFoundException("Product not found");
@@ -106,7 +108,7 @@ public class ProductController {
 	 * @param product
 	 * @return String
 	 */
-	@PostMapping("/editProduct")
+	@PutMapping("/editProduct")
 	String editProduct(@RequestBody Product product) {
 		String status = "Product has been updated";
 		
@@ -131,9 +133,13 @@ public class ProductController {
 //	
 	@GetMapping("/getProductById")
 	Optional<Product> getProductById(@RequestParam String productId){
-		return productService.getProductById(productId);
+		if(productService.getProductById(productId)==null) {
+			throw new ProductNotFoundException("Product Not Found");
+		} else {
+			return productService.getProductById(productId);
+		}
+		
 	}
-//	List<Product> getProductById
 
 
 }
