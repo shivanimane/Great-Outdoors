@@ -3,6 +3,9 @@
  */
 package com.greatoutdoor.cancelmanagementsystem.service;
 
+import java.util.List;
+
+import com.greatoutdoor.cancelmanagementsystem.model.ProductResponse;
 
 public interface CancelService {
 	/**
@@ -23,5 +26,11 @@ public interface CancelService {
 	 * @return
 	 */
 	String cancelProduct(String orderId, String userId, String productId, int quantity);
+	
+	/**
+	 * Get All ResponseProducts as List
+	 * @return
+	 */
+	List<ProductResponse> getresponseProducts();
 
 }

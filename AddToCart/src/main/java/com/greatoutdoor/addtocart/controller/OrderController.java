@@ -5,6 +5,7 @@ package com.greatoutdoor.addtocart.controller;
 
 import java.util.List;
 
+import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -24,6 +25,8 @@ import com.greatoutdoor.addtocart.model.Order;
 import com.greatoutdoor.addtocart.model.Product;
 import com.greatoutdoor.addtocart.service.OrderAndCartService;
 
+import io.swagger.annotations.ApiOperation;
+
 /**
  * @author Shivani
 
@@ -33,12 +36,20 @@ import com.greatoutdoor.addtocart.service.OrderAndCartService;
 @RequestMapping("/cart")
 public class OrderController {
 	
+	private static final Logger logger = Logger.getLogger(OrderController.class);
+	
 	@Autowired
 	OrderAndCartService orderAndCartService;
 	
+	@ApiOperation(
+			value = "Add products to cart",
+			notes = "Retailer can add product to cart with this API",
+			response = String.class
+			)
 	@PostMapping("/addToCart")
 	public String addItemToCart(@RequestBody CartBean cart) {
 		if(cart==null || cart.getProductId().trim().length() == 0 || cart.getQuantity()==0 ) {
+			logger.error("Null request, cart details not provided at /addItemToCart");
 			throw new NullParameterException("Null request, please provide cart details!");
 		}
 		String status = "Item added Succefully";
@@ -46,10 +57,16 @@ public class OrderController {
 		return status;
 	}
 	
+	@ApiOperation(
+			value = "Place an order",
+			notes = "Retailer can place an order with this API",
+			response = String.class
+			)
 	@PostMapping("/placeOrder")
 	public String placeOrder(@RequestParam String userId, @RequestParam String addressId , @RequestParam double totalCost) {
 		
 		if(userId==null || addressId==null) {
+			logger.error("Null request, please provide userId and addressId/ placeOrder");
 			throw new NullParameterException("Null request, please provide userId and addressId!");
 		}
 		
@@ -64,19 +81,12 @@ public class OrderController {
 			return status;
 		
 	}
-	
-//	@PostMapping("/removeFromCartByUserId")
-//	public String removeItemFromCart(@RequestParam String userId){
-//		if(userId==null) { 
-//			throw new NullParameterException("Null request, please provide correct cart details to remove item from cart!");
-//		}
-//		
-//		String status = "Item removed successfully!";		
-//		orderAndCartService.removeItemFromCartByUserId(userId);
-//		return status;
-//		
-//	}
-	
+
+	@ApiOperation(
+			value = "Remove product from cart by UserId and ProductId",
+			notes = "Retailer can remove product from cart with this API",
+			response = String.class
+			)
 	@DeleteMapping("/removeProductByUserIdProductId/{userId}/{productId}")
 	public String removeProductByUserIdProductId(@PathVariable String userId , @PathVariable String productId){
 		 
@@ -91,6 +101,11 @@ public class OrderController {
 		
 	}
 	
+	@ApiOperation(
+			value = "View all products",
+			notes = "Retailer can view all products in the cart with this API",
+			response = List.class
+			)
 	@GetMapping("/getAllProductsByUserId/{userId}")
 	List<Product> getAllProductsByUserId(@PathVariable String userId){
 		return orderAndCartService.getAllProductsByUserId(userId);
@@ -98,12 +113,21 @@ public class OrderController {
 	
 	
 	
-	
+	@ApiOperation(
+			value = "View order products",
+			notes = "Retailer can view all products in a perticular order with orderId with this API",
+			response = List.class
+			)
 	@GetMapping("/getAllOrdersByOrderId")
 	List<Product> viewOrderProducts(@RequestParam String orderId){
 		return orderAndCartService.getAllProductsByOrderId(orderId);
 	}
 	
+	@ApiOperation(
+			value = "Update quantity",
+			notes = "Retailer can ppdate quantity of items in the cart with this API",
+			response = String.class
+			)
 	@PostMapping("/updateQuantity")
 	String updateQuantity(@RequestBody Cart cartItem) {
 		if(orderAndCartService.updateItemQuantity(cartItem)) {

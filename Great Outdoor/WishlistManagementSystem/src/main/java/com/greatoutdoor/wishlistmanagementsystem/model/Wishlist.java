@@ -19,7 +19,7 @@ public class Wishlist implements Serializable{
 	@Column(name = "user_id" ,nullable=false)
 	private String userId;
 	@Id
-	@Column(name= "product_id" ,nullable=false)
+	@Column(name= "product_id",nullable=false)
 	private String productId;
 	
 	

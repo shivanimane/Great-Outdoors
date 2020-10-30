@@ -25,7 +25,7 @@ public class WishlistServiceImpl implements WishlistService {
 	@Autowired
 	WishlistRepository repository;
 	
-	private String productURL = "http://localhost:8003/product";
+	private String productUrl = "http://localhost:8003/product";
 
 	/*
 	 * name - add to wishlist
@@ -72,7 +72,7 @@ public class WishlistServiceImpl implements WishlistService {
 		int index = 0;
 		
 		while (itr.hasNext()) {
-			Product product = restTemplate.getForObject(productURL+"/getProductById?productId="+listWishListItems.get(index).getProductId(),
+			Product product = restTemplate.getForObject(productUrl+"/getProductById?productId="+listWishListItems.get(index).getProductId(),
 					Product.class);
 			listProducts.add(product);
 			index++;

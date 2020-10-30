@@ -50,8 +50,16 @@ public class ProductServiceImpl implements ProductService{
 
 	@Override
 	public boolean deleteProduct(String productId) {
+		if(productDao.findById(productId).isEmpty()) {
+			return false;
+		}
 		productDao.deleteById(productId);
 		return true;
+	}
+
+	@Override
+	public Optional<Product> getProductById(String productId) {
+		return productDao.findById(productId);
 	}
 	
 }
