@@ -52,7 +52,7 @@ public class RetailerInventoryServiceImpl implements RetailerInventoryService {
 					break;
 				}
 				}
-				object.setRetailerName("vikash");
+				object.setRetailerName("Reatailer ABC");
 				object.setProductCategoryNumber(deliveredItem.getProductCategory());
 				object.setProductCategoryName(GoUtility.getCategoryName(deliveredItem.getProductCategory()));
 				object.setProductUniqueId(deliveredItem.getProductUniqueId());

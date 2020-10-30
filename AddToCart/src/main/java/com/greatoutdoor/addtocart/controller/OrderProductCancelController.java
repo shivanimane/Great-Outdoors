@@ -82,6 +82,9 @@ public class OrderProductCancelController {
 		if(orderId==null || productId==null) {
 			throw new NullParameterException("Null request, please provide  orderId and productId!");
 		}
+		if(orderAndCartService.getAllOrdersByOrderIdProductId(orderId , productId)==null) {
+			throw new OrderNotFoundException("Order Not Found");
+		}
 		return orderAndCartService.getAllOrdersByOrderIdProductId(orderId , productId);
 	}
 	
