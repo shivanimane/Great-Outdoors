@@ -60,12 +60,12 @@ public class ProductServiceImpl implements ProductService {
 
 	@Override
 	public Optional<Product> getProductById(String productId) {
-		if (productDao.findById(productId).isEmpty()) {
-			return null;
-		} else {
+		//if (productDao.findById(productId).isEmpty()) {
+		//	return null;
+		//} else {
 			return productDao.findById(productId);
 
-		}
+		//}
 
 	}
 

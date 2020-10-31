@@ -46,4 +46,9 @@ public class CartBean {
 		this.quantity = quantity;
 	}
 
+	@Override
+	public String toString() {
+		return "CartBean [userId=" + userId + ", productId=" + productId + ", quantity=" + quantity + "]";
+	}
+
 }
