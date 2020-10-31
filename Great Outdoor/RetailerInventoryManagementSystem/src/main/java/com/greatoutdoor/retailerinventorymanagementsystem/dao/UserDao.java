@@ -4,10 +4,10 @@ package com.greatoutdoor.retailerinventorymanagementsystem.dao;
  */
 import org.springframework.data.repository.CrudRepository;
 
-import com.greatoutdoor.retailerinventorymanagementsystem.model.UserDTO;
+import com.greatoutdoor.retailerinventorymanagementsystem.model.User;
 
 
 
-public interface UserDao extends CrudRepository<UserDTO, String> {
+public interface UserDao extends CrudRepository<User, String> {
 
 }

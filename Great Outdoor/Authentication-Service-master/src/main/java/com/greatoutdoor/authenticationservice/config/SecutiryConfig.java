@@ -2,6 +2,7 @@ package com.greatoutdoor.authenticationservice.config;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
@@ -26,6 +27,7 @@ import com.greatoutdoor.authenticationservicefilter.JwtFilter;
  * 				3. Configure PasswordEncoder to encode and decode password.
  * 				4. Configure Http security to authorize url request.
  */
+@ComponentScan("com.*")
 @Configuration
 @EnableWebSecurity
 @EnableGlobalMethodSecurity(prePostEnabled = true)
@@ -40,15 +42,15 @@ public class SecutiryConfig extends WebSecurityConfigurerAdapter{
 	
 	@Override
 	protected void configure(AuthenticationManagerBuilder auth) throws Exception {
-		auth.parentAuthenticationManager(authenticationManagerBean());
+//		auth.parentAuthenticationManager(authenticationManagerBean());
 		auth.userDetailsService(userDetailsService).passwordEncoder(passwordEncoder());
 	}
 
-//	@Bean
-//    @Override
-//    public AuthenticationManager authenticationManagerBean() throws Exception {
-//        return super.authenticationManagerBean();
-//	}
+	@Bean
+    @Override
+    public AuthenticationManager authenticationManagerBean() throws Exception {
+        return super.authenticationManagerBean();
+	}
 	
 	@Bean
     public PasswordEncoder passwordEncoder(){

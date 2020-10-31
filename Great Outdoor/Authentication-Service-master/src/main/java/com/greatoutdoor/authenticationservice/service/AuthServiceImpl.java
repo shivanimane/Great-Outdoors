@@ -107,7 +107,16 @@ public class AuthServiceImpl implements AuthService{
 					.badRequest()
 					.body("Error: Email is already in use!");
 		}
-
+		/**
+		 * {
+		 * localhost:9001/app/auth/signup
+    "username":"shivani",
+    "email":"shivani@mail.com",
+    "role":["retailer"],
+    "password":"Shivani123!",
+    "phoneno":"7744881890"
+}
+		 */
 		// Create new user's account
 		User user = new User(signUpRequest.getUsername(), 
 				encoder.encode(signUpRequest.getPassword()),

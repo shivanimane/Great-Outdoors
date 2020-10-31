@@ -125,14 +125,6 @@ public class ProductController {
 	}
 
 	
-	@GetMapping("/getProductById/{productId}")
-	List<Product> getProductById(){
-
-		return productService.viewAllProducts();
-
-		
-	}
-
 
 //	
 	@GetMapping("/getProductById")

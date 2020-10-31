@@ -14,16 +14,16 @@ import com.greatoutdoor.productmanagementsystem.model.Product;
 
 /**
  * @author Shivani
-
  *
+ * 
  */
 
 @Service
-public class ProductServiceImpl implements ProductService{
+public class ProductServiceImpl implements ProductService {
 
 	@Autowired
 	ProductDao productDao;
-	
+
 	@Override
 	public List<Product> viewAllProducts() {
 		
@@ -32,7 +32,7 @@ public class ProductServiceImpl implements ProductService{
 
 	@Override
 	public boolean addProduct(Product product) {
-		String prodId = "PRODUCT"+productDao.count();
+		String prodId = "PRODUCT" + productDao.count();
 		product.setProductId(prodId);
 		productDao.save(product);
 		return true;
@@ -41,17 +41,17 @@ public class ProductServiceImpl implements ProductService{
 	@Override
 	public boolean editProduct(Product product) {
 		Optional<Product> find = productDao.findById(product.getProductId());
-		if(find.isPresent()) {
+		if (find.isPresent()) {
 			productDao.save(product);
 			return true;
 		}
-		 
+
 		return false;
 	}
 
 	@Override
 	public boolean deleteProduct(String productId) {
-		if(productDao.findById(productId).isPresent()){
+		if (productDao.findById(productId).isPresent()) {
 			return false;
 		}
 		productDao.deleteById(productId);
@@ -60,13 +60,13 @@ public class ProductServiceImpl implements ProductService{
 
 	@Override
 	public Optional<Product> getProductById(String productId) {
-		if(productDao.findById(productId).isPresent()) 
-		{
+		if (productDao.findById(productId).isEmpty()) {
 			return null;
 		} else {
 			return productDao.findById(productId);
+
 		}
-		
+
 	}
-	
+
 }

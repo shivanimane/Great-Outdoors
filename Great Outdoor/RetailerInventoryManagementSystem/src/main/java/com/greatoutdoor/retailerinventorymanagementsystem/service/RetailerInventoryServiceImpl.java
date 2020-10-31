@@ -22,8 +22,8 @@ import com.greatoutdoor.retailerinventorymanagementsystem.dao.UserDao;
 import com.greatoutdoor.retailerinventorymanagementsystem.exception.ExceptionConstants;
 import com.greatoutdoor.retailerinventorymanagementsystem.exception.RetailerInventoryException;
 import com.greatoutdoor.retailerinventorymanagementsystem.model.RetailerInventoryBean;
-import com.greatoutdoor.retailerinventorymanagementsystem.model.RetailerInventoryDTO;
-import com.greatoutdoor.retailerinventorymanagementsystem.model.UserDTO;
+import com.greatoutdoor.retailerinventorymanagementsystem.model.RetailerInventory;
+import com.greatoutdoor.retailerinventorymanagementsystem.model.User;
 import com.greatoutdoor.retailerinventorymanagementsystem.utility.GoUtility;
 
 
@@ -40,19 +40,19 @@ public class RetailerInventoryServiceImpl implements RetailerInventoryService {
 	@Override
 	public List<RetailerInventoryBean> getItemWiseDeliveryTimeReport(String retailerId) throws RetailerInventoryException {
 		List<RetailerInventoryBean> result = new ArrayList<RetailerInventoryBean> ();
-		List<RetailerInventoryDTO> listOfDeliveredItems = retailerInventoryRepository.findAllByretailerId(retailerId);		
+		List<RetailerInventory> listOfDeliveredItems = retailerInventoryRepository.findAllByretailerId(retailerId);		
 		try {
-			List<UserDTO> userList = (List<UserDTO>) userRepository.findAll();
-			 for (RetailerInventoryDTO deliveredItem : listOfDeliveredItems) {
+			List<User> userList = (List<User>) userRepository.findAll();
+			 for (RetailerInventory deliveredItem : listOfDeliveredItems) {
 				RetailerInventoryBean object = new RetailerInventoryBean ();
 			object.setRetailerId(retailerId);
-				for (UserDTO user : userList) {
+				for (User user : userList) {
 					if (user.getUserId().equals(retailerId)) {
 						object.setRetailerName(user.getUserName());
 					break;
 				}
 				}
-				object.setRetailerName("Reatailer ABC");
+				object.setRetailerName("Retailer ABC");
 				object.setProductCategoryNumber(deliveredItem.getProductCategory());
 				object.setProductCategoryName(GoUtility.getCategoryName(deliveredItem.getProductCategory()));
 				object.setProductUniqueId(deliveredItem.getProductUniqueId());
@@ -69,16 +69,16 @@ public class RetailerInventoryServiceImpl implements RetailerInventoryService {
 	@Override
 	public List<RetailerInventoryBean> getCategoryWiseDeliveryTimeReport(String retailerId) throws RetailerInventoryException{
 		List<RetailerInventoryBean> result = new ArrayList<RetailerInventoryBean> ();
-		List<RetailerInventoryDTO> listOfDeliveredItems = retailerInventoryRepository.findAllByretailerId(retailerId); 
+		List<RetailerInventory> listOfDeliveredItems = retailerInventoryRepository.findAllByretailerId(retailerId); 
 		Map<Integer, List<RetailerInventoryBean>> map = new HashMap<Integer, List<RetailerInventoryBean>>();
 		for (int category = 1; category <= 5; category++)
 			map.put(category, new ArrayList<RetailerInventoryBean>());	
 		try {
-			List<UserDTO> userList = (List<UserDTO>) userRepository.findAll();
-			for (RetailerInventoryDTO deliveredItem : listOfDeliveredItems) {
+			List<User> userList = (List<User>) userRepository.findAll();
+			for (RetailerInventory deliveredItem : listOfDeliveredItems) {
 				RetailerInventoryBean object = new RetailerInventoryBean ();
 				object.setRetailerId(retailerId);
-				for (UserDTO user : userList) {
+				for (User user : userList) {
 					if (user.getUserId().equals(retailerId)) {
 						object.setRetailerName(user.getUserName());
 						break;
@@ -121,12 +121,12 @@ public class RetailerInventoryServiceImpl implements RetailerInventoryService {
 	}
 
 	@Override
-	public boolean updateProductRecieveTimeStamp(RetailerInventoryDTO retailerinventorydto) throws RetailerInventoryException {
+	public boolean updateProductRecieveTimeStamp(RetailerInventory retailerinventorydto) throws RetailerInventoryException {
 		boolean receiveTimestampUpdated = false;
 
 		try {
 
-			RetailerInventoryDTO existingItem = (RetailerInventoryDTO) retailerInventoryRepository.findAll();
+			RetailerInventory existingItem = (RetailerInventory) retailerInventoryRepository.findAll();
 			if (existingItem == null) {
 			throw new RetailerInventoryException(
 						"updateProductReceiveTimeStamp - " + ExceptionConstants.PRODUCT_NOT_IN_INVENTORY);
@@ -146,11 +146,11 @@ public class RetailerInventoryServiceImpl implements RetailerInventoryService {
 	}
 	
 	@Override
-	public boolean updateProductSaleTimeStamp(RetailerInventoryDTO retailerinventorydto) throws RetailerInventoryException {
+	public boolean updateProductSaleTimeStamp(RetailerInventory retailerinventorydto) throws RetailerInventoryException {
 		boolean saleTimestampUpdated = false;
 
 		try {
-			RetailerInventoryDTO existingItem = (RetailerInventoryDTO) retailerInventoryRepository.findAll();
+			RetailerInventory existingItem = (RetailerInventory) retailerInventoryRepository.findAll();
 			if (existingItem == null) {
 				throw new RetailerInventoryException(
 						"updateProductSaleTimeStamp - " + ExceptionConstants.PRODUCT_NOT_IN_INVENTORY);
@@ -170,12 +170,12 @@ public class RetailerInventoryServiceImpl implements RetailerInventoryService {
 	}
    
 	@Override
-	public List<RetailerInventoryDTO> getListOfRetailers() {
-				return (List<RetailerInventoryDTO>) retailerInventoryRepository.findAll();
+	public List<RetailerInventory> getListOfRetailers() {
+				return (List<RetailerInventory>) retailerInventoryRepository.findAll();
 	}
 
 	@Override
-	public List<RetailerInventoryDTO> getInventoryById(String retailerId) {
+	public List<RetailerInventory> getInventoryById(String retailerId) {
 		
 		return retailerInventoryRepository.findAllByretailerId(retailerId);
 	}
@@ -195,7 +195,7 @@ public class RetailerInventoryServiceImpl implements RetailerInventoryService {
 	public boolean addItemToInventory(String retailerId, byte productCategory, String productId, String productUIN) throws RetailerInventoryException {
 		boolean itemAdded = false;
 		Calendar currentSystemTimestamp = Calendar.getInstance(TimeZone.getTimeZone("UTC"));
-		RetailerInventoryDTO queryArgument = new RetailerInventoryDTO(retailerId, productCategory, productId, productUIN, currentSystemTimestamp, null, null);
+		RetailerInventory queryArgument = new RetailerInventory(retailerId, productCategory, productId, productUIN, currentSystemTimestamp, null, null);
 		itemAdded = retailerInventoryRepository.save(queryArgument) != null;
 		return itemAdded;
 	}
@@ -205,16 +205,16 @@ public class RetailerInventoryServiceImpl implements RetailerInventoryService {
 			throws RetailerInventoryException {
 		List<RetailerInventoryBean> result = new ArrayList<RetailerInventoryBean> ();
 
-		List<RetailerInventoryDTO> listOfSoldItems =  retailerInventoryRepository.findAllByretailerId(retailerId);
+		List<RetailerInventory> listOfSoldItems =  retailerInventoryRepository.findAllByretailerId(retailerId);
 		try {
-			List<UserDTO> userList = (List<UserDTO>) userRepository.findAll();
+			List<User> userList = (List<User>) userRepository.findAll();
 			
-			for (RetailerInventoryDTO soldItem : listOfSoldItems) {
+			for (RetailerInventory soldItem : listOfSoldItems) {
 				if (soldItem.getProductSaleTimestamp().get(Calendar.MONTH) == dateSelection.get(Calendar.MONTH)) {
 					RetailerInventoryBean object = new RetailerInventoryBean ();
 					object.setRetailerId(retailerId);
 					object.setRetailerName("plawan");
-					for (UserDTO user : userList) {
+					for (User user : userList) {
 						if (user.getUserId().equals(retailerId)) {
 							object.setRetailerName(user.getUserName());
 							break;
@@ -243,14 +243,14 @@ public class RetailerInventoryServiceImpl implements RetailerInventoryService {
 	public List<RetailerInventoryBean> getQuarterlyShelfTimeReport(String retailerId, Calendar dateSelection)
 			throws RetailerInventoryException {
 		List<RetailerInventoryBean> result = new ArrayList<RetailerInventoryBean> ();
-		List<RetailerInventoryDTO> listOfSoldItems =  retailerInventoryRepository.findAllByretailerId(retailerId);
+		List<RetailerInventory> listOfSoldItems =  retailerInventoryRepository.findAllByretailerId(retailerId);
 		try {
-			List<UserDTO> userList = (List<UserDTO>) userRepository.findAll();
+			List<User> userList = (List<User>) userRepository.findAll();
 			
-			for (RetailerInventoryDTO soldItem : listOfSoldItems) {
+			for (RetailerInventory soldItem : listOfSoldItems) {
 				RetailerInventoryBean object = new RetailerInventoryBean ();
 				object.setRetailerId(retailerId);
-				for (UserDTO user : userList) {
+				for (User user : userList) {
 					if (user.getUserId().equals(retailerId)) {
 						object.setRetailerName(user.getUserName());
 						break;
@@ -277,14 +277,14 @@ public class RetailerInventoryServiceImpl implements RetailerInventoryService {
 	public List<RetailerInventoryBean> getYearlyShelfTimeReport(String retailerId, Calendar dateSelection)
 			throws RetailerInventoryException {
 		List<RetailerInventoryBean> result = new ArrayList<RetailerInventoryBean>();
-		List<RetailerInventoryDTO> listOfSoldItems = retailerInventoryRepository.findAllByretailerId(retailerId);
+		List<RetailerInventory> listOfSoldItems = retailerInventoryRepository.findAllByretailerId(retailerId);
 		try {
-			List<UserDTO> userList = (List<UserDTO>) userRepository.findAll();
+			List<User> userList = (List<User>) userRepository.findAll();
 
-			for (RetailerInventoryDTO soldItem : listOfSoldItems) {
+			for (RetailerInventory soldItem : listOfSoldItems) {
 				RetailerInventoryBean object = new RetailerInventoryBean();
 				object.setRetailerId(retailerId);
-				for (UserDTO user : userList) {
+				for (User user : userList) {
 					if (user.getUserId().equals(retailerId)) {
 						object.setRetailerName(user.getUserName());
 						break;

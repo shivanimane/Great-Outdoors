@@ -13,37 +13,37 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "USER")
-public class UserDTO implements Serializable {
+public class User implements Serializable {
 	
 	private static final long serialVersionUID = -8450180103620249767L;
 	
-	@Column(name = "USER_NAME", unique = false, nullable = false, length = 50)
+	@Column(name = "USER_NAME", unique = false, nullable = false)
 	private String userName;
 
 	@Id
 	@Column(name = "USER_ID", unique = true, nullable = false)
 	private String userId;
 
-	@Column(name = "USER_MAIL", unique = false, nullable = false, length = 50)
+	@Column(name = "USER_MAIL", unique = false, nullable = false)
 	private String userMail;
 
-	@Column(name = "USER_PASSWORD", unique = false, nullable = false, length = 30)
+	@Column(name = "USER_PASSWORD", unique = false, nullable = false)
 	private String userPassword;
 
-	@Column(name = "USER_CONTACT", unique = false, nullable = false, length = 10)
+	@Column(name = "USER_CONTACT", unique = false, nullable = false)
 	private long userNumber;
 
-	@Column(name = "USER_CATEGORY", unique = false, nullable = false, length = 1)
+	@Column(name = "USER_CATEGORY", unique = false, nullable = false)
 	private int userCategory;
 	
-	@Column(name = "USER_ACTIVE_STATUS", unique = false, nullable = false, length = 1)
+	@Column(name = "USER_ACTIVE_STATUS", unique = false, nullable = false)
 	private boolean userActiveStatus;
 
-	public UserDTO() {
+	public User() {
 
 	}
 
-	public UserDTO(String userName, String userId, String userMail, String userPassword, long userNumber,
+	public User(String userName, String userId, String userMail, String userPassword, long userNumber,
 			int userCategory, boolean userActiveStatus) {
 		super();
 		this.userName = userName;

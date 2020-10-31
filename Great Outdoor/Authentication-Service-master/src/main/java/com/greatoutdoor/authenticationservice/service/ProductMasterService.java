@@ -1,6 +1,6 @@
 package com.greatoutdoor.authenticationservice.service;
 
-import com.greatoutdoor.authenticationservice.entity.ProductDTO;
+import com.greatoutdoor.authenticationservice.entity.Product;
 
 public interface ProductMasterService {
 
@@ -10,10 +10,10 @@ public interface ProductMasterService {
 	 * - Function Name : addProduct <br>
 	 * - Description : Only product master can add a new product and return status. <br>
 	 * 
-	 * @param ProductDTO product
+	 * @param Product product
 	 * @return String
 	 ****************************************************************************************************************************************/
-	String addProduct(ProductDTO product);
+	String addProduct(Product product);
 
 	
 	

@@ -49,8 +49,8 @@ public class CancelServiceImpl implements CancelService{
 		List<OrderProductMap> list = orders.getOrders();
 		Iterator<OrderProductMap> itr = list.iterator();
 		int index= 0;
-		
 		while(itr.hasNext()) {
+			
 			Cancel cancelOrder = new Cancel( orderId,userId, list.get(index).getProductId(),
 					list.get(index).getProductUIN(), currentDate, 0);
 			

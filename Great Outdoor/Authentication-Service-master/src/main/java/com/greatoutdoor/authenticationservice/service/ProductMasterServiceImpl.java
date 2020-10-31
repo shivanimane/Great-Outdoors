@@ -6,7 +6,7 @@ import org.springframework.util.LinkedMultiValueMap;
 import org.springframework.util.MultiValueMap;
 import org.springframework.web.client.RestTemplate;
 
-import com.greatoutdoor.authenticationservice.entity.ProductDTO;
+import com.greatoutdoor.authenticationservice.entity.Product;
 import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 import com.netflix.hystrix.contrib.javanica.annotation.HystrixProperty;
 
@@ -15,7 +15,7 @@ public class ProductMasterServiceImpl implements ProductMasterService{
 
 	@Autowired
 	RestTemplate restTemplate;
-	private String productURL = "http://product-ms/product";
+	private String productURL = "http://localhost:8003/product";
 
 
 	
@@ -25,18 +25,18 @@ public class ProductMasterServiceImpl implements ProductMasterService{
 	 * - Function Name : addProduct <br>
 	 * - Description : Only product master can add a new product and return status. Here we are calling productms to add new product. <br>
 	 * 
-	 * @param ProductDTO product
+	 * @param Product product
 	 * @return String
 	 ****************************************************************************************************************************************/
-	@HystrixCommand(fallbackMethod = "getFallbackAddProduct",
-			commandProperties = {
-					@HystrixProperty(name = "execution.isolation.thread.timeoutInMilliseconds", value = "2000"),
-                    @HystrixProperty(name = "circuitBreaker.requestVolumeThreshold", value = "5"),
-                    @HystrixProperty(name = "circuitBreaker.errorThresholdPercentage", value = "50"),
-                    @HystrixProperty(name = "circuitBreaker.sleepWindowInMilliseconds", value = "5000"),
-			})	
+//	@HystrixCommand(fallbackMethod = "getFallbackAddProduct",
+//			commandProperties = {
+//					@HystrixProperty(name = "execution.isolation.thread.timeoutInMilliseconds", value = "2000"),
+//                    @HystrixProperty(name = "circuitBreaker.requestVolumeThreshold", value = "5"),
+//                    @HystrixProperty(name = "circuitBreaker.errorThresholdPercentage", value = "50"),
+//                    @HystrixProperty(name = "circuitBreaker.sleepWindowInMilliseconds", value = "5000"),
+//			})	
 	@Override
-	public String addProduct(ProductDTO product) {
+	public String addProduct(Product product) {
 		return restTemplate.postForObject(productURL+"/addProduct",product, String.class);
 	}
 
@@ -73,14 +73,14 @@ public class ProductMasterServiceImpl implements ProductMasterService{
 	
 	
 	
-	//Fallback method for add product
-	String getFallbackAddProduct(ProductDTO product) {
-		return "Add product service is not responding...";
-	}
+//	//Fallback method for add product
+//	String getFallbackAddProduct(Product product) {
+//		return "Add product service is not responding...";
+//	}
 	
 	
 	//Fallback method for delete product
-	String getFallbackDeleteProduct(ProductDTO product) {
+	String getFallbackDeleteProduct(Product product) {
 		return "Delete product service is not responding...";
 	}
 
