@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.greatoutdoor.authenticationservice.entity.ProductDTO;
+import com.greatoutdoor.authenticationservice.entity.Product;
 import com.greatoutdoor.authenticationservice.service.ProductMasterService;
 
 import io.swagger.annotations.ApiOperation;
@@ -26,11 +26,11 @@ public class MasterController {
 	@ApiOperation(
 			value = "Add product ",
 			notes = "Product master can add a new product in this API",
-			response = ProductDTO.class
+			response = Product.class
 			)
 	@PostMapping("/addProduct")
 	@PreAuthorize("hasRole('PRODUCT_MASTER')")
-	public String addProduct(@RequestBody ProductDTO product) {
+	public String addProduct(@RequestBody Product product) {
 		return productMasterService.addProduct(product);
 	}
 	

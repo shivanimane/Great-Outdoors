@@ -1,6 +1,6 @@
 package com.greatoutdoor.authenticationservice.entity;
 
-public class ProductDTO {
+public class Product {
 	
 	
 	private String productId;
@@ -14,11 +14,11 @@ public class ProductDTO {
 	private String productName;
 	private String productURL;
 	
-	public ProductDTO() {}
+	public Product() {}
 
 	
 
-	public ProductDTO(String productId, double price, String colour, String dimension, String specification,
+	public Product(String productId, double price, String colour, String dimension, String specification,
 			String manufacture, int quantity, int productCategory, String productName, String productURL) {
 		super();
 		this.productId = productId;
@@ -36,7 +36,7 @@ public class ProductDTO {
 	
 
 
-	public ProductDTO(double price, String colour, String dimension, String specification, String manufacture,
+	public Product(double price, String colour, String dimension, String specification, String manufacture,
 			int quantity, int productCategory, String productName, String productURL) {
 		super();
 		this.price = price;

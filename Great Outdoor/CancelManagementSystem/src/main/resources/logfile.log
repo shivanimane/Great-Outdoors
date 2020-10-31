@@ -1,0 +1,65 @@
+2020-10-30 22:46:34.523  INFO 7136 --- [restartedMain] c.g.c.CancelManagementSystem             : Starting CancelManagementSystem on DESKTOP-DNE248H with PID 7136 (C:\Users\HP\Desktop\Great-Outdoors\Great Outdoor\CancelManagementSystem\target\classes started by HP in C:\Users\HP\Desktop\Great-Outdoors\Great Outdoor\CancelManagementSystem)
+2020-10-30 22:46:34.524  INFO 7136 --- [restartedMain] c.g.c.CancelManagementSystem             : No active profile set, falling back to default profiles: default
+2020-10-30 22:46:35.897  INFO 7136 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2020-10-30 22:46:35.936  INFO 7136 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 36ms. Found 1 JPA repository interfaces.
+2020-10-30 22:46:36.618  INFO 7136 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8008 (http)
+2020-10-30 22:46:36.620  INFO 7136 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-10-30 22:46:36.621  INFO 7136 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.38]
+2020-10-30 22:46:36.682  INFO 7136 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-10-30 22:46:36.683  INFO 7136 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2144 ms
+2020-10-30 22:46:37.055  INFO 7136 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-10-30 22:46:37.078  INFO 7136 --- [task-1] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-10-30 22:46:37.093  INFO 7136 --- [task-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2020-10-30 22:46:37.127  INFO 7136 --- [task-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2020-10-30 22:46:37.128  INFO 7136 --- [task-1] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2020-10-30 22:46:37.161  WARN 7136 --- [task-1] org.hibernate.mapping.RootClass          : HHH000038: Composite-id class does not override equals(): com.greatoutdoor.cancelmanagementsystem.model.Cart
+2020-10-30 22:46:37.161  WARN 7136 --- [task-1] org.hibernate.mapping.RootClass          : HHH000039: Composite-id class does not override hashCode(): com.greatoutdoor.cancelmanagementsystem.model.Cart
+2020-10-30 22:46:37.280  INFO 7136 --- [task-1] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-10-30 22:46:37.281  INFO 7136 --- [task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-10-30 22:46:37.367  WARN 7136 --- [task-2] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2020-10-30 22:46:37.637  WARN 7136 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-10-30 22:46:38.036  INFO 7136 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 14 endpoint(s) beneath base path '/actuator'
+2020-10-30 22:46:38.439  INFO 7136 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8008 (http) with context path ''
+2020-10-30 22:46:38.485  INFO 7136 --- [restartedMain] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories…
+2020-10-30 22:46:38.494  INFO 7136 --- [restartedMain] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
+2020-10-30 22:46:38.509  INFO 7136 --- [restartedMain] c.g.c.CancelManagementSystem             : Started CancelManagementSystem in 4.169 seconds (JVM running for 12812.752)
+2020-10-30 22:46:38.520  INFO 7136 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation delta:
+
+
+==========================
+CONDITION EVALUATION DELTA
+==========================
+
+
+Positive matches:
+-----------------
+
+   LogFileWebEndpointAutoConfiguration#logFileWebEndpoint matched:
+      - Log File found logging.file.name ./src/main/resources/logfile.log (LogFileWebEndpointAutoConfiguration.LogFileCondition)
+      - @ConditionalOnMissingBean (types: org.springframework.boot.actuate.logging.LogFileWebEndpoint; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+
+Negative matches:
+-----------------
+
+    None
+
+
+Exclusions:
+-----------
+
+    None
+
+
+Unconditional classes:
+----------------------
+
+    None
+
+
+
+2020-10-30 22:57:57.317  INFO 7136 --- [RMI TCP Connection(2)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2020-10-30 22:57:57.509  INFO 7136 --- [RMI TCP Connection(2)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-10-30 22:57:57.511  INFO 7136 --- [RMI TCP Connection(2)-127.0.0.1] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-10-30 22:57:57.512  INFO 7136 --- [RMI TCP Connection(2)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2020-10-30 22:57:57.533  INFO 7136 --- [RMI TCP Connection(2)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
