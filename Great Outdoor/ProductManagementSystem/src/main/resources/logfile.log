@@ -429,3 +429,11 @@
 2020-10-31 11:38:10.543  INFO 8956 --- [restartedMain] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
 2020-10-31 11:38:10.568  INFO 8956 --- [restartedMain] c.g.p.ProductManagementSystem            : Started ProductManagementSystem in 13.193 seconds (JVM running for 1442.247)
 2020-10-31 11:38:10.574  INFO 8956 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2020-10-31 11:38:38.715  INFO 8956 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2020-10-31 11:38:38.716  INFO 8956 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2020-10-31 11:38:38.717  INFO 8956 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2020-10-31 11:38:38.717  INFO 8956 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2020-10-31 11:38:38.717  INFO 8956 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2020-10-31 11:38:38.718  INFO 8956 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Application version is -1: false
+2020-10-31 11:38:38.719  INFO 8956 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2020-10-31 11:38:38.729  INFO 8956 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : The response status is 200
