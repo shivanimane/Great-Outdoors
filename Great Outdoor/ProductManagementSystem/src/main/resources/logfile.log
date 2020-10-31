@@ -1085,3 +1085,208 @@ Caused by: java.lang.Error: Unresolved compilation problems:
 2020-10-31 10:43:31.543  INFO 17292 --- [restartedMain] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
 2020-10-31 10:43:31.550  INFO 17292 --- [restartedMain] c.g.p.ProductManagementSystem            : Started ProductManagementSystem in 1.279 seconds (JVM running for 686.379)
 2020-10-31 10:43:31.554  INFO 17292 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2020-10-31 10:47:33.592  INFO 17292 --- [Thread-20] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-10-31 10:47:33.595  INFO 17292 --- [Thread-20] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-10-31 10:47:33.596  INFO 17292 --- [Thread-20] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Shutdown initiated...
+2020-10-31 10:47:33.621  INFO 17292 --- [Thread-20] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Shutdown completed.
+2020-10-31 10:47:34.717  INFO 17292 --- [restartedMain] c.g.p.ProductManagementSystem            : Starting ProductManagementSystem on LAPTOP-0I1I76M4 with PID 17292 (C:\Users\Deepali\Documents\GitHub\Great-Outdoors\Great Outdoor\ProductManagementSystem\target\classes started by Deepali in C:\Users\Deepali\Documents\GitHub\Great-Outdoors\Great Outdoor\ProductManagementSystem)
+2020-10-31 10:47:34.718  INFO 17292 --- [restartedMain] c.g.p.ProductManagementSystem            : No active profile set, falling back to default profiles: default
+2020-10-31 10:47:36.136  INFO 17292 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2020-10-31 10:47:36.175  INFO 17292 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 37ms. Found 1 JPA repository interfaces.
+2020-10-31 10:47:36.946  INFO 17292 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8003 (http)
+2020-10-31 10:47:36.947  INFO 17292 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-10-31 10:47:36.948  INFO 17292 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.38]
+2020-10-31 10:47:36.990  INFO 17292 --- [restartedMain] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2020-10-31 10:47:36.990  INFO 17292 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2265 ms
+2020-10-31 10:47:37.313  INFO 17292 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-10-31 10:47:37.327  INFO 17292 --- [task-1] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-10-31 10:47:37.343  INFO 17292 --- [task-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Starting...
+2020-10-31 10:47:37.452  INFO 17292 --- [task-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Start completed.
+2020-10-31 10:47:37.452  INFO 17292 --- [task-1] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2020-10-31 10:47:37.479  WARN 17292 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-10-31 10:47:37.568  INFO 17292 --- [task-1] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-10-31 10:47:37.570  INFO 17292 --- [task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-10-31 10:47:37.716  INFO 17292 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 14 endpoint(s) beneath base path '/actuator'
+2020-10-31 10:47:37.735  WARN 17292 --- [task-2] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2020-10-31 10:47:37.921  INFO 17292 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8003 (http) with context path ''
+2020-10-31 10:47:37.940  INFO 17292 --- [restartedMain] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories…
+2020-10-31 10:47:37.944  INFO 17292 --- [restartedMain] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
+2020-10-31 10:47:37.951  INFO 17292 --- [restartedMain] c.g.p.ProductManagementSystem            : Started ProductManagementSystem in 3.444 seconds (JVM running for 932.781)
+2020-10-31 10:47:37.953  INFO 17292 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2020-10-31 10:47:52.709  INFO 17292 --- [Thread-25] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-10-31 10:47:52.710  INFO 17292 --- [Thread-25] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-10-31 10:47:52.710  INFO 17292 --- [Thread-25] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Shutdown initiated...
+2020-10-31 10:47:52.716  INFO 17292 --- [Thread-25] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Shutdown completed.
+2020-10-31 10:47:53.302  INFO 17292 --- [restartedMain] c.g.p.ProductManagementSystem            : Starting ProductManagementSystem on LAPTOP-0I1I76M4 with PID 17292 (C:\Users\Deepali\Documents\GitHub\Great-Outdoors\Great Outdoor\ProductManagementSystem\target\classes started by Deepali in C:\Users\Deepali\Documents\GitHub\Great-Outdoors\Great Outdoor\ProductManagementSystem)
+2020-10-31 10:47:53.302  INFO 17292 --- [restartedMain] c.g.p.ProductManagementSystem            : No active profile set, falling back to default profiles: default
+2020-10-31 10:47:54.263  INFO 17292 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2020-10-31 10:47:54.300  INFO 17292 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 36ms. Found 1 JPA repository interfaces.
+2020-10-31 10:47:55.297  INFO 17292 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8003 (http)
+2020-10-31 10:47:55.301  INFO 17292 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-10-31 10:47:55.302  INFO 17292 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.38]
+2020-10-31 10:47:55.371  INFO 17292 --- [restartedMain] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2020-10-31 10:47:55.371  INFO 17292 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2061 ms
+2020-10-31 10:47:55.663  INFO 17292 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-10-31 10:47:55.674  INFO 17292 --- [task-1] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-10-31 10:47:55.684  INFO 17292 --- [task-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Starting...
+2020-10-31 10:47:55.703  INFO 17292 --- [task-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Start completed.
+2020-10-31 10:47:55.704  INFO 17292 --- [task-1] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2020-10-31 10:47:55.766  INFO 17292 --- [task-1] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-10-31 10:47:55.766  INFO 17292 --- [task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-10-31 10:47:55.787  WARN 17292 --- [task-2] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2020-10-31 10:47:55.879  WARN 17292 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-10-31 10:47:56.124  INFO 17292 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 14 endpoint(s) beneath base path '/actuator'
+2020-10-31 10:47:56.346  INFO 17292 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8003 (http) with context path ''
+2020-10-31 10:47:56.370  INFO 17292 --- [restartedMain] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories…
+2020-10-31 10:47:56.377  INFO 17292 --- [restartedMain] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
+2020-10-31 10:47:56.392  INFO 17292 --- [restartedMain] c.g.p.ProductManagementSystem            : Started ProductManagementSystem in 3.143 seconds (JVM running for 951.218)
+2020-10-31 12:37:20.344  INFO 17292 --- [http-nio-8003-exec-1] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-10-31 12:37:20.347  INFO 17292 --- [http-nio-8003-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-10-31 12:37:20.393  INFO 17292 --- [http-nio-8003-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 46 ms
+2020-10-31 15:42:11.107  WARN 17292 --- [HikariPool-7 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-7 - Thread starvation or clock leap detected (housekeeper delta=50m11s425ms279µs200ns).
+2020-10-31 20:26:24.539  WARN 17292 --- [HikariPool-7 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-7 - Thread starvation or clock leap detected (housekeeper delta=18m39s300ms750µs400ns).
+2020-10-31 20:36:47.529  WARN 17292 --- [http-nio-8003-exec-10] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [java.lang.NullPointerException]
+2020-10-31 20:37:48.847  WARN 17292 --- [http-nio-8003-exec-3] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in org.springframework.http.ResponseEntity<java.lang.String> com.greatoutdoor.productmanagementsystem.controller.ProductController.addProduct(com.greatoutdoor.productmanagementsystem.model.Product) with 5 errors: [Field error in object 'product' on field 'colour': rejected value [null]; codes [NotNull.product.colour,NotNull.colour,NotNull.java.lang.String,NotNull]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [product.colour,colour]; arguments []; default message [colour]]; default message [Color cannot be null]] [Field error in object 'product' on field 'productCategory': rejected value [0]; codes [Min.product.productCategory,Min.productCategory,Min.int,Min]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [product.productCategory,productCategory]; arguments []; default message [productCategory],1]; default message [Product Category is only between 1-5]] [Field error in object 'product' on field 'manufacture': rejected value [null]; codes [NotNull.product.manufacture,NotNull.manufacture,NotNull.java.lang.String,NotNull]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [product.manufacture,manufacture]; arguments []; default message [manufacture]]; default message [Manufacturer cannot be null]] [Field error in object 'product' on field 'specification': rejected value [null]; codes [NotNull.product.specification,NotNull.specification,NotNull.java.lang.String,NotNull]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [product.specification,specification]; arguments []; default message [specification]]; default message [Specification cannot be null]] [Field error in object 'product' on field 'dimension': rejected value [null]; codes [NotNull.product.dimension,NotNull.dimension,NotNull.java.lang.String,NotNull]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [product.dimension,dimension]; arguments []; default message [dimension]]; default message [Dimension cannot be null]] ]
+2020-10-31 20:38:07.816  WARN 17292 --- [http-nio-8003-exec-5] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in org.springframework.http.ResponseEntity<java.lang.String> com.greatoutdoor.productmanagementsystem.controller.ProductController.addProduct(com.greatoutdoor.productmanagementsystem.model.Product) with 5 errors: [Field error in object 'product' on field 'productCategory': rejected value [0]; codes [Min.product.productCategory,Min.productCategory,Min.int,Min]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [product.productCategory,productCategory]; arguments []; default message [productCategory],1]; default message [Product Category is only between 1-5]] [Field error in object 'product' on field 'manufacture': rejected value [null]; codes [NotNull.product.manufacture,NotNull.manufacture,NotNull.java.lang.String,NotNull]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [product.manufacture,manufacture]; arguments []; default message [manufacture]]; default message [Manufacturer cannot be null]] [Field error in object 'product' on field 'specification': rejected value [null]; codes [NotNull.product.specification,NotNull.specification,NotNull.java.lang.String,NotNull]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [product.specification,specification]; arguments []; default message [specification]]; default message [Specification cannot be null]] [Field error in object 'product' on field 'dimension': rejected value [null]; codes [NotNull.product.dimension,NotNull.dimension,NotNull.java.lang.String,NotNull]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [product.dimension,dimension]; arguments []; default message [dimension]]; default message [Dimension cannot be null]] [Field error in object 'product' on field 'colour': rejected value [null]; codes [NotNull.product.colour,NotNull.colour,NotNull.java.lang.String,NotNull]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [product.colour,colour]; arguments []; default message [colour]]; default message [Color cannot be null]] ]
+2020-10-31 20:38:58.506  WARN 17292 --- [http-nio-8003-exec-7] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in org.springframework.http.ResponseEntity<java.lang.String> com.greatoutdoor.productmanagementsystem.controller.ProductController.addProduct(com.greatoutdoor.productmanagementsystem.model.Product) with 5 errors: [Field error in object 'product' on field 'colour': rejected value [null]; codes [NotNull.product.colour,NotNull.colour,NotNull.java.lang.String,NotNull]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [product.colour,colour]; arguments []; default message [colour]]; default message [Color cannot be null]] [Field error in object 'product' on field 'manufacture': rejected value [null]; codes [NotNull.product.manufacture,NotNull.manufacture,NotNull.java.lang.String,NotNull]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [product.manufacture,manufacture]; arguments []; default message [manufacture]]; default message [Manufacturer cannot be null]] [Field error in object 'product' on field 'specification': rejected value [null]; codes [NotNull.product.specification,NotNull.specification,NotNull.java.lang.String,NotNull]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [product.specification,specification]; arguments []; default message [specification]]; default message [Specification cannot be null]] [Field error in object 'product' on field 'dimension': rejected value [null]; codes [NotNull.product.dimension,NotNull.dimension,NotNull.java.lang.String,NotNull]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [product.dimension,dimension]; arguments []; default message [dimension]]; default message [Dimension cannot be null]] [Field error in object 'product' on field 'productCategory': rejected value [0]; codes [Min.product.productCategory,Min.productCategory,Min.int,Min]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [product.productCategory,productCategory]; arguments []; default message [productCategory],1]; default message [Product Category is only between 1-5]] ]
+2020-10-31 20:45:19.500  WARN 17292 --- [http-nio-8003-exec-1] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [java.lang.NullPointerException]
+2020-10-31 20:45:22.467  WARN 17292 --- [http-nio-8003-exec-3] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [java.lang.NullPointerException]
+2020-10-31 20:50:51.546  INFO 17292 --- [RMI TCP Connection(2)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2020-10-31 20:50:53.411  INFO 17292 --- [RMI TCP Connection(2)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-10-31 20:50:53.554  INFO 17292 --- [RMI TCP Connection(2)-127.0.0.1] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-10-31 20:50:53.556  INFO 17292 --- [RMI TCP Connection(2)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Shutdown initiated...
+2020-10-31 20:50:53.597  INFO 17292 --- [RMI TCP Connection(2)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Shutdown completed.
+2020-10-31 20:52:54.329  INFO 14480 --- [restartedMain] c.g.p.ProductManagementSystem            : No active profile set, falling back to default profiles: default
+2020-10-31 20:52:57.067  INFO 14480 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2020-10-31 20:52:57.239  INFO 14480 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 171ms. Found 1 JPA repository interfaces.
+2020-10-31 20:52:57.531  WARN 14480 --- [restartedMain] o.s.boot.actuate.endpoint.EndpointId     : Endpoint ID 'service-registry' contains invalid characters, please migrate to a valid format.
+2020-10-31 20:52:57.835  INFO 14480 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=fb02c133-3c73-327b-b809-1d2774bebdf8
+2020-10-31 20:53:00.258  INFO 14480 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8003 (http)
+2020-10-31 20:53:00.307  INFO 14480 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-10-31 20:53:00.307  INFO 14480 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.38]
+2020-10-31 20:53:00.936  INFO 14480 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-10-31 20:53:00.944  INFO 14480 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 6565 ms
+2020-10-31 20:53:01.212  WARN 14480 --- [restartedMain] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2020-10-31 20:53:01.214  INFO 14480 --- [restartedMain] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-10-31 20:53:01.236  INFO 14480 --- [restartedMain] c.netflix.config.DynamicPropertyFactory  : DynamicPropertyFactory is initialized with configuration sources: com.netflix.config.ConcurrentCompositeConfiguration@3669d8cf
+2020-10-31 20:53:02.786  INFO 14480 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-10-31 20:53:02.912  INFO 14480 --- [task-1] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-10-31 20:53:03.354  INFO 14480 --- [task-1] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.21.Final
+2020-10-31 20:53:04.388  INFO 14480 --- [task-1] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-10-31 20:53:05.105  INFO 14480 --- [task-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-10-31 20:53:05.628  WARN 14480 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-10-31 20:53:06.521  INFO 14480 --- [task-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-10-31 20:53:06.568  INFO 14480 --- [task-1] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2020-10-31 20:53:08.569  INFO 14480 --- [task-1] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-10-31 20:53:08.589  INFO 14480 --- [task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-10-31 20:53:10.509  INFO 14480 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 18 endpoint(s) beneath base path '/actuator'
+2020-10-31 20:53:10.655  WARN 14480 --- [task-2] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2020-10-31 20:53:10.813  WARN 14480 --- [restartedMain] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2020-10-31 20:53:10.813  INFO 14480 --- [restartedMain] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-10-31 20:53:12.384  WARN 14480 --- [restartedMain] ockingLoadBalancerClientRibbonWarnLogger : You already have RibbonLoadBalancerClient on your classpath. It will be used by default. As Spring Cloud Ribbon is in maintenance mode. We recommend switching to BlockingLoadBalancerClient instead. In order to use it, set the value of `spring.cloud.loadbalancer.ribbon.enabled` to `false` or remove spring-cloud-starter-netflix-ribbon from your project.
+2020-10-31 20:53:12.577  INFO 14480 --- [restartedMain] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2020-10-31 20:53:12.642  INFO 14480 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2020-10-31 20:53:12.745  INFO 14480 --- [restartedMain] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
+2020-10-31 20:53:12.746  INFO 14480 --- [restartedMain] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
+2020-10-31 20:53:13.156  INFO 14480 --- [restartedMain] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
+2020-10-31 20:53:13.156  INFO 14480 --- [restartedMain] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
+2020-10-31 20:53:13.461  INFO 14480 --- [restartedMain] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-10-31 20:53:13.757  INFO 14480 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2020-10-31 20:53:13.763  INFO 14480 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2020-10-31 20:53:13.763  INFO 14480 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2020-10-31 20:53:13.763  INFO 14480 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2020-10-31 20:53:13.763  INFO 14480 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2020-10-31 20:53:13.764  INFO 14480 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2020-10-31 20:53:13.765  INFO 14480 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2020-10-31 20:53:13.985  INFO 14480 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2020-10-31 20:53:14.002  INFO 14480 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2020-10-31 20:53:14.010  INFO 14480 --- [restartedMain] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2020-10-31 20:53:14.061  INFO 14480 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1604157794019 with initial instances count: 0
+2020-10-31 20:53:14.091  INFO 14480 --- [restartedMain] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application PRODUCT-MGMT-SERVICE with eureka with status UP
+2020-10-31 20:53:14.093  INFO 14480 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1604157794093, current=UP, previous=STARTING]
+2020-10-31 20:53:14.102  WARN 14480 --- [restartedMain] c.n.discovery.InstanceInfoReplicator     : Ignoring onDemand update due to rate limiter
+2020-10-31 20:53:14.115  INFO 14480 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_PRODUCT-MGMT-SERVICE/LAPTOP-0I1I76M4:product-mgmt-service:8003: registering service...
+2020-10-31 20:53:14.379  INFO 14480 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_PRODUCT-MGMT-SERVICE/LAPTOP-0I1I76M4:product-mgmt-service:8003 - registration status: 204
+2020-10-31 20:53:14.381  INFO 14480 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8003 (http) with context path ''
+2020-10-31 20:53:14.386  INFO 14480 --- [restartedMain] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8003
+2020-10-31 20:53:15.288  INFO 14480 --- [restartedMain] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories…
+2020-10-31 20:53:15.333  INFO 14480 --- [restartedMain] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
+2020-10-31 20:53:15.354  INFO 14480 --- [restartedMain] c.g.p.ProductManagementSystem            : Started ProductManagementSystem in 26.51 seconds (JVM running for 44.932)
+2020-10-31 20:53:44.004  INFO 14480 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2020-10-31 20:53:44.007  INFO 14480 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2020-10-31 20:53:44.008  INFO 14480 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2020-10-31 20:53:44.008  INFO 14480 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2020-10-31 20:53:44.010  INFO 14480 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2020-10-31 20:53:44.010  INFO 14480 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Application version is -1: false
+2020-10-31 20:53:44.010  INFO 14480 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2020-10-31 20:53:44.120  INFO 14480 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2020-10-31 20:54:06.939  INFO 14480 --- [http-nio-8003-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-10-31 20:54:06.940  INFO 14480 --- [http-nio-8003-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-10-31 20:54:06.962  INFO 14480 --- [http-nio-8003-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 22 ms
+2020-10-31 20:54:07.229  WARN 14480 --- [http-nio-8003-exec-2] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [java.lang.NullPointerException]
+2020-10-31 20:58:13.773  INFO 14480 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-10-31 20:59:40.957  INFO 14480 --- [Thread-2] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application PRODUCT-MGMT-SERVICE with eureka with status DOWN
+2020-10-31 20:59:40.960  WARN 14480 --- [Thread-2] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1604158180960, current=DOWN, previous=UP]
+2020-10-31 20:59:40.979  WARN 14480 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1604158180979, current=UP, previous=DOWN]
+2020-10-31 20:59:40.980  INFO 14480 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_PRODUCT-MGMT-SERVICE/LAPTOP-0I1I76M4:product-mgmt-service:8003: registering service...
+2020-10-31 20:59:40.999  INFO 14480 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_PRODUCT-MGMT-SERVICE/LAPTOP-0I1I76M4:product-mgmt-service:8003 - registration status: 204
+2020-10-31 20:59:41.577  INFO 14480 --- [Thread-2] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-10-31 20:59:41.582  INFO 14480 --- [Thread-2] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-10-31 20:59:41.586  INFO 14480 --- [Thread-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2020-10-31 20:59:41.614  INFO 14480 --- [Thread-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2020-10-31 20:59:41.617  INFO 14480 --- [Thread-2] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2020-10-31 20:59:44.630  WARN 14480 --- [DiscoveryClient-0] c.netflix.discovery.TimedSupervisorTask  : task supervisor shutting down, can't accept the task
+2020-10-31 20:59:44.633  INFO 14480 --- [Thread-2] com.netflix.discovery.DiscoveryClient    : Unregistering ...
+2020-10-31 20:59:44.655  INFO 14480 --- [Thread-2] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_PRODUCT-MGMT-SERVICE/LAPTOP-0I1I76M4:product-mgmt-service:8003 - deregister  status: 200
+2020-10-31 20:59:44.692  INFO 14480 --- [Thread-2] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+2020-10-31 20:59:46.717  INFO 14480 --- [restartedMain] c.g.p.ProductManagementSystem            : No active profile set, falling back to default profiles: default
+2020-10-31 20:59:47.532  INFO 14480 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2020-10-31 20:59:47.544  INFO 14480 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 11ms. Found 1 JPA repository interfaces.
+2020-10-31 20:59:47.674  INFO 14480 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=fb02c133-3c73-327b-b809-1d2774bebdf8
+2020-10-31 20:59:47.977  INFO 14480 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8003 (http)
+2020-10-31 20:59:47.978  INFO 14480 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-10-31 20:59:47.978  INFO 14480 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.38]
+2020-10-31 20:59:48.006  INFO 14480 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-10-31 20:59:48.006  INFO 14480 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1286 ms
+2020-10-31 20:59:48.215  INFO 14480 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-10-31 20:59:48.223  INFO 14480 --- [task-1] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-10-31 20:59:48.232  INFO 14480 --- [task-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2020-10-31 20:59:48.252  INFO 14480 --- [task-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2020-10-31 20:59:48.253  INFO 14480 --- [task-1] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2020-10-31 20:59:48.341  INFO 14480 --- [task-1] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-10-31 20:59:48.379  WARN 14480 --- [task-2] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2020-10-31 20:59:48.341  INFO 14480 --- [task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-10-31 20:59:53.247  WARN 14480 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-10-31 20:59:54.254  INFO 14480 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 18 endpoint(s) beneath base path '/actuator'
+2020-10-31 20:59:54.297  WARN 14480 --- [restartedMain] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2020-10-31 20:59:54.298  INFO 14480 --- [restartedMain] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-10-31 20:59:55.054  WARN 14480 --- [restartedMain] ockingLoadBalancerClientRibbonWarnLogger : You already have RibbonLoadBalancerClient on your classpath. It will be used by default. As Spring Cloud Ribbon is in maintenance mode. We recommend switching to BlockingLoadBalancerClient instead. In order to use it, set the value of `spring.cloud.loadbalancer.ribbon.enabled` to `false` or remove spring-cloud-starter-netflix-ribbon from your project.
+2020-10-31 20:59:55.104  INFO 14480 --- [restartedMain] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2020-10-31 20:59:55.110  INFO 14480 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2020-10-31 20:59:55.113  INFO 14480 --- [restartedMain] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
+2020-10-31 20:59:55.113  INFO 14480 --- [restartedMain] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
+2020-10-31 20:59:55.114  INFO 14480 --- [restartedMain] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
+2020-10-31 20:59:55.114  INFO 14480 --- [restartedMain] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
+2020-10-31 20:59:55.173  INFO 14480 --- [restartedMain] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-10-31 20:59:55.174  INFO 14480 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2020-10-31 20:59:55.174  INFO 14480 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2020-10-31 20:59:55.174  INFO 14480 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2020-10-31 20:59:55.175  INFO 14480 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2020-10-31 20:59:55.175  INFO 14480 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2020-10-31 20:59:55.175  INFO 14480 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2020-10-31 20:59:55.175  INFO 14480 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2020-10-31 20:59:55.178  INFO 14480 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2020-10-31 20:59:55.179  INFO 14480 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2020-10-31 20:59:55.179  INFO 14480 --- [restartedMain] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2020-10-31 20:59:55.180  INFO 14480 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1604158195180 with initial instances count: 1
+2020-10-31 20:59:55.182  INFO 14480 --- [restartedMain] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application PRODUCT-MGMT-SERVICE with eureka with status UP
+2020-10-31 20:59:55.183  INFO 14480 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1604158195183, current=UP, previous=STARTING]
+2020-10-31 20:59:55.183  WARN 14480 --- [restartedMain] c.n.discovery.InstanceInfoReplicator     : Ignoring onDemand update due to rate limiter
+2020-10-31 20:59:55.187  INFO 14480 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_PRODUCT-MGMT-SERVICE/LAPTOP-0I1I76M4:product-mgmt-service:8003: registering service...
+2020-10-31 20:59:55.191  INFO 14480 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8003 (http) with context path ''
+2020-10-31 20:59:55.192  INFO 14480 --- [restartedMain] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8003
+2020-10-31 20:59:55.209  INFO 14480 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_PRODUCT-MGMT-SERVICE/LAPTOP-0I1I76M4:product-mgmt-service:8003 - registration status: 204
+2020-10-31 20:59:55.772  INFO 14480 --- [restartedMain] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories…
+2020-10-31 20:59:55.777  INFO 14480 --- [restartedMain] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
+2020-10-31 20:59:55.789  INFO 14480 --- [restartedMain] c.g.p.ProductManagementSystem            : Started ProductManagementSystem in 10.8 seconds (JVM running for 445.367)
+2020-10-31 20:59:55.794  INFO 14480 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged

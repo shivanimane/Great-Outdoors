@@ -7,6 +7,9 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.validation.constraints.Size;
+
+import com.sun.istack.NotNull;
 
 @Entity
 @Table(name="address")
@@ -15,6 +18,8 @@ public class Address {
 	
 	@Id
 	//@GeneratedValue(strategy=GenerationType.IDENTITY)
+	@NotNull
+	@Size(min=4, message="addressid should have at least 4 character")
 	private String addressId;
 	private String retailerId;
 	private String buildingNo;

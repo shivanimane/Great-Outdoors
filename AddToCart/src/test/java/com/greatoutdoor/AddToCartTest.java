@@ -66,4 +66,29 @@ class AddToCartTest {
 	void testdeleteOrder() {
 		Order order=new Order("3000", "t567", "4528", 5, 2020-12-12,2019-06-05, 2000);
 	}**/
+	
+	/**@Test
+	void testremoveItemFromCartByUserId() {
+		Cart cartItem=new Cart("567");
+		OrderAndCartService orderandcartservice = mock(OrderAndCartServiceImpl.class);
+		 when(orderandcartservice.removeItemFromCartByUserId(cartItem)).thenReturn(Boolean.TRUE);
+			System.out.println(cartItem.toString());
+			boolean logc = orderandcartservice.removeItemFromCartByUserId(cartItem);
+			assertEquals(Boolean.TRUE, logc);
+	}**/
+	
+	@Test
+	void testdeleteOrder() {
+		Order order= new Order();
+		OrderAndCartService orderandcartservice = mock(OrderAndCartServiceImpl.class);
+		 when(orderandcartservice.deleteOrder(order)).thenReturn(Boolean.TRUE);
+			System.out.println(order.toString());
+			boolean logc = orderandcartservice.deleteOrder(order);
+			assertEquals(Boolean.TRUE, logc);
+		
+	}
+	
+	
+	
+	
 }

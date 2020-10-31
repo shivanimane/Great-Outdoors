@@ -18,26 +18,22 @@ import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExcep
 import com.greatoutdoor.addressmanagementsystem.exception.ErrorMessage;
 import com.greatoutdoor.addressmanagementsystem.exception.NullParameterException;
 import com.greatoutdoor.addressmanagementsystem.exception.AddressNotFound;
-
-
+import org.springframework.web.context.request.WebRequest;
 
 @ControllerAdvice
-public class CustomExceptionHandler extends ResponseEntityExceptionHandler{
+public class CustomExceptionHandler extends ResponseEntityExceptionHandler {
 
 	private long currentTimeMillis = System.currentTimeMillis();
 	private String errorMsg = "Some thing went wrong!";
-	
+
 	@ExceptionHandler(Exception.class)
-	public final ResponseEntity<ErrorMessage> somethingWentWrong(Exception ex){
-		
-		ErrorMessage exceptionResponse =
-				new ErrorMessage(ex.getMessage(), 
-						errorMsg,currentTimeMillis);
-		return new ResponseEntity<ErrorMessage>(exceptionResponse,
-				new HttpHeaders(),HttpStatus.BAD_REQUEST);
-		
+	public final ResponseEntity<ErrorMessage> somethingWentWrong(Exception ex) {
+
+		ErrorMessage exceptionResponse = new ErrorMessage(ex.getMessage(), errorMsg, currentTimeMillis);
+		return new ResponseEntity<ErrorMessage>(exceptionResponse, new HttpHeaders(), HttpStatus.BAD_REQUEST);
+
 	}
-	
+
 	
 //	/*
 //	 * Name: validationException
@@ -52,7 +48,7 @@ public class CustomExceptionHandler extends ResponseEntityExceptionHandler{
 //		return new ResponseEntity<ErrorMessage>(exceptionResponse,
 //				new HttpHeaders(),HttpStatus.NOT_FOUND);
 //	}
-	
+
 //	
 //	@ResponseStatus(HttpStatus.BAD_REQUEST)
 //	@ExceptionHandler(MethodArgumentNotValidException.class)
@@ -68,50 +64,39 @@ public class CustomExceptionHandler extends ResponseEntityExceptionHandler{
 //	    });
 //	    return errors;
 //	}
-	
+
 	/*
-	 * Name: validationException
-	 * Description: This exception will be handled if request comes with null values.
+	 * Name: validationException Description: This exception will be handled if
+	 * request comes with null values.
 	 */
 	@ExceptionHandler(NullParameterException.class)
-	public final ResponseEntity<ErrorMessage> nullParameter(NullParameterException ex){
+	public final ResponseEntity<ErrorMessage> nullParameter(NullParameterException ex) {
 
-		ErrorMessage exceptionResponse =
-				new ErrorMessage(ex.getMessage(), 
-						errorMsg,currentTimeMillis);
-		return new ResponseEntity<ErrorMessage>(exceptionResponse,
-				new HttpHeaders(),HttpStatus.NOT_FOUND);
+		ErrorMessage exceptionResponse = new ErrorMessage(ex.getMessage(), errorMsg, currentTimeMillis);
+		return new ResponseEntity<ErrorMessage>(exceptionResponse, new HttpHeaders(), HttpStatus.NOT_FOUND);
 	}
-	
-	
-	
+
 	/*
-	 * Name: validationException
-	 * Description: This exception will be handled if the requested user in not their in database.
+	 * Name: validationException Description: This exception will be handled if the
+	 * requested user in not their in database.
 	 */
 	@ExceptionHandler(AddressNotFound.class)
-	public final ResponseEntity<ErrorMessage> addressNotFound(AddressNotFound ex){
+	public final ResponseEntity<ErrorMessage> addressNotFound(AddressNotFound ex) {
 
-		ErrorMessage exceptionResponse =
-				new ErrorMessage(ex.getMessage(), 
-						errorMsg,currentTimeMillis);
-		return new ResponseEntity<ErrorMessage>(exceptionResponse,
-				new HttpHeaders(),HttpStatus.NOT_FOUND);
+		ErrorMessage exceptionResponse = new ErrorMessage(ex.getMessage(), errorMsg, currentTimeMillis);
+		return new ResponseEntity<ErrorMessage>(exceptionResponse, new HttpHeaders(), HttpStatus.NOT_FOUND);
 	}
-	
-	
+
 }
 
-
-class ErrorMessage{
+class ErrorMessage {
 	private String message;
 	private String details;
 	private long timestamp;
-	
-	public ErrorMessage() {}
-	
-	
-	
+
+	public ErrorMessage() {
+	}
+
 	public ErrorMessage(String message, String details, long timestamp) {
 		super();
 		this.message = message;
@@ -119,35 +104,28 @@ class ErrorMessage{
 		this.timestamp = timestamp;
 	}
 
-
-
 	public String getMessage() {
 		return message;
 	}
-	
+
 	public void setMessage(String message) {
 		this.message = message;
 	}
-	
+
 	public String getDetails() {
 		return details;
 	}
-	
+
 	public void setDetails(String details) {
 		this.details = details;
 	}
-
-
 
 	public long getTimestamp() {
 		return timestamp;
 	}
 
-
-
 	public void setTimestamp(long timestamp) {
 		this.timestamp = timestamp;
 	}
-	
-	
+
 }

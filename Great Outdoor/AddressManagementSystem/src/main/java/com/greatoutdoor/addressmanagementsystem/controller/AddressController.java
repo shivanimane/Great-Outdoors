@@ -1,10 +1,13 @@
 /**
+@Deepali
  * 
  */
 package com.greatoutdoor.addressmanagementsystem.controller;
 
 import java.util.List;
 import java.util.Optional;
+
+import javax.validation.Valid;
 
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -58,7 +61,7 @@ public class AddressController {
 	)
 
 	@PostMapping("/addAddress")
-	ResponseEntity<String> addAddress(@RequestBody Address address) {
+	ResponseEntity<String> addAddress(@Valid @RequestBody Address address) {
 
 		if (addressService.addAddress(address)) {
 			return ResponseEntity.ok("Address has been added");
