@@ -4506,3 +4506,125 @@ org.eclipse.core.runtime.CoreException: Could not resolve artifact org.springfra
 2020-10-31 10:23:39,371 [Worker-1032: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
 2020-10-31 10:23:39,377 [Worker-1032: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
 2020-10-31 10:23:39,377 [Worker-1032: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\user\Documents\Great-Outdoors\Great Outdoor\Authentication-Service-master\src\test\resources
+2020-10-31 10:26:52,015 [Worker-1044: Building workspace] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.cg.iter:authenticationService-JWT:0.0.1-SNAPSHOT @ C:\Users\user\Documents\Great-Outdoors\Great Outdoor\Authentication-Service-master\pom.xml.
+2020-10-31 10:27:01,167 [Worker-1044: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-10-31 10:27:01,168 [Worker-1044: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-10-31 10:27:01,168 [Worker-1044: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-10-31 10:27:01,171 [Worker-1044: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-10-31 10:27:01,171 [Worker-1044: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\user\Documents\Great-Outdoors\Great Outdoor\Authentication-Service-master\src\test\resources
+2020-10-31 10:27:11,645 [Worker-1045: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-10-31 10:27:11,646 [Worker-1045: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2020-10-31 10:27:11,648 [Worker-1045: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-10-31 10:27:11,651 [Worker-1045: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-10-31 10:27:11,651 [Worker-1045: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\user\Documents\Great-Outdoors\AddToCart\src\test\resources
+2020-10-31 10:27:23,399 [Worker-1050: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-10-31 10:27:23,399 [Worker-1050: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-10-31 10:27:23,400 [Worker-1050: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2020-10-31 10:27:23,413 [Worker-1050: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-10-31 10:27:23,413 [Worker-1050: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\user\Documents\Great-Outdoors\AddToCart\src\test\resources
+2020-10-31 10:27:25,774 [Worker-1050: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-10-31 10:27:25,775 [Worker-1050: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-10-31 10:27:25,775 [Worker-1050: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2020-10-31 10:27:25,783 [Worker-1050: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-10-31 10:27:25,783 [Worker-1050: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\user\Documents\Great-Outdoors\Great Outdoor\AddressManagementSystem\src\test\resources
+2020-10-31 10:27:42,533 [Worker-1043: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-10-31 10:27:42,534 [Worker-1043: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2020-10-31 10:27:42,536 [Worker-1043: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2020-10-31 10:27:42,543 [Worker-1043: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-10-31 10:27:42,543 [Worker-1043: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\user\Documents\Great-Outdoors\Great Outdoor\Authentication-Service-master\src\test\resources
+2020-10-31 10:27:45,568 [Worker-1046: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-10-31 10:27:45,569 [Worker-1046: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2020-10-31 10:27:45,571 [Worker-1046: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2020-10-31 10:27:45,579 [Worker-1046: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-10-31 10:27:45,579 [Worker-1046: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\user\Documents\Great-Outdoors\Great Outdoor\CancelManagementSystem\src\test\resources
+2020-10-31 10:27:47,340 [Worker-1044: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-10-31 10:27:47,342 [Worker-1044: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2020-10-31 10:27:47,344 [Worker-1044: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2020-10-31 10:27:47,357 [Worker-1044: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-10-31 10:27:47,358 [Worker-1044: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\user\Documents\Great-Outdoors\Great Outdoor\ProductManagementSystem\src\test\resources
+2020-10-31 10:27:49,797 [Worker-1049: Building workspace] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.example:GreatOutdoors:0.0.1-SNAPSHOT @ C:\Users\user\Documents\Great-Outdoors\Great Outdoor\WishlistManagementSystem\pom.xml.
+2020-10-31 10:27:51,314 [Worker-1049: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-10-31 10:27:51,316 [Worker-1049: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2020-10-31 10:27:51,318 [Worker-1049: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-10-31 10:27:51,321 [Worker-1049: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-10-31 10:27:51,321 [Worker-1049: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\user\Documents\Great-Outdoors\Great Outdoor\WishlistManagementSystem\src\test\resources
+2020-10-31 10:29:19,609 [Worker-1044: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-10-31 10:29:19,611 [Worker-1044: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2020-10-31 10:29:19,614 [Worker-1044: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2020-10-31 10:29:19,659 [Worker-1044: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-10-31 10:29:19,660 [Worker-1044: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\user\Documents\Great-Outdoors\Great Outdoor\ProductManagementSystem\src\test\resources
+2020-10-31 10:34:09,135 [Worker-1045: Updating Maven Project] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update started
+2020-10-31 10:34:14,245 [Worker-1045: Updating Maven Project] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.example:GreatOutdoors:0.0.1-SNAPSHOT @ C:\Users\user\Documents\Great-Outdoors\AddToCart\pom.xml.
+2020-10-31 10:34:18,764 [Worker-1045: Updating Maven Project] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://oss.jfrog.org/artifactory/oss-snapshot-local/io/springfox/springfox-swagger-ui/3.0.0-SNAPSHOT/maven-metadata.xml
+2020-10-31 10:34:20,063 [Worker-1045: Updating Maven Project] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://oss.jfrog.org/artifactory/oss-snapshot-local/io/springfox/springfox-swagger-ui/3.0.0-SNAPSHOT/maven-metadata.xml
+2020-10-31 10:34:20,572 [Worker-1045: Updating Maven Project] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://oss.jfrog.org/artifactory/oss-snapshot-local/io/springfox/springfox-spring-webmvc/3.0.0-SNAPSHOT/maven-metadata.xml
+2020-10-31 10:34:21,097 [Worker-1045: Updating Maven Project] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://oss.jfrog.org/artifactory/oss-snapshot-local/io/springfox/springfox-spring-webmvc/3.0.0-SNAPSHOT/maven-metadata.xml
+2020-10-31 10:34:21,472 [Worker-1045: Updating Maven Project] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://oss.jfrog.org/artifactory/oss-snapshot-local/io/springfox/springfox-spi/3.0.0-SNAPSHOT/maven-metadata.xml
+2020-10-31 10:34:21,937 [Worker-1045: Updating Maven Project] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://oss.jfrog.org/artifactory/oss-snapshot-local/io/springfox/springfox-spi/3.0.0-SNAPSHOT/maven-metadata.xml
+2020-10-31 10:34:22,324 [Worker-1045: Updating Maven Project] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://oss.jfrog.org/artifactory/oss-snapshot-local/io/springfox/springfox-core/3.0.0-SNAPSHOT/maven-metadata.xml
+2020-10-31 10:34:22,729 [Worker-1045: Updating Maven Project] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://oss.jfrog.org/artifactory/oss-snapshot-local/io/springfox/springfox-core/3.0.0-SNAPSHOT/maven-metadata.xml
+2020-10-31 10:34:23,123 [Worker-1045: Updating Maven Project] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://oss.jfrog.org/artifactory/oss-snapshot-local/io/springfox/springfox-schema/3.0.0-SNAPSHOT/maven-metadata.xml
+2020-10-31 10:34:23,559 [Worker-1045: Updating Maven Project] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://oss.jfrog.org/artifactory/oss-snapshot-local/io/springfox/springfox-schema/3.0.0-SNAPSHOT/maven-metadata.xml
+2020-10-31 10:34:24,000 [Worker-1045: Updating Maven Project] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://oss.jfrog.org/artifactory/oss-snapshot-local/io/springfox/springfox-spring-web/3.0.0-SNAPSHOT/maven-metadata.xml
+2020-10-31 10:34:24,407 [Worker-1045: Updating Maven Project] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://oss.jfrog.org/artifactory/oss-snapshot-local/io/springfox/springfox-spring-web/3.0.0-SNAPSHOT/maven-metadata.xml
+2020-10-31 10:34:24,797 [Worker-1045: Updating Maven Project] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://oss.jfrog.org/artifactory/oss-snapshot-local/io/springfox/springfox-swagger2/3.0.0-SNAPSHOT/maven-metadata.xml
+2020-10-31 10:34:25,243 [Worker-1045: Updating Maven Project] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://oss.jfrog.org/artifactory/oss-snapshot-local/io/springfox/springfox-swagger2/3.0.0-SNAPSHOT/maven-metadata.xml
+2020-10-31 10:34:25,621 [Worker-1045: Updating Maven Project] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://oss.jfrog.org/artifactory/oss-snapshot-local/io/springfox/springfox-swagger-common/3.0.0-SNAPSHOT/maven-metadata.xml
+2020-10-31 10:34:26,056 [Worker-1045: Updating Maven Project] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://oss.jfrog.org/artifactory/oss-snapshot-local/io/springfox/springfox-swagger-common/3.0.0-SNAPSHOT/maven-metadata.xml
+2020-10-31 10:34:26,463 [Worker-1045: Updating Maven Project] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://oss.jfrog.org/artifactory/oss-snapshot-local/io/springfox/springfox-spring-webflux/3.0.0-SNAPSHOT/maven-metadata.xml
+2020-10-31 10:34:26,850 [Worker-1045: Updating Maven Project] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://oss.jfrog.org/artifactory/oss-snapshot-local/io/springfox/springfox-spring-webflux/3.0.0-SNAPSHOT/maven-metadata.xml
+2020-10-31 10:34:27,244 [Worker-1045: Updating Maven Project] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://oss.jfrog.org/artifactory/oss-snapshot-local/io/springfox/springfox-data-rest/3.0.0-SNAPSHOT/maven-metadata.xml
+2020-10-31 10:34:27,725 [Worker-1045: Updating Maven Project] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://oss.jfrog.org/artifactory/oss-snapshot-local/io/springfox/springfox-data-rest/3.0.0-SNAPSHOT/maven-metadata.xml
+2020-10-31 10:34:28,374 [Worker-1045: Updating Maven Project] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.example:GreatOutdoors:0.0.1-SNAPSHOT @ C:\Users\user\Documents\Great-Outdoors\Great Outdoor\AddressManagementSystem\pom.xml.
+2020-10-31 10:34:28,664 [Worker-1045: Updating Maven Project] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.example:GreatOutdoors:0.0.1-SNAPSHOT @ C:\Users\user\Documents\Great-Outdoors\Great Outdoor\CancelManagementSystem\pom.xml.
+2020-10-31 10:34:29,077 [Worker-1045: Updating Maven Project] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.cg.iter:authenticationService-JWT:0.0.1-SNAPSHOT @ C:\Users\user\Documents\Great-Outdoors\Great Outdoor\Authentication-Service-master\pom.xml.
+2020-10-31 10:34:32,821 [Worker-1045: Updating Maven Project] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/javax/xml/bind/jaxb-api/2.3.1/jaxb-api-2.3.1.pom
+2020-10-31 10:34:33,281 [Worker-1045: Updating Maven Project] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/javax/xml/bind/jaxb-api/2.3.1/jaxb-api-2.3.1.pom
+2020-10-31 10:34:33,620 [Worker-1045: Updating Maven Project] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/javax/xml/bind/jaxb-api-parent/2.3.1/jaxb-api-parent-2.3.1.pom
+2020-10-31 10:34:33,851 [Worker-1045: Updating Maven Project] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/javax/xml/bind/jaxb-api-parent/2.3.1/jaxb-api-parent-2.3.1.pom
+2020-10-31 10:34:34,170 [Worker-1045: Updating Maven Project] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/javax/activation/javax.activation-api/1.2.0/javax.activation-api-1.2.0.pom
+2020-10-31 10:34:34,438 [Worker-1045: Updating Maven Project] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/javax/activation/javax.activation-api/1.2.0/javax.activation-api-1.2.0.pom
+2020-10-31 10:34:34,717 [Worker-1045: Updating Maven Project] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/com/sun/activation/all/1.2.0/all-1.2.0.pom
+2020-10-31 10:34:34,972 [Worker-1045: Updating Maven Project] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/com/sun/activation/all/1.2.0/all-1.2.0.pom
+2020-10-31 10:34:37,279 [Worker-1045: Updating Maven Project] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/javax/activation/javax.activation-api/1.2.0/javax.activation-api-1.2.0.jar
+2020-10-31 10:34:37,775 [Worker-1045: Updating Maven Project] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/javax/activation/javax.activation-api/1.2.0/javax.activation-api-1.2.0.jar
+2020-10-31 10:34:38,137 [Worker-1045: Updating Maven Project] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.example:GreatOutdoors:0.0.1-SNAPSHOT @ C:\Users\user\Documents\Great-Outdoors\Great Outdoor\WishlistManagementSystem\pom.xml.
+2020-10-31 10:34:38,600 [Worker-1045: Updating Maven Project] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.example:GreatOutdoors:0.0.1-SNAPSHOT @ C:\Users\user\Documents\Great-Outdoors\Great Outdoor\ProductManagementSystem\pom.xml.
+2020-10-31 10:34:42,063 [Worker-1045: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /Authentication-Service-master/src/main/java
+2020-10-31 10:34:42,064 [Worker-1045: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /Authentication-Service-master/src/main/resources
+2020-10-31 10:34:42,064 [Worker-1045: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /Authentication-Service-master/src/main/resources
+2020-10-31 10:34:42,065 [Worker-1045: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /Authentication-Service-master/src/test/java
+2020-10-31 10:34:44,753 [Worker-1045: Updating Maven Project] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update completed: 35 sec
+2020-10-31 10:34:48,810 [Worker-1053: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-10-31 10:34:48,820 [Worker-1053: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-10-31 10:34:48,821 [Worker-1053: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-10-31 10:34:48,831 [Worker-1053: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-10-31 10:34:48,831 [Worker-1053: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\user\Documents\Great-Outdoors\AddToCart\src\test\resources
+2020-10-31 10:34:51,164 [Worker-1055: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/javax/activation/javax.activation-api/1.2.0/javax.activation-api-1.2.0-javadoc.jar
+2020-10-31 10:34:51,835 [Worker-1053: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-10-31 10:34:51,836 [Worker-1053: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-10-31 10:34:51,836 [Worker-1053: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-10-31 10:34:51,841 [Worker-1053: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-10-31 10:34:51,841 [Worker-1053: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\user\Documents\Great-Outdoors\Great Outdoor\AddressManagementSystem\src\test\resources
+2020-10-31 10:34:52,141 [Worker-1055: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/javax/activation/javax.activation-api/1.2.0/javax.activation-api-1.2.0-javadoc.jar
+2020-10-31 10:34:56,976 [Worker-1055: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded javadoc for javax.activation:javax.activation-api:1.2.0
+2020-10-31 10:35:10,414 [Worker-1057: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-10-31 10:35:10,415 [Worker-1057: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2020-10-31 10:35:10,481 [Worker-1057: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2020-10-31 10:35:10,496 [Worker-1057: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-10-31 10:35:10,498 [Worker-1057: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\user\Documents\Great-Outdoors\Great Outdoor\Authentication-Service-master\src\test\resources
+2020-10-31 10:35:12,859 [Worker-1052: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-10-31 10:35:12,859 [Worker-1052: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-10-31 10:35:12,860 [Worker-1052: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-10-31 10:35:12,862 [Worker-1052: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-10-31 10:35:12,862 [Worker-1052: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\user\Documents\Great-Outdoors\Great Outdoor\CancelManagementSystem\src\test\resources
+2020-10-31 10:35:13,704 [Worker-1052: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-10-31 10:35:13,705 [Worker-1052: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-10-31 10:35:13,705 [Worker-1052: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-10-31 10:35:13,708 [Worker-1052: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-10-31 10:35:13,708 [Worker-1052: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\user\Documents\Great-Outdoors\Great Outdoor\ProductManagementSystem\src\test\resources
+2020-10-31 10:35:14,589 [Worker-1052: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-10-31 10:35:14,589 [Worker-1052: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-10-31 10:35:14,589 [Worker-1052: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-10-31 10:35:14,592 [Worker-1052: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-10-31 10:35:14,592 [Worker-1052: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\user\Documents\Great-Outdoors\Great Outdoor\WishlistManagementSystem\src\test\resources
