@@ -61,6 +61,7 @@ public class ProductController {
     },
     
 	 */
+	
 	@PostMapping("/addProduct")
 	Product addProduct(@Valid @RequestBody Product product) {
 		return productService.addProduct(product);
@@ -81,7 +82,7 @@ public class ProductController {
 //		return "ERROR";
 //	}
 //	
-	
+	                                                      
 	/**
 	 * Edit a Product
 	 * @param product
