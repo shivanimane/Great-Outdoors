@@ -1,121 +1,147 @@
 package com.greatoutdoor.retailerinventorymanagementsystem.model;
-/**
- * 
- * @author Deepali
- *
- */
 import java.io.Serializable;
 
-import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "USER")
-public class User implements Serializable {
-	
-	private static final long serialVersionUID = -8450180103620249767L;
-	
-	@Column(name = "USER_NAME", unique = false, nullable = false)
+@Table(name = "User")
+public class User implements Serializable{
 	private String userName;
-
 	@Id
-	@Column(name = "USER_ID", unique = true, nullable = false)
 	private String userId;
-
-	@Column(name = "USER_MAIL", unique = false, nullable = false)
 	private String userMail;
-
-	@Column(name = "USER_PASSWORD", unique = false, nullable = false)
 	private String userPassword;
-
-	@Column(name = "USER_CONTACT", unique = false, nullable = false)
-	private long userNumber;
-
-	@Column(name = "USER_CATEGORY", unique = false, nullable = false)
+	private String userContact;
 	private int userCategory;
-	
-	@Column(name = "USER_ACTIVE_STATUS", unique = false, nullable = false)
 	private boolean userActiveStatus;
-
+	
+	/**
+	 * 
+	 */
 	public User() {
-
+		// TODO Auto-generated constructor stub
 	}
 
-	public User(String userName, String userId, String userMail, String userPassword, long userNumber,
+	/**
+	 * @param userName
+	 * @param userId
+	 * @param userMail
+	 * @param userPassword
+	 * @param userContact
+	 * @param userCategory
+	 * @param userActiveStatus
+	 */
+	public User(String userName, String userId, String userMail, String userPassword, String userContact,
 			int userCategory, boolean userActiveStatus) {
 		super();
 		this.userName = userName;
 		this.userId = userId;
 		this.userMail = userMail;
 		this.userPassword = userPassword;
-		this.userNumber = userNumber;
+		this.userContact = userContact;
 		this.userCategory = userCategory;
 		this.userActiveStatus = userActiveStatus;
 	}
 
+	/**
+	 * @return the userName
+	 */
 	public String getUserName() {
 		return userName;
 	}
 
+	/**
+	 * @param userName the userName to set
+	 */
 	public void setUserName(String userName) {
 		this.userName = userName;
 	}
 
+	/**
+	 * @return the userId
+	 */
 	public String getUserId() {
 		return userId;
 	}
 
+	/**
+	 * @param userId the userId to set
+	 */
 	public void setUserId(String userId) {
 		this.userId = userId;
 	}
 
+	/**
+	 * @return the userMail
+	 */
 	public String getUserMail() {
 		return userMail;
 	}
 
+	/**
+	 * @param userMail the userMail to set
+	 */
 	public void setUserMail(String userMail) {
 		this.userMail = userMail;
 	}
 
+	/**
+	 * @return the userPassword
+	 */
 	public String getUserPassword() {
 		return userPassword;
 	}
 
+	/**
+	 * @param userPassword the userPassword to set
+	 */
 	public void setUserPassword(String userPassword) {
 		this.userPassword = userPassword;
 	}
 
-	public long getUserNumber() {
-		return userNumber;
+	/**
+	 * @return the userContact
+	 */
+	public String getUserContact() {
+		return userContact;
 	}
 
-	public void setUserNumber(long userNumber) {
-		this.userNumber = userNumber;
+	/**
+	 * @param userContact the userContact to set
+	 */
+	public void setUserContact(String userContact) {
+		this.userContact = userContact;
 	}
 
+	/**
+	 * @return the userCategory
+	 */
 	public int getUserCategory() {
 		return userCategory;
 	}
 
+	/**
+	 * @param userCategory the userCategory to set
+	 */
 	public void setUserCategory(int userCategory) {
 		this.userCategory = userCategory;
 	}
 
+	/**
+	 * @return the userActiveStatus
+	 */
 	public boolean isUserActiveStatus() {
 		return userActiveStatus;
 	}
 
+	/**
+	 * @param userActiveStatus the userActiveStatus to set
+	 */
 	public void setUserActiveStatus(boolean userActiveStatus) {
 		this.userActiveStatus = userActiveStatus;
 	}
-
-	@Override
-	public String toString() {
-		return "UserEntity [userName=" + userName + ", userId=" + userId + ", userMail=" + userMail + ", userPassword="
-				+ userPassword + ", userNumber=" + userNumber + ", userCategory=" + userCategory + ", userActiveStatus="
-				+ userActiveStatus + "]";
-	}
-
+	
+	
 }

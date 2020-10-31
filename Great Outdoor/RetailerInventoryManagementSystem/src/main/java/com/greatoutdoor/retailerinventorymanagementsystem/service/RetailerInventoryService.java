@@ -19,8 +19,8 @@ public interface RetailerInventoryService {
 	public boolean updateProductSaleTimeStamp(RetailerInventory retailerinventorydto) throws RetailerInventoryException;
 	public List<RetailerInventory> getListOfRetailers();
 	public List<RetailerInventory> getInventoryById(String retailerId);
-	public List<RetailerInventoryBean> getMonthlyShelfTimeReport(String retailerId, Calendar dateSelection)throws RetailerInventoryException; 
-	public List<RetailerInventoryBean> getQuarterlyShelfTimeReport(String retailerId, Calendar dateSelection)throws RetailerInventoryException ;
-	public List<RetailerInventoryBean> getYearlyShelfTimeReport(String retailerId, Calendar dateSelection)throws RetailerInventoryException; 
+//	public List<RetailerInventoryBean> getMonthlyShelfTimeReport(String retailerId, Calendar dateSelection)throws RetailerInventoryException; 
+//	public List<RetailerInventoryBean> getQuarterlyShelfTimeReport(String retailerId, Calendar dateSelection)throws RetailerInventoryException ;
+//	public List<RetailerInventoryBean> getYearlyShelfTimeReport(String retailerId, Calendar dateSelection)throws RetailerInventoryException; 
 
 }
