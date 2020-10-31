@@ -33,7 +33,7 @@ public class WishlistController {
 	@PostMapping("/addToWishlist")
 	public String addToWishlist(@RequestBody Wishlist addItem) {
 		
-		if(addItem==null || addItem.getUserId().trim().length()==0 ||addItem.getProductId().trim().length()==0) { 
+		if(  addItem.getUserId().trim().length()==0 ||addItem.getProductId().trim().length()==0) { 
 			throw new com.greatoutdoor.wishlistmanagementsystem.exception.NullParameterException("Null request, please provide Wishlist details!");
 		}
 		    String status= "Added to wishlist";

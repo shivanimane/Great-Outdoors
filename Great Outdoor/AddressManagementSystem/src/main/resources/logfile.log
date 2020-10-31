@@ -1072,3 +1072,36 @@
 2020-10-30 15:59:17.806  INFO 12084 --- [http-nio-8005-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
 2020-10-30 15:59:17.811  INFO 12084 --- [http-nio-8005-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 5 ms
 2020-10-30 15:59:25.860  WARN 12084 --- [http-nio-8005-exec-3] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.greatoutdoor.addressmanagementsystem.exception.AddressNotFound: Address Not Found]
+2020-10-30 16:59:38.990  INFO 17820 --- [restartedMain] c.g.a.AddressManagementSystem            : Starting AddressManagementSystem on DESKTOP-OKKG71L with PID 17820 (C:\Users\user\Documents\Great-Outdoors\Great Outdoor\AddressManagementSystem\target\classes started by user in C:\Users\user\Documents\Great-Outdoors\Great Outdoor\AddressManagementSystem)
+2020-10-30 16:59:38.998  INFO 17820 --- [restartedMain] c.g.a.AddressManagementSystem            : No active profile set, falling back to default profiles: default
+2020-10-30 16:59:39.131  INFO 17820 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-10-30 16:59:39.131  INFO 17820 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-10-30 16:59:42.336  INFO 17820 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2020-10-30 16:59:42.530  INFO 17820 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 169ms. Found 1 JPA repository interfaces.
+2020-10-30 16:59:44.337  INFO 17820 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8005 (http)
+2020-10-30 16:59:44.354  INFO 17820 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-10-30 16:59:44.355  INFO 17820 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.38]
+2020-10-30 16:59:44.597  INFO 17820 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-10-30 16:59:44.597  INFO 17820 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 5464 ms
+2020-10-30 16:59:46.063  INFO 17820 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-10-30 16:59:46.202  INFO 17820 --- [task-1] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-10-30 16:59:46.378  INFO 17820 --- [task-1] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.21.Final
+2020-10-30 16:59:47.057  INFO 17820 --- [task-1] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-10-30 16:59:47.414  INFO 17820 --- [task-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-10-30 16:59:51.201  INFO 17820 --- [task-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-10-30 16:59:51.453  INFO 17820 --- [task-1] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2020-10-30 16:59:55.664  INFO 17820 --- [task-1] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-10-30 16:59:55.710  INFO 17820 --- [task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-10-30 16:59:56.560  INFO 17820 --- [task-2] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-10-30 16:59:57.296  WARN 17820 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-10-30 17:00:00.183  INFO 17820 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 14 endpoint(s) beneath base path '/actuator'
+2020-10-30 17:00:00.447  INFO 17820 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8005 (http) with context path ''
+2020-10-30 17:00:00.450  INFO 17820 --- [restartedMain] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories…
+2020-10-30 17:00:00.524  INFO 17820 --- [restartedMain] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
+2020-10-30 17:00:00.599  INFO 17820 --- [restartedMain] c.g.a.AddressManagementSystem            : Started AddressManagementSystem in 22.554 seconds (JVM running for 25.565)
+2020-10-30 18:25:28.878  WARN 17820 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=53m7s501ms198µs900ns).
+2020-10-30 18:29:22.254  INFO 17820 --- [RMI TCP Connection(47)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2020-10-30 18:29:23.020  INFO 17820 --- [RMI TCP Connection(47)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-10-30 18:29:23.036  INFO 17820 --- [RMI TCP Connection(47)-127.0.0.1] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-10-30 18:29:23.040  INFO 17820 --- [RMI TCP Connection(47)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2020-10-30 18:29:23.074  INFO 17820 --- [RMI TCP Connection(47)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
