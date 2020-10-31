@@ -1,131 +1,159 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://maven.apache.org/POM/4.0.0">
+<project
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://maven.apache.org/POM/4.0.0">
 
-<modelVersion>4.0.0</modelVersion>
+	<modelVersion>4.0.0</modelVersion>
 
 
-<parent>
+	<parent>
 
-<groupId>org.springframework.boot</groupId>
+		<groupId>org.springframework.boot</groupId>
 
-<artifactId>spring-boot-starter-parent</artifactId>
+		<artifactId>spring-boot-starter-parent</artifactId>
 
-<version>2.3.4.RELEASE</version>
+		<version>2.3.4.RELEASE</version>
 
-<relativePath/>
+		<relativePath />
 
-<!-- lookup parent from repository -->
+		<!-- lookup parent from repository -->
 
 
-</parent>
+	</parent>
 
-<groupId>com.example</groupId>
+	<groupId>com.example</groupId>
 
-<artifactId>GreatOutdoors</artifactId>
+	<artifactId>GreatOutdoors</artifactId>
 
-<version>0.0.1-SNAPSHOT</version>
+	<version>0.0.1-SNAPSHOT</version>
 
-<name>GreatOutdoors</name>
+	<name>GreatOutdoors</name>
 
-<description>Great Outdoors Distributors</description>
+	<description>Great Outdoors Distributors</description>
 
 
-<properties>
+	<properties>
 
-<java.version>11</java.version>
+		<java.version>11</java.version>
+		<spring-cloud.version>Hoxton.SR3</spring-cloud.version>
 
-</properties>
+	</properties>
 
 
-<dependencies>
+	<dependencies>
 
 
-<dependency>
+		<dependency>
 
-<groupId>org.springframework.boot</groupId>
+			<groupId>org.springframework.boot</groupId>
 
-<artifactId>spring-boot-starter-data-jpa</artifactId>
+			<artifactId>spring-boot-starter-data-jpa</artifactId>
 
-</dependency>
+		</dependency>
 
 
-<dependency>
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+		</dependency>
 
-<groupId>org.springframework.boot</groupId>
+		<dependency>
 
-<artifactId>spring-boot-starter-data-rest</artifactId>
+			<groupId>org.springframework.boot</groupId>
 
-</dependency>
+			<artifactId>spring-boot-starter-data-rest</artifactId>
 
+		</dependency>
 
-<dependency>
 
-<groupId>org.springframework.boot</groupId>
+		<dependency>
 
-<artifactId>spring-boot-devtools</artifactId>
+			<groupId>org.springframework.boot</groupId>
 
-<scope>runtime</scope>
+			<artifactId>spring-boot-devtools</artifactId>
 
-<optional>true</optional>
+			<scope>runtime</scope>
 
-</dependency>
+			<optional>true</optional>
 
+		</dependency>
 
-<dependency>
 
-<groupId>mysql</groupId>
+		<dependency>
 
-<artifactId>mysql-connector-java</artifactId>
+			<groupId>mysql</groupId>
 
-<scope>runtime</scope>
+			<artifactId>mysql-connector-java</artifactId>
 
-</dependency>
+			<scope>runtime</scope>
 
+		</dependency>
 
-<dependency>
 
-<groupId>org.springframework.boot</groupId>
+		<dependency>
 
-<artifactId>spring-boot-starter-test</artifactId>
+			<groupId>org.springframework.boot</groupId>
 
-<scope>test</scope>
+			<artifactId>spring-boot-starter-test</artifactId>
 
+			<scope>test</scope>
 
-<exclusions>
 
+			<exclusions>
 
-<exclusion>
 
-<groupId>org.junit.vintage</groupId>
+				<exclusion>
 
-<artifactId>junit-vintage-engine</artifactId>
+					<groupId>org.junit.vintage</groupId>
 
-</exclusion>
+					<artifactId>junit-vintage-engine</artifactId>
 
-</exclusions>
+				</exclusion>
 
-</dependency>
+			</exclusions>
 
-</dependencies>
+		</dependency>
 
+	</dependencies>
 
-<build>
+<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>org.springframework.cloud</groupId>
+				<artifactId>spring-cloud-dependencies</artifactId>
+				<version>${spring-cloud.version}</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+	
+	<repositories>
+		<repository>
+			<id>jcenter-snapshots</id>
+			<name>jcenter</name>
+			<url>http://oss.jfrog.org/artifactory/oss-snapshot-local/</url>
+		</repository>
+	</repositories>
+	
+	<build>
 
 
-<plugins>
+		<plugins>
 
 
-<plugin>
+			<plugin>
 
-<groupId>org.springframework.boot</groupId>
+				<groupId>org.springframework.boot</groupId>
 
-<artifactId>spring-boot-maven-plugin</artifactId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
 
-</plugin>
+			</plugin>
 
-</plugins>
+		</plugins>
 
-</build>
+	</build>
 
 </project>
