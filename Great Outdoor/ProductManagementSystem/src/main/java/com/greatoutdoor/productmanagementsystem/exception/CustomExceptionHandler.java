@@ -38,36 +38,6 @@ public class CustomExceptionHandler extends ResponseEntityExceptionHandler{
 	}
 	
 	
-//	/*
-//	 * Name: validationException
-//	 * Description: This exception will be handled if user inputs are not valid.
-//	 */
-//	@ExceptionHandler(ValidationException.class)
-//	public final ResponseEntity<ErrorMessage> validationException(ValidationException ex){
-//
-//		ErrorMessage exceptionResponse =
-//				new ErrorMessage(ex.getMessage(), 
-//						"Invalid input.",currentTimeMillis);
-//		return new ResponseEntity<ErrorMessage>(exceptionResponse,
-//				new HttpHeaders(),HttpStatus.NOT_FOUND);
-//	}
-	
-//	
-//	@ResponseStatus(HttpStatus.BAD_REQUEST)
-//	@ExceptionHandler(MethodArgumentNotValidException.class)
-//	public Set<String> handleValidationExceptions(
-//	  MethodArgumentNotValidException ex) {
-//	   // Map<String, String> errors = new HashMap<>();
-//	    Set<String> errors = new HashSet<String>();
-//	    ex.getBindingResult().getAllErrors().forEach((error) -> {
-//	        String fieldName = ((FieldError) error).getField();
-//	        String errorMessage = error.getDefaultMessage();
-//	        errors.add(errorMessage);
-//	      //  errors.put(fieldName, errorMessage);
-//	    });
-//	    return errors;
-//	}
-	
 	/*
 	 * Name: validationException
 	 * Description: This exception will be handled if request comes with null values.
@@ -82,6 +52,20 @@ public class CustomExceptionHandler extends ResponseEntityExceptionHandler{
 				new HttpHeaders(),HttpStatus.NOT_FOUND);
 	}
 	
+	
+	/*
+	 * Name: validationException
+	 * Description: This exception will be handled if request comes with null values.
+	 */
+	@ExceptionHandler(ValidationException.class)
+	public final ResponseEntity<ErrorMessage> validationParameter(ValidationException ex){
+
+		ErrorMessage exceptionResponse =
+				new ErrorMessage(ex.getMessage(), 
+						errorMsg,currentTimeMillis);
+		return new ResponseEntity<ErrorMessage>(exceptionResponse,
+				new HttpHeaders(),HttpStatus.NOT_FOUND);
+	}
 	
 	
 	/*

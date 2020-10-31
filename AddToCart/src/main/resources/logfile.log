@@ -1,60 +1,283 @@
-2020-10-30 22:45:07.745  INFO 12012 --- [restartedMain] c.g.addtocart.AddToCartSystem            : Starting AddToCartSystem on DESKTOP-DNE248H with PID 12012 (C:\Users\HP\Desktop\Great-Outdoors\AddToCart\target\classes started by HP in C:\Users\HP\Desktop\Great-Outdoors\AddToCart)
-2020-10-30 22:45:07.746  INFO 12012 --- [restartedMain] c.g.addtocart.AddToCartSystem            : No active profile set, falling back to default profiles: default
-2020-10-30 22:45:08.880  INFO 12012 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
-2020-10-30 22:45:08.914  INFO 12012 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 33ms. Found 3 JPA repository interfaces.
-2020-10-30 22:45:09.203  INFO 12012 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8006 (http)
-2020-10-30 22:45:09.204  INFO 12012 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2020-10-30 22:45:09.205  INFO 12012 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.38]
-2020-10-30 22:45:09.269  INFO 12012 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2020-10-30 22:45:09.270  INFO 12012 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1513 ms
-2020-10-30 22:45:09.583  INFO 12012 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2020-10-30 22:45:09.621  INFO 12012 --- [task-1] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2020-10-30 22:45:09.669  INFO 12012 --- [task-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
-2020-10-30 22:45:09.704  INFO 12012 --- [task-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
-2020-10-30 22:45:09.705  INFO 12012 --- [task-1] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
-2020-10-30 22:45:09.744  WARN 12012 --- [task-1] org.hibernate.mapping.RootClass          : HHH000038: Composite-id class does not override equals(): com.greatoutdoor.addtocart.model.Cart
-2020-10-30 22:45:09.746  WARN 12012 --- [task-1] org.hibernate.mapping.RootClass          : HHH000039: Composite-id class does not override hashCode(): com.greatoutdoor.addtocart.model.Cart
-2020-10-30 22:45:09.940  INFO 12012 --- [task-1] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2020-10-30 22:45:09.941  INFO 12012 --- [task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2020-10-30 22:45:10.025  WARN 12012 --- [task-2] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
-2020-10-30 22:45:10.257  WARN 12012 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2020-10-30 22:45:10.637  INFO 12012 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 14 endpoint(s) beneath base path '/actuator'
-2020-10-30 22:45:10.975  INFO 12012 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8006 (http) with context path ''
-2020-10-30 22:45:11.018  INFO 12012 --- [restartedMain] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories…
-2020-10-30 22:45:11.116  INFO 12012 --- [restartedMain] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
-2020-10-30 22:45:11.131  INFO 12012 --- [restartedMain] c.g.addtocart.AddToCartSystem            : Started AddToCartSystem in 3.498 seconds (JVM running for 12731.29)
-2020-10-30 22:45:11.141  INFO 12012 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation delta:
-
-
-==========================
-CONDITION EVALUATION DELTA
-==========================
-
-
-Positive matches:
------------------
-
-   LogFileWebEndpointAutoConfiguration#logFileWebEndpoint matched:
-      - Log File found logging.file.name ./src/main/resources/logfile.log (LogFileWebEndpointAutoConfiguration.LogFileCondition)
-      - @ConditionalOnMissingBean (types: org.springframework.boot.actuate.logging.LogFileWebEndpoint; SearchStrategy: all) did not find any beans (OnBeanCondition)
-
-
-Negative matches:
------------------
-
-    None
-
-
-Exclusions:
------------
-
-    None
-
-
-Unconditional classes:
-----------------------
-
-    None
-
-
-
+2020-10-31 08:11:09.562  INFO 11416 --- [restartedMain] c.g.addtocart.AddToCartSystem            : Starting AddToCartSystem on DESKTOP-DNE248H with PID 11416 (C:\Users\HP\Desktop\Great-Outdoors\AddToCart\target\classes started by HP in C:\Users\HP\Desktop\Great-Outdoors\AddToCart)
+2020-10-31 08:11:09.735  INFO 11416 --- [restartedMain] c.g.addtocart.AddToCartSystem            : No active profile set, falling back to default profiles: default
+2020-10-31 08:11:10.629  INFO 11416 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-10-31 08:11:10.667  INFO 11416 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-10-31 08:11:17.580  INFO 11416 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2020-10-31 08:11:18.175  INFO 11416 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 523ms. Found 3 JPA repository interfaces.
+2020-10-31 08:11:23.440  INFO 11416 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8006 (http)
+2020-10-31 08:11:23.467  INFO 11416 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-10-31 08:11:23.482  INFO 11416 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.38]
+2020-10-31 08:11:23.983  INFO 11416 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-10-31 08:11:23.984  INFO 11416 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 13316 ms
+2020-10-31 08:11:26.510  INFO 11416 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-10-31 08:11:26.748  INFO 11416 --- [task-1] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-10-31 08:11:27.208  INFO 11416 --- [task-1] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.21.Final
+2020-10-31 08:11:28.908  INFO 11416 --- [task-1] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-10-31 08:11:29.959  INFO 11416 --- [task-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-10-31 08:11:31.615  INFO 11416 --- [task-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-10-31 08:11:31.656  INFO 11416 --- [task-1] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2020-10-31 08:11:31.794  WARN 11416 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-10-31 08:11:32.523  WARN 11416 --- [task-1] org.hibernate.mapping.RootClass          : HHH000038: Composite-id class does not override equals(): com.greatoutdoor.addtocart.model.Cart
+2020-10-31 08:11:32.524  WARN 11416 --- [task-1] org.hibernate.mapping.RootClass          : HHH000039: Composite-id class does not override hashCode(): com.greatoutdoor.addtocart.model.Cart
+2020-10-31 08:11:36.020  INFO 11416 --- [task-1] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-10-31 08:11:36.040  INFO 11416 --- [task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-10-31 08:11:39.601  INFO 11416 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 14 endpoint(s) beneath base path '/actuator'
+2020-10-31 08:11:39.931  INFO 11416 --- [task-2] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-10-31 08:11:42.664  INFO 11416 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8006 (http) with context path ''
+2020-10-31 08:11:42.964  INFO 11416 --- [restartedMain] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories…
+2020-10-31 08:11:43.631  INFO 11416 --- [restartedMain] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
+2020-10-31 08:11:44.191  INFO 11416 --- [restartedMain] c.g.addtocart.AddToCartSystem            : Started AddToCartSystem in 35.687 seconds (JVM running for 37.525)
+2020-10-31 09:42:20.654  WARN 11416 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=17m48s788ms971µs938ns).
+2020-10-31 10:22:00.594  INFO 11416 --- [Thread-4] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-10-31 10:22:00.625  INFO 11416 --- [Thread-4] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-10-31 10:22:00.630  INFO 11416 --- [Thread-4] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2020-10-31 10:22:00.715  INFO 11416 --- [Thread-4] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2020-10-31 10:23:09.300  INFO 1844 --- [restartedMain] c.g.addtocart.AddToCartSystem            : No active profile set, falling back to default profiles: default
+2020-10-31 10:23:11.363  INFO 1844 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2020-10-31 10:23:11.493  INFO 1844 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 118ms. Found 3 JPA repository interfaces.
+2020-10-31 10:23:11.801  WARN 1844 --- [restartedMain] o.s.boot.actuate.endpoint.EndpointId     : Endpoint ID 'service-registry' contains invalid characters, please migrate to a valid format.
+2020-10-31 10:23:12.090  INFO 1844 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=d8d637a2-85c0-33f2-a099-ca6893c71e80
+2020-10-31 10:23:13.110  INFO 1844 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8006 (http)
+2020-10-31 10:23:13.123  INFO 1844 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-10-31 10:23:13.124  INFO 1844 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.38]
+2020-10-31 10:23:13.384  INFO 1844 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-10-31 10:23:13.384  INFO 1844 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 4060 ms
+2020-10-31 10:23:13.644  WARN 1844 --- [restartedMain] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2020-10-31 10:23:13.645  INFO 1844 --- [restartedMain] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-10-31 10:23:13.661  INFO 1844 --- [restartedMain] c.netflix.config.DynamicPropertyFactory  : DynamicPropertyFactory is initialized with configuration sources: com.netflix.config.ConcurrentCompositeConfiguration@4303913c
+2020-10-31 10:23:14.341  INFO 1844 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-10-31 10:23:14.427  INFO 1844 --- [task-1] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-10-31 10:23:14.525  INFO 1844 --- [task-1] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.21.Final
+2020-10-31 10:23:14.766  INFO 1844 --- [task-1] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-10-31 10:23:14.950  INFO 1844 --- [task-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-10-31 10:23:15.561  INFO 1844 --- [task-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-10-31 10:23:15.585  INFO 1844 --- [task-1] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2020-10-31 10:23:15.780  WARN 1844 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-10-31 10:23:16.074  WARN 1844 --- [task-1] org.hibernate.mapping.RootClass          : HHH000038: Composite-id class does not override equals(): com.greatoutdoor.addtocart.model.Cart
+2020-10-31 10:23:16.074  WARN 1844 --- [task-1] org.hibernate.mapping.RootClass          : HHH000039: Composite-id class does not override hashCode(): com.greatoutdoor.addtocart.model.Cart
+2020-10-31 10:23:16.762  INFO 1844 --- [task-1] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-10-31 10:23:16.773  INFO 1844 --- [task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-10-31 10:23:18.225  INFO 1844 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 18 endpoint(s) beneath base path '/actuator'
+2020-10-31 10:23:18.438  INFO 1844 --- [task-2] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-10-31 10:23:18.716  WARN 1844 --- [restartedMain] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2020-10-31 10:23:18.717  INFO 1844 --- [restartedMain] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-10-31 10:23:20.144  WARN 1844 --- [restartedMain] ockingLoadBalancerClientRibbonWarnLogger : You already have RibbonLoadBalancerClient on your classpath. It will be used by default. As Spring Cloud Ribbon is in maintenance mode. We recommend switching to BlockingLoadBalancerClient instead. In order to use it, set the value of `spring.cloud.loadbalancer.ribbon.enabled` to `false` or remove spring-cloud-starter-netflix-ribbon from your project.
+2020-10-31 10:23:20.390  INFO 1844 --- [restartedMain] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2020-10-31 10:23:20.446  INFO 1844 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2020-10-31 10:23:20.558  INFO 1844 --- [restartedMain] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
+2020-10-31 10:23:20.558  INFO 1844 --- [restartedMain] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
+2020-10-31 10:23:20.829  INFO 1844 --- [restartedMain] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
+2020-10-31 10:23:20.830  INFO 1844 --- [restartedMain] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
+2020-10-31 10:23:21.123  INFO 1844 --- [restartedMain] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-10-31 10:23:21.300  INFO 1844 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2020-10-31 10:23:21.301  INFO 1844 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2020-10-31 10:23:21.301  INFO 1844 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2020-10-31 10:23:21.302  INFO 1844 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2020-10-31 10:23:21.302  INFO 1844 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2020-10-31 10:23:21.302  INFO 1844 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2020-10-31 10:23:21.302  INFO 1844 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2020-10-31 10:23:21.631  INFO 1844 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2020-10-31 10:23:21.635  INFO 1844 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2020-10-31 10:23:21.639  INFO 1844 --- [restartedMain] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2020-10-31 10:23:21.644  INFO 1844 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1604120001642 with initial instances count: 1
+2020-10-31 10:23:21.659  INFO 1844 --- [restartedMain] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application ADD-TO-CART-SERVICE with eureka with status UP
+2020-10-31 10:23:21.660  INFO 1844 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1604120001660, current=UP, previous=STARTING]
+2020-10-31 10:23:21.663  WARN 1844 --- [restartedMain] c.n.discovery.InstanceInfoReplicator     : Ignoring onDemand update due to rate limiter
+2020-10-31 10:23:21.673  INFO 1844 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_ADD-TO-CART-SERVICE/DESKTOP-DNE248H:add-to-cart-service:8006: registering service...
+2020-10-31 10:23:21.711  INFO 1844 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8006 (http) with context path ''
+2020-10-31 10:23:21.713  INFO 1844 --- [restartedMain] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8006
+2020-10-31 10:23:21.723  INFO 1844 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_ADD-TO-CART-SERVICE/DESKTOP-DNE248H:add-to-cart-service:8006 - registration status: 204
+2020-10-31 10:23:22.179  INFO 1844 --- [restartedMain] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories…
+2020-10-31 10:23:22.528  INFO 1844 --- [restartedMain] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
+2020-10-31 10:23:22.561  INFO 1844 --- [restartedMain] c.g.addtocart.AddToCartSystem            : Started AddToCartSystem in 14.83 seconds (JVM running for 16.705)
+2020-10-31 10:30:15.762  INFO 6500 --- [restartedMain] c.g.addtocart.AddToCartSystem            : No active profile set, falling back to default profiles: default
+2020-10-31 10:30:17.726  INFO 6500 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2020-10-31 10:30:17.853  INFO 6500 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 116ms. Found 3 JPA repository interfaces.
+2020-10-31 10:30:18.151  WARN 6500 --- [restartedMain] o.s.boot.actuate.endpoint.EndpointId     : Endpoint ID 'service-registry' contains invalid characters, please migrate to a valid format.
+2020-10-31 10:30:18.396  INFO 6500 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=d8d637a2-85c0-33f2-a099-ca6893c71e80
+2020-10-31 10:30:19.416  INFO 6500 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8006 (http)
+2020-10-31 10:30:19.430  INFO 6500 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-10-31 10:30:19.432  INFO 6500 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.38]
+2020-10-31 10:30:19.807  INFO 6500 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-10-31 10:30:19.808  INFO 6500 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 4024 ms
+2020-10-31 10:30:20.200  WARN 6500 --- [restartedMain] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2020-10-31 10:30:20.200  INFO 6500 --- [restartedMain] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-10-31 10:30:20.222  INFO 6500 --- [restartedMain] c.netflix.config.DynamicPropertyFactory  : DynamicPropertyFactory is initialized with configuration sources: com.netflix.config.ConcurrentCompositeConfiguration@3477adaf
+2020-10-31 10:30:21.404  INFO 6500 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-10-31 10:30:21.492  INFO 6500 --- [task-1] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-10-31 10:30:21.773  INFO 6500 --- [task-1] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.21.Final
+2020-10-31 10:30:22.118  INFO 6500 --- [task-1] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-10-31 10:30:22.327  INFO 6500 --- [task-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-10-31 10:30:23.884  INFO 6500 --- [task-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-10-31 10:30:23.905  INFO 6500 --- [task-1] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2020-10-31 10:30:24.145  WARN 6500 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-10-31 10:30:24.399  WARN 6500 --- [task-1] org.hibernate.mapping.RootClass          : HHH000038: Composite-id class does not override equals(): com.greatoutdoor.addtocart.model.Cart
+2020-10-31 10:30:24.399  WARN 6500 --- [task-1] org.hibernate.mapping.RootClass          : HHH000039: Composite-id class does not override hashCode(): com.greatoutdoor.addtocart.model.Cart
+2020-10-31 10:30:25.025  INFO 6500 --- [task-1] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-10-31 10:30:25.042  INFO 6500 --- [task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-10-31 10:30:26.422  INFO 6500 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 18 endpoint(s) beneath base path '/actuator'
+2020-10-31 10:30:26.579  WARN 6500 --- [task-2] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2020-10-31 10:30:26.854  WARN 6500 --- [restartedMain] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2020-10-31 10:30:26.855  INFO 6500 --- [restartedMain] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-10-31 10:30:28.081  WARN 6500 --- [restartedMain] ockingLoadBalancerClientRibbonWarnLogger : You already have RibbonLoadBalancerClient on your classpath. It will be used by default. As Spring Cloud Ribbon is in maintenance mode. We recommend switching to BlockingLoadBalancerClient instead. In order to use it, set the value of `spring.cloud.loadbalancer.ribbon.enabled` to `false` or remove spring-cloud-starter-netflix-ribbon from your project.
+2020-10-31 10:30:28.299  INFO 6500 --- [restartedMain] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2020-10-31 10:30:28.346  INFO 6500 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2020-10-31 10:30:28.445  INFO 6500 --- [restartedMain] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
+2020-10-31 10:30:28.445  INFO 6500 --- [restartedMain] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
+2020-10-31 10:30:28.732  INFO 6500 --- [restartedMain] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
+2020-10-31 10:30:28.732  INFO 6500 --- [restartedMain] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
+2020-10-31 10:30:28.985  INFO 6500 --- [restartedMain] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-10-31 10:30:29.165  INFO 6500 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2020-10-31 10:30:29.166  INFO 6500 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2020-10-31 10:30:29.166  INFO 6500 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2020-10-31 10:30:29.166  INFO 6500 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2020-10-31 10:30:29.166  INFO 6500 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2020-10-31 10:30:29.167  INFO 6500 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2020-10-31 10:30:29.167  INFO 6500 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2020-10-31 10:30:29.391  INFO 6500 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2020-10-31 10:30:29.396  INFO 6500 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2020-10-31 10:30:29.400  INFO 6500 --- [restartedMain] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2020-10-31 10:30:29.409  INFO 6500 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1604120429407 with initial instances count: 1
+2020-10-31 10:30:29.422  INFO 6500 --- [restartedMain] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application ADD-TO-CART-SERVICE with eureka with status UP
+2020-10-31 10:30:29.424  INFO 6500 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1604120429424, current=UP, previous=STARTING]
+2020-10-31 10:30:29.427  WARN 6500 --- [restartedMain] c.n.discovery.InstanceInfoReplicator     : Ignoring onDemand update due to rate limiter
+2020-10-31 10:30:29.434  INFO 6500 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_ADD-TO-CART-SERVICE/DESKTOP-DNE248H:add-to-cart-service:8006: registering service...
+2020-10-31 10:30:29.469  INFO 6500 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8006 (http) with context path ''
+2020-10-31 10:30:29.471  INFO 6500 --- [restartedMain] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8006
+2020-10-31 10:30:29.484  INFO 6500 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_ADD-TO-CART-SERVICE/DESKTOP-DNE248H:add-to-cart-service:8006 - registration status: 204
+2020-10-31 10:30:29.832  INFO 6500 --- [restartedMain] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories…
+2020-10-31 10:30:30.159  INFO 6500 --- [restartedMain] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
+2020-10-31 10:30:30.198  INFO 6500 --- [restartedMain] c.g.addtocart.AddToCartSystem            : Started AddToCartSystem in 15.834 seconds (JVM running for 17.299)
+2020-10-31 10:34:12.614  INFO 6500 --- [Thread-1] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application ADD-TO-CART-SERVICE with eureka with status DOWN
+2020-10-31 10:34:12.614  WARN 6500 --- [Thread-1] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1604120652614, current=DOWN, previous=UP]
+2020-10-31 10:34:12.620  WARN 6500 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1604120652620, current=UP, previous=DOWN]
+2020-10-31 10:34:12.620  INFO 6500 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_ADD-TO-CART-SERVICE/DESKTOP-DNE248H:add-to-cart-service:8006: registering service...
+2020-10-31 10:34:12.627  INFO 6500 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_ADD-TO-CART-SERVICE/DESKTOP-DNE248H:add-to-cart-service:8006 - registration status: 204
+2020-10-31 10:34:12.808  INFO 6500 --- [Thread-1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-10-31 10:34:12.812  INFO 6500 --- [Thread-1] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-10-31 10:34:12.815  INFO 6500 --- [Thread-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2020-10-31 10:34:12.837  INFO 6500 --- [Thread-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2020-10-31 10:34:12.838  INFO 6500 --- [Thread-1] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2020-10-31 10:34:15.842  INFO 6500 --- [Thread-1] com.netflix.discovery.DiscoveryClient    : Unregistering ...
+2020-10-31 10:34:15.851  INFO 6500 --- [Thread-1] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_ADD-TO-CART-SERVICE/DESKTOP-DNE248H:add-to-cart-service:8006 - deregister  status: 200
+2020-10-31 10:34:15.877  INFO 6500 --- [Thread-1] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+2020-10-31 10:34:16.697  INFO 6500 --- [restartedMain] c.g.addtocart.AddToCartSystem            : No active profile set, falling back to default profiles: default
+2020-10-31 10:34:17.659  INFO 6500 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2020-10-31 10:34:17.689  INFO 6500 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 28ms. Found 3 JPA repository interfaces.
+2020-10-31 10:34:17.864  INFO 6500 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=d8d637a2-85c0-33f2-a099-ca6893c71e80
+2020-10-31 10:34:18.040  INFO 6500 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8006 (http)
+2020-10-31 10:34:18.041  INFO 6500 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-10-31 10:34:18.042  INFO 6500 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.38]
+2020-10-31 10:34:18.102  INFO 6500 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-10-31 10:34:18.103  INFO 6500 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1401 ms
+2020-10-31 10:34:18.319  INFO 6500 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-10-31 10:34:18.331  INFO 6500 --- [task-1] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-10-31 10:34:18.346  INFO 6500 --- [task-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2020-10-31 10:34:18.390  INFO 6500 --- [task-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2020-10-31 10:34:18.391  INFO 6500 --- [task-1] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2020-10-31 10:34:18.415  WARN 6500 --- [task-1] org.hibernate.mapping.RootClass          : HHH000038: Composite-id class does not override equals(): com.greatoutdoor.addtocart.model.Cart
+2020-10-31 10:34:18.415  WARN 6500 --- [task-1] org.hibernate.mapping.RootClass          : HHH000039: Composite-id class does not override hashCode(): com.greatoutdoor.addtocart.model.Cart
+2020-10-31 10:34:18.500  INFO 6500 --- [task-1] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-10-31 10:34:18.501  INFO 6500 --- [task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-10-31 10:34:18.548  WARN 6500 --- [task-2] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2020-10-31 10:34:18.753  WARN 6500 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-10-31 10:34:19.223  INFO 6500 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 18 endpoint(s) beneath base path '/actuator'
+2020-10-31 10:34:19.275  WARN 6500 --- [restartedMain] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2020-10-31 10:34:19.276  INFO 6500 --- [restartedMain] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-10-31 10:34:19.655  WARN 6500 --- [restartedMain] ockingLoadBalancerClientRibbonWarnLogger : You already have RibbonLoadBalancerClient on your classpath. It will be used by default. As Spring Cloud Ribbon is in maintenance mode. We recommend switching to BlockingLoadBalancerClient instead. In order to use it, set the value of `spring.cloud.loadbalancer.ribbon.enabled` to `false` or remove spring-cloud-starter-netflix-ribbon from your project.
+2020-10-31 10:34:19.724  INFO 6500 --- [restartedMain] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2020-10-31 10:34:19.727  INFO 6500 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2020-10-31 10:34:19.729  INFO 6500 --- [restartedMain] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
+2020-10-31 10:34:19.729  INFO 6500 --- [restartedMain] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
+2020-10-31 10:34:19.730  INFO 6500 --- [restartedMain] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
+2020-10-31 10:34:19.730  INFO 6500 --- [restartedMain] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
+2020-10-31 10:34:19.810  INFO 6500 --- [restartedMain] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-10-31 10:34:19.811  INFO 6500 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2020-10-31 10:34:19.812  INFO 6500 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2020-10-31 10:34:19.812  INFO 6500 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2020-10-31 10:34:19.812  INFO 6500 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2020-10-31 10:34:19.812  INFO 6500 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2020-10-31 10:34:19.812  INFO 6500 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2020-10-31 10:34:19.812  INFO 6500 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2020-10-31 10:34:19.818  INFO 6500 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2020-10-31 10:34:19.820  INFO 6500 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2020-10-31 10:34:19.820  INFO 6500 --- [restartedMain] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2020-10-31 10:34:19.821  INFO 6500 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1604120659821 with initial instances count: 3
+2020-10-31 10:34:19.824  INFO 6500 --- [restartedMain] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application ADD-TO-CART-SERVICE with eureka with status UP
+2020-10-31 10:34:19.824  INFO 6500 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1604120659824, current=UP, previous=STARTING]
+2020-10-31 10:34:19.824  WARN 6500 --- [restartedMain] c.n.discovery.InstanceInfoReplicator     : Ignoring onDemand update due to rate limiter
+2020-10-31 10:34:19.828  INFO 6500 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_ADD-TO-CART-SERVICE/DESKTOP-DNE248H:add-to-cart-service:8006: registering service...
+2020-10-31 10:34:19.833  INFO 6500 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8006 (http) with context path ''
+2020-10-31 10:34:19.834  INFO 6500 --- [restartedMain] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8006
+2020-10-31 10:34:19.836  INFO 6500 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_ADD-TO-CART-SERVICE/DESKTOP-DNE248H:add-to-cart-service:8006 - registration status: 204
+2020-10-31 10:34:20.055  INFO 6500 --- [restartedMain] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories…
+2020-10-31 10:34:20.105  INFO 6500 --- [restartedMain] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
+2020-10-31 10:34:20.119  INFO 6500 --- [restartedMain] c.g.addtocart.AddToCartSystem            : Started AddToCartSystem in 4.085 seconds (JVM running for 247.22)
+2020-10-31 10:34:20.124  INFO 6500 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2020-10-31 10:34:58.530  INFO 6500 --- [Thread-9] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application ADD-TO-CART-SERVICE with eureka with status DOWN
+2020-10-31 10:34:58.530  WARN 6500 --- [Thread-9] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1604120698530, current=DOWN, previous=UP]
+2020-10-31 10:34:58.631  WARN 6500 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1604120698631, current=UP, previous=DOWN]
+2020-10-31 10:34:58.632  INFO 6500 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_ADD-TO-CART-SERVICE/DESKTOP-DNE248H:add-to-cart-service:8006: registering service...
+2020-10-31 10:34:58.645  INFO 6500 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_ADD-TO-CART-SERVICE/DESKTOP-DNE248H:add-to-cart-service:8006 - registration status: 204
+2020-10-31 10:34:58.848  INFO 6500 --- [Thread-9] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-10-31 10:34:58.849  INFO 6500 --- [Thread-9] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-10-31 10:34:58.850  INFO 6500 --- [Thread-9] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2020-10-31 10:34:58.872  INFO 6500 --- [Thread-9] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+2020-10-31 10:34:58.873  INFO 6500 --- [Thread-9] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2020-10-31 10:35:01.877  INFO 6500 --- [Thread-9] com.netflix.discovery.DiscoveryClient    : Unregistering ...
+2020-10-31 10:35:01.886  INFO 6500 --- [Thread-9] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_ADD-TO-CART-SERVICE/DESKTOP-DNE248H:add-to-cart-service:8006 - deregister  status: 200
+2020-10-31 10:35:01.904  INFO 6500 --- [Thread-9] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+2020-10-31 10:35:02.868  INFO 6500 --- [restartedMain] c.g.addtocart.AddToCartSystem            : No active profile set, falling back to default profiles: default
+2020-10-31 10:35:04.000  INFO 6500 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2020-10-31 10:35:04.030  INFO 6500 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 29ms. Found 3 JPA repository interfaces.
+2020-10-31 10:35:04.211  INFO 6500 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=d8d637a2-85c0-33f2-a099-ca6893c71e80
+2020-10-31 10:35:04.431  INFO 6500 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8006 (http)
+2020-10-31 10:35:04.432  INFO 6500 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-10-31 10:35:04.433  INFO 6500 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.38]
+2020-10-31 10:35:04.512  INFO 6500 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-10-31 10:35:04.513  INFO 6500 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1640 ms
+2020-10-31 10:35:04.848  INFO 6500 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-10-31 10:35:04.859  INFO 6500 --- [task-1] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-10-31 10:35:04.880  INFO 6500 --- [task-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Starting...
+2020-10-31 10:35:04.912  INFO 6500 --- [task-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Start completed.
+2020-10-31 10:35:04.913  INFO 6500 --- [task-1] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2020-10-31 10:35:04.942  WARN 6500 --- [task-1] org.hibernate.mapping.RootClass          : HHH000038: Composite-id class does not override equals(): com.greatoutdoor.addtocart.model.Cart
+2020-10-31 10:35:04.943  WARN 6500 --- [task-1] org.hibernate.mapping.RootClass          : HHH000039: Composite-id class does not override hashCode(): com.greatoutdoor.addtocart.model.Cart
+2020-10-31 10:35:05.061  INFO 6500 --- [task-1] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-10-31 10:35:05.063  INFO 6500 --- [task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-10-31 10:35:05.151  WARN 6500 --- [task-2] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2020-10-31 10:35:05.437  WARN 6500 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-10-31 10:35:06.413  INFO 6500 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 18 endpoint(s) beneath base path '/actuator'
+2020-10-31 10:35:06.489  WARN 6500 --- [restartedMain] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2020-10-31 10:35:06.492  INFO 6500 --- [restartedMain] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-10-31 10:35:07.145  WARN 6500 --- [restartedMain] ockingLoadBalancerClientRibbonWarnLogger : You already have RibbonLoadBalancerClient on your classpath. It will be used by default. As Spring Cloud Ribbon is in maintenance mode. We recommend switching to BlockingLoadBalancerClient instead. In order to use it, set the value of `spring.cloud.loadbalancer.ribbon.enabled` to `false` or remove spring-cloud-starter-netflix-ribbon from your project.
+2020-10-31 10:35:07.248  INFO 6500 --- [restartedMain] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2020-10-31 10:35:07.252  INFO 6500 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2020-10-31 10:35:07.254  INFO 6500 --- [restartedMain] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
+2020-10-31 10:35:07.254  INFO 6500 --- [restartedMain] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
+2020-10-31 10:35:07.254  INFO 6500 --- [restartedMain] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
+2020-10-31 10:35:07.254  INFO 6500 --- [restartedMain] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
+2020-10-31 10:35:07.393  INFO 6500 --- [restartedMain] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-10-31 10:35:07.394  INFO 6500 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2020-10-31 10:35:07.395  INFO 6500 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2020-10-31 10:35:07.395  INFO 6500 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2020-10-31 10:35:07.395  INFO 6500 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2020-10-31 10:35:07.395  INFO 6500 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2020-10-31 10:35:07.397  INFO 6500 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2020-10-31 10:35:07.397  INFO 6500 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2020-10-31 10:35:07.404  INFO 6500 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2020-10-31 10:35:07.406  INFO 6500 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2020-10-31 10:35:07.407  INFO 6500 --- [restartedMain] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2020-10-31 10:35:07.408  INFO 6500 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1604120707408 with initial instances count: 4
+2020-10-31 10:35:07.412  INFO 6500 --- [restartedMain] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application ADD-TO-CART-SERVICE with eureka with status UP
+2020-10-31 10:35:07.412  INFO 6500 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1604120707412, current=UP, previous=STARTING]
+2020-10-31 10:35:07.413  WARN 6500 --- [restartedMain] c.n.discovery.InstanceInfoReplicator     : Ignoring onDemand update due to rate limiter
+2020-10-31 10:35:07.423  INFO 6500 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_ADD-TO-CART-SERVICE/DESKTOP-DNE248H:add-to-cart-service:8006: registering service...
+2020-10-31 10:35:07.423  INFO 6500 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8006 (http) with context path ''
+2020-10-31 10:35:07.424  INFO 6500 --- [restartedMain] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8006
+2020-10-31 10:35:07.431  INFO 6500 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_ADD-TO-CART-SERVICE/DESKTOP-DNE248H:add-to-cart-service:8006 - registration status: 204
+2020-10-31 10:35:07.760  INFO 6500 --- [restartedMain] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories…
+2020-10-31 10:35:07.871  INFO 6500 --- [restartedMain] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
+2020-10-31 10:35:07.898  INFO 6500 --- [restartedMain] c.g.addtocart.AddToCartSystem            : Started AddToCartSystem in 5.795 seconds (JVM running for 294.999)
+2020-10-31 10:35:07.905  INFO 6500 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2020-10-31 10:40:07.400  INFO 6500 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
