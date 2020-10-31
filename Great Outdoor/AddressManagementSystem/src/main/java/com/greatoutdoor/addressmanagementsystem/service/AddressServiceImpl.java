@@ -1,5 +1,4 @@
 /**
-
  * 
  */
 package com.greatoutdoor.addressmanagementsystem.service;
@@ -29,11 +28,13 @@ public class AddressServiceImpl implements AddressService {
 	@Override
 	public boolean deleteAddress(String addressId) {
 		if (addressRepository.findById(addressId).isPresent()) {
+			addressRepository.deleteById(addressId);
 			return true;
+		
+	
 		} else {
-
 			return false;
-		}
+			}
 
 	}
 

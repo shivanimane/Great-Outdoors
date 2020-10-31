@@ -6,7 +6,10 @@ package com.greatoutdoor.productmanagementsystem.controller;
 import java.util.List;
 import java.util.Optional;
 
+import javax.validation.Valid;
+
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -56,7 +59,7 @@ public class ProductController {
     
 	 */
 	@PostMapping("/addProduct")
-	String addProduct(@RequestBody Product product) {
+	ResponseEntity<String> addProduct(@Valid @RequestBody Product product) {
 		if(product.getProductId().trim().length()==0) {
 			throw new NullParameterException("Please provide Product id");
 			
@@ -65,11 +68,11 @@ public class ProductController {
 		
 		
 		if(productService.addProduct(product)) {
-			return status;
+			return ResponseEntity.ok("Product has been added");
 		}
 		
 		else {
-			return "Failed to add product!";
+			return ResponseEntity.badRequest().body("Invalid ");
 		}
 		
 	}
