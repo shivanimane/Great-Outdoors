@@ -28,12 +28,11 @@ public class AddressServiceImpl implements AddressService {
 
 	@Override
 	public boolean deleteAddress(String addressId) {
-		if (addressRepository.findById(addressId).isEmpty()) {
-			return false;
+		if (addressRepository.findById(addressId).isPresent()) {
+			return true;
 		} else {
 
-			addressRepository.deleteById(addressId);
-			return true;
+			return false;
 		}
 
 	}
