@@ -157,19 +157,20 @@ public class RetailerInventoryController {
 //	}
 //	
 //
-//	@GetMapping("/RetailerInventoryById")
-//	public List<RetailerInventory> getRetailerInventoryById (@RequestParam String retailerId) {
-//		
-//		List<RetailerInventory> result = null;
-//		try {
-//			result = this.retailerInventoryService.getInventoryById(retailerId);
-//		} catch (Exception error) {
-//			error.printStackTrace();
-//			System.out.println("Retailer List By Invenory By Id - " + error.getMessage());
-//		}
-//		return result;
-//	}
+	@GetMapping("/RetailerInventoryById")
+	public List<RetailerInventory> getRetailerInventoryById (@RequestParam String retailerId) {
+		
+		List<RetailerInventory> result = null;
+		try {
+			result = this.retailerInventoryService.getInventoryById(retailerId);
+		} catch (Exception error) {
+			error.printStackTrace();
+			System.out.println("Retailer List By Invenory By Id - " + error.getMessage());
+		}
+		return result;
+	}
 
+	
 }
 	
 	
