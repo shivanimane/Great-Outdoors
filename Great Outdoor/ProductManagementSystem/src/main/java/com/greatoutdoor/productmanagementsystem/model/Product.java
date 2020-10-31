@@ -7,33 +7,39 @@ import javax.validation.constraints.Max;
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotNull;
 
+import org.hibernate.validator.constraints.NotBlank;
+import org.hibernate.validator.constraints.NotEmpty;
+
+
 @Entity
 @Table(name = "product_table")
 public class Product {
 	@Id
 	private String productId;
 	
-	@NotNull(message = "Price cannot be null")
+	
 	private double price;
 	
-	@NotNull(message = "Color cannot be null")
+	@NotEmpty(message = "Color may not be empty")
 	private String colour;
 	
-	@NotNull(message = "Dimension cannot be null")
+	@NotEmpty(message = "Dimensions  cannot be empty")
 	private String dimension;
 	
-	@NotNull(message = "Specification cannot be null")
+	@NotEmpty(message = "Specification cannot be empty")
 	private String specification;
 	
-	@NotNull(message = "Manufacturer cannot be null")
+	@NotEmpty(message = "Manufacturer cannot be empty")
 	private String manufacture;
 	
-	@NotNull(message = "Quantity cannot be null")
+	@NotEmpty(message = "Quantity cannot be empty")
 	private int quantity;
 	
 	@Min(value = 1,message = "Product Category is only between 1-5")
 	@Max(value = 5,message = "Product Category is only between 1-5")
+	@NotEmpty(message = "ProductCategory cannot not be empty")
 	private int productCategory;
+	@NotEmpty(message = "Name cannot be empty")
 	private String productName;
 	
 	/**

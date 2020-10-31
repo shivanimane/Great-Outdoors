@@ -10,6 +10,7 @@ import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -26,7 +27,9 @@ import com.greatoutdoor.productmanagementsystem.service.ProductService;
 
 @RestController
 @RequestMapping("/product")
+@Validated
 //@CrossOrigin(origins="*")
+
 public class ProductController {
 	
 	@Autowired
@@ -58,22 +61,11 @@ public class ProductController {
     },
     
 	 */
+	
 	@PostMapping("/addProduct")
-	ResponseEntity<String> addProduct(@Valid @RequestBody Product product) {
-		if(product.getProductId().trim().length()==0) {
-			throw new NullParameterException("Please provide Product id");
-			
-		}
-		String status = "Product has been added";
+	Product addProduct(@Valid @RequestBody Product product) {
+		return productService.addProduct(product);
 		
-		
-		if(productService.addProduct(product)) {
-			return ResponseEntity.ok("Product has been added");
-		}
-		
-		else {
-			return ResponseEntity.badRequest().body("Invalid ");
-		}
 		
 	}
 	
@@ -82,14 +74,15 @@ public class ProductController {
 	 * @param productId
 	 * @return String
 	 */
-	@PostMapping("/deleteProduct/{productId}")
-	String deleteProduct(@PathVariable String productId) {
-		if(productService.deleteProduct(productId)) {
-			return "Product has been deleted!";
-		}
-		return "ERROR";
-	}
-	
+//	@PostMapping("/deleteProduct/{productId}")
+//	String deleteProduct(@PathVariable String productId) {
+//		if(productService.deleteProduct(productId)) {
+//			return "Product has been deleted!";
+//		}
+//		return "ERROR";
+//	}
+//	
+	                                                      
 	/**
 	 * Edit a Product
 	 * @param product

@@ -33,7 +33,7 @@ public Wishlist(String userId, String productId) {
 
 @Override
 public String toString() {
-	return "WishlistDTO [userId=" + userId + ", productId=" + productId + "]";
+	return "Wishlist [userId=" + userId + ", productId=" + productId + "]";
 }
 
 	public String getUserId() {

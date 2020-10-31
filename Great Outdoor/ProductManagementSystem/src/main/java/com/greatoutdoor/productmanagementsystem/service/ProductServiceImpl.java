@@ -31,11 +31,11 @@ public class ProductServiceImpl implements ProductService {
 	}
 
 	@Override
-	public boolean addProduct(Product product) {
+	public Product addProduct(Product product) {
 		String prodId = "PRODUCT" + productDao.count();
 		product.setProductId(prodId);
-		productDao.save(product);
-		return true;
+		return productDao.save(product);
+		
 	}
 
 	@Override
@@ -60,16 +60,13 @@ public class ProductServiceImpl implements ProductService {
 
 	@Override
 	public Optional<Product> getProductById(String productId) {
-	if (productDao.findById(productId).isPresent()) {
-			return  productDao.findById(productId);
-	}
-		 else 
-		 {
-			return null;
+		if (productDao.findById(productId).isPresent()) {
+			return productDao.findById(productId);
+		} else {
+		      return null;
 
 		}
 
 	}
-	
 
 }
