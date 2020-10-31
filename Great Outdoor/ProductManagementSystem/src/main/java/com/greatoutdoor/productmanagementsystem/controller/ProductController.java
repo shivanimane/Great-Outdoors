@@ -27,6 +27,7 @@ import com.greatoutdoor.productmanagementsystem.service.ProductService;
 @RestController
 @RequestMapping("/product")
 //@CrossOrigin(origins="*")
+
 public class ProductController {
 	
 	@Autowired
