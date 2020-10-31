@@ -15,13 +15,12 @@ public class RetailerInventoryBean {
 	private String productName;
 	private String productUniqueId;
 	private Period deliveryTimePeriod;
-	private Period shelfTimePeriod;
 	public RetailerInventoryBean() {
 		super();
 	}
 	public RetailerInventoryBean(String retailerId, String retailerName, byte productCategoryNumber,
-			String productCategoryName, String productName, String productUniqueId, Period deliveryTimePeriod,
-			Period shelfTimePeriod) {
+			String productCategoryName, String productName, String productUniqueId, Period deliveryTimePeriod
+			) {
 		super();
 		this.retailerId = retailerId;
 		this.retailerName = retailerName;
@@ -30,7 +29,6 @@ public class RetailerInventoryBean {
 		this.productName = productName;
 		this.productUniqueId = productUniqueId;
 		this.deliveryTimePeriod = deliveryTimePeriod;
-		this.shelfTimePeriod = shelfTimePeriod;
 	}
 	public String getRetailerId() {
 		return retailerId;
@@ -74,18 +72,13 @@ public class RetailerInventoryBean {
 	public void setDeliveryTimePeriod(Period deliveryTimePeriod) {
 		this.deliveryTimePeriod = deliveryTimePeriod;
 	}
-	public Period getShelfTimePeriod() {
-		return shelfTimePeriod;
-	}
-	public void setShelfTimePeriod(Period shelfTimePeriod) {
-		this.shelfTimePeriod = shelfTimePeriod;
-	}
+	
 	@Override
 	public String toString() {
 		return "RetailerInventoryBean [retailerId=" + retailerId + ", retailerName=" + retailerName
 				+ ", productCategoryNumber=" + productCategoryNumber + ", productCategoryName=" + productCategoryName
 				+ ", productName=" + productName + ", productUniqueId=" + productUniqueId + ", deliveryTimePeriod="
-				+ deliveryTimePeriod + ", shelfTimePeriod=" + shelfTimePeriod + "]";
+				+ deliveryTimePeriod +"]";
 	}
 
 	public static String periodToString (Period period) {
