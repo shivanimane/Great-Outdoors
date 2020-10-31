@@ -3007,3 +3007,103 @@ com.netflix.discovery.shared.transport.TransportException: Cannot execute reques
 2020-10-31 19:57:03.157  INFO 868 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Application version is -1: false
 2020-10-31 19:57:03.157  INFO 868 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
 2020-10-31 19:57:03.164  INFO 868 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2020-10-31 22:10:23.061  WARN 868 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2h10m59s937ms550µs313ns).
+2020-10-31 22:10:28.368  INFO 868 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-10-31 22:11:43.706  INFO 868 --- [Thread-1] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application RETAILER-MGMT-SERVICE with eureka with status DOWN
+2020-10-31 22:11:43.707  WARN 868 --- [Thread-1] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1604162503707, current=DOWN, previous=UP]
+2020-10-31 22:11:43.714  WARN 868 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1604162503714, current=UP, previous=DOWN]
+2020-10-31 22:11:43.715  INFO 868 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_RETAILER-MGMT-SERVICE/DESKTOP-DNE248H:retailer-mgmt-service:8002: registering service...
+2020-10-31 22:11:43.722  INFO 868 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_RETAILER-MGMT-SERVICE/DESKTOP-DNE248H:retailer-mgmt-service:8002 - registration status: 204
+2020-10-31 22:11:44.179  INFO 868 --- [Thread-1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-10-31 22:11:44.184  INFO 868 --- [Thread-1] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-10-31 22:11:44.189  INFO 868 --- [Thread-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2020-10-31 22:11:44.201  INFO 868 --- [Thread-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2020-10-31 22:11:44.207  INFO 868 --- [Thread-1] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2020-10-31 22:11:47.211  INFO 868 --- [Thread-1] com.netflix.discovery.DiscoveryClient    : Unregistering ...
+2020-10-31 22:11:47.218  INFO 868 --- [Thread-1] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_RETAILER-MGMT-SERVICE/DESKTOP-DNE248H:retailer-mgmt-service:8002 - deregister  status: 200
+2020-10-31 22:11:47.244  INFO 868 --- [Thread-1] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+2020-10-31 22:11:49.142  INFO 868 --- [restartedMain] c.g.r.RetailerInventoryManagementSystem  : No active profile set, falling back to default profiles: default
+2020-10-31 22:11:50.885  INFO 868 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2020-10-31 22:11:50.930  INFO 868 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 44ms. Found 2 JPA repository interfaces.
+2020-10-31 22:11:51.350  INFO 868 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=b6f0d5b4-4f99-3741-8640-e1361c07f79d
+2020-10-31 22:11:51.986  INFO 868 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8002 (http)
+2020-10-31 22:11:51.989  INFO 868 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-10-31 22:11:51.989  INFO 868 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.38]
+2020-10-31 22:11:52.260  INFO 868 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-10-31 22:11:52.261  INFO 868 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3114 ms
+2020-10-31 22:11:53.191  INFO 868 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-10-31 22:11:53.217  INFO 868 --- [task-1] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-10-31 22:11:53.330  INFO 868 --- [task-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2020-10-31 22:11:53.368  INFO 868 --- [task-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2020-10-31 22:11:53.369  INFO 868 --- [task-1] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2020-10-31 22:11:54.274  INFO 868 --- [task-1] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-10-31 22:11:54.275  INFO 868 --- [task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-10-31 22:11:54.532  WARN 868 --- [task-2] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2020-10-31 22:11:55.063  WARN 868 --- [restartedMain] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2020-10-31 22:11:55.064  INFO 868 --- [restartedMain] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-10-31 22:11:55.277  WARN 868 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-10-31 22:11:57.556  WARN 868 --- [restartedMain] ockingLoadBalancerClientRibbonWarnLogger : You already have RibbonLoadBalancerClient on your classpath. It will be used by default. As Spring Cloud Ribbon is in maintenance mode. We recommend switching to BlockingLoadBalancerClient instead. In order to use it, set the value of `spring.cloud.loadbalancer.ribbon.enabled` to `false` or remove spring-cloud-starter-netflix-ribbon from your project.
+2020-10-31 22:11:57.598  INFO 868 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 18 endpoint(s) beneath base path '/actuator'
+2020-10-31 22:11:57.700  INFO 868 --- [restartedMain] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2020-10-31 22:11:57.706  INFO 868 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2020-10-31 22:11:57.710  INFO 868 --- [restartedMain] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
+2020-10-31 22:11:57.710  INFO 868 --- [restartedMain] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
+2020-10-31 22:11:57.711  INFO 868 --- [restartedMain] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
+2020-10-31 22:11:57.711  INFO 868 --- [restartedMain] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
+2020-10-31 22:11:58.101  INFO 868 --- [restartedMain] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-10-31 22:11:58.104  INFO 868 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2020-10-31 22:11:58.104  INFO 868 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2020-10-31 22:11:58.104  INFO 868 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2020-10-31 22:11:58.104  INFO 868 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2020-10-31 22:11:58.104  INFO 868 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2020-10-31 22:11:58.105  INFO 868 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2020-10-31 22:11:58.105  INFO 868 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2020-10-31 22:11:58.118  INFO 868 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2020-10-31 22:11:58.119  INFO 868 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2020-10-31 22:11:58.120  INFO 868 --- [restartedMain] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2020-10-31 22:11:58.122  INFO 868 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1604162518122 with initial instances count: 4
+2020-10-31 22:11:58.126  INFO 868 --- [restartedMain] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application RETAILER-MGMT-SERVICE with eureka with status UP
+2020-10-31 22:11:58.126  INFO 868 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1604162518126, current=UP, previous=STARTING]
+2020-10-31 22:11:58.127  WARN 868 --- [restartedMain] c.n.discovery.InstanceInfoReplicator     : Ignoring onDemand update due to rate limiter
+2020-10-31 22:11:58.140  INFO 868 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8002 (http) with context path ''
+2020-10-31 22:11:58.142  INFO 868 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_RETAILER-MGMT-SERVICE/DESKTOP-DNE248H:retailer-mgmt-service:8002: registering service...
+2020-10-31 22:11:58.142  INFO 868 --- [restartedMain] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8002
+2020-10-31 22:11:58.151  INFO 868 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_RETAILER-MGMT-SERVICE/DESKTOP-DNE248H:retailer-mgmt-service:8002 - registration status: 204
+2020-10-31 22:11:58.659  INFO 868 --- [restartedMain] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories…
+2020-10-31 22:11:58.684  INFO 868 --- [restartedMain] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
+2020-10-31 22:11:58.709  INFO 868 --- [restartedMain] c.g.r.RetailerInventoryManagementSystem  : Started RetailerInventoryManagementSystem in 11.174 seconds (JVM running for 8536.066)
+2020-10-31 22:11:58.717  INFO 868 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2020-10-31 22:12:29.582  INFO 868 --- [http-nio-8002-exec-5] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-10-31 22:12:29.583  INFO 868 --- [http-nio-8002-exec-5] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-10-31 22:12:29.589  INFO 868 --- [http-nio-8002-exec-5] o.s.web.servlet.DispatcherServlet        : Completed initialization in 6 ms
+2020-10-31 22:16:58.107  INFO 868 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-10-31 22:21:58.108  INFO 868 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-10-31 22:26:58.110  INFO 868 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-10-31 22:31:58.111  INFO 868 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-10-31 22:36:58.113  INFO 868 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-10-31 22:41:58.115  INFO 868 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-10-31 22:46:58.118  INFO 868 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-10-31 22:51:58.119  INFO 868 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-10-31 22:56:58.120  INFO 868 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-10-31 23:01:58.123  INFO 868 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-10-31 23:06:58.125  INFO 868 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-10-31 23:11:58.127  INFO 868 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-10-31 23:16:58.129  INFO 868 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-10-31 23:21:58.130  INFO 868 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-10-31 23:26:58.131  INFO 868 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-10-31 23:31:28.606  INFO 868 --- [RMI TCP Connection(2)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2020-10-31 23:31:28.616  INFO 868 --- [RMI TCP Connection(2)-127.0.0.1] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application RETAILER-MGMT-SERVICE with eureka with status DOWN
+2020-10-31 23:31:28.617  WARN 868 --- [RMI TCP Connection(2)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1604167288617, current=DOWN, previous=UP]
+2020-10-31 23:31:28.622  WARN 868 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1604167288622, current=UP, previous=DOWN]
+2020-10-31 23:31:28.622  INFO 868 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_RETAILER-MGMT-SERVICE/DESKTOP-DNE248H:retailer-mgmt-service:8002: registering service...
+2020-10-31 23:31:28.629  INFO 868 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_RETAILER-MGMT-SERVICE/DESKTOP-DNE248H:retailer-mgmt-service:8002 - registration status: 204
+2020-10-31 23:31:28.745  INFO 868 --- [RMI TCP Connection(2)-127.0.0.1] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2020-10-31 23:31:28.749  INFO 868 --- [RMI TCP Connection(2)-127.0.0.1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2020-10-31 23:31:28.802  INFO 868 --- [RMI TCP Connection(2)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-10-31 23:31:28.809  INFO 868 --- [RMI TCP Connection(2)-127.0.0.1] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-10-31 23:31:28.810  INFO 868 --- [RMI TCP Connection(2)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2020-10-31 23:31:28.826  INFO 868 --- [RMI TCP Connection(2)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+2020-10-31 23:31:28.827  INFO 868 --- [RMI TCP Connection(2)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2020-10-31 23:31:31.830  INFO 868 --- [RMI TCP Connection(2)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : Unregistering ...
+2020-10-31 23:31:31.833  INFO 868 --- [RMI TCP Connection(2)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_RETAILER-MGMT-SERVICE/DESKTOP-DNE248H:retailer-mgmt-service:8002 - deregister  status: 200
+2020-10-31 23:31:31.846  INFO 868 --- [RMI TCP Connection(2)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
