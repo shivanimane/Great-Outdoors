@@ -1,4 +1,5 @@
 /**
+@Deepali
  * 
  */
 package com.greatoutdoor.addressmanagementsystem.controller;
@@ -6,9 +7,11 @@ package com.greatoutdoor.addressmanagementsystem.controller;
 import java.util.List;
 import java.util.Optional;
 
-import org.slf4j.LoggerFactory;
+import javax.validation.Valid;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -37,6 +40,7 @@ import io.swagger.annotations.ApiOperation;
 
 @RestController
 @RequestMapping("/address")
+@Validated                                              //change
 public class AddressController {
 
 	@Autowired
@@ -58,7 +62,7 @@ public class AddressController {
 	)
 
 	@PostMapping("/addAddress")
-	ResponseEntity<String> addAddress(@RequestBody Address address) {
+	ResponseEntity<String> addAddress(@Valid @RequestBody Address address) {
 
 		if (addressService.addAddress(address)) {
 			return ResponseEntity.ok("Address has been added");

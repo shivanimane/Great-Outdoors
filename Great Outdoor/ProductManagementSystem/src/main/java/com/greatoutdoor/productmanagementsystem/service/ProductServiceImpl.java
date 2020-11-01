@@ -30,13 +30,14 @@ public class ProductServiceImpl implements ProductService {
 		return (List<Product>) productDao.findAll();
 	}
 
-	@Override
+	/**@Override
 	public Product addProduct(Product product) {
 		String prodId = "PRODUCT" + productDao.count();
 		product.setProductId(prodId);
 		return productDao.save(product);
 		
-	}
+	}**/
+	
 
 	@Override
 	public boolean editProduct(Product product) {
@@ -69,4 +70,18 @@ public class ProductServiceImpl implements ProductService {
 
 	}
 
+	@Override
+	public boolean addProduct(Product product) {
+		String prodId = "PRODUCT" + productDao.count();
+		if(product.getProductId()==null)
+		{
+			return false;
+		}else {
+			productDao.save(product);
+		return true;
+		
+	}
+		
+
+}
 }

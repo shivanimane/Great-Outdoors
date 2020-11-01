@@ -19,7 +19,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+
 import com.greatoutdoor.productmanagementsystem.exception.NullParameterException;
+import com.greatoutdoor.productmanagementsystem.exception.ProductNotFoundException;
 import com.greatoutdoor.productmanagementsystem.model.Product;
 import com.greatoutdoor.productmanagementsystem.service.ProductService;
 
@@ -62,12 +64,24 @@ public class ProductController {
     
 	 */
 	
-	@PostMapping("/addProduct")
-	Product addProduct(@Valid @RequestBody Product product) {
+	/**@PostMapping("/addProduct")
+	Product addProduct(@Valid @RequestBody Product product)
+	 {
 		return productService.addProduct(product);
 		
-		
+		}**/
+	
+	@PostMapping("/addProduct")
+	ResponseEntity<String> addAddress(@Valid @RequestBody Product product) {
+
+		if (productService.addProduct(product)) {
+			return ResponseEntity.ok("Product has been added");
+		} else {
+			throw new NullParameterException("Product Id cannot be zero");
+		}
+
 	}
+	
 	
 	/**
 	 * Delete a Product
@@ -105,9 +119,13 @@ public class ProductController {
 //	
 	@GetMapping("/getProductById")
 	Optional<Product> getProductById(@RequestParam String productId){
-		return productService.getProductById(productId);
+		//return productService.getProductById(productId);
+		if(productService.getProductById(productId)==null) {
+			throw new ProductNotFoundException("Product Not Found");
+		}else {
+			return productService.getProductById(productId);
+		}
 	}
-//	List<Product> getProductById
 
 
 }
