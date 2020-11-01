@@ -20,10 +20,9 @@ import org.hibernate.validator.constraints.NotEmpty;
 public class Address {
 
 	@Id
-	// @GeneratedValue(strategy=GenerationType.IDENTITY)
-	// @NotEmpty(message = "addressID can not empty")
-	private String addressId;
-	// @NotEmpty(message = "retailerID can not empty")
+	@GeneratedValue(strategy=GenerationType.AUTO)
+	private Integer addressId;
+	@NotEmpty(message = "retailerID can not empty")
 	private String retailerId;
 	@NotEmpty(message = "buildingno can not empty")
 	private String buildingNo;
@@ -36,7 +35,7 @@ public class Address {
 	@NotEmpty(message = "zip can not empty")
 	private String zip;
 
-	public Address(String addressId, String retailerId,
+	public Address(Integer addressId, String retailerId,
 			@NotNull(message = "buildingno cannot be null") String buildingNo,
 			@NotNull(message = "city cannot be null") String city,
 			@NotNull(message = "state cannot be null") String state,
@@ -52,11 +51,11 @@ public class Address {
 		this.zip = zip;
 	}
 
-	public String getAddressId() {
+	public Integer getAddressId() {
 		return addressId;
 	}
 
-	public void setAddressId(String addressId) {
+	public void setAddressId(Integer addressId) {
 		this.addressId = addressId;
 	}
 

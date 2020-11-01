@@ -40,7 +40,7 @@ import io.swagger.annotations.ApiOperation;
 
 @RestController
 @RequestMapping("/address")
-@Validated                                              //change
+@Validated // change
 public class AddressController {
 
 	@Autowired
@@ -54,13 +54,11 @@ public class AddressController {
 	}
 
 	/*
-	 * { "addressId":"a-101", "retailerId":"r-101", "buildingNo":"501",
-	 * "city":"pune", "state":"Maharastra", "field":"dsgfb", "zip":"411057" }
+	 * { "addressId": "2345", "retailerId": "ABC Retailers", "buildingNo": "234",
+	 * "city": "Mumbai", "state": "Maharastra", "field": "Goregaon", "zip": "400063"
+	 * }
 	 */
-	@ApiOperation(value = "Post address"
-
-	)
-
+	@ApiOperation(value = "Post address")
 	@PostMapping("/addAddress")
 	ResponseEntity<String> addAddress(@Valid @RequestBody Address address) {
 
@@ -72,43 +70,40 @@ public class AddressController {
 
 	}
 
-	@ApiOperation(value = "Update address"
-
-	)
+	@ApiOperation(value = "Update address")
 	@PutMapping("/updateAddress")
 	String updateAddress(@RequestBody Address address) {
-
+		if(address.getAddressId()==null) {
+			throw new NullParameterException("Address Id cannot be empty");
+		}
 		if (addressService.updateAddress(address)) {
 			return "successfully updated Address";
 
 		} else {
-			throw new AddressNotFound("Address not found");
+			throw new AddressNotFound("Please enter correct address Id");
 		}
 
 	}
 
-	@ApiOperation(value = "Delete address"
-
-	)
+	@ApiOperation(value = "Delete address")
 	@DeleteMapping("/deleteAddress")
-	String deleteAddress(@RequestParam String addressId) throws AddressNotFound {
-		if(addressId.isEmpty()) {
-			throw new NullParameterException("Please provide address Id");
+	String deleteAddress(@RequestParam Integer addressId) throws AddressNotFound {
+		if(addressId==null) {
+			throw new NullParameterException("Please provide AddressId");
 		}
-
 		if (addressService.deleteAddress(addressId)) {
 			return "Address Deleted Successfully";
 		} else {
 			throw new AddressNotFound("Address not found");
-
 		}
 
 	}
 
 	@GetMapping("/getAddressById")
-	Optional<Address> getAddressById(@RequestParam String addressId) {
-		if(addressId.isEmpty())
-		 throw new NullParameterException("Please provide address Id");
+	Optional<Address> getAddressById(@RequestParam Integer addressId) {
+		if (addressId==null) {
+			throw new NullParameterException("Please enter address Id");
+		}
 		if (addressService.getAddressById(addressId) == null) {
 			throw new AddressNotFound("Address Not Found");
 		} else {

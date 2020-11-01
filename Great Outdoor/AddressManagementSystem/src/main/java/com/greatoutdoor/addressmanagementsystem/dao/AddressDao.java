@@ -14,7 +14,7 @@ import com.greatoutdoor.addressmanagementsystem.model.Address;
  *
  */
 @Repository
-public interface AddressDao extends CrudRepository<Address, String> {
+public interface AddressDao extends CrudRepository<Address, Integer> {
 
 }
 

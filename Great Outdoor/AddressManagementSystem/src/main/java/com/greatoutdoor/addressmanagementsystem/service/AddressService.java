@@ -16,8 +16,8 @@ public interface AddressService {
 	List<Address> viewAllAddresss();
 	boolean addAddress(Address address);
 	boolean updateAddress(Address address);
-	boolean deleteAddress(String addressId);
-	Optional<Address> getAddressById(String addressId);
+	boolean deleteAddress(Integer addressId);
+	Optional<Address> getAddressById(Integer addressId);
 
 	
 }
