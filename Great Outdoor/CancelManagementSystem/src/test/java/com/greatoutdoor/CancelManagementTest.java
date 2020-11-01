@@ -28,13 +28,7 @@ class CancelManagementTest {
 	}**/
 
 	
-	
-	
-	
-	
-	
 }
-
 
 
 /**@Test
