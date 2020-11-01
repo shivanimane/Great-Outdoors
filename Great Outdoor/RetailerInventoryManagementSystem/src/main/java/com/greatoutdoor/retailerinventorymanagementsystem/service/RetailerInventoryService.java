@@ -14,9 +14,10 @@ import com.greatoutdoor.retailerinventorymanagementsystem.model.RetailerInventor
 
 public interface RetailerInventoryService {
 	public List<RetailerInventoryBean> getItemWiseDeliveryTimeReport(String retailerId) throws RetailerInventoryException;
-	public List<RetailerInventoryBean> getCategoryWiseDeliveryTimeReport(String retailerId) throws RetailerInventoryException;
+	//public List<RetailerInventoryBean> getCategoryWiseDeliveryTimeReport(String retailerId) throws RetailerInventoryException;
 	public List<RetailerInventory> getListOfRetailers();
 	public List<RetailerInventory> getInventoryById(String retailerId);
+	public boolean updateProductRecieveTimeStamp(RetailerInventory retailerinventorydto) throws RetailerInventoryException;
 //	public List<RetailerInventoryBean> getMonthlyShelfTimeReport(String retailerId, Calendar dateSelection)throws RetailerInventoryException; 
 //	public List<RetailerInventoryBean> getQuarterlyShelfTimeReport(String retailerId, Calendar dateSelection)throws RetailerInventoryException ;
 //	public List<RetailerInventoryBean> getYearlyShelfTimeReport(String retailerId, Calendar dateSelection)throws RetailerInventoryException; 
