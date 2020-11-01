@@ -21,7 +21,7 @@
 
 	</properties>
 
-	<dependencies>
+	  <dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-data-jpa</artifactId>
@@ -34,6 +34,12 @@
       <groupId>org.springframework.boot</groupId>
       <artifactId>spring-boot-starter-validation</artifactId>
 </dependency>
+<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-validator</artifactId>
+			<version>6.0.12.Final</version>
+		</dependency>
+		
 		<!-- Swagger 2 -->
 		<!-- http://localhost:prtnumber/v2/api-docs -->
 		<dependency>

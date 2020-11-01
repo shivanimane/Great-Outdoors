@@ -1,4 +1,5 @@
 package com.greatoutdoor.addressmanagementsystem.model;
+
 /**
  *  @author Deepali
  */
@@ -9,20 +10,20 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 import javax.validation.constraints.Size;
 
+import javax.validation.constraints.NotNull;
+
+import org.hibernate.validator.constraints.NotBlank;
 import org.hibernate.validator.constraints.NotEmpty;
 
-import com.sun.istack.NotNull;
-
 @Entity
-@Table(name="address")
+@Table(name = "address")
 public class Address {
-	
-	
+
 	@Id
-	//@GeneratedValue(strategy=GenerationType.IDENTITY)
-	@NotEmpty(message = "addressID can not empty")
+	// @GeneratedValue(strategy=GenerationType.IDENTITY)
+	// @NotEmpty(message = "addressID can not empty")
 	private String addressId;
-	@NotEmpty(message = "retailerID can not empty")
+	// @NotEmpty(message = "retailerID can not empty")
 	private String retailerId;
 	@NotEmpty(message = "buildingno can not empty")
 	private String buildingNo;
@@ -34,10 +35,13 @@ public class Address {
 	private String field;
 	@NotEmpty(message = "zip can not empty")
 	private String zip;
-	
-	
-	public Address(String addressId, String retailerId, String buildingNo, String city, String state, String field,
-			String zip) {
+
+	public Address(String addressId, String retailerId,
+			@NotNull(message = "buildingno cannot be null") String buildingNo,
+			@NotNull(message = "city cannot be null") String city,
+			@NotNull(message = "state cannot be null") String state,
+			@NotNull(message = "field cannot be null") String field,
+			@NotNull(message = "zip cannot be null") String zip) {
 		super();
 		this.addressId = addressId;
 		this.retailerId = retailerId;
@@ -104,6 +108,7 @@ public class Address {
 		this.zip = zip;
 	}
 
-	public Address() {}
-		
+	public Address() {
+	}
+
 }

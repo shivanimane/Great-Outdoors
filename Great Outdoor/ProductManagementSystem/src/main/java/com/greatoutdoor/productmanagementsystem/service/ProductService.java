@@ -15,7 +15,8 @@ import com.greatoutdoor.productmanagementsystem.model.Product;
  */
 public interface ProductService {
 	List<Product> viewAllProducts();
-	Product addProduct(Product product);
+	//Product addProduct(Product product);
+	boolean addProduct(Product product);
 	boolean editProduct(Product product);
 	boolean deleteProduct(String productId);
 	Optional<Product> getProductById(String productId);
