@@ -32,12 +32,12 @@ public class Product {
 	@NotEmpty(message = "Manufacturer cannot be empty")
 	private String manufacture;
 	
-	@NotEmpty(message = "Quantity cannot be empty")
+	//@NotEmpty(message = "Quantity cannot be empty")
 	private int quantity;
 	
 	@Min(value = 1,message = "Product Category is only between 1-5")
 	@Max(value = 5,message = "Product Category is only between 1-5")
-	@NotEmpty(message = "ProductCategory cannot not be empty")
+	//@NotEmpty(message = "ProductCategory cannot not be empty")
 	private int productCategory;
 	@NotEmpty(message = "Name cannot be empty")
 	private String productName;

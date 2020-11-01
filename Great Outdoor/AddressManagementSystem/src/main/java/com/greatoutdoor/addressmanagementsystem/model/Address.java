@@ -9,6 +9,8 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 import javax.validation.constraints.Size;
 
+import org.hibernate.validator.constraints.NotEmpty;
+
 import com.sun.istack.NotNull;
 
 @Entity
@@ -18,14 +20,19 @@ public class Address {
 	
 	@Id
 	//@GeneratedValue(strategy=GenerationType.IDENTITY)
-	@NotNull
-	@Size(min=4, message="addressid should have at least 4 character")
+	@NotEmpty(message = "addressID can not empty")
 	private String addressId;
+	@NotEmpty(message = "retailerID can not empty")
 	private String retailerId;
+	@NotEmpty(message = "buildingno can not empty")
 	private String buildingNo;
+	@NotEmpty(message = "city can not empty")
 	private String city;
+	@NotEmpty(message = "state can not empty")
 	private String state;
+	@NotEmpty(message = "field can not empty")
 	private String field;
+	@NotEmpty(message = "zip can not empty")
 	private String zip;
 	
 	

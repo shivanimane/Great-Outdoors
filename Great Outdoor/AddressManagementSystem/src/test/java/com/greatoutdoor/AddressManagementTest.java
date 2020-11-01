@@ -35,17 +35,7 @@ class AddressManagementTest {
 			assertEquals(Boolean.TRUE, loge);
 	  }
 			
-	/* @Test
-	 void testdeleteAddress() {
-		 Address address=new Address("4597", "a123", "678", "pune", "maharashtra", "56t5" ,"345322");
-		 AddressService addressservice=mock(AddressServiceImpl.class);
-		  when(addressservice.deleteAddress(addressId)).thenReturn(Boolean.TRUE);
-		  System.out.println(address.toString());
-			boolean loge = addressservice.deleteAddress(addressId);
-			assertEquals(Boolean.TRUE, loge);
-		 
-		 
-	 }*/
+	
 		  
 		  
 		  

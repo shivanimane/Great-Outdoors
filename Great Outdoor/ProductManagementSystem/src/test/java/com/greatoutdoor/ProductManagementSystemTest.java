@@ -13,7 +13,7 @@ import com.greatoutdoor.productmanagementsystem.service.ProductServiceImpl;
 
 class ProductManagementSystemTest {
 
-	@Test 
+	/**@Test 
 	void testaddProduct()
 	{
 		Product product=new Product("454", 1, "467","876","589", "743", 1, 4, "7123");
@@ -23,7 +23,7 @@ class ProductManagementSystemTest {
 		boolean logp = productservice.addProduct(product);
 		assertEquals(Boolean.TRUE, logp);
 		
-	}
+	}**/
 	
 	@Test
 	void testeditProduct() {
