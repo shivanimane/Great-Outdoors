@@ -137,7 +137,7 @@ public class OrderAndCartServiceImpl implements OrderAndCartService {
 	public boolean cancelOrderByOrderId(String orderId) {
 
 		if (orderProductMapDao.count() == 0 || orderDao.count() == 0
-				|| orderProductMapDao.getAllOrdersByOrderId(orderId) == null) {
+				|| orderProductMapDao.getAllOrdersByOrderId(orderId).isEmpty()) {
 			return false;
 		} else {
 			orderProductMapDao.deleteOrderByOrderId(orderId);
