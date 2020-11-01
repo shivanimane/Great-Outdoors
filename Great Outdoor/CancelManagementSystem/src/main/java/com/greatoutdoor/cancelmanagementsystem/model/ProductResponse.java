@@ -15,17 +15,14 @@ public class ProductResponse {
 	private String productId;
 
 	private String productName;
-	private String productURL;
 	private double price;
-	public ProductResponse(String userId, String orderId, String productId, String productName,
-			String productURL , double price) {
+	public ProductResponse(String userId, String orderId, String productId, String productName, double price) {
 		super();
 		this.userId = userId;
 		this.orderId = orderId;
 		this.productId = productId;
 		
 		this.productName = productName;
-		this.productURL = productURL;
 		this.price = price;
 	}
 	public ProductResponse() {
@@ -58,12 +55,7 @@ public class ProductResponse {
 	public void setProductName(String productName) {
 		this.productName = productName;
 	}
-	public String getProductURL() {
-		return productURL;
-	}
-	public void setProductURL(String productURL) {
-		this.productURL = productURL;
-	}
+	
 	public double getPrice() {
 		return price;
 	}
