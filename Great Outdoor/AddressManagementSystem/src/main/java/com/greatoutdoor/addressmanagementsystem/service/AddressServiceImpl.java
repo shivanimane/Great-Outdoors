@@ -11,6 +11,7 @@ import org.springframework.stereotype.Service;
 
 import com.greatoutdoor.addressmanagementsystem.dao.AddressDao;
 import com.greatoutdoor.addressmanagementsystem.model.Address;
+import com.greatoutdoor.addressmanagementsystem.exception.AddressNotFound;
 import com.greatoutdoor.addressmanagementsystem.exception.CrudException;
 
 @Service
@@ -21,8 +22,13 @@ public class AddressServiceImpl implements AddressService {
 	@Override
 	public List<Address> viewAllAddresss() {
 		// TODO Auto-generated method stub
-		if(addressRepository.count()==0) throw new CrudException("Please add something to wishlist");
+		if(addressRepository.count()==0) 
+			{
+			throw new AddressNotFound("No Addressess found");
+			}
+		else {
 		return (List<Address>) addressRepository.findAll();
+		}
 	}
 
 	@Override

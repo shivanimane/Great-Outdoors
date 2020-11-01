@@ -48,7 +48,7 @@ public class AddressController {
 	private static final Logger Logger = LoggerFactory.getLogger(Address.class);
 
 	@ApiOperation(value = "View all address", notes = "User can add address", response = String.class)
-	@GetMapping("/viewALLAddress")
+	@GetMapping("/viewAllAddress")
 	List<Address> viewAllAddress() {
 		return addressService.viewAllAddresss();
 	}
@@ -92,6 +92,9 @@ public class AddressController {
 	)
 	@DeleteMapping("/deleteAddress")
 	String deleteAddress(@RequestParam String addressId) throws AddressNotFound {
+		if(addressId.isEmpty()) {
+			throw new NullParameterException("Please provide address Id");
+		}
 
 		if (addressService.deleteAddress(addressId)) {
 			return "Address Deleted Successfully";
@@ -104,6 +107,8 @@ public class AddressController {
 
 	@GetMapping("/getAddressById")
 	Optional<Address> getAddressById(@RequestParam String addressId) {
+		if(addressId.isEmpty())
+		 throw new NullParameterException("Please provide address Id");
 		if (addressService.getAddressById(addressId) == null) {
 			throw new AddressNotFound("Address Not Found");
 		} else {
