@@ -10,6 +10,7 @@ import java.util.Calendar;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import java.util.TimeZone;
 
 import javax.persistence.RollbackException;
@@ -127,13 +128,14 @@ public class RetailerInventoryServiceImpl implements RetailerInventoryService {
 		return result;
 	}
 
-	@Override
+/*	@Override
 	public boolean updateProductRecieveTimeStamp(RetailerInventory retailerinventorydto) throws RetailerInventoryException {
 		boolean receiveTimestampUpdated = false;
 
 		try {
 
-			RetailerInventory existingItem = (RetailerInventory) retailerInventoryRepository.findAll();
+			RetailerInventory existingItem = (RetailerInventory) retailerInventoryRepository.findByProductUIN(retailerinventorydto.getProductUniqueId());
+			System.out.println(existingItem);
 			if (existingItem == null) {
 			throw new RetailerInventoryException(
 						"updateProductReceiveTimeStamp - " + ExceptionConstants.PRODUCT_NOT_IN_INVENTORY);
@@ -151,30 +153,30 @@ public class RetailerInventoryServiceImpl implements RetailerInventoryService {
 		return receiveTimestampUpdated;
 		
 	}
-	
-	@Override
-	public boolean updateProductSaleTimeStamp(RetailerInventory retailerinventorydto) throws RetailerInventoryException {
-		boolean saleTimestampUpdated = false;
-
-		try {
-			RetailerInventory existingItem = (RetailerInventory) retailerInventoryRepository.findAll();
-			if (existingItem == null) {
-				throw new RetailerInventoryException(
-						"updateProductSaleTimeStamp - " + ExceptionConstants.PRODUCT_NOT_IN_INVENTORY);
-			}
-			existingItem.setProductSaleTimestamp(retailerinventorydto.getProductSaleTimestamp());
-	
-		} catch (IllegalStateException error) {
-			throw new RetailerInventoryException(
-					"updateProductSaleTimeStamp - " + ExceptionConstants.INAPPROPRIATE_METHOD_INVOCATION);
-		} catch (RollbackException error) {
-			throw new RetailerInventoryException(
-					"updateProductSaleTimeStamp - " + ExceptionConstants.FAILURE_COMMIT_CHANGES);
-		}
-		saleTimestampUpdated = true;
-		return saleTimestampUpdated;
-		
-	}
+	*/
+	//@Override
+//	public boolean updateProductSaleTimeStamp(RetailerInventory retailerinventorydto) throws RetailerInventoryException {
+//		boolean saleTimestampUpdated = false;
+//
+//		try {
+//			RetailerInventory existingItem = (RetailerInventory) retailerInventoryRepository.findAll();
+//			if (existingItem == null) {
+//				throw new RetailerInventoryException(
+//						"updateProductSaleTimeStamp - " + ExceptionConstants.PRODUCT_NOT_IN_INVENTORY);
+//			}
+//			existingItem.setProductSaleTimestamp(retailerinventorydto.getProductSaleTimestamp());
+//	
+//		} catch (IllegalStateException error) {
+//			throw new RetailerInventoryException(
+//					"updateProductSaleTimeStamp - " + ExceptionConstants.INAPPROPRIATE_METHOD_INVOCATION);
+//		} catch (RollbackException error) {
+//			throw new RetailerInventoryException(
+//					"updateProductSaleTimeStamp - " + ExceptionConstants.FAILURE_COMMIT_CHANGES);
+//		}
+//		saleTimestampUpdated = true;
+//		return saleTimestampUpdated;
+//		
+//	}
    
 	@Override
 	public List<RetailerInventory> getListOfRetailers() {
@@ -199,7 +201,7 @@ public class RetailerInventoryServiceImpl implements RetailerInventoryService {
 		return itemDeleted;
 	}
 	
-	public boolean addItemToInventory(String retailerId, byte productCategory, String productId, String productUIN) throws RetailerInventoryException {
+	public boolean addItemToInventory(String retailerId, byte productCategory, String productId, String productUIN) {
 		boolean itemAdded = false;
 		Calendar currentSystemTimestamp = Calendar.getInstance(TimeZone.getTimeZone("UTC"));
 		RetailerInventory queryArgument = new RetailerInventory(retailerId, productCategory, productId, productUIN, currentSystemTimestamp, null, null);
