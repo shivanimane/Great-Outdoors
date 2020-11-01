@@ -18,7 +18,7 @@ import com.greatoutdoor.addressmanagementsystem.service.AddressServiceImpl;
 class AddressManagementTest {
 
 	@Test
-	void testupdateAddress() {
+	void testUpdateAddress() {
 
 		Address address = new Address(4597, "a123", "678", "pune", "maharashtra", "56t5", "345322");
 		AddressService addressservice = mock(AddressServiceImpl.class);

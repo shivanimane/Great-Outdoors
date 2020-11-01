@@ -47,7 +47,7 @@ public class AddressController {
 	AddressService addressService;
 	private static final Logger Logger = LoggerFactory.getLogger(Address.class);
 
-	@ApiOperation(value = "View all address", notes = "User can add address", response = String.class)
+	@ApiOperation(value = "View all address", notes = "Retailer can add address", response = String.class)
 	@GetMapping("/viewAllAddress")
 	List<Address> viewAllAddress() {
 		return addressService.viewAllAddresss();
@@ -65,7 +65,7 @@ public class AddressController {
 		if (addressService.addAddress(address)) {
 			return ResponseEntity.ok("Address has been added");
 		} else {
-			throw new NullParameterException("Address Id or Retailer Id cannot be zero");
+			throw new NullParameterException("Retailer Id cannot be zero");
 		}
 
 	}

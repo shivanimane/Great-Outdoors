@@ -6,6 +6,7 @@ package com.greatoutdoor.wishlistmanagementsystem.controller;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -36,6 +37,9 @@ public class WishlistController {
 		if(addItem.getUserId()==null || addItem.getProductId()==null || addItem.getUserId().trim().length()==0 ||addItem.getProductId().trim().length()==0) { 
 			throw new com.greatoutdoor.wishlistmanagementsystem.exception.NullParameterException("Null request, please provide Wishlist details!");
 		}
+		
+		
+		
 		    String status= "Added to wishlist";
 		    service.addToWishlist(addItem);
 		    return status;
@@ -43,20 +47,25 @@ public class WishlistController {
                
 		}
 
-	@PostMapping("/deleteProduct")
+	@DeleteMapping("/deleteProduct")
    public String deleteProduct(@RequestBody Wishlist removeItem )  {
 		
 		if(removeItem==null || removeItem.getUserId().trim().length()==0 ||removeItem.getProductId().trim().length()==0) { 
 			throw new NullParameterException("Null request, please provide wishlist details to remove item from wishlist!");
 			
+		} else {
+//			String status= "Removed item";
+//		     if(service.deleteProduct(removeItem)) {
+//		    	return status;
+//		     }
+//		     else
+//		    	 throw new CrudException("Product Id not found");
+			String status= "Removed item";
+			service.deleteProduct(removeItem);
+			return status;
 		}
 		
-		String status= "Removed item";
-	     if(service.deleteProduct(removeItem)==false) {
-	    	 throw new CrudException("Product Id not found");
-	     }
-	     else
-		   return status;
+		
 	
 	}
 		
