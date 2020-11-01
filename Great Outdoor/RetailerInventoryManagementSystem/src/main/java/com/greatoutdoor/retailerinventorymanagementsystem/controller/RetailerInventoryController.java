@@ -1,4 +1,5 @@
 package com.greatoutdoor.retailerinventorymanagementsystem.controller;
+
 /**
  * @Deepali
  */
@@ -16,58 +17,47 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.greatoutdoor.retailerinventorymanagementsystem.exception.NullParameterException;
 import com.greatoutdoor.retailerinventorymanagementsystem.exception.RetailerInventoryException;
 import com.greatoutdoor.retailerinventorymanagementsystem.model.RetailerInventoryBean;
 import com.greatoutdoor.retailerinventorymanagementsystem.model.RetailerInventory;
 import com.greatoutdoor.retailerinventorymanagementsystem.service.RetailerInventoryService;
-
 
 @RestController
 
 @RequestMapping("/getRetailerInventory")
 
 public class RetailerInventoryController {
-	
+
 	@Autowired
 	private RetailerInventoryService retailerInventoryService;
-	private static final Logger Logger= LoggerFactory.getLogger(RetailerInventoryBean.class);
-		
+	private static final Logger Logger = LoggerFactory.getLogger(RetailerInventoryBean.class);
+
 	@ResponseBody
-	@GetMapping("/getDeliveryTimeReport")
-	public List<RetailerInventoryBean> getDeliveryTimeReport(@RequestParam String retailerId, @RequestParam int reportType)
-	{
-		
-		List<RetailerInventoryBean> result = null;
-		switch (reportType) {
-		case 1: {
-			try {
-				result = retailerInventoryService.getItemWiseDeliveryTimeReport(retailerId);
-			} catch (RetailerInventoryException error) {
-				error.printStackTrace();
-				System.out.println("Delivery Time Report - " + error.getMessage());
-			}
-			break;
-//		}
-//		case 2: {
-//			try {
-//				result = retailerInventoryService.getCategoryWiseDeliveryTimeReport(retailerId);
-//			} catch (RetailerInventoryException error) {
-//				error.printStackTrace();
-//				System.out.println("Delivery Time Report - " + error.getMessage());
-//			}
-//			break;
+	@GetMapping("/getItemWiseDelivery")
+	public List<RetailerInventoryBean> getDeliveryTimeReport(@RequestParam String retailerId) {
+		if(retailerId.isEmpty()) {
+			throw new NullParameterException("Please enter retailerId");
 		}
-		default: {		
+		List<RetailerInventoryBean> result = null;
+
+		try {
+			result = retailerInventoryService.getItemWiseDeliveryTimeReport(retailerId);
+		} catch (RetailerInventoryException error) {
+			error.printStackTrace();
+			System.out.println("Delivery Time Report - " + error.getMessage());
+
 			System.out.println("Delivery Time Report - " + "Invalid Argument Recieved");
 		}
-	}
-	
 		return result;
-		
-		}
+
+	}
+
 	@GetMapping("/getRetailerInventoryById")
-	public List<RetailerInventory> getRetailerInventoryById (@RequestParam String retailerId) {
-		
+	public List<RetailerInventory> getRetailerInventoryById(@RequestParam String retailerId) {
+		if(retailerId.isEmpty()) {
+			throw new NullParameterException("Please enter retailerId");
+		}
 		List<RetailerInventory> result = null;
 		try {
 			result = this.retailerInventoryService.getInventoryById(retailerId);
@@ -77,10 +67,10 @@ public class RetailerInventoryController {
 		}
 		return result;
 	}
-	
+
 	@ResponseBody
 	@GetMapping("/RetailerList")
-	public List<RetailerInventory> getRetailerList () {
+	public List<RetailerInventory> getRetailerList() {
 		List<RetailerInventory> result = null;
 		try {
 			result = this.retailerInventoryService.getListOfRetailers();
@@ -92,30 +82,5 @@ public class RetailerInventoryController {
 		return result;
 	}
 
-	@PostMapping("/addToRetailerInventory")
-	public String addToInventory(@RequestParam String retailerId, byte productCategory, String productId, String productUIN) {
-		if(this.retailerInventoryService.addItemToInventory(retailerId, productCategory, productId, productUIN))
-			return "Added Successfully";
-		else {
-			return "Failed to add";
-		}
-		
-	}
-	
-	@ResponseBody
-	@GetMapping("/updateProductRecieveTime")
-	public String getUpdateProductRecieveTimeStamp(@RequestBody RetailerInventory retailerInventoryDTO)
-	{
-		String status="Product Timestamp updated";
-		try {
-			retailerInventoryService.updateProductRecieveTimeStamp(retailerInventoryDTO);
-		}catch (RetailerInventoryException error) {
-			error.printStackTrace();
-			System.out.println("Product Recieve Time - " + error.getMessage());
-		}
-		return status;
-		
-	}
+
 }
-	
-	

@@ -57,7 +57,7 @@ public class OrderProductCancelController {
 	}
 
 	@ApiOperation(value = "Cancel an order using orderID", response = String.class)
-	@DeleteMapping("/cancelOrder")
+	@PostMapping("/cancelOrder")
 	public String cancelOrder(@RequestParam String orderId) {
 		if (orderId.isEmpty()) {
 			throw new NullParameterException("please enter OrderId");
@@ -84,7 +84,7 @@ public class OrderProductCancelController {
 	}
 
 	@ApiOperation(value = "Cancel a product using orderId and productId", response = String.class)
-	@DeleteMapping("/cancelProduct")
+	@PostMapping("/cancelProduct")
 	public String cancelOrderProduct(@RequestParam String orderId, @RequestParam String productId) {
 		if (orderId.isEmpty() || productId.isEmpty()) {
 			throw new NullParameterException("Please enter orderId and productId");

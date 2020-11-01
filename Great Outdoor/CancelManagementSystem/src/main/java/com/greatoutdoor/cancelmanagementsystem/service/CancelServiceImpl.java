@@ -104,8 +104,7 @@ public class CancelServiceImpl implements CancelService{
 			Product product = restTemplate.getForObject(productUrl+"/getProductById?productId="+cancelOrders.get(index).getProductId(),
 					Product.class);
 			ProductResponse productResponse = new ProductResponse(cancelOrders.get(index).getUserId(),
-					cancelOrders.get(index).getOrderid(),cancelOrders.get(index).getProductId(), product.getProductName(),
-					product.getProductURL() , product.getPrice());
+					cancelOrders.get(index).getOrderid(),cancelOrders.get(index).getProductId(), product.getProductName(), product.getPrice());
 			
 			response.add(productResponse);
 			index++;
