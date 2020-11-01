@@ -26,18 +26,13 @@ public class ProductServiceImpl implements ProductService {
 
 	@Override
 	public List<Product> viewAllProducts() {
-		
-		return (List<Product>) productDao.findAll();
-	}
+		if (productDao.count() == 0) {
+			return null;
+		} else {
+			return (List<Product>) productDao.findAll();
+		}
 
-	/**@Override
-	public Product addProduct(Product product) {
-		String prodId = "PRODUCT" + productDao.count();
-		product.setProductId(prodId);
-		return productDao.save(product);
-		
-	}**/
-	
+	}
 
 	@Override
 	public boolean editProduct(Product product) {
@@ -53,10 +48,12 @@ public class ProductServiceImpl implements ProductService {
 	@Override
 	public boolean deleteProduct(String productId) {
 		if (productDao.findById(productId).isPresent()) {
+			productDao.deleteById(productId);
+			return true;
+		} else {
 			return false;
 		}
-		productDao.deleteById(productId);
-		return true;
+
 	}
 
 	@Override
@@ -64,7 +61,7 @@ public class ProductServiceImpl implements ProductService {
 		if (productDao.findById(productId).isPresent()) {
 			return productDao.findById(productId);
 		} else {
-		      return null;
+			return null;
 
 		}
 
@@ -72,16 +69,16 @@ public class ProductServiceImpl implements ProductService {
 
 	@Override
 	public boolean addProduct(Product product) {
-		String prodId = "PRODUCT" + productDao.count();
-		if(product.getProductId()==null)
-		{
+		if(product==null) {
 			return false;
-		}else {
+		} else {
+			String prodId = "PRODUCT" + productDao.count();
+			product.setProductId(prodId);
 			productDao.save(product);
-		return true;
+			return true;
+
+		}
 		
 	}
-		
 
-}
 }

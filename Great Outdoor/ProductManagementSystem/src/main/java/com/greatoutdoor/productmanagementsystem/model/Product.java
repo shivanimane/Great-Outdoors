@@ -6,6 +6,7 @@ import javax.persistence.Table;
 import javax.validation.constraints.Max;
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotNull;
+import javax.validation.constraints.PositiveOrZero;
 
 import org.hibernate.validator.constraints.NotBlank;
 import org.hibernate.validator.constraints.NotEmpty;
@@ -17,7 +18,7 @@ public class Product {
 	@Id
 	private String productId;
 	
-	
+	@PositiveOrZero(message = "Price has to be more than 0")
 	private double price;
 	
 	@NotEmpty(message = "Color may not be empty")
@@ -32,7 +33,7 @@ public class Product {
 	@NotEmpty(message = "Manufacturer cannot be empty")
 	private String manufacture;
 	
-	//@NotEmpty(message = "Quantity cannot be empty")
+	@PositiveOrZero(message = "Quantity has to be more than 0")
 	private int quantity;
 	
 	@Min(value = 1,message = "Product Category is only between 1-5")

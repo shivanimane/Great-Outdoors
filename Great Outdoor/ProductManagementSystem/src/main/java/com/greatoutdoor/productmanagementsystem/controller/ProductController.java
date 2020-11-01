@@ -1,6 +1,4 @@
 
- 
-
 package com.greatoutdoor.productmanagementsystem.controller;
 
 import java.util.List;
@@ -11,6 +9,7 @@ import javax.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.annotation.Validated;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -43,7 +42,11 @@ public class ProductController {
 	 */
 	@GetMapping("/viewAllProducts")
 	List<Product> viewAllProducts(){
-		return productService.viewAllProducts();
+		if(productService.viewAllProducts()==null) {
+			throw new ProductNotFoundException("Products not found");
+		} else {
+			return productService.viewAllProducts();
+		}
 	}
 	
 	/**
@@ -64,20 +67,14 @@ public class ProductController {
     
 	 */
 	
-	/**@PostMapping("/addProduct")
-	Product addProduct(@Valid @RequestBody Product product)
-	 {
-		return productService.addProduct(product);
-		
-		}**/
 	
 	@PostMapping("/addProduct")
-	ResponseEntity<String> addAddress(@Valid @RequestBody Product product) {
+	String addProduct(@Valid @RequestBody Product product) {
 
 		if (productService.addProduct(product)) {
-			return ResponseEntity.ok("Product has been added");
+			return "Product has been added";
 		} else {
-			throw new NullParameterException("Product Id cannot be zero");
+			throw new NullParameterException("Please enter Product details");
 		}
 
 	}
@@ -88,14 +85,19 @@ public class ProductController {
 	 * @param productId
 	 * @return String
 	 */
-//	@PostMapping("/deleteProduct/{productId}")
-//	String deleteProduct(@PathVariable String productId) {
-//		if(productService.deleteProduct(productId)) {
-//			return "Product has been deleted!";
-//		}
-//		return "ERROR";
-//	}
-//	
+	@DeleteMapping("/deleteProduct")
+	String deleteProduct(@RequestParam String productId) {
+		if(productId.trim().length()==0) {
+			throw new NullParameterException("Please enter productId");
+		}
+		if(productService.deleteProduct(productId)) {
+			return "Product has been deleted!";
+		} else {
+			throw new ProductNotFoundException("Product not found");
+		}
+		
+	}
+	
 	                                                      
 	/**
 	 * Edit a Product
