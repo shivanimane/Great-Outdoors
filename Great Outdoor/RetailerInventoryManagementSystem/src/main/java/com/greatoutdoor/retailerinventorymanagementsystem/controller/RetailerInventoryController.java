@@ -10,6 +10,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -46,15 +47,15 @@ public class RetailerInventoryController {
 				System.out.println("Delivery Time Report - " + error.getMessage());
 			}
 			break;
-		}
-		case 2: {
-			try {
-				result = retailerInventoryService.getCategoryWiseDeliveryTimeReport(retailerId);
-			} catch (RetailerInventoryException error) {
-				error.printStackTrace();
-				System.out.println("Delivery Time Report - " + error.getMessage());
-			}
-			break;
+//		}
+//		case 2: {
+//			try {
+//				result = retailerInventoryService.getCategoryWiseDeliveryTimeReport(retailerId);
+//			} catch (RetailerInventoryException error) {
+//				error.printStackTrace();
+//				System.out.println("Delivery Time Report - " + error.getMessage());
+//			}
+//			break;
 		}
 		default: {		
 			System.out.println("Delivery Time Report - " + "Invalid Argument Recieved");
@@ -64,7 +65,7 @@ public class RetailerInventoryController {
 		return result;
 		
 		}
-	@GetMapping("/RetailerInventoryById")
+	@GetMapping("/getRetailerInventoryById")
 	public List<RetailerInventory> getRetailerInventoryById (@RequestParam String retailerId) {
 		
 		List<RetailerInventory> result = null;
@@ -98,6 +99,21 @@ public class RetailerInventoryController {
 		else {
 			return "Failed to add";
 		}
+		
+	}
+	
+	@ResponseBody
+	@GetMapping("/updateProductRecieveTime")
+	public String getUpdateProductRecieveTimeStamp(@RequestBody RetailerInventory retailerInventoryDTO)
+	{
+		String status="Product Timestamp updated";
+		try {
+			retailerInventoryService.updateProductRecieveTimeStamp(retailerInventoryDTO);
+		}catch (RetailerInventoryException error) {
+			error.printStackTrace();
+			System.out.println("Product Recieve Time - " + error.getMessage());
+		}
+		return status;
 		
 	}
 }

@@ -74,73 +74,78 @@ public class RetailerInventoryServiceImpl implements RetailerInventoryService {
 		}
 		return result;
 	}
+//
+//	@Override
+//	public List<RetailerInventoryBean> getCategoryWiseDeliveryTimeReport(String retailerId) throws RetailerInventoryException{
+//		List<RetailerInventoryBean> result = new ArrayList<RetailerInventoryBean> ();
+//		List<RetailerInventory> listOfDeliveredItems = retailerInventoryRepository.findAllByretailerId(retailerId); 
+//		Map<Integer, List<RetailerInventoryBean>> map = new HashMap<Integer, List<RetailerInventoryBean>>();
+//		for (int category = 1; category <= 5; category++)
+//			map.put(category, new ArrayList<RetailerInventoryBean>());	
+//		try {
+//			List<User> userList = (List<User>) userRepository.findAll();
+//			for (RetailerInventory deliveredItem : listOfDeliveredItems) {
+//				RetailerInventoryBean object = new RetailerInventoryBean ();
+//				object.setRetailerId(retailerId);
+//				for (User user : userList) {
+//					if (user.getUserId().equals(retailerId)) {
+//						object.setRetailerName(user.getUserName());
+//						break;
+//					}
+//				}
+//				object.setProductCategoryNumber(deliveredItem.getProductCategory());
+//				object.setProductCategoryName(GoUtility.getCategoryName(deliveredItem.getProductCategory()));
+//				object.setProductUniqueId(deliveredItem.getProductUniqueId());
+//				object.setDeliveryTimePeriod(GoUtility.calculatePeriod(deliveredItem.getProductDispatchTimestamp(), deliveredItem.getProductRecieveTimestamp()));
+//				map.get(Integer.valueOf(object.getProductCategoryNumber())).add(object);
+//			}
+//			
+//			for (int category = 1; category <= 5; category++) {
+//				if (map.get(category).size() != 0) {
+//					int years = 0, months = 0, days = 0, count = 0;
+//					for (RetailerInventoryBean item : map.get(category)) {
+//						years += item.getDeliveryTimePeriod().getYears(); 
+//						months += item.getDeliveryTimePeriod().getMonths(); 
+//						days += item.getDeliveryTimePeriod().getDays();
+//						count ++;
+//					}
+//					years /= count;
+//					months /= count;
+//					days /= count;
+//					RetailerInventoryBean object = new RetailerInventoryBean ();
+//					object.setProductCategoryNumber((byte)category);
+//					object.setProductCategoryName(GoUtility.getCategoryName(category));
+//					object.setProductUniqueId("----");
+//					object.setDeliveryTimePeriod(Period.of(years, months, days));
+//					result.add(object);
+//				}
+//			}
+//			
+//		} catch (RuntimeException error) {
+//			error.printStackTrace();
+//			throw new RetailerInventoryException ("getCategoryWiseDeliveryTimeReport - " + ExceptionConstants.INTERNAL_RUNTIME_ERROR);
+//		}
+//		return result;
+//	}
 
 	@Override
-	public List<RetailerInventoryBean> getCategoryWiseDeliveryTimeReport(String retailerId) throws RetailerInventoryException{
-		List<RetailerInventoryBean> result = new ArrayList<RetailerInventoryBean> ();
-		List<RetailerInventory> listOfDeliveredItems = retailerInventoryRepository.findAllByretailerId(retailerId); 
-		Map<Integer, List<RetailerInventoryBean>> map = new HashMap<Integer, List<RetailerInventoryBean>>();
-		for (int category = 1; category <= 5; category++)
-			map.put(category, new ArrayList<RetailerInventoryBean>());	
-		try {
-			List<User> userList = (List<User>) userRepository.findAll();
-			for (RetailerInventory deliveredItem : listOfDeliveredItems) {
-				RetailerInventoryBean object = new RetailerInventoryBean ();
-				object.setRetailerId(retailerId);
-				for (User user : userList) {
-					if (user.getUserId().equals(retailerId)) {
-						object.setRetailerName(user.getUserName());
-						break;
-					}
-				}
-				object.setProductCategoryNumber(deliveredItem.getProductCategory());
-				object.setProductCategoryName(GoUtility.getCategoryName(deliveredItem.getProductCategory()));
-				object.setProductUniqueId(deliveredItem.getProductUniqueId());
-				object.setDeliveryTimePeriod(GoUtility.calculatePeriod(deliveredItem.getProductDispatchTimestamp(), deliveredItem.getProductRecieveTimestamp()));
-				map.get(Integer.valueOf(object.getProductCategoryNumber())).add(object);
-			}
-			
-			for (int category = 1; category <= 5; category++) {
-				if (map.get(category).size() != 0) {
-					int years = 0, months = 0, days = 0, count = 0;
-					for (RetailerInventoryBean item : map.get(category)) {
-						years += item.getDeliveryTimePeriod().getYears(); 
-						months += item.getDeliveryTimePeriod().getMonths(); 
-						days += item.getDeliveryTimePeriod().getDays();
-						count ++;
-					}
-					years /= count;
-					months /= count;
-					days /= count;
-					RetailerInventoryBean object = new RetailerInventoryBean ();
-					object.setProductCategoryNumber((byte)category);
-					object.setProductCategoryName(GoUtility.getCategoryName(category));
-					object.setProductUniqueId("----");
-					object.setDeliveryTimePeriod(Period.of(years, months, days));
-					result.add(object);
-				}
-			}
-			
-		} catch (RuntimeException error) {
-			error.printStackTrace();
-			throw new RetailerInventoryException ("getCategoryWiseDeliveryTimeReport - " + ExceptionConstants.INTERNAL_RUNTIME_ERROR);
-		}
-		return result;
-	}
-
-/*	@Override
 	public boolean updateProductRecieveTimeStamp(RetailerInventory retailerinventorydto) throws RetailerInventoryException {
 		boolean receiveTimestampUpdated = false;
+		
 
 		try {
-
-			RetailerInventory existingItem = (RetailerInventory) retailerInventoryRepository.findByProductUIN(retailerinventorydto.getProductUniqueId());
+			
+			
+			
+			Optional<RetailerInventory> existingItem = this.retailerInventoryRepository.findById(retailerinventorydto.getProductUniqueId());
 			System.out.println(existingItem);
 			if (existingItem == null) {
 			throw new RetailerInventoryException(
 						"updateProductReceiveTimeStamp - " + ExceptionConstants.PRODUCT_NOT_IN_INVENTORY);
 			}
-			existingItem.setProductRecieveTimestamp(retailerinventorydto.getProductRecieveTimestamp());
+			existingItem.get().setProductRecieveTimestamp(retailerinventorydto.getProductRecieveTimestamp());
+			System.out.println(retailerinventorydto.getProductRecieveTimestamp());
+			//existingItem.setProductRecieveTimestamp(retailerinventorydto.getProductRecieveTimestamp());
 	
 		} catch (IllegalStateException error) {
 			throw new RetailerInventoryException(
@@ -153,7 +158,7 @@ public class RetailerInventoryServiceImpl implements RetailerInventoryService {
 		return receiveTimestampUpdated;
 		
 	}
-	*/
+
 	//@Override
 //	public boolean updateProductSaleTimeStamp(RetailerInventory retailerinventorydto) throws RetailerInventoryException {
 //		boolean saleTimestampUpdated = false;
