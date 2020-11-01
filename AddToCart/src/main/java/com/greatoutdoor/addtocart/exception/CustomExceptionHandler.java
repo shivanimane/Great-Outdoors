@@ -1,126 +1,82 @@
-/**
- * 
- */
 package com.greatoutdoor.addtocart.exception;
+
+
+
+import java.util.Date;
 
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
-import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExceptionHandler;
+import org.springframework.web.context.request.WebRequest;
 
-/**
- * @author Shivani
 
- *
- */
+
 @ControllerAdvice
-public class CustomExceptionHandler extends ResponseEntityExceptionHandler{
-
-
-	private long currentTimeMillis = System.currentTimeMillis();
-	private String errorMsg = "Some thing went wrong!";
+public class CustomExceptionHandler {
 	
-	@ExceptionHandler(Exception.class)
-	public final ResponseEntity<ErrorMessage> somethingWentWrong(Exception ex){
+	@ExceptionHandler(NullPointerException.class)
+	public final ResponseEntity<ApiError> somethingWentWrong(NullPointerException ex){
 		
-		ErrorMessage exceptionResponse =
-				new ErrorMessage(ex.getMessage(), 
-						errorMsg,currentTimeMillis);
-		return new ResponseEntity<ErrorMessage>(exceptionResponse,
-				new HttpHeaders(),HttpStatus.BAD_REQUEST);
+		ApiError error = new ApiError();
+		error.setException(" " + "Please enter details");
+		HttpStatus status = HttpStatus.BAD_REQUEST;
+		return new ResponseEntity<>(error, status);
 		
 	}
 	
-	@ExceptionHandler(OrderNotFoundException.class)
-	public final ResponseEntity<ErrorMessage> orderNotFound(OrderNotFoundException ex){
-
-		ErrorMessage exceptionResponse =
-				new ErrorMessage(ex.getMessage(), 
-						errorMsg,currentTimeMillis);
-		return new ResponseEntity<ErrorMessage>(exceptionResponse,
-				new HttpHeaders(),HttpStatus.NOT_FOUND);
-	}
-	
-	@ExceptionHandler(ProductNotFoundException.class)
-	public final ResponseEntity<ErrorMessage> productNotFound(ProductNotFoundException ex){
-
-		ErrorMessage exceptionResponse =
-				new ErrorMessage(ex.getMessage(), 
-						errorMsg,currentTimeMillis);
-		return new ResponseEntity<ErrorMessage>(exceptionResponse,
-				new HttpHeaders(),HttpStatus.NOT_FOUND);
-	}
-	
-	
-	@ExceptionHandler(NullParameterException.class)
-	public final ResponseEntity<ErrorMessage> nullParameter(NullParameterException ex){
-
-		ErrorMessage exceptionResponse =
-				new ErrorMessage(ex.getMessage(), 
-						errorMsg,currentTimeMillis);
-		return new ResponseEntity<ErrorMessage>(exceptionResponse,
-				new HttpHeaders(),HttpStatus.NOT_FOUND);
-	}
-	
-	@ExceptionHandler(CrudException.class)
-	public final ResponseEntity<ErrorMessage> crudException(CrudException ex){
-
-		ErrorMessage exceptionResponse =
-				new ErrorMessage(ex.getMessage(), 
-						errorMsg,currentTimeMillis);
-		return new ResponseEntity<ErrorMessage>(exceptionResponse,
-				new HttpHeaders(),HttpStatus.NOT_FOUND);
-	}
-	
-	
-}
-
-
-class ErrorMessage{
-	private String message;
-	private String details;
-	private long timestamp;
-	
-	public ErrorMessage() {}
-	
-	
-	
-	public ErrorMessage(String message, String details, long timestamp) {
-		super();
-		this.message = message;
-		this.details = details;
-		this.timestamp = timestamp;
+	@ExceptionHandler(value = NullParameterException.class)
+	public ResponseEntity<ApiError> handlingNoValueFoundException(NullParameterException e) {
+		ApiError error = new ApiError();
+		error.setException(" " + e.getMessage());
+		HttpStatus status = HttpStatus.NOT_FOUND;
+		return new ResponseEntity<>(error, status);
 	}
 
-
-
-	public String getMessage() {
-		return message;
+	@ExceptionHandler(value = CrudException.class)
+	public ResponseEntity<ApiError> handlingNotPossibleException(CrudException e) {
+		ApiError error = new ApiError();
+		error.setException(" " + e.getMessage());
+		HttpStatus status = HttpStatus.BAD_REQUEST;
+		return new ResponseEntity<>(error, status);
 	}
 	
-	public void setMessage(String message) {
-		this.message = message;
+	@ExceptionHandler(value = CartNotFoundException.class)
+	public ResponseEntity<ApiError> handlingNotPossibleException(CartNotFoundException e) {
+		ApiError error = new ApiError();
+		error.setException(" " + e.getMessage());
+		HttpStatus status = HttpStatus.BAD_REQUEST;
+		return new ResponseEntity<>(error, status);
 	}
 	
-	public String getDetails() {
-		return details;
+	@ExceptionHandler(value = OrderNotFoundException.class)
+	public ResponseEntity<ApiError> handlingNotPossibleException(OrderNotFoundException e) {
+		ApiError error = new ApiError();
+		error.setException(" " + e.getMessage());
+		HttpStatus status = HttpStatus.BAD_REQUEST;
+		return new ResponseEntity<>(error, status);
 	}
 	
-	public void setDetails(String details) {
-		this.details = details;
+	@ExceptionHandler(value = ProductNotFoundException.class)
+	public ResponseEntity<ApiError> handlingNotPossibleException(ProductNotFoundException e) {
+		ApiError error = new ApiError();
+		error.setException(" " + e.getMessage());
+		HttpStatus status = HttpStatus.BAD_REQUEST;
+		return new ResponseEntity<>(error, status);
 	}
+	
 
 
-
-	public long getTimestamp() {
-		return timestamp;
+	@ExceptionHandler(MethodArgumentNotValidException.class)
+	public ResponseEntity<ApiError> handleValidationExceptions(MethodArgumentNotValidException e) {
+		ApiError error = new ApiError();
+		error.setException(" " + e.getLocalizedMessage());
+		HttpStatus status = HttpStatus.BAD_REQUEST;
+		return new ResponseEntity<>(error, status);
 	}
+	
+	
 
-
-
-	public void setTimestamp(long timestamp) {
-		this.timestamp = timestamp;
-	}
 }

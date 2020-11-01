@@ -1,97 +1,35 @@
 package com.greatoutdoor.wishlistmanagementsystem.exception;
 
 
+import java.util.Date;
+
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
-import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExceptionHandler;
+import org.springframework.web.context.request.WebRequest;
 
 
 @ControllerAdvice
-public class CustomExceptionHandler extends ResponseEntityExceptionHandler {
-	
-	private long currentTimeMillis = System.currentTimeMillis();
-	private String errorMsg = "Something went wrong!";
-	
-	
-	@ExceptionHandler(Exception.class)
-	public final ResponseEntity<ErrorMessage> somethingWentWrong(Exception ex){
-		
-		ErrorMessage exceptionResponse =
-				new ErrorMessage(ex.getMessage(), 
-						errorMsg,currentTimeMillis);
-		return new ResponseEntity<ErrorMessage>(exceptionResponse,
-				new HttpHeaders(),HttpStatus.BAD_REQUEST);
-		
-	}
-	
-	@ExceptionHandler(NullParameterException.class)
-	public final ResponseEntity<ErrorMessage> nullParameter(NullParameterException ex){
-
-		ErrorMessage exceptionResponse =
-				new ErrorMessage(ex.getMessage(), 
-					errorMsg,currentTimeMillis);
-		return new ResponseEntity<ErrorMessage>(exceptionResponse,
-				new HttpHeaders(),HttpStatus.NOT_FOUND);
-	}
-	
-	@ExceptionHandler(CrudException.class)
-	public final ResponseEntity<ErrorMessage> crudException(CrudException ex){
-
-		ErrorMessage exceptionResponse =
-				new ErrorMessage(ex.getMessage(), 
-						errorMsg,currentTimeMillis);
-		return new ResponseEntity<ErrorMessage>(exceptionResponse,
-				new HttpHeaders(),HttpStatus.NOT_FOUND);
+public class CustomExceptionHandler {
+	@ExceptionHandler(value = NullParameterException.class)
+	public ResponseEntity<ApiError> handlingNoValueFoundException(NullParameterException e) {
+		ApiError error = new ApiError();
+		error.setException(" " + e.getMessage());
+		HttpStatus status = HttpStatus.NOT_FOUND;
+		return new ResponseEntity<>(error, status);
 	}
 
-}
-class ErrorMessage{
-	private String message;
-	private String details;
-	private long timestamp;
-	
-	public ErrorMessage() {}
-	
-	
-
-	public ErrorMessage(String message, String details, long timestamp) {
-	super();
-	this.message = message;
-		this.details = details;
-		this.timestamp = timestamp;
-	}
-
-
-
-	public String getMessage() {
-		return message;
-}
-	
-	public void setMessage(String message) {
-		this.message = message;
-	}
-	
-	public String getDetails() {
-		return details;
-	}
-	
-	public void setDetails(String details) {
-		this.details = details;
-	}
-
-
-	public long getTimestamp() {
-		return timestamp;
-	}
-
-
-
-	public void setTimestamp(long timestamp) {
-		this.timestamp = timestamp;
+	@ExceptionHandler(value = CrudException.class)
+	public ResponseEntity<ApiError> CrudException(CrudException e) {
+		ApiError error = new ApiError();
+		error.setException(" " + e.getMessage());
+		HttpStatus status = HttpStatus.NOT_FOUND;
+		return new ResponseEntity<>(error, status);
 	}
 	
 	
+
 }
