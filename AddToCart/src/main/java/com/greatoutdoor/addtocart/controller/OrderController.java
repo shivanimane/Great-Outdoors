@@ -48,13 +48,19 @@ public class OrderController {
 			)
 	@PostMapping("/addToCart")
 	public String addItemToCart(@RequestBody CartBean cart) {
-		if(cart==null || cart.getProductId().trim().length() == 0 || cart.getQuantity()==0 ) {
+		if(cart==null) {
+			throw new NullParameterException("Please enter details");
+		}
+		if(cart.getUserId().trim().length() == 0 || cart.getProductId().trim().length() == 0 || cart.getQuantity()==0 ) {
 			logger.error("Null request, cart details not provided at /addItemToCart");
 			throw new NullParameterException("Null request, please provide cart details!");
 		}
-		String status = "Item added Succefully";
-		orderAndCartService.addItemToCart(cart);
-		return status;
+		String status = "Item added Successfully";
+		if(orderAndCartService.addItemToCart(cart)) {
+			return status;
+		} else {
+			throw new CrudException("Cart with same UserId ProductId already exists");
+		}
 	}
 	
 	@ApiOperation(
@@ -63,9 +69,9 @@ public class OrderController {
 			response = String.class
 			)
 	@PostMapping("/placeOrder")
-	public String placeOrder(@RequestParam String userId, @RequestParam String addressId , @RequestParam double totalCost) {
+	public String placeOrder(@RequestParam String userId, @RequestParam String addressId , @RequestParam Double totalCost) {
 		
-		if(userId==null || addressId==null) {
+		if(userId==null || addressId==null || totalCost==null) {
 			logger.error("Null request, please provide userId and addressId/ placeOrder");
 			throw new NullParameterException("Null request, please provide userId and addressId!");
 		}
@@ -87,20 +93,21 @@ public class OrderController {
 			notes = "Retailer can remove product from cart with this API",
 			response = String.class
 			)
-	@DeleteMapping("/removeProductByUserIdProductId/{userId}/{productId}")
-	public String removeProductByUserIdProductId(@PathVariable String userId , @PathVariable String productId){
-		 
+	@DeleteMapping("/removeProductByUserIdProductId")
+	public String removeProductByUserIdProductId(@RequestParam String userId , @RequestParam String productId){
 		
-		if(userId==null || productId==null ) { 
-			throw new NullParameterException("Null request, please provide user Id and product Id to remove iteam from cart!");
-		}
-		
-		String status = "Item removed successfully!";		
-		if(orderAndCartService.removeProductByUserIdProductId(userId, productId)) {
-			return status;
+		if(userId.isEmpty() || productId.isEmpty() ) { 
+			throw new NullParameterException("Null request, please provide user Id and product Id to remove item from cart!");
 		} else {
-			throw new CartNotFoundException("Product not found in the Cart");
+			String status = "Item removed successfully!";		
+			if(orderAndCartService.removeProductByUserIdProductId(userId, productId)) {
+				return status;
+			} else {
+				throw new CartNotFoundException("Product not found in the Cart");
+			}
 		}
+		
+		
 		
 	}
 	
@@ -111,8 +118,8 @@ public class OrderController {
 			)
 	@GetMapping("/getAllProductsByUserId")
 	List<Product> getAllProductsByUserId(@RequestParam String userId){
-		if(userId==null) {
-			throw new NullParameterException("Null Request, Please give valid userId");
+		if(userId.isEmpty()) {
+			throw new NullParameterException("Please enter userId");
 		} else if(orderAndCartService.getAllProductsByUserId(userId)==null) {
 			throw new ProductNotFoundException("Product Not Found in the Cart");
 		}
@@ -128,6 +135,9 @@ public class OrderController {
 			)
 	@GetMapping("/getAllProductsByOrderId")
 	List<Product> viewOrderProducts(@RequestParam String orderId){
+		if(orderId.isEmpty()) {
+			throw new NullParameterException("Please enter orderId");
+		}
 		if(orderAndCartService.getAllProductsByOrderId(orderId)==null) {
 			throw new OrderNotFoundException("Order not found");
 		} else {
@@ -141,15 +151,15 @@ public class OrderController {
 			notes = "Retailer can ppdate quantity of items in the cart with this API",
 			response = String.class
 			)
-	@PostMapping("/updateQuantity")
+	@PutMapping("/updateQuantity")
 	String updateQuantity(@RequestBody Cart cartItem) {
 		if(cartItem.getUserId()==null || cartItem.getProductId()==null)
-			throw new NullParameterException("UserId por ProductId cannot be null");
+			throw new NullParameterException("Please enter userID and productID");
 		if(orderAndCartService.updateItemQuantity(cartItem)) {
-			return "successfully changed";
+			return "Quantity has been updated";
 		}
 		else {
-			throw new CrudException("fail to change the quantity");
+			throw new CrudException("Please enter correct userId and productId");
 		}
 	}
 	
