@@ -19,5 +19,7 @@ public interface RetailerInventoryDao extends CrudRepository<RetailerInventory, 
 	@Transactional
 	@Query("select ri from RetailerInventory ri where ri.retailerId=:retailerId")
 	List<RetailerInventory> findAllByretailerId(String retailerId);
+	
+	
 
 }
