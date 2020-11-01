@@ -1,5 +1,4 @@
-package com.greatoutdoor.addtocart.exception;
-
+package com.greatoutdoor.retailerinventorymanagementsystem.exception;
 
 
 import java.util.Date;
@@ -13,20 +12,8 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.context.request.WebRequest;
 
 
-
 @ControllerAdvice
 public class CustomExceptionHandler {
-	
-	@ExceptionHandler(NullPointerException.class)
-	public final ResponseEntity<ApiError> somethingWentWrong(NullPointerException ex){
-		
-		ApiError error = new ApiError();
-		error.setException(" " + "Please enter details");
-		HttpStatus status = HttpStatus.BAD_REQUEST;
-		return new ResponseEntity<>(error, status);
-		
-	}
-	
 	@ExceptionHandler(value = NullParameterException.class)
 	public ResponseEntity<ApiError> handlingNoValueFoundException(NullParameterException e) {
 		ApiError error = new ApiError();
@@ -35,39 +22,21 @@ public class CustomExceptionHandler {
 		return new ResponseEntity<>(error, status);
 	}
 
-	@ExceptionHandler(value = CrudException.class)
-	public ResponseEntity<ApiError> handlingNotPossibleException(CrudException e) {
+	@ExceptionHandler(value = RetailerInventoryException.class)
+	public ResponseEntity<ApiError> handlingNotPossibleException(RetailerInventoryException e) {
 		ApiError error = new ApiError();
 		error.setException(" " + e.getMessage());
 		HttpStatus status = HttpStatus.BAD_REQUEST;
 		return new ResponseEntity<>(error, status);
 	}
 	
-	@ExceptionHandler(value = CartNotFoundException.class)
-	public ResponseEntity<ApiError> handlingNotPossibleException(CartNotFoundException e) {
+	@ExceptionHandler(value = UserException.class)
+	public ResponseEntity<ApiError> handlingNotPossibleException(UserException e) {
 		ApiError error = new ApiError();
 		error.setException(" " + e.getMessage());
 		HttpStatus status = HttpStatus.BAD_REQUEST;
 		return new ResponseEntity<>(error, status);
 	}
-	
-	@ExceptionHandler(value = OrderNotFoundException.class)
-	public ResponseEntity<ApiError> handlingNotPossibleException(OrderNotFoundException e) {
-		ApiError error = new ApiError();
-		error.setException(" " + e.getMessage());
-		HttpStatus status = HttpStatus.BAD_REQUEST;
-		return new ResponseEntity<>(error, status);
-	}
-	
-	@ExceptionHandler(value = ProductNotFoundException.class)
-	public ResponseEntity<ApiError> handlingNotPossibleException(ProductNotFoundException e) {
-		ApiError error = new ApiError();
-		error.setException(" " + e.getMessage());
-		HttpStatus status = HttpStatus.BAD_REQUEST;
-		return new ResponseEntity<>(error, status);
-	}
-	
-
 
 	@ExceptionHandler(MethodArgumentNotValidException.class)
 	public ResponseEntity<ApiError> handleValidationExceptions(MethodArgumentNotValidException e) {

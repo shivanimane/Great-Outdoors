@@ -7,6 +7,7 @@ import java.util.List;
 
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -24,102 +25,87 @@ import io.swagger.annotations.ApiOperation;
 
 /**
  * @author Shivani
-
  *
+ * 
  */
 @RestController
 @RequestMapping("/order")
 public class OrderProductCancelController {
-	
+
 	private static final Logger logger = Logger.getLogger(OrderProductCancelController.class);
-	
+
 	@Autowired
 	OrderAndCartService orderAndCartService;
-	
+
 	/**
-	 *  localhost:8006/order/getOrders?orderId=ORD1113417
+	 * localhost:8006/order/getOrders?orderId=ORD1113417
+	 * 
 	 * @param orderId
 	 * @return
 	 */
-	@ApiOperation(
-			value = "Get All Products using OrderId",
-			notes = "Get all products for an order with this API",
-			response = Orders.class
-			)
+	@ApiOperation(value = "Get All Products using OrderId", notes = "Get all products for an order with this API", response = Orders.class)
 	@GetMapping("/getOrders")
-	public Orders getAllOrdersWithOrderId(@RequestParam String orderId){
-		if(orderId==null) {
-			throw new NullParameterException("Null request! Please enter orderId");
-		}else if(orderAndCartService.getAllOrdersByOrderId(orderId)==null) {
+	public Orders getAllOrdersWithOrderId(@RequestParam String orderId) {
+		if (orderId.isEmpty()) {
+			throw new NullParameterException("Please enter orderId");
+		} else if (orderAndCartService.getAllOrdersByOrderId(orderId) == null) {
 			throw new OrderNotFoundException("Order not found");
 		} else {
 			return orderAndCartService.getAllOrdersByOrderId(orderId);
 		}
-		
+
 	}
-	
-	@ApiOperation(
-			value = "Cancel an order using orderID",
-			response = String.class
-			)
+
+	@ApiOperation(value = "Cancel an order using orderID", response = String.class)
 	@PostMapping("/cancelOrder")
-	public String cancelOrder(@RequestParam String orderId ) {
-		if(orderId==null) {
-			throw new NullParameterException("Null request, please provide orderId!");
+	public String cancelOrder(@RequestParam String orderId) {
+		if (orderId.isEmpty()) {
+			throw new NullParameterException("please enter OrderId");
 		}
-		if(orderAndCartService.cancelOrderByOrderId(orderId)==false) {
+		if (orderAndCartService.cancelOrderByOrderId(orderId)) {
+		//	orderAndCartService.cancelOrderByOrderId(orderId);
+			return "Order Cancelled";
+		} else {
 			throw new OrderNotFoundException("Order does not exist");
 		}
-		orderAndCartService.cancelOrderByOrderId(orderId);
-		return "Order Cancelled";
+		
 	}
-	
-	@ApiOperation(
-			value = "Get Orders by orderId and productId",
-			response = String.class
-			)
+
+	@ApiOperation(value = "Get Orders by orderId and productId", response = String.class)
 	@GetMapping("/getOrdersByOrderIdProductId")
-	public Orders getAllOrdersWithOrderIdProductId(@RequestParam String orderId , @RequestParam String productId){
-		if(orderId==null || productId==null) {
-			throw new NullParameterException("Null request, please provide  orderId and productId!");
+	public Orders getAllOrdersWithOrderIdProductId(@RequestParam String orderId, @RequestParam String productId) {
+		if (orderId.isEmpty() || productId.isEmpty()) {
+			throw new NullParameterException("Please enter orderId and productId!");
 		}
-		if(orderAndCartService.getAllOrdersByOrderIdProductId(orderId , productId)==null) {
+		if (orderAndCartService.getAllOrdersByOrderIdProductId(orderId, productId) == null) {
 			throw new OrderNotFoundException("Order Not Found");
 		}
-		return orderAndCartService.getAllOrdersByOrderIdProductId(orderId , productId);
+		return orderAndCartService.getAllOrdersByOrderIdProductId(orderId, productId);
 	}
-	
-	@ApiOperation(
-			value = "Cancel a product using orderId and productId",
-			response = String.class
-			)
+
+	@ApiOperation(value = "Cancel a product using orderId and productId", response = String.class)
 	@PostMapping("/cancelProduct")
-	public String cancelOrderProduct(@RequestParam String orderId , @RequestParam String productId ) {
-		if(orderId==null || productId==null) {
-			throw new NullParameterException("Null request, please provide  orderId and productId!");
-		} else if(orderAndCartService.cancelProductByOrderIdProductId(orderId, productId)==false) {
+	public String cancelOrderProduct(@RequestParam String orderId, @RequestParam String productId) {
+		if (orderId.isEmpty() || productId.isEmpty()) {
+			throw new NullParameterException("Please enter orderId and productId");
+		} else if (orderAndCartService.cancelProductByOrderIdProductId(orderId, productId) == false) {
 			throw new OrderNotFoundException("Order Not Found");
 		} else {
 			return "Product cancelled from your order";
 		}
-		
 	}
-	
-	@ApiOperation(
-			value = "Get All Orders by UserId",
-			response = String.class
-			)
+
+	@ApiOperation(value = "Get All Orders by UserId", response = String.class)
 	@GetMapping("/getAllOrdersByUserId")
-	public List<Order> getAllOrders(@RequestParam String userId){
-		
-		if(userId==null) {
-			throw new NullParameterException("Null request, please provide  userID!");
+	public List<Order> getAllOrders(@RequestParam String userId) {
+
+		if (userId.isEmpty()) {
+			throw new NullParameterException("Please enter userID!");
 		}
-		if(orderAndCartService.getAllOrdersByUserId(userId)==null) {
+		if (orderAndCartService.getAllOrdersByUserId(userId) == null) {
 			throw new NullParameterException("User Id is Incorrect");
 		}
 		return orderAndCartService.getAllOrdersByUserId(userId);
 	}
-	
 
 }

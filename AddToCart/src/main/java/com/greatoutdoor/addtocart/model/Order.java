@@ -40,7 +40,7 @@ public class Order implements Serializable{
 	private Date orderInitiateTime;
 	@Column(name = "order_dispatch_time")
 	private Date orderDispatchTime;
-	private double totalcost;
+	private Double totalcost;
 	/**
 	 * 
 	 */

@@ -19,72 +19,60 @@ import com.greatoutdoor.wishlistmanagementsystem.exception.NullParameterExceptio
 import com.greatoutdoor.wishlistmanagementsystem.model.Product;
 import com.greatoutdoor.wishlistmanagementsystem.model.Wishlist;
 import com.greatoutdoor.wishlistmanagementsystem.service.WishlistServiceImpl;
+
 //this is a restcontroller
 @RestController
 @RequestMapping("/wishlist")
 @CrossOrigin(origins = "*")
 public class WishlistController {
-	
-	
-	
+
 	@Autowired
 	WishlistServiceImpl service;
-	
-	
+
 	@PostMapping("/addToWishlist")
 	public String addToWishlist(@RequestBody Wishlist addItem) {
-		
-		if(addItem.getUserId()==null || addItem.getProductId()==null || addItem.getUserId().trim().length()==0 ||addItem.getProductId().trim().length()==0) { 
-			throw new com.greatoutdoor.wishlistmanagementsystem.exception.NullParameterException("Null request, please provide Wishlist details!");
-		}
-		
-		
-		
-		    String status= "Added to wishlist";
-		    service.addToWishlist(addItem);
-		    return status;
-		
-               
+
+		if (addItem.getUserId() == null || addItem.getProductId() == null || addItem.getUserId().trim().length() == 0
+				|| addItem.getProductId().trim().length() == 0) {
+			throw new com.greatoutdoor.wishlistmanagementsystem.exception.NullParameterException(
+					"Null request, please provide Wishlist details!");
 		}
 
-	@DeleteMapping("/deleteProduct")
-   public String deleteProduct(@RequestBody Wishlist removeItem )  {
-		
-		if(removeItem==null || removeItem.getUserId().trim().length()==0 ||removeItem.getProductId().trim().length()==0) { 
-			throw new NullParameterException("Null request, please provide wishlist details to remove item from wishlist!");
-			
-		} else {
-//			String status= "Removed item";
-//		     if(service.deleteProduct(removeItem)) {
-//		    	return status;
-//		     }
-//		     else
-//		    	 throw new CrudException("Product Id not found");
-			String status= "Removed item";
-			service.deleteProduct(removeItem);
-			return status;
-		}
-		
-		
-	
+		String status = "Added to wishlist";
+		service.addToWishlist(addItem);
+		return status;
+
 	}
-		
-	
-	
+
+	@DeleteMapping("/deleteProduct")
+	public String deleteProduct(@RequestBody Wishlist removeItem) {
+
+		if (removeItem == null || removeItem.getUserId().trim().length() == 0
+				|| removeItem.getProductId().trim().length() == 0) {
+			throw new NullParameterException(
+					"Null request, please provide wishlist details to remove item from wishlist!");
+
+		} else {
+			String status = "Removed item";
+			if (service.deleteProduct(removeItem)) {
+				return status;
+			} else {
+				throw new CrudException("Product Id not found");
+			}
+		}
+
+	}
+
 	@GetMapping("/viewAll")
 	public List<Wishlist> viewAllItems() {
 		List<Wishlist> list = service.viewAllItems();
 		return list;
 	}
-	
 
 	@GetMapping("/viewAllProducts")
-	
+
 	public List<Product> viewAllProductFromWishList() {
 		return service.viewAllProductFromWishList();
 	}
 
-		
-	}
-	
-
+}

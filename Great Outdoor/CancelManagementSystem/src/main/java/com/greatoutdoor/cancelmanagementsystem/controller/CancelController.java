@@ -7,6 +7,7 @@ import java.util.List;
 
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -40,8 +41,8 @@ public class CancelController {
 			)
 	@PostMapping("/cancelOrder")
 	public String cancelOrder(@RequestParam String  orderId, @RequestParam String userId) {
-		if(orderId==null||userId==null) {
-			throw new NullParameterException("Null request, please provide correct orderId or userId");
+		if(orderId.isEmpty()||userId.isEmpty()) {
+			throw new NullParameterException("Please provide orderId or userId");
 		}
 		String status="Order cancelled succesufully";
 		cancelService.cancelOrder(orderId, userId);
@@ -54,11 +55,11 @@ public class CancelController {
 			response = String.class
 			)
 	@PostMapping("/cancelProduct")
-	String cancelProduct(@RequestParam String orderId,  @RequestParam String userId, @RequestParam String productId,@RequestParam int quantity) throws Exception
+	String cancelProduct(@RequestParam String orderId,  @RequestParam String userId, @RequestParam String productId,@RequestParam Integer quantity) throws Exception
 	{
-		if(orderId==null ||userId==null||productId==null) 
+		if(orderId.isEmpty() ||userId.isEmpty()||productId.isEmpty()||quantity==null) 
 		{
-			throw new NullParameterException("Null request, please provide userId or orderId or productId");
+			throw new NullParameterException("Please provide userId, orderId, productId and quantity");
 		}
 		String status="Product cancelled succesfully";
 		cancelService.cancelProduct(orderId, userId, productId, quantity);
