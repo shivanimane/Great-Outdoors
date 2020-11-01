@@ -1815,3 +1815,18 @@ Caused by: java.lang.IllegalStateException: Using named parameters for method pu
 2020-11-01 11:22:47.823  INFO 368 --- [http-nio-8002-exec-4] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
 2020-11-01 11:22:47.823  INFO 368 --- [http-nio-8002-exec-4] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
 2020-11-01 11:22:47.832  INFO 368 --- [http-nio-8002-exec-4] o.s.web.servlet.DispatcherServlet        : Completed initialization in 9 ms
+2020-11-01 11:26:19.713  INFO 368 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-11-01 11:31:19.716  INFO 368 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-11-01 11:36:19.717  INFO 368 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-11-01 11:41:19.719  INFO 368 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-11-01 11:46:19.720  INFO 368 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-11-01 11:51:19.721  INFO 368 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-11-01 11:56:19.722  INFO 368 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-11-01 12:01:19.724  INFO 368 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-11-01 12:56:56.708  WARN 368 --- [HikariPool-23 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-23 - Thread starvation or clock leap detected (housekeeper delta=51m10s782ms921µs900ns).
+2020-11-01 12:57:00.503  INFO 368 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-11-01 13:01:32.720  WARN 368 --- [HikariPool-23 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-23 - Thread starvation or clock leap detected (housekeeper delta=2m6s13ms29µs500ns).
+2020-11-01 13:03:36.509  INFO 368 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-11-01 13:06:12.240  WARN 368 --- [HikariPool-23 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-23 - Thread starvation or clock leap detected (housekeeper delta=1m39s520ms102µs400ns).
+2020-11-01 13:10:22.392  WARN 368 --- [HikariPool-23 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-23 - Thread starvation or clock leap detected (housekeeper delta=1m10s151ms577µs).
+2020-11-01 13:10:26.168  INFO 368 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
