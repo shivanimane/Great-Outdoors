@@ -112,20 +112,20 @@ public class RetailerInventoryController {
 //
 //	}
 //	
-//	@ResponseBody
-//	@GetMapping("/getProductRecieveTime")
-//	public String getUpdateProductRecieveTimeStamp(@RequestBody RetailerInventory retailerInventoryDTO)
-//	{
-//		String status="Product Timestamp updated";
-//		try {
-//			retailerInventoryService.updateProductRecieveTimeStamp(retailerInventoryDTO);
-//		}catch (RetailerInventoryException error) {
-//			error.printStackTrace();
-//			System.out.println("Product Recieve Time - " + error.getMessage());
-//		}
-//		return status;
-//		
-//	}
+	@ResponseBody
+	@GetMapping("/getProductRecieveTime")
+	public String getUpdateProductRecieveTimeStamp(@RequestBody RetailerInventory retailerInventoryDTO)
+	{
+		String status="Product Timestamp updated";
+		try {
+			retailerInventoryService.updateProductRecieveTimeStamp(retailerInventoryDTO);
+		}catch (RetailerInventoryException error) {
+			error.printStackTrace();
+			System.out.println("Product Recieve Time - " + error.getMessage());
+		}
+		return status;
+		
+	}
 //	
 //	@ResponseBody
 //	@GetMapping("/getProductSaleTime")

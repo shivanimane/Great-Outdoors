@@ -130,6 +130,7 @@ public class RetailerInventoryServiceImpl implements RetailerInventoryService {
 	@Override
 	public boolean updateProductRecieveTimeStamp(RetailerInventory retailerinventorydto) throws RetailerInventoryException {
 		boolean receiveTimestampUpdated = false;
+		
 
 		try {
 
