@@ -11,6 +11,7 @@ import org.springframework.stereotype.Service;
 
 import com.greatoutdoor.addressmanagementsystem.dao.AddressDao;
 import com.greatoutdoor.addressmanagementsystem.model.Address;
+import com.greatoutdoor.addressmanagementsystem.exception.AddressNotFound;
 import com.greatoutdoor.addressmanagementsystem.exception.CrudException;
 
 @Service
@@ -21,38 +22,36 @@ public class AddressServiceImpl implements AddressService {
 	@Override
 	public List<Address> viewAllAddresss() {
 		// TODO Auto-generated method stub
-		if(addressRepository.count()==0) throw new CrudException("Please add something to wishlist");
-		return (List<Address>) addressRepository.findAll();
+		if (addressRepository.count() == 0) {
+			throw new AddressNotFound("No Addresses found");
+		} else {
+			return (List<Address>) addressRepository.findAll();
+		}
+
 	}
 
 	@Override
-	public boolean deleteAddress(String addressId) {
+	public boolean deleteAddress(Integer addressId) {
 		if (addressRepository.findById(addressId).isPresent()) {
 			addressRepository.deleteById(addressId);
 			return true;
-		
-	
 		} else {
 			return false;
-			}
+		}
 
 	}
 
 	@Override
 	public boolean addAddress(Address address) {
-		if (address.getAddressId() == null || address.getRetailerId() == null) {
-			return false;
-		} else {
-			addressRepository.save(address);
-			return true;
-		}
+
+		addressRepository.save(address);
+		return true;
 
 	}
 
 	@Override
 	public boolean updateAddress(Address address) {
-		Optional<Address> find = addressRepository.findById(address.getAddressId());
-		if (find.isPresent()) {
+		if (addressRepository.findById(address.getAddressId()).isPresent()){
 			addressRepository.save(address);
 			return true;
 		} else {
@@ -62,7 +61,7 @@ public class AddressServiceImpl implements AddressService {
 	}
 
 	@Override
-	public Optional<Address> getAddressById(String addressId) {
+	public Optional<Address> getAddressById(Integer addressId) {
 		if (addressRepository.findById(addressId).isPresent()) {
 			return addressRepository.findById(addressId);
 		} else {
