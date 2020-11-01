@@ -20,7 +20,7 @@ class AddressManagementTest {
 	@Test
 	void testUpdateAddress() {
 
-		Address address = new Address("4597", "a123", "678", "pune", "maharashtra", "56t5", "345322");
+		Address address = new Address(4597, "a123", "678", "pune", "maharashtra", "56t5", "345322");
 		AddressService addressservice = mock(AddressServiceImpl.class);
 		when(addressservice.updateAddress(address)).thenReturn(Boolean.TRUE);
 		System.out.println(address.toString());
@@ -31,7 +31,7 @@ class AddressManagementTest {
 
 	@Test
 	void testaddAddress() {
-		Address address = new Address("4597", "a123", "678", "pune", "maharashtra", "56t5", "345322");
+		Address address = new Address(4597, "a123", "678", "pune", "maharashtra", "56t5", "345322");
 		AddressService addressservice = mock(AddressServiceImpl.class);
 		when(addressservice.addAddress(address)).thenReturn(Boolean.TRUE);
 		System.out.println(address.toString());
