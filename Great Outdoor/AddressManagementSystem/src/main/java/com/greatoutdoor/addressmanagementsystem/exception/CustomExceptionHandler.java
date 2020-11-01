@@ -30,6 +30,8 @@ public class CustomExceptionHandler {
 		HttpStatus status = HttpStatus.BAD_REQUEST;
 		return new ResponseEntity<>(error, status);
 	}
+	
+
 
 	@ExceptionHandler(MethodArgumentNotValidException.class)
 	public ResponseEntity<ApiError> handleValidationExceptions(MethodArgumentNotValidException e) {
