@@ -1320,3 +1320,4 @@ com.netflix.discovery.shared.transport.TransportException: Cannot execute reques
 2020-11-02 13:44:14.906  WARN 11960 --- [http-nio-8003-exec-8] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.greatoutdoor.productmanagementsystem.exception.ProductNotFoundException: Product not found]
 2020-11-02 13:45:23.600  INFO 11960 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
 2020-11-02 13:50:23.615  INFO 11960 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-11-02 13:55:23.631  INFO 11960 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration

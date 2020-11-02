@@ -9,6 +9,7 @@ import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -39,8 +40,8 @@ public class CancelController {
 			notes = "User can cancel an order that is not yet dispatched using this API",
 			response = String.class
 			)
-	@PostMapping("/cancelOrder")
-	public String cancelOrder(@RequestParam String  orderId, @RequestParam String userId) {
+	@PostMapping("/cancelOrder/{orderId}/{userId}")
+	public String cancelOrder(@PathVariable String  orderId, @PathVariable String userId) {
 		if(orderId.isEmpty()||userId.isEmpty()) {
 			throw new NullParameterException("Please provide orderId or userId");
 		}
@@ -54,8 +55,8 @@ public class CancelController {
 			notes = "User can cancel a product that is not yet dispatched using this API",
 			response = String.class
 			)
-	@PostMapping("/cancelProduct")
-	String cancelProduct(@RequestParam String orderId,  @RequestParam String userId, @RequestParam String productId,@RequestParam Integer quantity) throws Exception
+	@PostMapping("/cancelProduct/{orderId}/{userId}/{productId}/{quantity}")
+	String cancelProduct(@PathVariable String orderId,  @PathVariable String userId, @PathVariable String productId,@PathVariable Integer quantity) throws Exception
 	{
 		if(orderId.isEmpty() ||userId.isEmpty()||productId.isEmpty()||quantity==null) 
 		{

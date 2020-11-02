@@ -29,7 +29,7 @@ class ProductManagementSystemTest {
 	}**/
 	
 	@Test
-	void testeditProduct() {
+	void testEditProduct() {
 		Product product=new Product("454", 1, "467","876","589", "743", 1, 4, "7123");
 		ProductService productservice=mock(ProductServiceImpl.class);
 		when(productservice.editProduct(product)).thenReturn(Boolean.TRUE);

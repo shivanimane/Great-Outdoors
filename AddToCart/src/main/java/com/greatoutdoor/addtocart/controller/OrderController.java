@@ -53,7 +53,7 @@ public class OrderController {
 		}
 		if(cart.getUserId().trim().length() == 0 || cart.getProductId().trim().length() == 0 || cart.getQuantity()==0 ) {
 			logger.error("Null request, cart details not provided at /addItemToCart");
-			throw new NullParameterException("Null request, please provide cart details!");
+			throw new NullParameterException("Please enter correct cart details!");
 		}
 		String status = "Item added Successfully";
 		if(orderAndCartService.addItemToCart(cart)) {
@@ -68,10 +68,10 @@ public class OrderController {
 			notes = "Retailer can place an order with this API",
 			response = String.class
 			)
-	@PostMapping("/placeOrder")
-	public String placeOrder(@RequestParam String userId, @RequestParam String addressId , @RequestParam Double totalCost) {
+	@PostMapping("/placeOrder/{userId}/{addressId}/{totalCost}")
+	public String placeOrder(@PathVariable String userId, @PathVariable String addressId , @PathVariable Double totalCost) {
 		
-		if(userId==null || addressId==null || totalCost==null) {
+		if(userId==null || addressId==null ) {
 			logger.error("Null request, please provide userId and addressId/ placeOrder");
 			throw new NullParameterException("Null request, please provide userId and addressId!");
 		}
@@ -93,8 +93,8 @@ public class OrderController {
 			notes = "Retailer can remove product from cart with this API",
 			response = String.class
 			)
-	@DeleteMapping("/removeProductByUserIdProductId")
-	public String removeProductByUserIdProductId(@RequestParam String userId , @RequestParam String productId){
+	@DeleteMapping("/removeProductByUserIdProductId/{userId}/{productId}")
+	public String removeProductByUserIdProductId(@PathVariable String userId , @PathVariable String productId){
 		
 		if(userId.isEmpty() || productId.isEmpty() ) { 
 			throw new NullParameterException("Null request, please provide user Id and product Id to remove item from cart!");
@@ -116,8 +116,8 @@ public class OrderController {
 			notes = "Retailer can view all products in the cart with this API",
 			response = List.class
 			)
-	@GetMapping("/getAllProductsByUserId")
-	List<Product> getAllProductsByUserId(@RequestParam String userId){
+	@GetMapping("/getAllProductsByUserId/{userId}")
+	List<Product> getAllProductsByUserId(@PathVariable String userId){
 		if(userId.isEmpty()) {
 			throw new NullParameterException("Please enter userId");
 		} else if(orderAndCartService.getAllProductsByUserId(userId)==null) {
@@ -133,8 +133,8 @@ public class OrderController {
 			notes = "Retailer can view all products in a perticular order with orderId with this API",
 			response = List.class
 			)
-	@GetMapping("/getAllProductsByOrderId")
-	List<Product> viewOrderProducts(@RequestParam String orderId){
+	@GetMapping("/getAllProductsByOrderId/{orderId}")
+	List<Product> viewOrderProducts(@PathVariable String orderId){
 		if(orderId.isEmpty()) {
 			throw new NullParameterException("Please enter orderId");
 		}

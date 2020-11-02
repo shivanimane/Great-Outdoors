@@ -7,6 +7,7 @@ import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -40,9 +41,9 @@ public class AdminController {
 			notes = "Admin can remove a product master in this API",
 			response = String.class
 			)
-	@DeleteMapping("/deleteProductMaster")
+	@DeleteMapping("/deleteProductMaster/{userId}")
 	@PreAuthorize("hasRole('ADMIN')")
-	public String deleteProductMaster(@RequestParam int userId) {
+	public String deleteProductMaster(@PathVariable int userId) {
 		if(productMasterService.deleteProductMaster(userId)) {
 			return "Product master deleted successfully";
 		}
@@ -104,9 +105,9 @@ public class AdminController {
 			notes = "Admin can remove a retailer in this API",
 			response = String.class
 			)
-	@DeleteMapping("/deleteRetailer")
+	@DeleteMapping("/deleteRetailer/userId")
 	@PreAuthorize("hasRole('ADMIN')")
-	public String deleteRetailer(@RequestParam int userId) {
+	public String deleteRetailer(@PathVariable int userId) {
 		if(retailerService.deleteRetailer(userId)) {
 			return "Retailer deleted successfully";
 		}

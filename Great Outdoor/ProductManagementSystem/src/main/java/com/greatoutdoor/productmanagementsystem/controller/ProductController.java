@@ -70,7 +70,9 @@ public class ProductController {
 	
 	@PostMapping("/addProduct")
 	String addProduct(@Valid @RequestBody Product product) {
-
+		if(product==null) {
+			throw new NullParameterException("Please enter Product details");
+		}
 		if (productService.addProduct(product)) {
 			return "Product has been added";
 		} else {
