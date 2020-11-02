@@ -34,12 +34,8 @@ public class Order implements Serializable{
 	private String userId;
 	@Column(name = "address_id" ,nullable = false)
 	private String addressId;
-	@Column(name = "order_dispatch_status" ,nullable = false)
-	private byte orderDispatchStatus;
 	@Column(name = "order_initiate_time")
 	private Date orderInitiateTime;
-	@Column(name = "order_dispatch_time")
-	private Date orderDispatchTime;
 	private Double totalcost;
 	/**
 	 * 
@@ -62,9 +58,7 @@ public class Order implements Serializable{
 		this.orderId = orderId;
 		this.userId = userId;
 		this.addressId = addressId;
-		this.orderDispatchStatus = orderDispatchStatus;
 		this.orderInitiateTime = orderInitiateTime;
-		this.orderDispatchTime = orderDispatchTime;
 		this.totalcost = totalcost;
 	}
 	
@@ -107,15 +101,7 @@ public class Order implements Serializable{
 	/**
 	 * @return the orderDispatchStatus
 	 */
-	public byte getOrderDispatchStatus() {
-		return orderDispatchStatus;
-	}
-	/**
-	 * @param orderDispatchStatus the orderDispatchStatus to set
-	 */
-	public void setOrderDispatchStatus(byte orderDispatchStatus) {
-		this.orderDispatchStatus = orderDispatchStatus;
-	}
+	
 	/**
 	 * @return the orderInitiateTime
 	 */
@@ -128,19 +114,6 @@ public class Order implements Serializable{
 	public void setOrderInitiateTime(Date orderInitiateTime) {
 		this.orderInitiateTime = orderInitiateTime;
 	}
-	/**
-	 * @return the orderDispatchTime
-	 */
-	public Date getOrderDispatchTime() {
-		return orderDispatchTime;
-	}
-	/**
-	 * @param orderDispatchTime the orderDispatchTime to set
-	 */
-	public void setOrderDispatchTime(Date orderDispatchTime) {
-		this.orderDispatchTime = orderDispatchTime;
-	}
-	
 
 	public double getTotalcost() {
 		return totalcost;
