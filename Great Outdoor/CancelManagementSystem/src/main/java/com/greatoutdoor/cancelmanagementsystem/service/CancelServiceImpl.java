@@ -45,7 +45,7 @@ public class CancelServiceImpl implements CancelService{
 		long millis = System.currentTimeMillis();
 		Date currentDate = new Date(millis);
 		
-		Orders orders = restTemplate.getForObject(orderProductUrl+"/getOrders?orderId="+orderId, Orders.class);
+		Orders orders = restTemplate.getForObject(orderProductUrl+"/getOrders/"+orderId, Orders.class);
 		List<OrderProductMap> list = orders.getOrders();
 		Iterator<OrderProductMap> itr = list.iterator();
 		int index= 0;
@@ -62,7 +62,7 @@ public class CancelServiceImpl implements CancelService{
 		
 		MultiValueMap<String, String> parametersMap = new LinkedMultiValueMap<String, String>();
 		parametersMap.add("orderId", orderId);
-		return restTemplate.postForObject(orderProductUrl+"/cancelOrder", parametersMap, String.class);
+		return restTemplate.postForObject(orderProductUrl+"/cancelOrder/", parametersMap, String.class);
 		
 	}
 
@@ -71,8 +71,8 @@ public class CancelServiceImpl implements CancelService{
 		long millis=System.currentTimeMillis();  
 		Date currentDate = new java.util.Date(millis);
 		
-		Orders orders = restTemplate.getForObject(orderProductUrl+"/getOrdersByOrderIdProductId?orderId="
-						+orderId+"&productId="+productId, Orders.class);
+		Orders orders = restTemplate.getForObject(orderProductUrl+"/getOrdersByOrderIdProductId/"
+						+orderId+"/"+productId, Orders.class);
 		List<OrderProductMap> list = orders.getOrders();
 		Iterator<OrderProductMap> itr = list.iterator();
 		int index = 0;

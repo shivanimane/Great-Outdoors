@@ -44,8 +44,8 @@ public class OrderProductCancelController {
 	 * @return
 	 */
 	@ApiOperation(value = "Get All Products using OrderId", notes = "Get all products for an order with this API", response = Orders.class)
-	@GetMapping("/getOrders")
-	public Orders getAllOrdersWithOrderId(@RequestParam String orderId) {
+	@GetMapping("/getOrders/{orderId}")
+	public Orders getAllOrdersWithOrderId(@PathVariable String orderId) {
 		if (orderId.isEmpty()) {
 			throw new NullParameterException("Please enter orderId");
 		} else if (orderAndCartService.getAllOrdersByOrderId(orderId) == null) {
@@ -57,8 +57,8 @@ public class OrderProductCancelController {
 	}
 
 	@ApiOperation(value = "Cancel an order using orderID", response = String.class)
-	@PostMapping("/cancelOrder")
-	public String cancelOrder(@RequestParam String orderId) {
+	@PostMapping("/cancelOrder/{orderId}")
+	public String cancelOrder(@PathVariable String orderId) {
 		if (orderId.isEmpty()) {
 			throw new NullParameterException("please enter OrderId");
 		}
@@ -72,8 +72,8 @@ public class OrderProductCancelController {
 	}
 
 	@ApiOperation(value = "Get Orders by orderId and productId", response = String.class)
-	@GetMapping("/getOrdersByOrderIdProductId")
-	public Orders getAllOrdersWithOrderIdProductId(@RequestParam String orderId, @RequestParam String productId) {
+	@GetMapping("/getOrdersByOrderIdProductId/{orderId}/{productId}")
+	public Orders getAllOrdersWithOrderIdProductId(@PathVariable String orderId, @PathVariable String productId) {
 		if (orderId.isEmpty() || productId.isEmpty()) {
 			throw new NullParameterException("Please enter orderId and productId!");
 		}
@@ -84,8 +84,8 @@ public class OrderProductCancelController {
 	}
 
 	@ApiOperation(value = "Cancel a product using orderId and productId", response = String.class)
-	@PostMapping("/cancelProduct")
-	public String cancelOrderProduct(@RequestParam String orderId, @RequestParam String productId) {
+	@PostMapping("/cancelProduct/{orderId}/{productId}")
+	public String cancelOrderProduct(@PathVariable String orderId, @PathVariable String productId) {
 		if (orderId.isEmpty() || productId.isEmpty()) {
 			throw new NullParameterException("Please enter orderId and productId");
 		} else if (orderAndCartService.cancelProductByOrderIdProductId(orderId, productId) == false) {
@@ -96,8 +96,8 @@ public class OrderProductCancelController {
 	}
 
 	@ApiOperation(value = "Get All Orders by UserId", response = String.class)
-	@GetMapping("/getAllOrdersByUserId")
-	public List<Order> getAllOrders(@RequestParam String userId) {
+	@GetMapping("/getAllOrdersByUserId/{userId}")
+	public List<Order> getAllOrders(@PathVariable String userId) {
 
 		if (userId.isEmpty()) {
 			throw new NullParameterException("Please enter userID!");
