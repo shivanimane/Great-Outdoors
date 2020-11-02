@@ -86,8 +86,8 @@ public class AddressController {
 	}
 
 	@ApiOperation(value = "Delete address")
-	@DeleteMapping("/deleteAddress")
-	String deleteAddress(@RequestParam Integer addressId) throws AddressNotFound {
+	@DeleteMapping("/deleteAddress/{addressId}")
+	String deleteAddress(@PathVariable Integer addressId) throws AddressNotFound {
 		if(addressId==null) {
 			throw new NullParameterException("Please provide AddressId");
 		}
@@ -99,8 +99,8 @@ public class AddressController {
 
 	}
 
-	@GetMapping("/getAddressById")
-	Optional<Address> getAddressById(@RequestParam Integer addressId) {
+	@GetMapping("/getAddressById/{addressId}")
+	Optional<Address> getAddressById(@PathVariable Integer addressId) {
 		if (addressId==null) {
 			throw new NullParameterException("Please enter address Id");
 		}
