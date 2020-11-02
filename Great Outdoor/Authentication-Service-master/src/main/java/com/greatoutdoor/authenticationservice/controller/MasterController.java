@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -41,9 +42,9 @@ public class MasterController {
 			notes = "Product master can delete product in this API",
 			response = String.class
 			)
-	@DeleteMapping("/deleteProduct")
+	@DeleteMapping("/deleteProduct/{productId}")
 	@PreAuthorize("hasRole('PRODUCT_MASTER')")
-	public String deleteProduct(@RequestParam String productId) {
+	public String deleteProduct(@PathVariable String productId) {
 		return productMasterService.deleteProduct(productId);
 	}
 	

@@ -10,6 +10,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -34,8 +35,8 @@ public class RetailerInventoryController {
 	private static final Logger Logger = LoggerFactory.getLogger(RetailerInventoryBean.class);
 
 	@ResponseBody
-	@GetMapping("/getItemWiseDelivery")
-	public List<RetailerInventoryBean> getDeliveryTimeReport(@RequestParam String retailerId) {
+	@GetMapping("/getItemWiseDelivery/{retailerId}")
+	public List<RetailerInventoryBean> getDeliveryTimeReport(@PathVariable String retailerId) {
 		if(retailerId.isEmpty()) {
 			throw new NullParameterException("Please enter retailerId");
 		}
@@ -53,8 +54,8 @@ public class RetailerInventoryController {
 
 	}
 
-	@GetMapping("/getRetailerInventoryById")
-	public List<RetailerInventory> getRetailerInventoryById(@RequestParam String retailerId) {
+	@GetMapping("/getRetailerInventoryById/{retailerId}")
+	public List<RetailerInventory> getRetailerInventoryById(@PathVariable String retailerId) {
 		if(retailerId.isEmpty()) {
 			throw new NullParameterException("Please enter retailerId");
 		}
