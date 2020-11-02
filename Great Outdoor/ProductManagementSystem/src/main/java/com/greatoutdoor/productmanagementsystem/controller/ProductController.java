@@ -87,8 +87,8 @@ public class ProductController {
 	 * @param productId
 	 * @return String
 	 */
-	@DeleteMapping("/deleteProduct")
-	String deleteProduct(@RequestParam String productId) {
+	@DeleteMapping("/deleteProduct/{productId}")
+	String deleteProduct(@PathVariable String productId) {
 		if(productId.trim().length()==0) {
 			throw new NullParameterException("Please enter productId");
 		}
@@ -121,8 +121,8 @@ public class ProductController {
 	
 
 //	
-	@GetMapping("/getProductById")
-	Optional<Product> getProductById(@RequestParam String productId){
+	@GetMapping("/getProductById/{productId}")
+	Optional<Product> getProductById(@PathVariable String productId){
 		//return productService.getProductById(productId);
 		if(productService.getProductById(productId)==null) {
 			throw new ProductNotFoundException("Product Not Found");
