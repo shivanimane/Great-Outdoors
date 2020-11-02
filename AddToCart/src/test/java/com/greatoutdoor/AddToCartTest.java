@@ -21,7 +21,7 @@ import com.greatoutdoor.addtocart.service.OrderAndCartServiceImpl;
 class AddToCartTest {
 
 	@Test
-	void testaddItemToCart() {
+	void testAddItemToCart() {
 		CartBean cartItem = new CartBean("100", "200", 20);
 		OrderAndCartService orderandcartservice = mock(OrderAndCartServiceImpl.class);
 		when(orderandcartservice.addItemToCart(cartItem)).thenReturn(Boolean.TRUE);
@@ -31,7 +31,7 @@ class AddToCartTest {
 	}
 
 	@Test
-	void testinsertOrderProductMapEntity() {
+	void testInsertOrderProductMapEntity() {
 	OrderProductMap orderProductMapEntity = new OrderProductMap("456", "789", "345", 657, 355,
 				400);
    OrderAndCartService orderandcartservice = mock(OrderAndCartServiceImpl.class);
@@ -42,7 +42,7 @@ class AddToCartTest {
 	}
 	
 	@Test
-	void testdeleteOrderProductMapEntity() {
+	void testDeleteOrderProductMapEntity() {
 		OrderProductMap orderProductMapEntity = new OrderProductMap("456", "789", "345", 657, 355,
 				400);
 		OrderAndCartService orderandcartservice = mock(OrderAndCartServiceImpl.class);
@@ -54,7 +54,7 @@ class AddToCartTest {
 	}
 	
 	@Test
-	 void testupdateItemQuantity() {
+	 void testUpdateItemQuantity() {
 		 Cart cartItem =new Cart("687","543",10);
 		 OrderAndCartService orderandcartservice = mock(OrderAndCartServiceImpl.class);
 		 when(orderandcartservice.updateItemQuantity(cartItem)).thenReturn(Boolean.TRUE);
@@ -80,7 +80,7 @@ class AddToCartTest {
 	}**/
 	
 	@Test
-	void testdeleteOrder() {
+	void testDeleteOrder() {
 		Order order= new Order();
 		OrderAndCartService orderandcartservice = mock(OrderAndCartServiceImpl.class);
 		 when(orderandcartservice.deleteOrder(order)).thenReturn(Boolean.TRUE);

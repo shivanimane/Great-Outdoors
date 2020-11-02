@@ -16,7 +16,7 @@ import com.greatoutdoor.wishlistmanagementsystem.service.WishlistServiceImpl;
 class WishListManagementTest {
 
 	@Test
-	void testaddToWishlist() {
+	void testAddToWishlist() {
 		Wishlist addItem=new Wishlist("565","789");
 		WishlistService wishlistservice=mock(WishlistServiceImpl.class);
 		when(wishlistservice.addToWishlist(addItem)).thenReturn(Boolean.TRUE);
@@ -28,7 +28,7 @@ class WishListManagementTest {
 	}
 	
 	@Test
-	void testdeleteProduct() {
+	void testDeleteProduct() {
 		Wishlist removeItem=new Wishlist();
 		WishlistService wishlistservice=mock(WishlistServiceImpl.class);
 		when(wishlistservice.deleteProduct(removeItem)).thenReturn(Boolean.TRUE);
