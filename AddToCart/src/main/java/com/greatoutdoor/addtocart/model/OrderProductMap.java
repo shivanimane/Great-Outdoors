@@ -29,12 +29,6 @@ public class OrderProductMap implements Serializable{
 	@Column(name = "product_id")
 	private String productId;
 
-	@Column(name = "product_status")
-	private int productStatus;
-
-	@Column(name = "gift_status")
-	private int giftStatus;
-
 	private int quantity;
 
 	public OrderProductMap() {
@@ -46,8 +40,6 @@ public class OrderProductMap implements Serializable{
 		this.productUIN = productUIN;
 		this.orderId = orderId;
 		this.productId = productId;
-		this.productStatus = productStatus;
-		this.giftStatus = giftStatus;
 		this.quantity = quantity;
 	}
 
@@ -75,21 +67,6 @@ public class OrderProductMap implements Serializable{
 		this.productId = productId;
 	}
 
-	public int getProductStatus() {
-		return productStatus;
-	}
-
-	public void setProductStatus(int productStatus) {
-		this.productStatus = productStatus;
-	}
-
-	public int getGiftStatus() {
-		return giftStatus;
-	}
-
-	public void setGiftStatus(int giftStatus) {
-		this.giftStatus = giftStatus;
-	} 
 
 	public int getQuantity() {
 		return quantity;
