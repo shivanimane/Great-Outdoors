@@ -31,6 +31,17 @@ products:ProductModel[]=[];
     });
   }
 
+  remove(index: number){
+    var ans =confirm("Are you sure you want to delete?");
+    if(ans){
+      this.service.deleteProduct(index).subscribe(response=>{
+         console.log(this.products);
+         this.reloadData();
+      });
+      //this.route.navigate(['list-products']);
+    }
+  }
+
   clickOnViewProducts(){
     this.route.navigate(['list-product']);
   }

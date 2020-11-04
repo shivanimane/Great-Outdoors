@@ -18,4 +18,9 @@ export class ProductService {
     console.log(product);
     return this.http.post<ProductModel>("http://localhost:8003/product/addProduct",product);
   }
+  
+  deleteProduct(index : number){
+    console.log(index);
+    return this.http.delete("http://localhost:8003/product/deleteProduct/"+index);
+  }
 }
