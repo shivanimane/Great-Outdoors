@@ -12,10 +12,10 @@
               <div id="admin-sidebar" class="col-md-2 p-x-0 p-y-3">
                 <ul class="sidenav admin-sidenav list-unstyled">
                    
-                    <li><a (click)="clickOnViewProducts()">Add Product Master</a></li>
-                    <li><a (click)="clickOnViewProducts()">View All Product Master</a></li>
-                    <li><a (click)="clickOnViewProducts()">Add Product Retailer</a></li>
-                    <li><a (click)="clickOnViewProducts()">View All Retailer</a></li>
+                    <li><a (click)="clickOnAddProductMaster()">Add Product Master</a></li>
+                    <li><a (click)="clickOnViewProductMasters()">View All Product Master</a></li>
+                    <li><a (click)="clickOnAddRetailer()">Add Retailer</a></li>
+                    <li><a (click)="clickOnViewRetailers()">View All Retailer</a></li>
                    
                    
                     <li><a (click)="logout()">Logout</a></li>
@@ -24,48 +24,11 @@
                  
             </div>
             
-             <div id="admin-main-control" class="col-md-10 p-x-3 p-y-1">
-                  <!-- <div class="content-title m-x-auto">
-                      <i class="Welcome admin!"></i> Dashboard
-                  </div>
-                  <p class="display-4">Dashboard-y Things</p> -->
 
-                   <!-- Enter the code here -->
-                   
-                  <table class="table table-striped custab">
-                    <tr>
-                      <th>Product Id </th>
-                      <th>Product Name </th>
-                      <th>Price</th>
-                      <th>Colour</th>
-                      <th>Specification</th>
-                      <th>Manufacturer</th>
-                      <th>Quantity</th>
-                      <th>Product Category</th>
+            <h1>Welcome Admin</h1>
 
-
-                    </tr>
-                    <tr *ngFor="let p of products">
-                    <td>{{p.productId}}</td>
-                    <td>{{p.productName}}</td>
-                    <td>{{p.price}}</td>
-                    <td>{{p.colour}}</td>
-                    <td>{{p.specification}}</td>
-                    <td>{{p.manufacture}}</td>
-                    <td>{{p.quantity}}</td>
-                    <td>{{p.productCategory}}</td>
-                    
-                    <!-- <td><button class="btn btn-primary" (click)="generateReport(f.facultyId)">Generate Report</button></td>
-                    <td><button class="btn btn-danger" (click)="remove(f.facultyId)">Delete</button></td> -->
-                  </tr>
-                  </table>
                   
-              </div>  
-           
-           
-            
-            
-
-          </div> 
+              </div> 
+        
       </div> <!-- /.container-fluid -->
   </body>
