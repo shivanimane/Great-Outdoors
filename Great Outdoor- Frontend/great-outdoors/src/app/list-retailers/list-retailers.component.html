@@ -12,8 +12,8 @@
               <div id="admin-sidebar" class="col-md-2 p-x-0 p-y-3">
                 <ul class="sidenav admin-sidenav list-unstyled">
                    
-                    <li><a (click)="clickOnViewProducts()">View All Products</a></li>
-                    <li><a (click)="clickOnAddProduct()">Add Product</a></li>
+                    <li><a (click)="clickOnViewProductMasters()">View All Product Masters</a></li>
+                    <li><a (click)="clickOnAddProductMaster()">Add Product Master</a></li>
                    
                     <li><a (click)="logout()">Logout</a></li>
                     <!-- <li><a href="#">NavLink 6</a></li>                   -->
@@ -31,26 +31,14 @@
                    
                   <table class="table table-striped custab">
                     <tr>
-                      <th>Product Id </th>
-                      <th>Product Name </th>
-                      <th>Price</th>
-                      <th>Colour</th>
-                      <th>Specification</th>
-                      <th>Manufacturer</th>
-                      <th>Quantity</th>
-                      <th>Product Category</th>
-
+                      <th>User Id </th>
+                      <th>User Name </th>
+                      
 
                     </tr>
-                    <tr *ngFor="let p of products">
-                    <td>{{p.productId}}</td>
-                    <td>{{p.productName}}</td>
-                    <td>{{p.price}}</td>
-                    <td>{{p.colour}}</td>
-                    <td>{{p.specification}}</td>
-                    <td>{{p.manufacture}}</td>
-                    <td>{{p.quantity}}</td>
-                    <td>{{p.productCategory}}</td>
+                    <tr *ngFor="let user of users">
+                    <td>{{user.userId}}</td>
+                    <td>{{user.username}}</td>
                     
                     <!-- <td><button class="btn btn-primary" (click)="generateReport(f.facultyId)">Generate Report</button></td>
                     <td><button class="btn btn-danger" (click)="remove(f.facultyId)">Delete</button></td> -->
@@ -66,19 +54,3 @@
           </div> 
       </div> <!-- /.container-fluid -->
   </body>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

@@ -69,16 +69,12 @@ public class ProductController {
 	
 	
 	@PostMapping("/addProduct")
-	String addProduct(@Valid @RequestBody Product product) {
-		if(product==null) {
+	Product addProduct(@Valid @RequestBody Product product) {
+		if(productService.addProduct(product)==null){
 			throw new NullParameterException("Please enter Product details");
-		}
-		if (productService.addProduct(product)) {
-			return "Product has been added";
 		} else {
-			throw new NullParameterException("Please enter Product details");
+			return productService.addProduct(product);
 		}
-
 	}
 	
 	

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { ListProductService } from '../service/list-product.service';
+import { ProductService } from '../service/product.service';
 import { ProductModel } from '../models/product.model'
 
 @Component({
@@ -13,7 +13,7 @@ export class ListProductComponent implements OnInit {
 products:ProductModel[]=[];
 
   constructor(private route : Router,
-    private service:ListProductService
+    private service:ProductService
     ) { 
 
     }
@@ -33,6 +33,10 @@ products:ProductModel[]=[];
 
   clickOnViewProducts(){
     this.route.navigate(['list-product']);
+  }
+
+  clickOnAddProduct(){
+    this.route.navigate(['add-product']);
   }
 
   logout(){

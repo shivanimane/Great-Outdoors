@@ -68,14 +68,14 @@ public class ProductServiceImpl implements ProductService {
 	}
 
 	@Override
-	public boolean addProduct(Product product) {
+	public Product addProduct(Product product) {
 		if(product==null) {
-			return false;
+			return null;
 		} else {
 			String prodId = "PRODUCT" + productDao.count();
 			product.setProductId(prodId);
-			productDao.save(product);
-			return true;
+			return productDao.save(product);
+			
 
 		}
 		
