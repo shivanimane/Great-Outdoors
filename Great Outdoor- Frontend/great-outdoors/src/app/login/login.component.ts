@@ -43,7 +43,7 @@ export class LoginComponent implements OnInit {
 
     if (user.role == "admin") {
       this.route.navigate(['admin']);
-      //this.Auth.setLoggedIn(true);
+      this.Auth.setLoggedIn(true);
     } else if (user.role == "retailer") {
       this.route.navigate(['retailer']);
      // this.Auth.setLoggedIn(true);
