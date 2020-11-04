@@ -22,7 +22,7 @@ export class AddProductComponent implements OnInit {
   saveProduct(){
     console.log(this.product);
     this.service.addProduct(this.product).subscribe(response=>{
-      this.route.navigate(['list-course']);
+      this.route.navigate(['list-product']);
       this.Auth.setLoggedIn(true);
     });
     
