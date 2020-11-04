@@ -1,1 +1,55 @@
-<p>add-product-master works!</p>
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+  <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+  <!------ Include the above in your HEAD tag ---------->
+  
+  <head>
+      <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css" rel="stylesheet"/>
+  </head>
+  <body>
+      <div class="container-fluid">
+          <div class="row">    
+              <div id="admin-sidebar" class="col-md-2 p-x-0 p-y-3">
+                <ul class="sidenav admin-sidenav list-unstyled">
+                   
+                    <li><a (click)="clickOnViewProductMasters()">View All Product Masters</a></li>
+                    <li><a (click)="clickOnAddProductMaster()">Add Product Master</a></li>
+                    <li><a (click)="clickOnViewRetailers()">View All Retailers</a></li>
+                    <li><a (click)="clickOnAddRetailers()">Add Retailer</a></li>
+                   
+                    <li><a (click)="logout()">Logout</a></li>
+                    <!-- <li><a href="#">NavLink 6</a></li>                   -->
+                </ul>
+            </div>
+            <!-- Enter the code here -->
+           
+            <form (ngSubmit) = "saveUser(); addProductMasterForm.reset()" #addProductMasterForm=ngForm>
+              <div>
+                <table class="table table-striped ">
+                  <tr>
+                    <td><label> User Name </label></td>
+                    <td>
+                      <input name="username" class="form-control" 
+                      [(ngModel)]=user.username 
+                      placeholder="Enter ProductMaster Name" 
+                      required pattern="([A-z0-9À-ž\s]){2,}" 
+                      #username="ngModel">
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><label> Password </label></td>
+                    <td>
+                      <input name="password" class="form-control" 
+                      [(ngModel)]=user.password
+                      placeholder="Enter Password" 
+                      required
+                      #password="ngModel">
+                    </td>
+                  </tr>
+                                
+              <div>
+                <button class="btn btn-primary" type="submit" [disabled] = "!addProductMasterForm.valid">Add Product Master</button>
+              
+        
+      
+  

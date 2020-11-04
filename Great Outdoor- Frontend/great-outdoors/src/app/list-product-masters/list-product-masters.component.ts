@@ -29,12 +29,21 @@ export class ListProductMastersComponent implements OnInit {
   }
 
   clickOnViewProductMasters(){
-    this.route.navigate(['list-product-master']);
+    this.route.navigate(['list-product-masters']);
   }
 
   clickOnAddProductMaster(){
     this.route.navigate(['add-product-master']);
   }
+
+  clickOnViewRetailers(){
+    this.route.navigate(['list-retailers']);
+  }
+
+  clickOnAddRetailers(){
+    this.route.navigate(['add-retailer']);
+  }
+
 
   logout(){
     //localStorage.clear();

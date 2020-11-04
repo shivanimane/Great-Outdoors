@@ -29,8 +29,15 @@ public class AdminService {
 	
 
 	
-	public User addUser(User user) {
+	public User addProductMaster(User user) {
 		//User user=new User(signUp.getUsername(),signUp.getPassword(), signUp.getRole());
+		user.setUserType("product master");
+		 this.userRepository.save(user);
+		return user;
+	}
+	public User addRetailer(User user) {
+		//User user=new User(signUp.getUsername(),signUp.getPassword(), signUp.getRole());
+		user.setUserType("retailer");
 		 this.userRepository.save(user);
 		return user;
 	}
