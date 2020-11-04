@@ -54,14 +54,16 @@ public class AdminController {
 	
 	
 
-	@GetMapping("/viewProductMaster/{role}")
-	public List<User> viewProductMaster(@PathVariable String role) {
+	@GetMapping("/viewProductMaster")
+	public List<User> viewProductMaster() {
+		String role="product master";
 		return adminService.fetchUserByRole(role);
 		
 	}
 	
-	@GetMapping("/viewRetailers/{role}")
-	public List<User> viewRetailers(@PathVariable String role) {
+	@GetMapping("/viewRetailers")
+	public List<User> viewRetailers() {
+		String role="retailer";
 		return adminService.fetchUserByRole(role);
 		
 	}

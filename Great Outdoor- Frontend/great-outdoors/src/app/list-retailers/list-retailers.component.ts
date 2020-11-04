@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { UserModel } from '../models/user.model';
+import { AdminService } from '../service/admin.service';
+import { AuthService } from '../service/auth.service';
 
 @Component({
   selector: 'app-list-retailers',
@@ -7,9 +11,38 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ListRetailersComponent implements OnInit {
 
-  constructor() { }
+  
+  constructor(private service : AdminService, private route : Router, private Auth: AuthService) { }
+  users:UserModel[]=[];
+
 
   ngOnInit(): void {
+    
+    setTimeout(() => { this.reloadData() }, 100);
   }
+  
+  
+  reloadData() {
+    this.service.fetchAllProductMaster().subscribe(data => {
+      this.users =data;
+      console.log(this.users);
+    });
+  }
+
+  clickOnViewProductMasters(){
+    this.route.navigate(['list-retailers']);
+  }
+
+  clickOnAddProductMaster(){
+    this.route.navigate(['add-retailer']);
+  }
+
+  logout(){
+    //localStorage.clear();
+    sessionStorage.clear();
+    this.route.navigate(['login']);
+  }
+
+  
 
 }

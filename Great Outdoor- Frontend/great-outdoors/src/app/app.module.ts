@@ -22,7 +22,7 @@ const routes : Routes = [
   {path:'product-master', component:ProductMasterComponent,canActivate: [AuthGuard]},
   {path:'retailer', component:RetailerComponent,canActivate: [AuthGuard]},
   {path:'list-product',component:ListProductComponent},
-  {path:'list-productMaster',component:ListProductMastersComponent},
+  {path:'list-product-masters',component:ListProductMastersComponent},
   {path:'list-retailer',component:ListRetailersComponent},
   {path:'add-product-master',component:AddProductMasterComponent},
   {path:'add-retailer',component:AddRetailerComponent},
