@@ -13,4 +13,29 @@ export class AdminComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  clickOnAddProductMaster(){
+    this.route.navigate(['add-productMaster']);
+  }
+
+  
+  clickOnViewProductMasters(){
+    this.route.navigate(['list-productMasters']);
+  }
+
+  clickOnAddRetailer(){
+    this.route.navigate(['add-retailer']);
+  }
+
+  
+  clickOnViewRetailers(){
+    this.route.navigate(['list-retailers']);
+  }
+
+  logout(){
+    //localStorage.clear();
+    sessionStorage.clear();
+    this.route.navigate(['login']);
+  }
+
+
 }
