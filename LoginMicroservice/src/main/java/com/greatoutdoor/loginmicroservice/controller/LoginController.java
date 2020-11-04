@@ -1,8 +1,4 @@
-<<<<<<< HEAD:LoginMicroservice/src/main/java/com/greatoutdoor/loginservice/controller/UserController.java
-package com.greatoutdoor.loginservice.controller;
-=======
 package com.greatoutdoor.loginmicroservice.controller;
->>>>>>> a21c65d6b019dcae2c87f3ad3d8cabbcb79ce8d1:LoginMicroservice/src/main/java/com/greatoutdoor/loginmicroservice/controller/LoginController.java
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -11,15 +7,11 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-<<<<<<< HEAD:LoginMicroservice/src/main/java/com/greatoutdoor/loginservice/controller/UserController.java
-import com.greatoutdoor.loginservice.model.User;
-import com.greatoutdoor.loginservice.service.UserService;
-=======
 import com.greatoutdoor.loginmicroservice.exception.NullParameterException;
-import com.greatoutdoor.loginmicroservice.model.*;
+import com.greatoutdoor.loginmicroservice.model.User;
 import com.greatoutdoor.loginmicroservice.service.UserService;
->>>>>>> a21c65d6b019dcae2c87f3ad3d8cabbcb79ce8d1:LoginMicroservice/src/main/java/com/greatoutdoor/loginmicroservice/controller/LoginController.java
 
+@CrossOrigin("http://localhost:4200")
 @RestController
 @RequestMapping("/login")
 public class LoginController {
@@ -40,8 +32,7 @@ public class LoginController {
 			}
 	}
 	
-	@PostMapping("/login")
-	//@CrossOrigin(origins="http://localhost:4200")
+	@PostMapping("/loginUser")
 	public User loginUser(@RequestBody User user) throws Exception {
 		
 		String tmpUsername=user.getUsername();

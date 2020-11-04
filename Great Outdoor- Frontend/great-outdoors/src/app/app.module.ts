@@ -1,11 +1,16 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import { HttpClient,HttpClientModule } from '@angular/common/http'
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { HomeComponent } from './home/home.component';
 import { FormsModule } from '@angular/forms';
 import { RouterModule, Routes } from '@angular/router';
+import { AdminComponent } from './admin/admin.component';
+import { ProductMasterComponent } from './product-master/product-master.component';
+import { RetailerComponent } from './retailer/retailer.component';
+import { AddUserComponent } from './add-user/add-user.component';
+import { ListUserComponent } from './list-user/list-user.component';
 
 const routes : Routes = [
   {path:'login', component:LoginComponent},
@@ -38,12 +43,18 @@ const routes : Routes = [
   declarations: [
     AppComponent,
     LoginComponent,
-    HomeComponent
+    HomeComponent,
+    AdminComponent,
+    ProductMasterComponent,
+    RetailerComponent,
+    AddUserComponent,
+    ListUserComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     RouterModule.forRoot(routes),
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

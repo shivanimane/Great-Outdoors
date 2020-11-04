@@ -2,6 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { UserModel } from '../models/user.model';
 import { Login } from '../models/login.model';
+import { LoginService } from '../service/login.service';
+import { AuthService } from '../service/auth.service';
+
 
 @Component({
   selector: 'app-login',
@@ -14,10 +17,11 @@ export class LoginComponent implements OnInit {
   id: String;
 
   constructor(private route: Router, 
-    // private loginservice: LoginService,
-    //  private Auth: AuthService
+    private loginservice: LoginService,
+    private Auth: AuthService
      ) {
-  // this.login = new LoginComponent();
+ 
+    this.login = new Login();
     this.user = new UserModel();
   }
 
@@ -54,9 +58,10 @@ export class LoginComponent implements OnInit {
 
   checkLogin() {
     console.log(this.login);
-    // this.loginservice.getEmployee(this.login).subscribe(data => {
-    //   this.employee = data;
-    //   this.checkRole(this.employee);
-    // });
+   this.loginservice.loginUser(this.login).subscribe(data => {
+   this.user = data;
+      this.checkRole(this.user);
+      console.log(this.user);
+    });
   }
 }
