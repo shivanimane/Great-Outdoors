@@ -21,6 +21,12 @@ public class AdminService {
 	private UserDao userRepository;
 	
 	private RestTemplate rest = new RestTemplate();
+	
+	public List<User> fetchUserByRole(String role) {
+		return userRepository.findByRole(role);
+		
+	}
+	
 
 	
 	public User addUser(User user) {
