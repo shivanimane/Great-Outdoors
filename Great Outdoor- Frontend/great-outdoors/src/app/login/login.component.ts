@@ -46,10 +46,10 @@ export class LoginComponent implements OnInit {
       this.Auth.setLoggedIn(true);
     } else if (user.role == "retailer") {
       this.route.navigate(['retailer']);
-     // this.Auth.setLoggedIn(true);
-    } else if (user.role == "productMaster") {
-      this.route.navigate(['productMaster']);
-     // this.Auth.setLoggedIn(true);
+      this.Auth.setLoggedIn(true);
+    } else if (user.role == "product-master") {
+      this.route.navigate(['product-master']);
+      this.Auth.setLoggedIn(true);
     } else {
       alert("You are not registered!")
     }
