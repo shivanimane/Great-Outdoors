@@ -11,9 +11,8 @@
           <div class="row">    
               <div id="admin-sidebar" class="col-md-2 p-x-0 p-y-3">
                 <ul class="sidenav admin-sidenav list-unstyled">
-                   
-                    <li><a (click)="clickOnViewProductMasters()">View All Product Masters</a></li>
                     <li><a (click)="clickOnAddProductMaster()">Add Product Master</a></li>
+                    <li><a (click)="clickOnViewProductMasters()">View All Product Masters</a></li>
                     <li><a (click)="clickOnViewRetailers()">View All Retailers</a></li>
                     <li><a (click)="clickOnAddRetailers()">Add Retailer</a></li>
                    
@@ -34,12 +33,16 @@
                   <table class="table table-striped custab">
                     <tr>
                       <th>User Id </th>
-                      <th>User Name </th>
-                      
+                      <th>Username </th>
+                      <th>Email Id</th>
+                      <th>Phone No</th>
 
                     </tr>
                     <tr *ngFor="let user of users">
+                    <td>{{user.userId}}</td>
                     <td>{{user.username}}</td>
+                    <td>{{user.emailId}}</td>
+                    <td>{{user.phoneNo}}</td>
                     
                     <!-- <td><button class="btn btn-primary" (click)="generateReport(f.facultyId)">Generate Report</button></td>
                     <td><button class="btn btn-danger" (click)="remove(f.facultyId)">Delete</button></td> -->

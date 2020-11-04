@@ -31,7 +31,7 @@
                     <td>
                       <input name="username" class="form-control" 
                       [(ngModel)]=user.username 
-                      placeholder="Enter ProductMaster Name" 
+                      placeholder="Enter Product Master Name" 
                       required pattern="([A-z0-9À-ž\s]){2,}" 
                       #username="ngModel">
                     </td>
@@ -39,13 +39,47 @@
                   <tr>
                     <td><label> Password </label></td>
                     <td>
-                      <input name="password" class="form-control" 
-                      [(ngModel)]=user.password
-                      placeholder="Enter Password" 
-                      required
-                      #password="ngModel">
+                      <div class="form-group">
+                        <input type="password" class="form-control" placeholder="Enter Password" name="password" [(ngModel)]="user.password" required
+                         pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$" #password="ngModel"
+                        [class.is-invalid]="password.invalid && password.touched && password.dirty">
+                        <div *ngIf="password.errors && (password.invalid && password.touched && password.dirty)">
+                          <small class="text-danger" *ngIf="password.errors.required">Password is required field</small>
+                          <small class="text-danger" *ngIf="password.errors.pattern">Paasword must contain 8 characters including 1 upeercase,1 lowercase and 1 digit </small>
+                        
+                     
+                      </div>
+                      </div>
                     </td>
                   </tr>
+                  <tr>
+                    <td><label> Email Id </label></td>
+                    <td>
+                     <div class="form-group">
+                      <input type="emailId" class="form-control" placeholder="Enter Email Id" name="emailId" [(ngModel)]="user.emailId" required
+                       pattern="^[^@]+@[^@]+\.[^@]+$" #emailId="ngModel"
+                      [class.is-invalid]="emailId.invalid && emailId.touched && emailId.dirty">
+                      <div *ngIf="emailId.errors && (emailId.invalid && emailId.touched && emailId.dirty)">
+                        <small class="text-danger" *ngIf="emailId.errors.required">Email Id is required field</small>
+                        <small class="text-danger" *ngIf="emailId.errors.pattern">Invalid Email </small>
+                        
+                   
+                    </div>
+                    </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><label> Contact No </label></td>
+                    <td>
+                      <input name="phoneNo" class="form-control" 
+                      [(ngModel)]=user.phoneNo 
+                      placeholder="Enter contact no" 
+                      required pattern="\+?\d[\d -]{8,12}\d"
+                      #username="ngModel">
+                    </td>
+                  </tr>
+                  
+                  
                                 
               <div>
                 <button class="btn btn-primary" type="submit" [disabled] = "!addProductMasterForm.valid">Add Product Master</button>

@@ -19,12 +19,6 @@ import org.hibernate.validator.constraints.NotEmpty;
 @Table(name = "user_table")
 public class User{
 
-public User(String username, String password, String role) {
-		super();
-		this.username = username;
-		this.password = password;
-		this.role = role;
-	}
 
 @Column(name = "user_Id" )
 @Id
@@ -36,6 +30,15 @@ private String username;
 
 @Column(name="user_pass")
 private String password;
+
+
+@Column(name="user_email")
+private String emailId;
+
+
+@Column(name="user_phoneNo")
+private String phoneNo;
+
 
 @Column(name="user_type")
 private String role;
@@ -74,18 +77,27 @@ public String getRole() {
 public void setUserType(String userType) {
 	this.role = userType;
 }
-
-
-public User(int id, String username, String password, String role) {
+public String getEmailId() {
+	return emailId;
+}
+public void setEmailId(String emailId) {
+	this.emailId = emailId;
+}
+public String getPhoneNo() {
+	return phoneNo;
+}
+public void setPhoneNo(String phoneNo) {
+	this.phoneNo = phoneNo;
+}
+public User(int id, String username, String password, String emailId, String phoneNo, String role) {
 	super();
 	this.id = id;
 	this.username = username;
 	this.password = password;
+	this.emailId = emailId;
+	this.phoneNo = phoneNo;
 	this.role = role;
 }
 
-@Override
-public String toString() {
-	return "User [id=" + id + ", username=" + username + ", password=" + password + ", role=" + role + "]";
-}
+
 }
