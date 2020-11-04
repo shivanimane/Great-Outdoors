@@ -54,19 +54,26 @@ public class AddressController {
 	}
 
 	/*
-	 * { "addressId": "2345", "retailerId": "ABC Retailers", "buildingNo": "234",
-	 * "city": "Mumbai", "state": "Maharastra", "field": "Goregaon", "zip": "400063"
+	 * { "addressId": "2345",
+	 *  "retailerId": "ABC Retailers", 
+	 *  "buildingNo": "234",
+	 * "city": "Mumbai",
+	 *  "state": "Maharastra", 
+	 *  "field": "Goregaon", 
+	 *  "zip": "400063"
 	 * }
 	 */
 	@ApiOperation(value = "Post address")
 	@PostMapping("/addAddress")
 	ResponseEntity<String> addAddress(@Valid @RequestBody Address address) {
-
+		
 		if (addressService.addAddress(address)) {
 			return ResponseEntity.ok("Address has been added");
 		} else {
 			throw new NullParameterException("Retailer Id cannot be zero");
 		}
+		
+		
 
 	}
 

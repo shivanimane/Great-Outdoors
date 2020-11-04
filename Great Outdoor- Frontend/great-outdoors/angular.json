@@ -122,6 +122,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "great-outdoors"
+    }
+  },
+  "defaultProject": "great-outdoors",
+  "cli": {
+    "analytics": "2cc25a5d-c055-4f36-8d50-27581b84e8a9"
+  }
 }
