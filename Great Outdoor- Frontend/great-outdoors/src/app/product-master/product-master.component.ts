@@ -13,9 +13,17 @@ export class ProductMasterComponent implements OnInit {
   ngOnInit(): void {
   }
 
+
+  
+
   clickOnViewProducts(){
     this.route.navigate(['list-product']);
   }
+
+  clickOnAddProduct(){
+    this.route.navigate(['add-product']);
+  }
+
 
   logout(){
     //localStorage.clear();
