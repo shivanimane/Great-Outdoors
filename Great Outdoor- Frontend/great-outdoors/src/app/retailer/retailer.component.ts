@@ -13,5 +13,26 @@ export class RetailerComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  clickOnViewAllProducts(){
+    this.route.navigate(['list-products-retailer']);
+  }
+ 
+  clickOnViewCart(){
+    this.route.navigate(['list-cart']);
+ }
+
+  clickOnSeeWishlist(){
+    this.route.navigate(['list-wishlist']);
+  }
+
+  clickOnSeeAllOrders(){
+    this.route.navigate(['list-orders']);
+  }
+  logout(){
+    //localStorage.clear();
+    sessionStorage.clear();
+    this.route.navigate(['login']);
+  }
+
 
 }
