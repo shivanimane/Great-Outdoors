@@ -51,6 +51,7 @@ export class LoginComponent implements OnInit {
       this.route.navigate(['product-master']);
       this.Auth.setLoggedIn(true);
     } else {
+      
       alert("You are not registered!")
     }
   }

@@ -11,12 +11,14 @@
 
     <!-- Login Form -->
     <form (ngSubmit)="checkLogin();loginForm.reset() " #loginForm=ngForm>
-      <input type="text" [(ngModel)]="login.username" id="login" class="fadeIn second" name="username" placeholder="Enter Username" required pattern="([A-z0-9À-ž\s]){2,}"  #username = "ngModel">
+      <input type="text" [(ngModel)]="login.username" id="login" class="fadeIn second" name="username"
+       placeholder="Enter Username" required pattern="[a-zA-Z]{3,}"  #username = "ngModel">
       <div *ngIf="username.dirty && username.touched && username.invalid" class="alert alert-danger">
         Username is invalid
       </div>
-      <input type="password"  [(ngModel)]="login.password" id="password" class="fadeIn third" name="password"  placeholder="Enter Password"  required
-       pattern="[A-Za-z0-9]{4,}" #password="ngModel">
+      <input type="password"  [(ngModel)]="login.password" id="password" class="fadeIn third" name="password" 
+       placeholder="Enter Password"  required
+       #password="ngModel">
       <div *ngIf="password.dirty && password.touched && password.invalid" class="alert alert-danger">
         Password is invalid
     </div>
