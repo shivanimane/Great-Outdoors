@@ -23,26 +23,32 @@ export class ListRetailersComponent implements OnInit {
   
   
   reloadData() {
-    this.service.fetchAllProductMaster().subscribe(data => {
+    this.service.fetchAllRetailer().subscribe(data => {
       this.users =data;
       console.log(this.users);
     });
   }
 
   clickOnViewProductMasters(){
-    this.route.navigate(['list-retailers']);
+    this.route.navigate(['list-product-masters']);
   }
 
   clickOnAddProductMaster(){
+    this.route.navigate(['add-product-master']);
+  }
+  clickOnViewRetailers(){
+    this.route.navigate(['list-retailers']);
+  }
+
+  clickOnAddRetailers(){
     this.route.navigate(['add-retailer']);
   }
+
 
   logout(){
     //localStorage.clear();
     sessionStorage.clear();
     this.route.navigate(['login']);
   }
-
-  
 
 }

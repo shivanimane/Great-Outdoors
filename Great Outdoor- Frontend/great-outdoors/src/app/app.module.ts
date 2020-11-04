@@ -28,7 +28,7 @@ const routes : Routes = [
   {path:'retailer', component:RetailerComponent,canActivate: [AuthGuard]},
   {path:'list-product',component:ListProductComponent},
   {path:'list-product-masters',component:ListProductMastersComponent},
-  {path:'list-retailer',component:ListRetailersComponent},
+  {path:'list-retailers',component:ListRetailersComponent},
   {path:'add-product-master',component:AddProductMasterComponent},
   {path:'add-retailer',component:AddRetailerComponent},
   {path:'list-products-retailer', component:ListProductsRetailerComponent},
