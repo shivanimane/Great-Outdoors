@@ -771,3 +771,5 @@ Caused by: java.lang.Error: Unresolved compilation problem:
  at [Source: (PushbackInputStream); line: 1, column: 55] (through reference chain: com.greatoutdoor.productmanagementsystem.model.Product["productCategory"])]
 2020-11-04 16:21:35.904  INFO 13496 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
 2020-11-04 16:21:58.639  WARN 13496 --- [http-nio-8003-exec-1] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' not supported]
+2020-11-04 17:49:01.587  WARN 13496 --- [HikariPool-11 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-11 - Thread starvation or clock leap detected (housekeeper delta=1h23m57s178ms451µs763ns).
+2020-11-04 17:50:03.075  INFO 13496 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
