@@ -1,8 +1,7 @@
-<<<<<<< HEAD:LoginMicroservice/src/main/java/com/greatoutdoor/loginservice/controller/UserController.java
+
 package com.greatoutdoor.loginservice.controller;
-=======
+
 package com.greatoutdoor.loginmicroservice.controller;
->>>>>>> a21c65d6b019dcae2c87f3ad3d8cabbcb79ce8d1:LoginMicroservice/src/main/java/com/greatoutdoor/loginmicroservice/controller/LoginController.java
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -18,7 +17,6 @@ import com.greatoutdoor.loginservice.service.UserService;
 import com.greatoutdoor.loginmicroservice.exception.NullParameterException;
 import com.greatoutdoor.loginmicroservice.model.*;
 import com.greatoutdoor.loginmicroservice.service.UserService;
->>>>>>> a21c65d6b019dcae2c87f3ad3d8cabbcb79ce8d1:LoginMicroservice/src/main/java/com/greatoutdoor/loginmicroservice/controller/LoginController.java
 
 @RestController
 @RequestMapping("/login")
