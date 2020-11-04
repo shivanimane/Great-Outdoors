@@ -13,4 +13,5 @@ export class RetailerComponent implements OnInit {
   ngOnInit(): void {
   }
 
+
 }
