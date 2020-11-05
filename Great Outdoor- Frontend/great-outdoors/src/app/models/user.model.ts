@@ -1,5 +1,5 @@
 export class UserModel{
-    userId : string;
+    id : string;
     username : string;
     password : string;
     role : string;
