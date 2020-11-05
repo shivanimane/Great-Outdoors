@@ -38,7 +38,7 @@
                       <input name="username" class="form-control" 
                       [(ngModel)]=user.username 
                       placeholder="Enter  Name" 
-                      required pattern="([A-z0-9À-ž\s]){2,}" 
+                      required pattern ="([A-z0-9À-ž\s]){2,}"
                       #username="ngModel"
                       [class.is-invalid]="username.invalid && username.touched && username.dirty">
                       <div *ngIf="username.errors && (username.invalid && username.touched && username.dirty)">
@@ -54,7 +54,7 @@
                     <td>
                       <div class="form-group">
                         <input type="password" class="form-control" placeholder="Enter Password" name="password" [(ngModel)]="user.password" required
-                         pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$" #password="ngModel"
+                        pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$"#password="ngModel"
                         [class.is-invalid]="password.invalid && password.touched && password.dirty">
                         <div *ngIf="password.errors && (password.invalid && password.touched && password.dirty)">
                           <small class="text-danger" *ngIf="password.errors.required">Password is required field</small>
