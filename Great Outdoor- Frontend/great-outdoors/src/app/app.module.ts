@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 import { HttpClient,HttpClientModule } from '@angular/common/http'
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
-import { AddProductComponent } from './add-product/add-product.component';
+//import { AddProductComponent } from './add-product/add-product.component';
 import { AdminComponent } from './admin/admin.component';
 import { RetailerComponent } from './retailer/retailer.component';
 import { ProductMasterComponent } from './product-master/product-master.component'
