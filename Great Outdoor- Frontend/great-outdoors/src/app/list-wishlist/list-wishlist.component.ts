@@ -13,8 +13,7 @@ export class ListWishlistComponent implements OnInit {
   id:String;
 
   constructor(private route : Router,
-    private service:WishlistService,private activatedRoute:ActivatedRoute
-    ) { 
+    private service:WishlistService,private activatedRoute:ActivatedRoute) { 
     }
 
   ngOnInit(): void {
