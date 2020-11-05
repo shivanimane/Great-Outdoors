@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { HttpClient,HttpClientModule } from '@angular/common/http'
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
+import { AddProductComponent } from './add-product/add-product.component';
 import { AdminComponent } from './admin/admin.component';
 import { RetailerComponent } from './retailer/retailer.component';
 import { ProductMasterComponent } from './product-master/product-master.component'
@@ -26,7 +27,8 @@ const routes : Routes = [
   {path:'login', component:LoginComponent},
   {path:'admin', component:AdminComponent,canActivate: [AuthGuard]},
   {path:'product-master', component:ProductMasterComponent,canActivate: [AuthGuard]},
-  {path:'retailer/:id', component:RetailerComponent,canActivate: [AuthGuard]},
+  {path:'retailer', component:RetailerComponent,canActivate: [AuthGuard]},
+  {path:'add-product',component:AddProductComponent},
   {path:'list-product',component:ListProductComponent},
   {path:'add-product',component:AddProductComponent},
   {path:'list-product-masters',component:ListProductMastersComponent},
@@ -34,8 +36,8 @@ const routes : Routes = [
   {path:'add-product-master',component:AddProductMasterComponent},
   {path:'add-retailer',component:AddRetailerComponent},
   {path:'list-products-retailer', component:ListProductsRetailerComponent},
-  {path:'list-cart/:id', component:ListCartComponent},
-  {path:'list-wishlist/:id', component:ListWishlistComponent},
+  {path:'list-cart', component:ListCartComponent},
+  {path:'list-wishlist', component:ListWishlistComponent},
   {path:'list-orders', component:ListOrdersComponent},
  // {path:'admin', component:AdminComponent},
   {path:'', redirectTo:'login', pathMatch:"full"},
@@ -48,6 +50,7 @@ const routes : Routes = [
     LoginComponent,
     HomeComponent,
     AdminComponent,
+    AddProductComponent,
     ProductMasterComponent,
     RetailerComponent,
     ListProductComponent,
