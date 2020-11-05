@@ -6,6 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./add-retailer.component.css']
 })
 export class AddRetailerComponent implements OnInit {
+ 
+
 
   constructor() { }
 
