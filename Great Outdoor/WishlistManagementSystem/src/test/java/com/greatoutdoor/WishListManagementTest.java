@@ -15,18 +15,18 @@ import com.greatoutdoor.wishlistmanagementsystem.service.WishlistServiceImpl;
 
 class WishListManagementTest {
 
-	@Test
-	void testAddToWishlist() {
-		Wishlist addItem=new Wishlist("565","789");
-		WishlistService wishlistservice=mock(WishlistServiceImpl.class);
-		when(wishlistservice.addToWishlist(addItem)).thenReturn(Boolean.TRUE);
-		System.out.println(addItem.toString());
-		boolean logp =wishlistservice.addToWishlist(addItem) ;
-		assertEquals(Boolean.TRUE, logp);
-		
-		
-	}
-	
+//	@Test
+//	void testAddToWishlist() {
+//		Wishlist addItem=new Wishlist("565","789");
+//		WishlistService wishlistservice=mock(WishlistServiceImpl.class);
+//		when(wishlistservice.addToWishlist(addItem)).thenReturn(Boolean.TRUE);
+//		System.out.println(addItem.toString());
+//		boolean logp =wishlistservice.addToWishlist(addItem) ;
+//		assertEquals(Boolean.TRUE, logp);
+//		
+//		
+//	}
+//	
 	@Test
 	void testDeleteProduct() {
 		Wishlist removeItem=new Wishlist();

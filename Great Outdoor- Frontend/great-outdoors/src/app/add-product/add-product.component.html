@@ -27,81 +27,153 @@
                   <tr>
                     <td><label> Product Name </label></td>
                     <td>
+                      <div class="form-group">
                       <input name="productName" class="form-control" 
                       [(ngModel)]=product.productName 
                       placeholder="Enter Product Name" 
-                      required pattern="([A-z0-9À-ž\s]){2,}" 
-                      #productName="ngModel">
+                      required pattern="([a-zÀ-ž\s]){2,}" 
+                      #productName="ngModel"
+                      [class.is-invalid]="productName.invalid && productName.touched && productName.dirty">
+                      <div *ngIf="productName.errors && (productName.invalid && productName.touched && productName.dirty)">
+                        <small class="text-danger" *ngIf="productName.errors.required">Product Name is required field</small>
+                        <small class="text-danger" *ngIf="productName.errors.pattern"> Product Name should in string </small>
+                     </div>
+                     </div>                      
+                 
+
                     </td>
                   </tr>
+                  
                   <tr>
                     <td><label> Price </label></td>
                     <td>
+                      <div class="form-group">
                       <input name="price" class="form-control" 
                       [(ngModel)]=product.price 
                       placeholder="Enter Price" 
                       required
-                      #price="ngModel">
+                      pattern="^[1-9][0-9]*$"
+                      #price="ngModel"
+                      [class.is-invalid]="price.invalid && price.touched && price.dirty">
+                      <div *ngIf="price.errors && (price.invalid && price.touched && price.dirty)">
+                        <small class="text-danger" *ngIf="price.errors.required">Price is required field</small>
+                        <small class="text-danger" *ngIf="price.errors.pattern"> Price should be in numbers and greater than 0 </small>
+                     </div>
+                     </div>                      
+                 
                     </td>
                   </tr>
+
                   <tr>
                   <td><label>Category </label></td>
                   <td>
+                    <div class="form-group">
                     <input name="productCategory" class="form-control" 
                     [(ngModel)]=product.productCategory 
                     placeholder="Enter Category" 
-                    required 
-                    #productCategory="ngModel">
+                    required pattern="[1-5]{1}"
+                    #productCategory="ngModel"
+                    [class.is-invalid]="productCategory.invalid && productCategory.touched && productCategory.dirty">
+                    <div *ngIf="productCategory.errors && (productCategory.invalid && productCategory.touched && productCategory.dirty)">
+                      <small class="text-danger" *ngIf="productCategory.errors.required">Category is required field</small>
+                      <small class="text-danger" *ngIf="productCategory.errors.pattern"> Category should be between 1 to 5 </small>
+                   </div>
+                   </div>                      
+               
+                    
+                    
+                    
                   </td>
                 </tr>
                   <tr>
                     <td><label>Colour </label></td>
                     <td>
+                      <div class="form-group">
                       <input name="colour" class="form-control" 
                       [(ngModel)]=product.colour 
                       placeholder="Enter Colour" 
-                      required 
-                      #colour="ngModel">
+                      required pattern="([À-ža-z\s]){2,}"
+                      #colour="ngModel"
+                      [class.is-invalid]="colour.invalid && colour.touched && colour.dirty">
+                      <div *ngIf="colour.errors && (colour.invalid && colour.touched && colour.dirty)">
+                        <small class="text-danger" *ngIf="colour.errors.required">Colour is required field</small>
+                        <small class="text-danger" *ngIf="colour.errors.pattern">Invalid  Colour </small>
+                     </div>
+                     </div>                      
+                 
                     </td>
                   </tr>
                   <tr>
                     <td><label>Dimensions </label></td>
                     <td>
+                      <div class="form-group">
                       <input name="dimension" class="form-control" 
                       [(ngModel)]=product.dimension 
                       placeholder="Enter Dimension" 
                       required  
-                      #dimension="ngModel">
+                      #dimension="ngModel"
+                      [class.is-invalid]="dimension.invalid && dimension.touched && dimension.dirty">
+                      <div *ngIf="dimension.errors && (dimension.invalid && dimension.touched && dimension.dirty)">
+                        <small class="text-danger" *ngIf="dimension.errors.required">dimension is required field</small>
+                        <small class="text-danger" *ngIf="dimension.errors.pattern">Invalid  dimension</small>
+                     </div>
+                     </div>                      
+                 
                     </td>
                   </tr>
                   <tr>
                     <td><label>Specification </label></td>
                     <td>
+                      <div class="form-group">
                       <input name="specification" class="form-control" 
                       [(ngModel)]=product.specification 
                       placeholder="Enter Specification" 
-                      required 
-                      #specification="ngModel">
+                      required pattern="([À-ža-z\s]){2,}"
+                      #specification="ngModel"
+                      [class.is-invalid]="specification.invalid && specification.touched && specification.dirty">
+                      <div *ngIf="specification.errors && (specification.invalid && specification.touched && specification.dirty)">
+                        <small class="text-danger" *ngIf="specification.errors.required">specification is required field</small>
+                        <small class="text-danger" *ngIf="specification.errors.pattern">Invalid  specification </small>
+                     </div>
+                     </div>                      
+                 
                     </td>
                   </tr>
                   <tr>
                     <td><label>Manufacturer </label></td>
                     <td>
+                      <div class="form-group">
                       <input name="manufacture" class="form-control" 
                       [(ngModel)]=product.manufacture 
                       placeholder="Enter Manufacturer" 
-                      required 
-                      #manufacture="ngModel">
+                      required pttern="([À-ža-z\s]){2,}"
+                      #manufacture="ngModel"
+                      [class.is-invalid]="manufacture.invalid && manufacture.touched && manufacture.dirty">
+                      <div *ngIf="manufacture.errors && (manufacture.invalid && manufacture.touched && manufacture.dirty)">
+                        <small class="text-danger" *ngIf="manufacture.errors.required">Manufacture is required field</small>
+                        <small class="text-danger" *ngIf="manufacture.errors.pattern">Invalid  Manufacture </small>
+                     </div>
+                     </div>                      
+                 
                     </td>
                   </tr>
                   <tr>
                     <td><label>Quantity </label></td>
                     <td>
+                      <div class="form-group">
                       <input name="quantity" class="form-control" 
                       [(ngModel)]=product.quantity 
                       placeholder="Enter Quantity" 
                       required 
-                      #quantity="ngModel">
+                      pattern="[1-9]{1,}"
+                      #quantity="ngModel"
+                      [class.is-invalid]="quantity.invalid && quantity.touched && quantity.dirty">
+                      <div *ngIf="quantity.errors && (quantity.invalid && quantity.touched && quantity.dirty)">
+                        <small class="text-danger" *ngIf="quantity.errors.required">Quantity is required field</small>
+                        <small class="text-danger" *ngIf="quantity.errors.pattern"> Quantity should be greater than 0 and in numbers </small>
+                     </div>
+                     </div>                      
+                 
                     </td>
                   </tr>
                 </table>

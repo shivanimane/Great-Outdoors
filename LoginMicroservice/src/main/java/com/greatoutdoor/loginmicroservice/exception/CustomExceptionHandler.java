@@ -22,6 +22,9 @@ public class CustomExceptionHandler {
 		HttpStatus status = HttpStatus.NOT_FOUND;
 		return new ResponseEntity<>(error, status);
 	}
+	
+	
+
 
 	@ExceptionHandler(value = UserNotFound.class)
 	public ResponseEntity<ApiError> handlingNotPossibleException(UserNotFound e) {

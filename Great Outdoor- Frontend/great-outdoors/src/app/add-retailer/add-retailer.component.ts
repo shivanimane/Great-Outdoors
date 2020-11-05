@@ -28,7 +28,7 @@ export class AddRetailerComponent implements OnInit {
     });
     
   }
-
+  
  
   clickOnViewProductMasters(){
     this.route.navigate(['list-product-masters']);
