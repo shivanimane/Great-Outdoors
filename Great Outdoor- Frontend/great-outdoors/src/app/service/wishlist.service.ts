@@ -12,13 +12,14 @@ export class WishlistService {
 
   addToWishlist(wishlist :WishlistModel){
     console.log(wishlist);
-    return this.http.post<WishlistModel>("http://localhost:8003/wishlist/addToWishlist",wishlist);
+    return this.http.post<WishlistModel>("http://localhost:8009/wishlist/addToWishlist",wishlist);
   }
 
   fetchWishlist(index:String){
-    console.log(index);
-    return this.http.get<WishlistModel[]>("http://localhost:8006/cart/getAllProductsByUserId/"+index);
+    return this.http.get<WishlistModel[]>("http://localhost:8009/wishlist/viewWishlistByUserId/"+index);
     
   }
+
+
 
 }

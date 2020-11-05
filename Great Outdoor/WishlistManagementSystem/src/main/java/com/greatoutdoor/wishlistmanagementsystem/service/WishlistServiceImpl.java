@@ -31,18 +31,18 @@ public class WishlistServiceImpl implements WishlistService {
 	@Override
 	public boolean addToWishlist(Wishlist addItem) {
 
-		Product product = restTemplate.getForObject(productUrl + "/getProductById?productId=" + addItem.getProductId(),
+		Product product = restTemplate.getForObject(productUrl + "/getProductById/" + addItem.getProductId(),
 				Product.class);
 		if (product == null) {
 			return false;
-		} else {
+		} else 
 			addItem.setProductName(product.getProductName());
 			addItem.setPrice(product.getPrice());
 			repository.save(addItem);
 			return true;
 		}
 
-	}
+	
 	/*
 	 * name - delete item from the wishlist description - it will delete available
 	 * item from the wishlist
