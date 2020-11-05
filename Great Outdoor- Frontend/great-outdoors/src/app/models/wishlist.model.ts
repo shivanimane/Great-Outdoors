@@ -3,5 +3,4 @@ export class WishlistModel{
     productId:String;
     productName:String;
     price:Number;
-    
 }

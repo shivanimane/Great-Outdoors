@@ -128,3 +128,79 @@
 2020-11-05 21:03:39.633  INFO 14292 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
 2020-11-05 21:08:36.759  INFO 14292 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
 2020-11-05 21:13:36.761  INFO 14292 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-11-05 22:47:07.199  INFO 14868 --- [restartedMain] c.g.addtocart.AddToCartSystem            : No active profile set, falling back to default profiles: default
+2020-11-05 22:47:09.283  INFO 14868 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2020-11-05 22:47:09.445  INFO 14868 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 148ms. Found 3 JPA repository interfaces.
+2020-11-05 22:47:09.753  WARN 14868 --- [restartedMain] o.s.boot.actuate.endpoint.EndpointId     : Endpoint ID 'service-registry' contains invalid characters, please migrate to a valid format.
+2020-11-05 22:47:10.020  INFO 14868 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=d8d637a2-85c0-33f2-a099-ca6893c71e80
+2020-11-05 22:47:11.044  INFO 14868 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8006 (http)
+2020-11-05 22:47:11.057  INFO 14868 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-11-05 22:47:11.058  INFO 14868 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.38]
+2020-11-05 22:47:11.332  INFO 14868 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-11-05 22:47:11.333  INFO 14868 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 4112 ms
+2020-11-05 22:47:11.618  WARN 14868 --- [restartedMain] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2020-11-05 22:47:11.618  INFO 14868 --- [restartedMain] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-11-05 22:47:11.633  INFO 14868 --- [restartedMain] c.netflix.config.DynamicPropertyFactory  : DynamicPropertyFactory is initialized with configuration sources: com.netflix.config.ConcurrentCompositeConfiguration@2b85c11
+2020-11-05 22:47:12.340  INFO 14868 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-11-05 22:47:12.429  INFO 14868 --- [task-1] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-11-05 22:47:12.550  INFO 14868 --- [task-1] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.21.Final
+2020-11-05 22:47:12.806  INFO 14868 --- [task-1] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-11-05 22:47:13.015  INFO 14868 --- [task-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-11-05 22:47:13.676  INFO 14868 --- [task-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-11-05 22:47:13.699  INFO 14868 --- [task-1] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2020-11-05 22:47:13.881  WARN 14868 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-11-05 22:47:14.234  WARN 14868 --- [task-1] org.hibernate.mapping.RootClass          : HHH000038: Composite-id class does not override equals(): com.greatoutdoor.addtocart.model.Cart
+2020-11-05 22:47:14.235  WARN 14868 --- [task-1] org.hibernate.mapping.RootClass          : HHH000039: Composite-id class does not override hashCode(): com.greatoutdoor.addtocart.model.Cart
+2020-11-05 22:47:14.976  INFO 14868 --- [task-1] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-11-05 22:47:14.987  INFO 14868 --- [task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-11-05 22:47:16.514  INFO 14868 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 18 endpoint(s) beneath base path '/actuator'
+2020-11-05 22:47:16.760  WARN 14868 --- [task-2] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2020-11-05 22:47:17.052  WARN 14868 --- [restartedMain] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2020-11-05 22:47:17.052  INFO 14868 --- [restartedMain] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-11-05 22:47:18.743  WARN 14868 --- [restartedMain] ockingLoadBalancerClientRibbonWarnLogger : You already have RibbonLoadBalancerClient on your classpath. It will be used by default. As Spring Cloud Ribbon is in maintenance mode. We recommend switching to BlockingLoadBalancerClient instead. In order to use it, set the value of `spring.cloud.loadbalancer.ribbon.enabled` to `false` or remove spring-cloud-starter-netflix-ribbon from your project.
+2020-11-05 22:47:19.180  INFO 14868 --- [restartedMain] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2020-11-05 22:47:19.231  INFO 14868 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2020-11-05 22:47:19.356  INFO 14868 --- [restartedMain] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
+2020-11-05 22:47:19.357  INFO 14868 --- [restartedMain] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
+2020-11-05 22:47:19.671  INFO 14868 --- [restartedMain] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
+2020-11-05 22:47:19.671  INFO 14868 --- [restartedMain] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
+2020-11-05 22:47:19.997  INFO 14868 --- [restartedMain] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-11-05 22:47:20.202  INFO 14868 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2020-11-05 22:47:20.203  INFO 14868 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2020-11-05 22:47:20.204  INFO 14868 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2020-11-05 22:47:20.204  INFO 14868 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2020-11-05 22:47:20.204  INFO 14868 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2020-11-05 22:47:20.205  INFO 14868 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2020-11-05 22:47:20.205  INFO 14868 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2020-11-05 22:47:20.502  INFO 14868 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2020-11-05 22:47:20.509  INFO 14868 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2020-11-05 22:47:20.516  INFO 14868 --- [restartedMain] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2020-11-05 22:47:20.524  INFO 14868 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1604596640522 with initial instances count: 2
+2020-11-05 22:47:20.543  INFO 14868 --- [restartedMain] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application ADD-TO-CART-SERVICE with eureka with status UP
+2020-11-05 22:47:20.545  INFO 14868 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1604596640545, current=UP, previous=STARTING]
+2020-11-05 22:47:20.547  WARN 14868 --- [restartedMain] c.n.discovery.InstanceInfoReplicator     : Ignoring onDemand update due to rate limiter
+2020-11-05 22:47:20.553  INFO 14868 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_ADD-TO-CART-SERVICE/DESKTOP-DNE248H:add-to-cart-service:8006: registering service...
+2020-11-05 22:47:20.594  INFO 14868 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8006 (http) with context path ''
+2020-11-05 22:47:20.603  INFO 14868 --- [restartedMain] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8006
+2020-11-05 22:47:20.616  INFO 14868 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_ADD-TO-CART-SERVICE/DESKTOP-DNE248H:add-to-cart-service:8006 - registration status: 204
+2020-11-05 22:47:21.064  INFO 14868 --- [restartedMain] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories…
+2020-11-05 22:47:21.433  INFO 14868 --- [restartedMain] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
+2020-11-05 22:47:21.476  INFO 14868 --- [restartedMain] c.g.addtocart.AddToCartSystem            : Started AddToCartSystem in 15.958 seconds (JVM running for 18.121)
+2020-11-05 22:47:38.308  INFO 14868 --- [http-nio-8006-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-11-05 22:47:38.309  INFO 14868 --- [http-nio-8006-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-11-05 22:47:38.357  INFO 14868 --- [http-nio-8006-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 47 ms
+2020-11-05 22:47:38.615  WARN 14868 --- [http-nio-8006-exec-1] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.greatoutdoor.addtocart.exception.ProductNotFoundException: Product Not Found in the Cart]
+2020-11-05 22:52:20.317  INFO 14868 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-11-05 22:57:20.329  INFO 14868 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-11-05 23:02:20.335  INFO 14868 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-11-05 23:07:20.341  INFO 14868 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-11-05 23:12:20.348  INFO 14868 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-11-05 23:17:20.355  INFO 14868 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-11-05 23:22:20.357  INFO 14868 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-11-05 23:27:20.363  INFO 14868 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-11-05 23:32:20.368  INFO 14868 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-11-05 23:37:20.370  INFO 14868 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-11-05 23:42:20.375  INFO 14868 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-11-05 23:47:20.378  INFO 14868 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-11-05 23:52:20.380  INFO 14868 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-11-05 23:57:20.381  INFO 14868 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
