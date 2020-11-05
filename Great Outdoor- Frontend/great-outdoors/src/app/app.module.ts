@@ -28,9 +28,9 @@ const routes : Routes = [
   {path:'admin', component:AdminComponent,canActivate: [AuthGuard]},
   {path:'product-master', component:ProductMasterComponent,canActivate: [AuthGuard]},
   {path:'retailer/:id', component:RetailerComponent,canActivate: [AuthGuard]},
-  {path:'add-product',component:AddProductComponent},
+  {path:'add-product',component:ListProductComponent},
   {path:'list-product',component:ListProductComponent},
-  {path:'add-product',component:AddProductComponent},
+  {path:'add-product',component:ListProductComponent},
   {path:'list-product-masters',component:ListProductMastersComponent},
   {path:'list-retailers',component:ListRetailersComponent},
   {path:'add-product-master',component:AddProductMasterComponent},
@@ -50,7 +50,7 @@ const routes : Routes = [
     LoginComponent,
     HomeComponent,
     AdminComponent,
-    AddProductComponent,
+    ListProductComponent,
     ProductMasterComponent,
     RetailerComponent,
     ListProductComponent,
@@ -63,8 +63,8 @@ const routes : Routes = [
     ListWishlistComponent,
     ListOrdersComponent,
     ErrorComponent,
-    AddProductComponent,
-    ListAddressComponent
+    ListAddressComponent,
+    ListProductComponent
   ],
   imports: [
     BrowserModule,
