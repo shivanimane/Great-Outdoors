@@ -201,7 +201,7 @@ public class OrderAndCartServiceImpl implements OrderAndCartService {
 
 			while (itr.hasNext()) {
 				Product product = restTemplate.getForObject(
-						productURL + "/getProductById?productId=" + listCartItems.get(index).getProductId(),
+						productURL + "/getProductById/" + listCartItems.get(index).getProductId(),
 						Product.class);
 				product.setQuantity(listCartItems.get(index).getQuantity());
 				listProducts.add(product);

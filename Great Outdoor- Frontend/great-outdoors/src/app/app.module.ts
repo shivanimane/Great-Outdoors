@@ -36,7 +36,7 @@ const routes : Routes = [
   {path:'add-product-master',component:AddProductMasterComponent},
   {path:'add-retailer',component:AddRetailerComponent},
   {path:'list-products-retailer/:id', component:ListProductsRetailerComponent,canActivate:[AuthGuard]},
-  {path:'list-cart:/id', component:ListCartComponent},
+  {path:'list-cart/:id', component:ListCartComponent},
   {path:'list-wishlist/:id', component:ListWishlistComponent,canActivate: [AuthGuard]},
   {path:'list-orders', component:ListOrdersComponent},
  // {path:'admin', component:AdminComponent},

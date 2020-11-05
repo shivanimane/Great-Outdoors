@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { CartModel } from '../models/cart.model';
 import { ProductModel } from '../models/product.model';
 import { WishlistModel } from '../models/wishlist.model';
+import { CartService } from '../service/cart.service';
 import { ProductService } from '../service/product.service';
 import { WishlistService } from '../service/wishlist.service';
 
@@ -14,6 +16,7 @@ export class ListProductsRetailerComponent implements OnInit {
 
   products:ProductModel[]=[];
   wishlist: WishlistModel= new WishlistModel();
+  cart:CartModel=new CartModel();
   
 
   id:String;
@@ -21,7 +24,8 @@ export class ListProductsRetailerComponent implements OnInit {
   constructor(private route : Router,
     private activatedRoute :ActivatedRoute,
     private service:WishlistService,
-    private productService:ProductService
+    private productService:ProductService,
+    private cartService:CartService
     ) { 
 
     }
@@ -40,8 +44,13 @@ export class ListProductsRetailerComponent implements OnInit {
     });
   }
 
-  addToCart(index:number){
-
+  addToCart(productId:String){
+    console.log(this.id);
+    this.cart.retailerId=this.id;
+    this.cart.productId=productId;
+    console.log(this.cart);
+    this.cartService.addToCart(this.cart);
+    this.route.navigate(['list-cart',this.id]);
   }
 
   addToWishlist(productId:String,productName:String,price:Number){
