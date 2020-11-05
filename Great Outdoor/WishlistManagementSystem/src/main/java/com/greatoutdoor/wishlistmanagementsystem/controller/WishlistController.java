@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -23,7 +24,7 @@ import com.greatoutdoor.wishlistmanagementsystem.service.WishlistServiceImpl;
 //this is a restcontroller
 @RestController
 @RequestMapping("/wishlist")
-@CrossOrigin(origins = "*")
+@CrossOrigin("http://localhost:4200")
 public class WishlistController {
 
 	@Autowired
@@ -70,11 +71,12 @@ public class WishlistController {
 		List<Wishlist> list = service.viewAllItems();
 		return list;
 	}
+	
 
-	@GetMapping("/viewAllProducts")
+	@GetMapping("/viewWishlistByUserId/{userId}")
 
-	public List<Product> viewAllProductFromWishList() {
-		return service.viewAllProductFromWishList();
+	public List<Wishlist> viewAllWishlistByUserId(@PathVariable String userId) {
+		return service.viewAllWishlistByUserId(userId);
 	}
 
 }

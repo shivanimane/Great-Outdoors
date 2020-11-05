@@ -1,1 +1,62 @@
-<p>wishlist</p>
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+  <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+  <!------ Include the above in your HEAD tag ---------->
+  
+  <head>
+      <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css" rel="stylesheet"/>
+  </head>
+  <body>
+      <div class="container-fluid">
+          <div class="row">    
+              <div id="admin-sidebar" class="col-md-2 p-x-0 p-y-3">
+                <ul class="sidenav admin-sidenav list-unstyled">
+                   
+                    <li><a (click)="clickOnViewAllProducts()">Show All Products</a></li>
+                    <li><a (click)="clickOnViewCart()">Your Cart</a></li>
+                    <li><a (click)="clickOnSeeWishlist()">Your Wishlist</a></li>
+                    <li><a (click)="clickOnSeeAllOrders()">Orders</a></li>
+                   
+                   
+                    <li><a (click)="logout()">Logout</a></li>
+                    <!-- <li><a href="#">NavLink 6</a></li>                   -->
+                </ul>
+                 
+            </div>
+            
+             <div id="admin-main-control" class="col-md-10 p-x-3 p-y-1">
+                  <!-- <div class="content-title m-x-auto">
+                      <i class="Welcome admin!"></i> Dashboard
+                  </div>
+                  <p class="display-4">Dashboard-y Things</p> -->
+
+                   <!-- Enter the code here -->
+                   
+                  <table class="table table-striped custab">
+                    <tr>
+                      
+                      <th>Product Id </th>
+                      <th>Product Name </th>
+                      <th>Price</th>
+                      
+
+                    </tr>
+                    <tr *ngFor="let w of wishlist">
+                        
+                    <td>{{w.productId}}</td>
+                    <td>{{w.productName}}</td>
+                    <td>{{w.price}}</td>
+                   <!-- ><td><button class="btn btn-primary" (click)="delete(p.productId)">Delete</button></td>-->
+                  </tr>
+                  </table>
+                  
+              </div>  
+           
+           
+            
+            
+
+          </div> 
+      </div> <!-- /.container-fluid -->
+  </body>
+

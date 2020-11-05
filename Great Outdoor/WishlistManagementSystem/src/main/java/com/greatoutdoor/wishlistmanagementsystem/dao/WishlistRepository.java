@@ -13,10 +13,18 @@ import org.springframework.data.repository.CrudRepository;
 import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 
+
 import com.greatoutdoor.wishlistmanagementsystem.model.Product;
 import com.greatoutdoor.wishlistmanagementsystem.model.Wishlist;
 
 
 public interface WishlistRepository extends CrudRepository<Wishlist,String> {
 	
+
+	@Modifying
+	@Query("SELECT wl FROM Wishlist wl WHERE wl.userId=:userId")
+	@Transactional
+	List<Wishlist> getWishlistByUserId(@Param("userId") String userId);
+	
+	 
 }

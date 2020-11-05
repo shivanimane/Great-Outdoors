@@ -61,6 +61,7 @@ public class AdminController {
 		
 	}
 	
+	
 	@GetMapping("/viewRetailers")
 	public List<User> viewRetailers() {
 		String role="retailer";

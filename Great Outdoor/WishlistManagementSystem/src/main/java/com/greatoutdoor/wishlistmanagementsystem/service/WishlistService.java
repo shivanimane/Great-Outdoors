@@ -30,7 +30,7 @@ public interface WishlistService {
      * descriptio:shows all products in the wishlist
      */
 
-	List<Product> viewAllProductFromWishList() ;
+	public List<Wishlist> viewAllWishlistByUserId(String userId) ;
 
 
 

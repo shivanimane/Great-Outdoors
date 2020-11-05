@@ -32,6 +32,11 @@ public interface UserDao extends CrudRepository<User, String> {
 	   
 	   public  User findByUsernameAndPassword(String username,String password );
 	   
+//	   @Modifying
+//		@Query("SELECT user FROM User user WHERE user.emailId=:emailId")
+//		@Transactional
+//	   public boolean findByEmailId(String emailId);
+
 	   
 	}
 

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-retailer',
@@ -8,9 +8,11 @@ import { Router } from '@angular/router';
 })
 export class RetailerComponent implements OnInit {
 
-  constructor(private route : Router) { }
+  id:String;
+  constructor(private route : Router,private activatedRoute:ActivatedRoute) { }
 
   ngOnInit(): void {
+    this.id=this.activatedRoute.snapshot.params['id'];
   }
 
   clickOnViewAllProducts(){
@@ -18,11 +20,11 @@ export class RetailerComponent implements OnInit {
   }
  
   clickOnViewCart(){
-    this.route.navigate(['list-cart']);
+    this.route.navigate(['list-cart',this.id]);
  }
 
   clickOnSeeWishlist(){
-    this.route.navigate(['list-wishlist']);
+    this.route.navigate(['list-wishlist',this.id]);
   }
 
   clickOnSeeAllOrders(){
