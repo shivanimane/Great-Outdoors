@@ -22,6 +22,7 @@ import { ListCartComponent } from './list-cart/list-cart.component';
 import { ListWishlistComponent } from './list-wishlist/list-wishlist.component';
 import { ListOrdersComponent } from './list-orders/list-orders.component';
 import { ErrorComponent } from './error/error.component';
+import { ListAddressComponent } from './list-address/list-address.component';
 
 const routes : Routes = [
   {path:'login', component:LoginComponent},
@@ -63,7 +64,8 @@ const routes : Routes = [
     ListWishlistComponent,
     ListOrdersComponent,
     ErrorComponent,
-    AddProductComponent
+    AddProductComponent,
+    ListAddressComponent
   ],
   imports: [
     BrowserModule,

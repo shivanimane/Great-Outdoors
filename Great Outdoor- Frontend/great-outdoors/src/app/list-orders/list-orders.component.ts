@@ -37,7 +37,14 @@ export class ListOrdersComponent implements OnInit {
   //  }
  // }
 
-  
+ clickOnViewOrders(){
+  this.route.navigate(['']);
+}
+logout(){
+  //localStorage.clear();
+  sessionStorage.clear();
+  this.route.navigate(['login']);
+}
 
 
 

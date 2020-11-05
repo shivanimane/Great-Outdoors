@@ -3384,3 +3384,104 @@ java.lang.IllegalStateException: For queries with named parameters you need to u
 2020-11-05 19:25:42.809  INFO 17552 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
 2020-11-05 19:30:42.813  INFO 17552 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
 2020-11-05 20:41:21.408  WARN 17552 --- [HikariPool-3 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-3 - Thread starvation or clock leap detected (housekeeper delta=1h9m14s131ms871µs100ns).
+2020-11-05 20:44:26.937  INFO 17552 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-11-05 20:46:53.733  INFO 17552 --- [Thread-18] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application LOGIN-MGMT-SERVICE with eureka with status DOWN
+2020-11-05 20:46:53.734  WARN 17552 --- [Thread-18] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1604589413734, current=DOWN, previous=UP]
+2020-11-05 20:46:53.738  WARN 17552 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1604589413738, current=UP, previous=DOWN]
+2020-11-05 20:46:53.738  INFO 17552 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_LOGIN-MGMT-SERVICE/LAPTOP-0I1I76M4:login-mgmt-service:8007: registering service...
+2020-11-05 20:46:53.755  INFO 17552 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_LOGIN-MGMT-SERVICE/LAPTOP-0I1I76M4:login-mgmt-service:8007 - registration status: 204
+2020-11-05 20:46:54.177  INFO 17552 --- [Thread-18] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-11-05 20:46:54.180  INFO 17552 --- [Thread-18] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-11-05 20:46:54.181  INFO 17552 --- [Thread-18] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown initiated...
+2020-11-05 20:46:54.190  INFO 17552 --- [Thread-18] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown completed.
+2020-11-05 20:46:54.193  INFO 17552 --- [Thread-18] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2020-11-05 20:46:57.204  INFO 17552 --- [Thread-18] com.netflix.discovery.DiscoveryClient    : Unregistering ...
+2020-11-05 20:46:57.219  INFO 17552 --- [Thread-18] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_LOGIN-MGMT-SERVICE/LAPTOP-0I1I76M4:login-mgmt-service:8007 - deregister  status: 200
+2020-11-05 20:46:57.236  INFO 17552 --- [Thread-18] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+2020-11-05 20:46:59.330  INFO 17552 --- [restartedMain] c.g.loginmicroservice.loginmicroservice  : No active profile set, falling back to default profiles: default
+2020-11-05 20:46:59.955  INFO 17552 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2020-11-05 20:46:59.971  INFO 17552 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 15ms. Found 1 JPA repository interfaces.
+2020-11-05 20:47:00.129  INFO 17552 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=5f44dd9c-f571-3fa9-adc0-de470591f2d2
+2020-11-05 20:47:00.620  INFO 17552 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8007 (http)
+2020-11-05 20:47:00.621  INFO 17552 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-11-05 20:47:00.621  INFO 17552 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.38]
+2020-11-05 20:47:00.647  INFO 17552 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-11-05 20:47:00.648  INFO 17552 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1314 ms
+2020-11-05 20:47:00.854  INFO 17552 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-11-05 20:47:00.869  INFO 17552 --- [task-1] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-11-05 20:47:00.886  INFO 17552 --- [task-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Starting...
+2020-11-05 20:47:00.905  INFO 17552 --- [task-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Start completed.
+2020-11-05 20:47:00.906  INFO 17552 --- [task-1] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2020-11-05 20:47:01.981  INFO 17552 --- [task-1] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-11-05 20:47:01.983  INFO 17552 --- [task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-11-05 20:47:02.059  WARN 17552 --- [task-2] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2020-11-05 20:47:02.117  WARN 17552 --- [restartedMain] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2020-11-05 20:47:02.117  INFO 17552 --- [restartedMain] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-11-05 20:47:02.147  WARN 17552 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-11-05 20:47:03.861  WARN 17552 --- [restartedMain] ockingLoadBalancerClientRibbonWarnLogger : You already have RibbonLoadBalancerClient on your classpath. It will be used by default. As Spring Cloud Ribbon is in maintenance mode. We recommend switching to BlockingLoadBalancerClient instead. In order to use it, set the value of `spring.cloud.loadbalancer.ribbon.enabled` to `false` or remove spring-cloud-starter-netflix-ribbon from your project.
+2020-11-05 20:47:03.881  INFO 17552 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 18 endpoint(s) beneath base path '/actuator'
+2020-11-05 20:47:03.915  INFO 17552 --- [restartedMain] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2020-11-05 20:47:03.917  INFO 17552 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2020-11-05 20:47:03.919  INFO 17552 --- [restartedMain] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
+2020-11-05 20:47:03.919  INFO 17552 --- [restartedMain] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
+2020-11-05 20:47:03.919  INFO 17552 --- [restartedMain] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
+2020-11-05 20:47:03.919  INFO 17552 --- [restartedMain] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
+2020-11-05 20:47:04.000  INFO 17552 --- [restartedMain] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-11-05 20:47:04.001  INFO 17552 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2020-11-05 20:47:04.002  INFO 17552 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2020-11-05 20:47:04.002  INFO 17552 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2020-11-05 20:47:04.002  INFO 17552 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2020-11-05 20:47:04.002  INFO 17552 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2020-11-05 20:47:04.002  INFO 17552 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2020-11-05 20:47:04.003  INFO 17552 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2020-11-05 20:47:04.006  INFO 17552 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2020-11-05 20:47:04.006  INFO 17552 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2020-11-05 20:47:04.006  INFO 17552 --- [restartedMain] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2020-11-05 20:47:04.008  INFO 17552 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1604589424008 with initial instances count: 0
+2020-11-05 20:47:04.012  INFO 17552 --- [restartedMain] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application LOGIN-MGMT-SERVICE with eureka with status UP
+2020-11-05 20:47:04.012  INFO 17552 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1604589424012, current=UP, previous=STARTING]
+2020-11-05 20:47:04.013  WARN 17552 --- [restartedMain] c.n.discovery.InstanceInfoReplicator     : Ignoring onDemand update due to rate limiter
+2020-11-05 20:47:04.015  INFO 17552 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_LOGIN-MGMT-SERVICE/LAPTOP-0I1I76M4:login-mgmt-service:8007: registering service...
+2020-11-05 20:47:04.019  INFO 17552 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8007 (http) with context path ''
+2020-11-05 20:47:04.019  INFO 17552 --- [restartedMain] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8007
+2020-11-05 20:47:04.029  INFO 17552 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_LOGIN-MGMT-SERVICE/LAPTOP-0I1I76M4:login-mgmt-service:8007 - registration status: 204
+2020-11-05 20:47:04.648  INFO 17552 --- [restartedMain] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories…
+2020-11-05 20:47:04.929  INFO 17552 --- [restartedMain] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
+2020-11-05 20:47:04.944  INFO 17552 --- [restartedMain] c.g.loginmicroservice.loginmicroservice  : Started loginmicroservice in 6.981 seconds (JVM running for 22572.546)
+2020-11-05 20:47:04.948  INFO 17552 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2020-11-05 20:47:34.025  INFO 17552 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2020-11-05 20:47:34.027  INFO 17552 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2020-11-05 20:47:34.027  INFO 17552 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2020-11-05 20:47:34.027  INFO 17552 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2020-11-05 20:47:34.027  INFO 17552 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2020-11-05 20:47:34.027  INFO 17552 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Application version is -1: false
+2020-11-05 20:47:34.027  INFO 17552 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2020-11-05 20:47:34.037  INFO 17552 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2020-11-05 20:52:04.018  INFO 17552 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-11-05 20:57:04.024  INFO 17552 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-11-05 21:02:04.038  INFO 17552 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-11-05 21:07:04.044  INFO 17552 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-11-05 21:12:04.054  INFO 17552 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-11-05 21:14:42.227  INFO 17552 --- [http-nio-8007-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-11-05 21:14:42.229  INFO 17552 --- [http-nio-8007-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-11-05 21:14:42.247  INFO 17552 --- [http-nio-8007-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 18 ms
+2020-11-05 21:17:04.065  INFO 17552 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-11-05 21:22:04.080  INFO 17552 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-11-05 21:27:04.088  INFO 17552 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-11-05 21:32:04.093  INFO 17552 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-11-05 21:37:04.111  INFO 17552 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-11-05 21:42:04.116  INFO 17552 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-11-05 21:47:04.126  INFO 17552 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-11-05 21:52:04.131  INFO 17552 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-11-05 21:57:04.133  INFO 17552 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-11-05 22:02:04.146  INFO 17552 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-11-05 22:07:04.148  INFO 17552 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-11-05 22:12:04.154  INFO 17552 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-11-05 22:17:04.160  INFO 17552 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-11-05 22:22:04.174  INFO 17552 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-11-05 22:27:04.184  INFO 17552 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-11-05 22:32:04.192  INFO 17552 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-11-05 22:37:04.209  INFO 17552 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-11-05 22:42:04.214  INFO 17552 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-11-05 22:47:04.231  INFO 17552 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-11-05 22:52:04.241  INFO 17552 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
