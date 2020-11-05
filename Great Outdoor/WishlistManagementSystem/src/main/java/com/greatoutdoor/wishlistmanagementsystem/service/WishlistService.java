@@ -14,7 +14,7 @@ public interface WishlistService {
 	 * description - It will add an item to the wishlist.
 	 */
 	
-	boolean addToWishlist(Wishlist addItem) ;
+	Wishlist addToWishlist(Wishlist addItem) ;
 	
 	
 

@@ -29,17 +29,17 @@ public class WishlistServiceImpl implements WishlistService {
 	 * name - add to wishlist description - It will add an item to the wishlist.
 	 */
 	@Override
-	public boolean addToWishlist(Wishlist addItem) {
+	public Wishlist addToWishlist(Wishlist addItem) {
 
 		Product product = restTemplate.getForObject(productUrl + "/getProductById/" + addItem.getProductId(),
 				Product.class);
-		if (product == null) {
+	/*	if (product == null) {
 			return false;
-		} else 
+		} else */
 			addItem.setProductName(product.getProductName());
 			addItem.setPrice(product.getPrice());
 			repository.save(addItem);
-			return true;
+			return addItem;
 		}
 
 	

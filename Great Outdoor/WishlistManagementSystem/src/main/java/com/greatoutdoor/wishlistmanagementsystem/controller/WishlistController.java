@@ -31,17 +31,17 @@ public class WishlistController {
 	WishlistServiceImpl service;
 
 	@PostMapping("/addToWishlist")
-	public String addToWishlist(@RequestBody Wishlist addItem) {
+	public Wishlist addToWishlist(@RequestBody Wishlist addItem) {
 
 		if (addItem.getUserId() == null || addItem.getProductId() == null || addItem.getUserId().trim().length() == 0
 				|| addItem.getProductId().trim().length() == 0) {
 			throw new com.greatoutdoor.wishlistmanagementsystem.exception.NullParameterException(
 					"Null request, please provide Wishlist details!");
 		}
-
+		else {
 		String status = "Added to wishlist";
-		service.addToWishlist(addItem);
-		return status;
+		return service.addToWishlist(addItem);
+		}
 
 	}
 
