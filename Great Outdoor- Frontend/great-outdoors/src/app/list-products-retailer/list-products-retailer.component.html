@@ -11,10 +11,12 @@
           <div class="row">    
               <div id="admin-sidebar" class="col-md-2 p-x-0 p-y-3">
                 <ul class="sidenav admin-sidenav list-unstyled">
-                    <li><a (click)="clickOnAddProductMaster()">Add Product Master</a></li>
-                    <li><a (click)="clickOnViewProductMasters()">View All Product Masters</a></li>
-                    <li><a (click)="clickOnViewRetailers()">View All Retailers</a></li>
-                    <li><a (click)="clickOnAddRetailers()">Add Retailer</a></li>
+                   
+                    <li><a (click)="clickOnViewAllProducts()">Show All Products</a></li>
+                    <li><a (click)="clickOnViewCart()">Your Cart</a></li>
+                    <li><a (click)="clickOnSeeWishlist()">Your Wishlist</a></li>
+                    <li><a (click)="clickOnSeeAllOrders()">Orders</a></li>
+                   
                    
                     <li><a (click)="logout()">Logout</a></li>
                     <!-- <li><a href="#">NavLink 6</a></li>                   -->
@@ -32,20 +34,28 @@
                    
                   <table class="table table-striped custab">
                     <tr>
-                      <th>User Id </th>
-                      <th>Username </th>
-                      <th>Email Id</th>
-                      <th>Phone No</th>
+                      <th>Product Id </th>
+                      <th>Product Name </th>
+                      <th>Price</th>
+                      <th>Colour</th>
+                      <th>Specification</th>
+                      <th>Manufacturer</th>
+                      <th>Quantity</th>
+                      <th>Product Category</th>
+
 
                     </tr>
-                    <tr *ngFor="let user of users">
-                    <td>{{user.userId}}</td>
-                    <td>{{user.username}}</td>
-                    <td>{{user.emailId}}</td>
-                    <td>{{user.phoneNo}}</td>
-                    
-                    <!-- <td><button class="btn btn-primary" (click)="generateReport(f.facultyId)">Generate Report</button></td>
-                    <td><button class="btn btn-danger" (click)="remove(f.facultyId)">Delete</button></td> -->
+                    <tr *ngFor="let p of products">
+                    <td>{{p.productId}}</td>
+                    <td>{{p.productName}}</td>
+                    <td>{{p.price}}</td>
+                    <td>{{p.colour}}</td>
+                    <td>{{p.specification}}</td>
+                    <td>{{p.manufacture}}</td>
+                    <td>{{p.quantity}}</td>
+                    <td>{{p.productCategory}}</td>
+                    <td><button class="btn btn-primary" (click)="addToWishlist(p.productId)">Add to Wishlist</button></td>
+                    <td><button class="btn btn-primary" (click)="addToCart(p.productId)">Add to Cart</button></td>
                   </tr>
                   </table>
                   
@@ -58,3 +68,19 @@
           </div> 
       </div> <!-- /.container-fluid -->
   </body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

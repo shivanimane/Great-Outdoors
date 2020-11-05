@@ -1,1 +1,89 @@
-<p>add-product-master works!</p>
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+  <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+  <!------ Include the above in your HEAD tag ---------->
+  
+  <head>
+      <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css" rel="stylesheet"/>
+  </head>
+  <body>
+      <div class="container-fluid">
+          <div class="row">    
+              <div id="admin-sidebar" class="col-md-2 p-x-0 p-y-3">
+                <ul class="sidenav admin-sidenav list-unstyled">
+                   
+                    <li><a (click)="clickOnViewProductMasters()">View All Product Masters</a></li>
+                    <li><a (click)="clickOnAddProductMaster()">Add Product Master</a></li>
+                    <li><a (click)="clickOnViewRetailers()">View All Retailers</a></li>
+                    <li><a (click)="clickOnAddRetailers()">Add Retailer</a></li>
+                   
+                    <li><a (click)="logout()">Logout</a></li>
+                    <!-- <li><a href="#">NavLink 6</a></li>                   -->
+                </ul>
+            </div>
+            <!-- Enter the code here -->
+           
+            <form (ngSubmit) = "saveUser(); addProductMasterForm.reset()" #addProductMasterForm=ngForm>
+              <div>
+                <table class="table table-striped ">
+                  <tr>
+                    <td><label> User Name </label></td>
+                    <td>
+                      <input name="username" class="form-control" 
+                      [(ngModel)]=user.username 
+                      placeholder="Enter Product Master Name" 
+                      required pattern="([A-z0-9À-ž\s]){2,}" 
+                      #username="ngModel">
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><label> Password </label></td>
+                    <td>
+                      <div class="form-group">
+                        <input type="password" class="form-control" placeholder="Enter Password" name="password" [(ngModel)]="user.password" required
+                         pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$" #password="ngModel"
+                        [class.is-invalid]="password.invalid && password.touched && password.dirty">
+                        <div *ngIf="password.errors && (password.invalid && password.touched && password.dirty)">
+                          <small class="text-danger" *ngIf="password.errors.required">Password is required field</small>
+                          <small class="text-danger" *ngIf="password.errors.pattern">Paasword must contain 8 characters including 1 upeercase,1 lowercase and 1 digit </small>
+                        
+                     
+                      </div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><label> Email Id </label></td>
+                    <td>
+                     <div class="form-group">
+                      <input type="emailId" class="form-control" placeholder="Enter Email Id" name="emailId" [(ngModel)]="user.emailId" required
+                       pattern="^[^@]+@[^@]+\.[^@]+$" #emailId="ngModel"
+                      [class.is-invalid]="emailId.invalid && emailId.touched && emailId.dirty">
+                      <div *ngIf="emailId.errors && (emailId.invalid && emailId.touched && emailId.dirty)">
+                        <small class="text-danger" *ngIf="emailId.errors.required">Email Id is required field</small>
+                        <small class="text-danger" *ngIf="emailId.errors.pattern">Invalid Email </small>
+                        
+                   
+                    </div>
+                    </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><label> Contact No </label></td>
+                    <td>
+                      <input name="phoneNo" class="form-control" 
+                      [(ngModel)]=user.phoneNo 
+                      placeholder="Enter contact no" 
+                      required pattern="\+?\d[\d -]{8,12}\d"
+                      #username="ngModel">
+                    </td>
+                  </tr>
+                  
+                  
+                                
+              <div>
+                <button class="btn btn-primary" type="submit" [disabled] = "!addProductMasterForm.valid">Add Product Master</button>
+              
+        
+      
+  

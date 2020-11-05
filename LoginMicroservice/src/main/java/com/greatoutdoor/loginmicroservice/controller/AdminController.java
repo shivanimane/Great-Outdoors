@@ -32,7 +32,7 @@ public class AdminController {
 				throw new NullParameterException("please provide username and password");
 			}
 			else {
-			     adminService.addUser(user);
+			     adminService.addProductMaster(user);
 				return user;
 			}
 	}
@@ -46,7 +46,7 @@ public class AdminController {
 				throw new NullParameterException("please provide username and password");
 			}
 			else {
-				adminService.addUser(user);
+				adminService.addRetailer(user);
 				return user;
 			}
 	}

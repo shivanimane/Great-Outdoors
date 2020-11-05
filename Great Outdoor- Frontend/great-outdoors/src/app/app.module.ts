@@ -15,6 +15,11 @@ import { AddRetailerComponent } from './add-retailer/add-retailer.component';
 import { AddProductMasterComponent } from './add-product-master/add-product-master.component';
 import { ListRetailersComponent } from './list-retailers/list-retailers.component';
 import { ListProductMastersComponent } from './list-product-masters/list-product-masters.component';
+import { ListProductsRetailerComponent } from './list-products-retailer/list-products-retailer.component';
+import { ListCartComponent } from './list-cart/list-cart.component';
+import { ListWishlistComponent } from './list-wishlist/list-wishlist.component';
+import { ListOrdersComponent } from './list-orders/list-orders.component';
+import { ErrorComponent } from './error/error.component';
 
 const routes : Routes = [
   {path:'login', component:LoginComponent},
@@ -23,9 +28,13 @@ const routes : Routes = [
   {path:'retailer', component:RetailerComponent,canActivate: [AuthGuard]},
   {path:'list-product',component:ListProductComponent},
   {path:'list-product-masters',component:ListProductMastersComponent},
-  {path:'list-retailer',component:ListRetailersComponent},
+  {path:'list-retailers',component:ListRetailersComponent},
   {path:'add-product-master',component:AddProductMasterComponent},
   {path:'add-retailer',component:AddRetailerComponent},
+  {path:'list-products-retailer', component:ListProductsRetailerComponent},
+  {path:'list-cart', component:ListCartComponent},
+  {path:'list-wishlist', component:ListWishlistComponent},
+  {path:'list-orders', component:ListOrdersComponent},
  // {path:'admin', component:AdminComponent},
   {path:'', redirectTo:'login', pathMatch:"full"},
   {path:'*', redirectTo:'login', pathMatch:"full"},
@@ -43,7 +52,12 @@ const routes : Routes = [
     AddRetailerComponent,
     AddProductMasterComponent,
     ListRetailersComponent,
-    ListProductMastersComponent
+    ListProductMastersComponent,
+    ListProductsRetailerComponent,
+    ListCartComponent,
+    ListWishlistComponent,
+    ListOrdersComponent,
+    ErrorComponent
   ],
   imports: [
     BrowserModule,
