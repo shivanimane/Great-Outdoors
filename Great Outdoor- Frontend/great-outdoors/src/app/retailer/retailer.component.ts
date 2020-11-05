@@ -16,7 +16,7 @@ export class RetailerComponent implements OnInit {
   }
 
   clickOnViewAllProducts(){
-    this.route.navigate(['list-products-retailer']);
+    this.route.navigate(['list-products-retailer',this.id]);
   }
  
   clickOnViewCart(){

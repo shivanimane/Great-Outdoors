@@ -12,7 +12,6 @@ import { FormsModule } from '@angular/forms';
 import { RouterModule, Routes } from '@angular/router';
 import { AuthGuard } from './auth.guard';
 import { ListProductComponent } from './list-product/list-product.component';
-import { AddProductComponent } from './add-product/add-product.component';
 import { AddRetailerComponent } from './add-retailer/add-retailer.component';
 import { AddProductMasterComponent } from './add-product-master/add-product-master.component';
 import { ListRetailersComponent } from './list-retailers/list-retailers.component';
@@ -28,7 +27,7 @@ const routes : Routes = [
   {path:'login', component:LoginComponent},
   {path:'admin', component:AdminComponent,canActivate: [AuthGuard]},
   {path:'product-master', component:ProductMasterComponent,canActivate: [AuthGuard]},
-  {path:'retailer', component:RetailerComponent,canActivate: [AuthGuard]},
+  {path:'retailer/:id', component:RetailerComponent,canActivate: [AuthGuard]},
   {path:'add-product',component:AddProductComponent},
   {path:'list-product',component:ListProductComponent},
   {path:'add-product',component:AddProductComponent},
@@ -36,9 +35,9 @@ const routes : Routes = [
   {path:'list-retailers',component:ListRetailersComponent},
   {path:'add-product-master',component:AddProductMasterComponent},
   {path:'add-retailer',component:AddRetailerComponent},
-  {path:'list-products-retailer', component:ListProductsRetailerComponent},
-  {path:'list-cart', component:ListCartComponent},
-  {path:'list-wishlist', component:ListWishlistComponent},
+  {path:'list-products-retailer/:id', component:ListProductsRetailerComponent,canActivate:[AuthGuard]},
+  {path:'list-cart:/id', component:ListCartComponent},
+  {path:'list-wishlist/:id', component:ListWishlistComponent,canActivate: [AuthGuard]},
   {path:'list-orders', component:ListOrdersComponent},
  // {path:'admin', component:AdminComponent},
   {path:'', redirectTo:'login', pathMatch:"full"},

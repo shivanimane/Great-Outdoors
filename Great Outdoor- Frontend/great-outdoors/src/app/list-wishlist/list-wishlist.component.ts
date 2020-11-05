@@ -18,8 +18,6 @@ export class ListWishlistComponent implements OnInit {
     }
 
   ngOnInit(): void {
-    
-    
     this.id=this.activatedRoute.snapshot.params['id'];
     setTimeout(() => { this.reloadData() }, 100);
   }
@@ -36,17 +34,14 @@ export class ListWishlistComponent implements OnInit {
 
   }
 
-  addToWishlist(index:number){
-    
-  }
-
+ 
  
   clickOnViewAllProducts(){
-    this.route.navigate(['list-products-retailer']);
+    this.route.navigate(['list-products-retailer',this.id]);
   }
  
   clickOnViewCart(){
-    this.route.navigate(['list-cart']);
+    this.route.navigate(['list-cart',this.id]);
  }
 
   clickOnSeeWishlist(){
