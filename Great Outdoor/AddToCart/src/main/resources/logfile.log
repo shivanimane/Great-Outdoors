@@ -208,3 +208,68 @@ Caused by: java.net.SocketTimeoutException: Read timed out
 2020-11-05 23:49:34.057  INFO 14292 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
 2020-11-05 23:54:34.059  INFO 14292 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
 2020-11-05 23:59:34.060  INFO 14292 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-11-06 00:45:32.284  INFO 18080 --- [restartedMain] c.g.addtocart.AddToCartSystem            : No active profile set, falling back to default profiles: default
+2020-11-06 00:45:33.790  INFO 18080 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2020-11-06 00:45:33.879  INFO 18080 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 82ms. Found 3 JPA repository interfaces.
+2020-11-06 00:45:34.106  WARN 18080 --- [restartedMain] o.s.boot.actuate.endpoint.EndpointId     : Endpoint ID 'service-registry' contains invalid characters, please migrate to a valid format.
+2020-11-06 00:45:34.307  INFO 18080 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=d8d637a2-85c0-33f2-a099-ca6893c71e80
+2020-11-06 00:45:34.978  INFO 18080 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8006 (http)
+2020-11-06 00:45:34.986  INFO 18080 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-11-06 00:45:34.986  INFO 18080 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.38]
+2020-11-06 00:45:35.158  INFO 18080 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-11-06 00:45:35.159  INFO 18080 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2849 ms
+2020-11-06 00:45:35.371  WARN 18080 --- [restartedMain] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2020-11-06 00:45:35.371  INFO 18080 --- [restartedMain] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-11-06 00:45:35.380  INFO 18080 --- [restartedMain] c.netflix.config.DynamicPropertyFactory  : DynamicPropertyFactory is initialized with configuration sources: com.netflix.config.ConcurrentCompositeConfiguration@63f5626c
+2020-11-06 00:45:35.832  INFO 18080 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-11-06 00:45:35.878  INFO 18080 --- [task-1] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-11-06 00:45:35.929  INFO 18080 --- [task-1] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.21.Final
+2020-11-06 00:45:36.059  INFO 18080 --- [task-1] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-11-06 00:45:36.166  INFO 18080 --- [task-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-11-06 00:45:36.585  WARN 18080 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-11-06 00:45:36.846  INFO 18080 --- [task-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-11-06 00:45:36.859  INFO 18080 --- [task-1] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2020-11-06 00:45:37.183  WARN 18080 --- [task-1] org.hibernate.mapping.RootClass          : HHH000038: Composite-id class does not override equals(): com.greatoutdoor.addtocart.model.Cart
+2020-11-06 00:45:37.183  WARN 18080 --- [task-1] org.hibernate.mapping.RootClass          : HHH000039: Composite-id class does not override hashCode(): com.greatoutdoor.addtocart.model.Cart
+2020-11-06 00:45:47.076  INFO 18080 --- [task-1] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-11-06 00:45:47.087  INFO 18080 --- [task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-11-06 00:45:48.756  INFO 18080 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 18 endpoint(s) beneath base path '/actuator'
+2020-11-06 00:45:48.922  WARN 18080 --- [task-2] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2020-11-06 00:45:49.464  WARN 18080 --- [restartedMain] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2020-11-06 00:45:49.464  INFO 18080 --- [restartedMain] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-11-06 00:45:51.283  WARN 18080 --- [restartedMain] ockingLoadBalancerClientRibbonWarnLogger : You already have RibbonLoadBalancerClient on your classpath. It will be used by default. As Spring Cloud Ribbon is in maintenance mode. We recommend switching to BlockingLoadBalancerClient instead. In order to use it, set the value of `spring.cloud.loadbalancer.ribbon.enabled` to `false` or remove spring-cloud-starter-netflix-ribbon from your project.
+2020-11-06 00:45:51.487  INFO 18080 --- [restartedMain] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2020-11-06 00:45:51.535  INFO 18080 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2020-11-06 00:45:51.622  INFO 18080 --- [restartedMain] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
+2020-11-06 00:45:51.622  INFO 18080 --- [restartedMain] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
+2020-11-06 00:45:51.796  INFO 18080 --- [restartedMain] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
+2020-11-06 00:45:51.796  INFO 18080 --- [restartedMain] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
+2020-11-06 00:45:52.028  INFO 18080 --- [restartedMain] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-11-06 00:45:52.475  INFO 18080 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2020-11-06 00:45:52.476  INFO 18080 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2020-11-06 00:45:52.476  INFO 18080 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2020-11-06 00:45:52.476  INFO 18080 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2020-11-06 00:45:52.476  INFO 18080 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2020-11-06 00:45:52.476  INFO 18080 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2020-11-06 00:45:52.476  INFO 18080 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2020-11-06 00:45:52.696  INFO 18080 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2020-11-06 00:45:52.699  INFO 18080 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2020-11-06 00:45:52.703  INFO 18080 --- [restartedMain] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2020-11-06 00:45:52.707  INFO 18080 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1604603752706 with initial instances count: 2
+2020-11-06 00:45:52.715  INFO 18080 --- [restartedMain] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application ADD-TO-CART-SERVICE with eureka with status UP
+2020-11-06 00:45:52.717  INFO 18080 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1604603752717, current=UP, previous=STARTING]
+2020-11-06 00:45:52.718  WARN 18080 --- [restartedMain] c.n.discovery.InstanceInfoReplicator     : Ignoring onDemand update due to rate limiter
+2020-11-06 00:45:52.726  INFO 18080 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_ADD-TO-CART-SERVICE/LAPTOP-0I1I76M4:add-to-cart-service:8006: registering service...
+2020-11-06 00:45:52.752  INFO 18080 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8006 (http) with context path ''
+2020-11-06 00:45:52.754  INFO 18080 --- [restartedMain] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8006
+2020-11-06 00:45:52.777  INFO 18080 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_ADD-TO-CART-SERVICE/LAPTOP-0I1I76M4:add-to-cart-service:8006 - registration status: 204
+2020-11-06 00:45:53.640  INFO 18080 --- [restartedMain] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories…
+2020-11-06 00:45:54.532  INFO 18080 --- [restartedMain] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
+2020-11-06 00:45:54.554  INFO 18080 --- [restartedMain] c.g.addtocart.AddToCartSystem            : Started AddToCartSystem in 24.274 seconds (JVM running for 28.854)
+2020-11-06 00:50:52.488  INFO 18080 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-11-06 00:55:52.490  INFO 18080 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-11-06 01:00:52.494  INFO 18080 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-11-06 01:05:52.499  INFO 18080 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-11-06 01:10:52.506  INFO 18080 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-11-06 01:15:52.519  INFO 18080 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-11-06 01:20:52.535  INFO 18080 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
