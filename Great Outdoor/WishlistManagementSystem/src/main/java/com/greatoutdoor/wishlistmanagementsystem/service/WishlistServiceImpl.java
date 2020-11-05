@@ -36,6 +36,8 @@ public class WishlistServiceImpl implements WishlistService {
 		if (product == null) {
 			return false;
 		} else {
+			addItem.setProductName(product.getProductName());
+			addItem.setPrice(product.getPrice());
 			repository.save(addItem);
 			return true;
 		}
@@ -68,25 +70,13 @@ public class WishlistServiceImpl implements WishlistService {
 	 * showProductsFromWishlist descriptio:shows all products in the wishlist
 	 */
 	@Override
-
-	public List<Product> viewAllProductFromWishList() {
+	public List<Wishlist> viewAllWishlistByUserId(String userId) {
 		if (repository.count() == 0)
 			throw new CrudException("Please add items to wishlist");
-		List<Wishlist> listWishListItems = (List<Wishlist>) repository.findAll();
-		List<Product> listProducts = new ArrayList<>();
-
-		Iterator<Wishlist> itr = listWishListItems.iterator();
-		int index = 0;
-
-		while (itr.hasNext()) {
-			Product product = restTemplate.getForObject(
-					productUrl + "/getProductById?productId=" + listWishListItems.get(index).getProductId(),
-					Product.class);
-			listProducts.add(product);
-			index++;
-			itr.next();
+		else {
+		List<Wishlist> listWishListItems = (List<Wishlist>) repository.getWishlistByUserId(userId);
+				return listWishListItems;
 		}
-		return listProducts;
 	}
 
 }
