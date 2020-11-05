@@ -44,7 +44,9 @@ public class WishlistController {
 
 	}
 
-	@DeleteMapping("/deleteProduct")
+	@DeleteMapping("deleteProduct(index : number){\r\n" + 
+			"    console.log(index);\r\n" + 
+			"    return this.http.delete(\"http://localhost:8003/product/deleteProduct/\"+index);")
 	public String deleteProduct(@RequestBody Wishlist removeItem) {
 
 		if (removeItem == null || removeItem.getUserId().trim().length() == 0
