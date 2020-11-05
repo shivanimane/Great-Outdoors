@@ -12,7 +12,7 @@
     <!-- Login Form -->
        <form (ngSubmit)="checkLogin();loginForm.reset() " #loginForm=ngForm>
         <small class="text-danger">{{msg}}</small>
-        <div class="form-group"> <input type="text" class="form-control" placeholder="Enter Username" name="username" [(ngModel)]="login.username" required pattern="[a-zA-Z]{3,}" #username="ngModel"
+        <div class="form-group"> <input type="text" class="form-control" placeholder="Enter Username" name="username" [(ngModel)]="login.username" required  #username="ngModel"
           [class.is-invalid]="username.invalid && username.touched && username.dirty">
          
           <div *ngIf="username.errors && (username.invalid && username.touched && username.dirty)">

@@ -12,6 +12,7 @@ import { FormsModule } from '@angular/forms';
 import { RouterModule, Routes } from '@angular/router';
 import { AuthGuard } from './auth.guard';
 import { ListProductComponent } from './list-product/list-product.component';
+import { AddProductComponent } from './add-product/add-product.component';
 import { AddRetailerComponent } from './add-retailer/add-retailer.component';
 import { AddProductMasterComponent } from './add-product-master/add-product-master.component';
 import { ListRetailersComponent } from './list-retailers/list-retailers.component';
@@ -29,6 +30,7 @@ const routes : Routes = [
   {path:'retailer', component:RetailerComponent,canActivate: [AuthGuard]},
   {path:'add-product',component:AddProductComponent},
   {path:'list-product',component:ListProductComponent},
+  {path:'add-product',component:AddProductComponent},
   {path:'list-product-masters',component:ListProductMastersComponent},
   {path:'list-retailers',component:ListRetailersComponent},
   {path:'add-product-master',component:AddProductMasterComponent},
@@ -60,7 +62,8 @@ const routes : Routes = [
     ListCartComponent,
     ListWishlistComponent,
     ListOrdersComponent,
-    ErrorComponent
+    ErrorComponent,
+    AddProductComponent
   ],
   imports: [
     BrowserModule,
