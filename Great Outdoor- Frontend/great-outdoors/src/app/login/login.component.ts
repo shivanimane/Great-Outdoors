@@ -39,7 +39,7 @@ export class LoginComponent implements OnInit {
     }
 
     //localStorage.setItem('user',this.employee.employeeId);
-    sessionStorage.setItem('user', this.user.userId);
+    sessionStorage.setItem('user', this.user.id);
     console.log(user.role);
 
     if (user.role == "admin") {
@@ -48,7 +48,7 @@ export class LoginComponent implements OnInit {
     } else if (user.role == "retailer") {
       this.route.navigate(['retailer']);
       this.Auth.setLoggedIn(true);
-    } else if (user.role == "product-master") {
+    } else if (user.role == "product master") {
       this.route.navigate(['product-master']);
       this.Auth.setLoggedIn(true);
     } else {
