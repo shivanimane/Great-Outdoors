@@ -30,8 +30,9 @@
                       <input name="productName" class="form-control" 
                       [(ngModel)]=product.productName 
                       placeholder="Enter Product Name" 
-                      required pattern="([A-z0-9À-ž\s]){2,}" 
+                     required pattern="[a-zA-Z][a-zA-Z ]+" 
                       #productName="ngModel">
+                      
                     </td>
                   </tr>
                   <tr>
@@ -40,8 +41,10 @@
                       <input name="price" class="form-control" 
                       [(ngModel)]=product.price 
                       placeholder="Enter Price" 
-                      required
+                      required 
                       #price="ngModel">
+                      
+
                     </td>
                   </tr>
                   <tr>

@@ -8,35 +8,15 @@ import { WishService } from '../service/wish.service';
   styleUrls: ['./list-wishlist.component.css']
 })
 export class ListWishlistComponent implements OnInit {
-    wishes : WishModel[]=[];
-    constructor(private route : Router,
-      private service:WishService
+    
+    constructor(
       ) { }
 
   ngOnInit(): void {
     
   }
   
-  clickOnViewAllItems(){
-    this.route.navigate(['']);
-  }
-
-  clickOnAddToWishlist(){
-    this.route.navigate(['']);
-  }
-
-  clickOnDeleteProduct(){
-    this.route.navigate(['']);
-
-
-  }
-
-  clickOnViewAllProductFromWishList(){
-    this.route.navigate(['']);
-
-  }
-
-
+  
  
 }
 
