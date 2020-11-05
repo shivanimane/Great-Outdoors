@@ -12,8 +12,9 @@
               <div id="admin-sidebar" class="col-md-2 p-x-0 p-y-3">
                 <ul class="sidenav admin-sidenav list-unstyled">
                    
-                    <li><a (click)="clickOnViewProductMasters()">View All Product Masters</a></li>
                     <li><a (click)="clickOnAddProductMaster()">Add Product Master</a></li>
+                    <li><a (click)="clickOnViewProductMasters()">View All Product Masters</a></li>
+                   
                     <li><a (click)="clickOnViewRetailers()">View All Retailers</a></li>
                     <li><a (click)="clickOnAddRetailers()">Add Retailer</a></li>
                    
@@ -24,28 +25,79 @@
             <!-- Enter the code here -->
            
             <form (ngSubmit) = "saveUser(); addProductMasterForm.reset()" #addProductMasterForm=ngForm>
+
+              <div>
+                <h3>Add Product Master</h3>
+              </div>
               <div>
                 <table class="table table-striped ">
                   <tr>
                     <td><label> User Name </label></td>
                     <td>
+                      <div class="form-group">
                       <input name="username" class="form-control" 
                       [(ngModel)]=user.username 
-                      placeholder="Enter ProductMaster Name" 
+                      placeholder="Enter  Name" 
                       required pattern="([A-z0-9À-ž\s]){2,}" 
-                      #username="ngModel">
+                      #username="ngModel"
+                      [class.is-invalid]="username.invalid && username.touched && username.dirty">
+                      <div *ngIf="username.errors && (username.invalid && username.touched && username.dirty)">
+                        <small class="text-danger" *ngIf="username.errors.required">username is required field</small>
+                        <small class="text-danger" *ngIf="username.errors.pattern">Invalid username </small>
+                     </div>
+                     </div>                      
+                      
                     </td>
                   </tr>
                   <tr>
                     <td><label> Password </label></td>
                     <td>
-                      <input name="password" class="form-control" 
-                      [(ngModel)]=user.password
-                      placeholder="Enter Password" 
-                      required
-                      #password="ngModel">
+                      <div class="form-group">
+                        <input type="password" class="form-control" placeholder="Enter Password" name="password" [(ngModel)]="user.password" required
+                         pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$" #password="ngModel"
+                        [class.is-invalid]="password.invalid && password.touched && password.dirty">
+                        <div *ngIf="password.errors && (password.invalid && password.touched && password.dirty)">
+                          <small class="text-danger" *ngIf="password.errors.required">Password is required field</small>
+                          <small class="text-danger" *ngIf="password.errors.pattern">Paasword must contain 8 characters including 1 upeercase,1 lowercase and 1 digit </small>
+                        
+                     
+                      </div>
+                      </div>
                     </td>
                   </tr>
+                  <tr>
+                    <td><label> Email Id </label></td>
+                    <td>
+                     <div class="form-group">
+                      <input type="emailId" class="form-control" placeholder="Enter Email Id" name="emailId" [(ngModel)]="user.emailId" required
+                       pattern="^[^@]+@[^@]+\.[^@]+$" #emailId="ngModel"
+                      [class.is-invalid]="emailId.invalid && emailId.touched && emailId.dirty">
+                      <div *ngIf="emailId.errors && (emailId.invalid && emailId.touched && emailId.dirty)">
+                        <small class="text-danger" *ngIf="emailId.errors.required">Email Id is required field</small>
+                        <small class="text-danger" *ngIf="emailId.errors.pattern">Invalid Email </small>
+                        
+                   
+                    </div>
+                    </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><label> Contact No </label></td>
+                    <td>
+                      <div class="form-group">
+                      <input type="phoneNo" name="phoneNo" class="form-control" 
+                      [(ngModel)]=user.phoneNo  placeholder="Enter contact no" 
+                      required pattern="^[789]\d{9}$" #phoneNo="ngModel"
+                      [class.is-invalid]="phoneNo.invalid && phoneNo.touched && phoneNo.dirty">
+                      <div *ngIf="phoneNo.errors && (phoneNo.invalid && phoneNo.touched && phoneNo.dirty)">
+                        <small class="text-danger" *ngIf="phoneNo.errors.required">PhoneNo is required field</small>
+                        <small class="text-danger" *ngIf="phoneNo.errors.pattern">Phone No must be Valid(should start with 7/8/9) </small>
+                    </div>
+                    </div>
+                    </td>
+                  </tr>
+                  
+                  
                                 
               <div>
                 <button class="btn btn-primary" type="submit" [disabled] = "!addProductMasterForm.valid">Add Product Master</button>

@@ -15,6 +15,7 @@ export class LoginComponent implements OnInit {
   login: Login;
   user: UserModel;
   id: String;
+  msg:String;
 
   constructor(private route: Router, 
     private loginservice: LoginService,
@@ -38,7 +39,7 @@ export class LoginComponent implements OnInit {
     }
 
     //localStorage.setItem('user',this.employee.employeeId);
-    sessionStorage.setItem('user', this.user.userId);
+    sessionStorage.setItem('user', this.user.id);
     console.log(user.role);
 
     if (user.role == "admin") {
@@ -54,15 +55,23 @@ export class LoginComponent implements OnInit {
       
       alert("You are not registered!")
     }
+
+    
+
   }
-
-
   checkLogin() {
     console.log(this.login);
    this.loginservice.loginUser(this.login).subscribe(data => {
    this.user = data;
       this.checkRole(this.user);
       console.log(this.user);
-    });
+    
+    },
+    error=>{
+      alert("Please enter correct credentials!!")
+      console.log("exception occured")
+     
+  });
+    
   }
 }
