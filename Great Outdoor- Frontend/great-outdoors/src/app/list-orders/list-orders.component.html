@@ -45,10 +45,10 @@
                     </tr>
                     <tr *ngFor="let o of order">
                         
-                    <td>{{o.orderId}</td>
+                    <td>{{o.orderId}}</td>
                     <td>{{o.addressId}}</td>
-                    <th>{{o.orderInitiateTime}} </th>
-                    <th>{{o.totalCost}}</th>
+                    <td>{{o.orderInitiateTime}} </td>
+                    <td>{{o.totalCost}}</td>
 
                     <td><button class="btn btn-primary" (click)="cancelOrder(o.orderId)">Cancel </button></td>
                   </tr>

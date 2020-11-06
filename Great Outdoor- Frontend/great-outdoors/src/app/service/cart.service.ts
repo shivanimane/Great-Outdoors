@@ -26,10 +26,10 @@ export class CartService {
     return this.http.delete("http://localhost:8006/cart/removeProductByUserIdProductId/"+userId +"/" +productId);
   }
 
-  // placeOrder(userId:String,addressId:String,totalCost:number){
-  //   console.log(userId,addressId,totalCost);
-  //   return this.http.post<"Successfully Placed Order">("http://localhost:8006/cart/placeOrder/"+userId +"/" +addressId +"/" +totalCost);
-  // }
+  placeOrder(userId:String,addressId:String,totalCost:number){
+  //    console.log(userId,addressId,totalCost);
+  //    return this.http.post("http://localhost:8006/cart/placeOrder/"+userId +"/" +addressId +"/" +totalCost);
+    }
 
   fetchOrder(index:String){
     console.log(index);
@@ -37,5 +37,10 @@ export class CartService {
     
   }
 
+  cancelOrder(orderId:String){
+    console.log(orderId);
+    return this.http.delete("http://localhost:8006/order/cancelOrder/"+orderId  );
+    
+  }
 
 }

@@ -28,12 +28,22 @@ export class ListOrdersComponent implements OnInit {
   
   reloadData() {
     this.service.fetchOrder(this.id).subscribe(data => {
-      this.order =data;
+      this.order = data;
       console.log(this.order);
     });
   }
   
+cancelOrder(orderId:String){
+  var ans =confirm("Are you sure you want to cancel an order?");
+  if(ans){
+    this.service.cancelOrder(orderId).subscribe(response=>{
+       console.log(orderId);
+       this.reloadData();
+    });
+}
 
+
+}
   clickOnViewAllProducts(){
     this.route.navigate(['list-products-retailer',this.id]);
   }

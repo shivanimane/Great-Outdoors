@@ -13,6 +13,7 @@ export class ListCartComponent implements OnInit {
 
   cart:CartModel[]=[];
   id:String;
+  userId:String;
 
   constructor(private route : Router,
     private service:CartService,private activatedRoute:ActivatedRoute
@@ -34,15 +35,15 @@ export class ListCartComponent implements OnInit {
     });
   }
 
-  placeOrder(userId:String,addressId:String,totalCost:number){
-  //   console.log(this.id);
-  //   userId=this.id;
-  //   addressId="123";
-  //   totalCost=340;
+  placeOrder(){
+    console.log(this.id);
+    this.userId=this.id;
+    const addressId="123";
+    const totalCost=340;
    
-  //   this.service.placeOrder(userId,addressId,totalCost);
+    this.service.placeOrder(this.userId,addressId,totalCost);
     
-  //   this.route.navigate(['list-order',this.id]);
+    this.route.navigate(['list-order',this.id]);
    }
 
 deleteFromCart(productId:string) {
