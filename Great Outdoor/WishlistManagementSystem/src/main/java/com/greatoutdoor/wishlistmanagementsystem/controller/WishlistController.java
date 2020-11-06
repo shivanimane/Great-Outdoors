@@ -39,16 +39,16 @@ public class WishlistController {
 			throw new com.greatoutdoor.wishlistmanagementsystem.exception.NullParameterException(
 					"Null request, please provide Wishlist details!");
 		}
+		else if( service.addToWishlist(addItem)==null) {
+			throw new CrudException("Product Not added to wishlist");
+			}
 		else {
-		String status = "Added to wishlist";
-		return service.addToWishlist(addItem);
+			return addItem;
 		}
 
 	}
 
-	@DeleteMapping("deleteProduct(index : number){\r\n" + 
-			"    console.log(index);\r\n" + 
-			"    return this.http.delete(\"http://localhost:8003/product/deleteProduct/\"+index);")
+	@DeleteMapping("/deleteProduct")
 	public String deleteProduct(@RequestBody Wishlist removeItem) {
 
 		if (removeItem == null || removeItem.getUserId().trim().length() == 0
@@ -77,7 +77,13 @@ public class WishlistController {
 	@GetMapping("/viewWishlistByUserId/{userId}")
 
 	public List<Wishlist> viewAllWishlistByUserId(@PathVariable String userId) {
-		return service.viewAllWishlistByUserId(userId);
+		if(service.viewAllWishlistByUserId(userId)==null) {
+			throw new NullParameterException("No products in the wishlist");
+		}
+		else
+		{
+			return service.viewAllWishlistByUserId(userId);
+		}
 	}
 
 }
