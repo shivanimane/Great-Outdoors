@@ -13,6 +13,7 @@ import org.springframework.web.client.RestTemplate;
 
 import com.greatoutdoor.wishlistmanagementsystem.dao.WishlistRepository;
 import com.greatoutdoor.wishlistmanagementsystem.exception.CrudException;
+import com.greatoutdoor.wishlistmanagementsystem.exception.NullParameterException;
 import com.greatoutdoor.wishlistmanagementsystem.model.Product;
 import com.greatoutdoor.wishlistmanagementsystem.model.Wishlist;
 
@@ -33,16 +34,16 @@ public class WishlistServiceImpl implements WishlistService {
 
 		Product product = restTemplate.getForObject(productUrl + "/getProductById/" + addItem.getProductId(),
 				Product.class);
-	/*	if (product == null) {
-			return false;
-		} else */
+	if (product == null) {
+			throw new NullParameterException("Product not availabe");
+		} else {
 			addItem.setProductName(product.getProductName());
 			addItem.setPrice(product.getPrice());
 			repository.save(addItem);
 			return addItem;
 		}
 
-	
+	}
 	/*
 	 * name - delete item from the wishlist description - it will delete available
 	 * item from the wishlist
@@ -75,8 +76,13 @@ public class WishlistServiceImpl implements WishlistService {
 			throw new CrudException("Please add items to wishlist");
 		else {
 		List<Wishlist> listWishListItems = (List<Wishlist>) repository.getWishlistByUserId(userId);
+		if(listWishListItems==null)
+		{
+			throw new NullParameterException("No Product found in the Wishlist");
+		}
+		else {
 				return listWishListItems;
 		}
 	}
-
+	}
 }
