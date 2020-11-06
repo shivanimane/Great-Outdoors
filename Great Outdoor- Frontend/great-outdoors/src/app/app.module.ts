@@ -21,16 +21,15 @@ import { ListCartComponent } from './list-cart/list-cart.component';
 import { ListWishlistComponent } from './list-wishlist/list-wishlist.component';
 import { ListOrdersComponent } from './list-orders/list-orders.component';
 import { ErrorComponent } from './error/error.component';
-import { ListAddressComponent } from './list-address/list-address.component';
 
 const routes : Routes = [
   {path:'login', component:LoginComponent},
   {path:'admin', component:AdminComponent,canActivate: [AuthGuard]},
   {path:'product-master', component:ProductMasterComponent,canActivate: [AuthGuard]},
   {path:'retailer/:id', component:RetailerComponent,canActivate: [AuthGuard]},
-  {path:'add-product',component:ListProductComponent},
+  {path:'add-product',component:AddProductComponent},
   {path:'list-product',component:ListProductComponent},
-  {path:'add-product',component:ListProductComponent},
+  {path:'add-product',component:AddProductComponent},
   {path:'list-product-masters',component:ListProductMastersComponent},
   {path:'list-retailers',component:ListRetailersComponent},
   {path:'add-product-master',component:AddProductMasterComponent},
@@ -50,7 +49,7 @@ const routes : Routes = [
     LoginComponent,
     HomeComponent,
     AdminComponent,
-    ListProductComponent,
+    AddProductComponent,
     ProductMasterComponent,
     RetailerComponent,
     ListProductComponent,
@@ -63,8 +62,6 @@ const routes : Routes = [
     ListWishlistComponent,
     ListOrdersComponent,
     ErrorComponent,
-    ListAddressComponent,
-    ListProductComponent,
     AddProductComponent
   ],
   imports: [
