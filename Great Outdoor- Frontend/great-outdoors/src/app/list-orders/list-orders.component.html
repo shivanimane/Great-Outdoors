@@ -1,1 +1,80 @@
 <p>list-orders works!</p>
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+  <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+  <!------ Include the above in your HEAD tag ---------->
+  
+  <head>
+      <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css" rel="stylesheet"/>
+  </head>
+  <body>
+      <div class="container-fluid">
+          <div class="row">    
+              <div id="admin-sidebar" class="col-md-2 p-x-0 p-y-3">
+                <ul class="sidenav admin-sidenav list-unstyled">
+                   
+                    <li><a (click)="clickOnViewOrders()">Show All Orders</a></li>
+                   
+                   
+                   
+                    <li><a (click)="logout()">Logout</a></li>
+                    <!-- <li><a href="#">NavLink 6</a></li>                   -->
+                </ul>
+                 
+            </div>
+            
+             <div id="admin-main-control" class="col-md-10 p-x-3 p-y-1">
+                  <!-- <div class="content-title m-x-auto">
+                      <i class="Welcome admin!"></i> Dashboard
+                  </div>
+                  <p class="display-4">Dashboard-y Things</p> -->
+
+                   <!-- Enter the code here -->
+                   
+                  <table class="table table-striped custab">
+                    <tr>
+                      <th>Order Id </th>
+                      <th>User Id </th>
+                      <th>Address Id</th>
+                      <th>Order Initiate Time</th>
+                      <th>TotalCost</th>
+                      
+
+                    </tr>
+                    <tr *ngFor="let a of order">
+                    <td>{{a.orderId}}</td>
+                    <td>{{a.userId}}</td>
+                    <td>{{a.addressId }}</td>
+                    <td>{{a.orderInitiateTime}}</td>
+                    <td>{{q.totalcost }}</td>
+                    
+                    
+                  </tr>
+                  </table>
+                  
+              </div>  
+           
+           
+            
+            
+
+          </div> 
+      </div> <!-- /.container-fluid -->
+  </body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
