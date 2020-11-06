@@ -1,4 +1,3 @@
-<p>list-orders works!</p>
 <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
   <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
   <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
@@ -13,8 +12,10 @@
               <div id="admin-sidebar" class="col-md-2 p-x-0 p-y-3">
                 <ul class="sidenav admin-sidenav list-unstyled">
                    
-                    <li><a (click)="clickOnViewOrders()">Show All Orders</a></li>
-                   
+                    <li><a (click)="clickOnViewAllProducts()">Show All Products</a></li>
+                    <li><a (click)="clickOnViewCart()">Your Cart</a></li>
+                    <li><a (click)="clickOnSeeWishlist()">Your Wishlist</a></li>
+                    <li><a (click)="clickOnSeeAllOrders()">Orders</a></li>
                    
                    
                     <li><a (click)="logout()">Logout</a></li>
@@ -33,22 +34,23 @@
                    
                   <table class="table table-striped custab">
                     <tr>
+                      
                       <th>Order Id </th>
-                      <th>User Id </th>
                       <th>Address Id</th>
                       <th>Order Initiate Time</th>
-                      <th>TotalCost</th>
+                      <th>Total cost </th>
+                      
                       
 
                     </tr>
-                    <tr *ngFor="let a of order">
-                    <td>{{a.orderId}}</td>
-                    <td>{{a.userId}}</td>
-                    <td>{{a.addressId }}</td>
-                    <td>{{a.orderInitiateTime}}</td>
-                    <td>{{q.totalcost }}</td>
-                    
-                    
+                    <tr *ngFor="let o of order">
+                        
+                    <td>{{o.orderId}}</td>
+                    <td>{{o.addressId}}</td>
+                    <td>{{o.orderInitiateTime}} </td>
+                    <td>{{o.totalCost}}</td>
+
+                    <td><button class="btn btn-primary" (click)="cancelOrder(o.orderId)">Cancel </button></td>
                   </tr>
                   </table>
                   
@@ -56,25 +58,3 @@
            
            
             
-            
-
-          </div> 
-      </div> <!-- /.container-fluid -->
-  </body>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

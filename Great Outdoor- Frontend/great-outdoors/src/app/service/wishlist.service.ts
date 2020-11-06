@@ -12,7 +12,7 @@ export class WishlistService {
 
   addToWishlist(wishlist :WishlistModel){
     console.log(wishlist);
-    return this.http.post<WishlistModel>("http://localhost:8009/wishlist/addToWishlist",wishlist);
+    return this.http.post<WishlistModel>("http://localhost:8009/wishlist/addToWishlist",wishlist).subscribe();
   }
 
   fetchWishlist(index:String){

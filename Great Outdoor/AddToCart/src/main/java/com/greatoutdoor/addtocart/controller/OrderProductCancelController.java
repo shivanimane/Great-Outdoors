@@ -7,6 +7,7 @@ import java.util.List;
 
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -30,6 +31,7 @@ import io.swagger.annotations.ApiOperation;
  */
 @RestController
 @RequestMapping("/order")
+@CrossOrigin("http://localhost:4200")
 public class OrderProductCancelController {
 
 	private static final Logger logger = Logger.getLogger(OrderProductCancelController.class);
@@ -57,7 +59,7 @@ public class OrderProductCancelController {
 	}
 
 	@ApiOperation(value = "Cancel an order using orderID", response = String.class)
-	@PostMapping("/cancelOrder/{orderId}")
+	@DeleteMapping("/cancelOrder/{orderId}")
 	public String cancelOrder(@PathVariable String orderId) {
 		if (orderId.isEmpty()) {
 			throw new NullParameterException("please enter OrderId");

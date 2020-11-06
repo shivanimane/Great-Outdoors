@@ -44,10 +44,14 @@ export class ListProductsRetailerComponent implements OnInit {
     });
   }
 
-  addToCart(productId:String){
+  addToCart(productId:String,quantity:Number,productName:String,price:Number){
     console.log(this.id);
-    this.cart.retailerId=this.id;
+    this.cart.userId = this.id;
     this.cart.productId=productId;
+    this.cart.quantity=quantity;
+    
+    this.cart.productName=productName;
+    this.cart.price=price;
     console.log(this.cart);
     this.cartService.addToCart(this.cart);
     this.route.navigate(['list-cart',this.id]);
@@ -78,7 +82,7 @@ export class ListProductsRetailerComponent implements OnInit {
   }
 
   clickOnSeeAllOrders(){
-    this.route.navigate(['list-orders']);
+    this.route.navigate(['list-orders',this.id]);
   }
   logout(){
     //localStorage.clear();

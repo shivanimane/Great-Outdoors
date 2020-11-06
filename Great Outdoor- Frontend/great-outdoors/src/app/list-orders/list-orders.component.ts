@@ -1,51 +1,69 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
-import { OrderModel } from '../models/order.model'
-import { OrderService } from '../service/order.service';
+import { CartService } from '../service/cart.service';
+import { OrderModel} from '../models/order.model';
+import { ActivatedRoute, Router } from '@angular/router';
+
 @Component({
   selector: 'app-list-orders',
   templateUrl: './list-orders.component.html',
   styleUrls: ['./list-orders.component.css']
 })
 export class ListOrdersComponent implements OnInit {
+
   order:OrderModel[]=[];
+  id:String;
+
   constructor(private route : Router,
-    private service:OrderService) { }
+    private service:CartService,private activatedRoute:ActivatedRoute
+    ) { 
+    }
 
   ngOnInit(): void {
-  }
-  reloadData() {
-    throw new Error('Method not implemented.');
-  }
-
-  //saveOrder(){
-    //console.log(this.order);
-    //this.service.placeOrder(this.order).subscribe(response=>{
-   //   this.route.navigate(['']);
-     
-   // });
     
- // }
- // remove(index: number){
-  //  var ans =confirm("Are you sure you want to delete?");
-  //  if(ans){
-   //   this.service.deleteOrder.subscribe(response=>{
-    //     console.log(this.order);
-     //    this.reloadData();
-    //  });
-      
-  //  }
- // }
-
- clickOnViewOrders(){
-  this.route.navigate(['']);
+    
+    this.id=this.activatedRoute.snapshot.params['id'];
+    setTimeout(() => { this.reloadData() }, 100);
+  }
+  
+  
+  reloadData() {
+    this.service.fetchOrder(this.id).subscribe(data => {
+      this.order = data;
+      console.log(this.order);
+    });
+  }
+  
+cancelOrder(orderId:String){
+  var ans =confirm("Are you sure you want to cancel an order?");
+  if(ans){
+    this.service.cancelOrder(orderId).subscribe(response=>{
+       console.log(orderId);
+       this.reloadData();
+    });
 }
-logout(){
-  //localStorage.clear();
-  sessionStorage.clear();
-  this.route.navigate(['login']);
-}
 
+
+}
+  clickOnViewAllProducts(){
+    this.route.navigate(['list-products-retailer',this.id]);
+  }
+ 
+  clickOnViewCart(){
+    this.route.navigate(['list-cart',this.id]);
+ }
+
+  clickOnSeeWishlist(){
+    this.route.navigate(['list-wishlist',this.id]);
+  }
+
+  clickOnSeeAllOrders(){
+    this.route.navigate(['list-orders',this.id]);
+  }
+  logout(){
+    //localStorage.clear();
+    sessionStorage.clear();
+    this.route.navigate(['login']);
+  }
 
 
 }

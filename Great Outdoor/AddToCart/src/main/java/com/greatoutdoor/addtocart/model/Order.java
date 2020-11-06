@@ -34,7 +34,7 @@ public class Order implements Serializable{
 	private String userId;
 	@Column(name = "address_id" ,nullable = false)
 	private String addressId;
-	@Column(name = "order_initiate_time")
+	@Column(name = "order_initiate_time",nullable=false)
 	private Date orderInitiateTime;
 	private Double totalcost;
 	/**
@@ -52,21 +52,20 @@ public class Order implements Serializable{
 	 * @param orderDispatchTime
 	 * @param totalcost
 	 */
-	public Order(String orderId, String userId, String addressId, byte orderDispatchStatus, Date orderInitiateTime,
-			Date orderDispatchTime, double totalcost) {
-		super();
-		this.orderId = orderId;
-		this.userId = userId;
-		this.addressId = addressId;
-		this.orderInitiateTime = orderInitiateTime;
-		this.totalcost = totalcost;
-	}
 	
 	/**
 	 * @return the orderId
 	 */
 	public String getOrderId() {
 		return orderId;
+	}
+	public Order(String orderId, String userId, String addressId, Date orderInitiateTime, Double totalcost) {
+		super();
+		this.orderId = orderId;
+		this.userId = userId;
+		this.addressId = addressId;
+		this.orderInitiateTime = orderInitiateTime;
+		this.totalcost = totalcost;
 	}
 	/**
 	 * @param orderId the orderId to set

@@ -13,6 +13,7 @@ export class ListCartComponent implements OnInit {
 
   cart:CartModel[]=[];
   id:String;
+  userId:String;
 
   constructor(private route : Router,
     private service:CartService,private activatedRoute:ActivatedRoute
@@ -34,15 +35,27 @@ export class ListCartComponent implements OnInit {
     });
   }
 
-  addToCart(index:number){
-
-  }
-
-  addToWishlist(index:number){
+  placeOrder(){
+    console.log(this.id);
+    this.userId=this.id;
+    const addressId="123";
+    const totalCost=340;
+   
+    this.service.placeOrder(this.userId,addressId,totalCost);
     
-  }
+    this.route.navigate(['list-order',this.id]);
+   }
 
- 
+deleteFromCart(productId:string) {
+  
+  var ans =confirm("Are you sure you want to delete?");
+  if(ans){
+    this.service.deleteProductFromCart(this.id,productId).subscribe(response=>{
+       console.log(this.cart);
+       this.reloadData();
+    });
+}
+}
   clickOnViewAllProducts(){
     this.route.navigate(['list-products-retailer',this.id]);
   }
@@ -56,7 +69,7 @@ export class ListCartComponent implements OnInit {
   }
 
   clickOnSeeAllOrders(){
-    this.route.navigate(['list-orders']);
+    this.route.navigate(['list-orders',this.id]);
   }
   logout(){
     //localStorage.clear();

@@ -24,7 +24,7 @@ public interface OrderAndCartService {
 	 * @param cartItem
 	 * @return
 	 */
-	boolean addItemToCart(CartBean cartItem);
+	Cart addItemToCart(CartBean cartItem);
 	
 	/**
 	 * Insert Order-Product map entity
