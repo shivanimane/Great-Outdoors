@@ -30,6 +30,10 @@ export class RetailerComponent implements OnInit {
   clickOnSeeAllOrders(){
     this.route.navigate(['list-orders',this.id]);
   }
+
+  clickOnAddAddress(){
+    this.route.navigate(['list-address']);
+  }
   logout(){
     //localStorage.clear();
     sessionStorage.clear();

@@ -10,6 +10,8 @@ import { AuthService } from '../service/auth.service';
   styleUrls: ['./add-retailer.component.css']
 })
 export class AddRetailerComponent implements OnInit {
+ 
+
 
   user : UserModel;
   constructor(private service : AdminService, private route : Router, private Auth: AuthService) {
