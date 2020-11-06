@@ -28,7 +28,7 @@ export class RetailerComponent implements OnInit {
   }
 
   clickOnSeeAllOrders(){
-    this.route.navigate(['list-orders']);
+    this.route.navigate(['list-orders',this.id]);
   }
   logout(){
     //localStorage.clear();

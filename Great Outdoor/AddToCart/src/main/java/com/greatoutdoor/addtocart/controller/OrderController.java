@@ -49,19 +49,17 @@ public class OrderController {
 			response = String.class
 			)
 	@PostMapping("/addToCart")
-	public String addItemToCart(@RequestBody CartBean cart) {
+	public Cart addItemToCart(@RequestBody CartBean cart) {
 		if(cart==null) {
 			throw new NullParameterException("Please enter details");
 		}
-		if(cart.getUserId().trim().length() == 0 || cart.getProductId().trim().length() == 0 || cart.getQuantity()==0 ) {
+		else if(cart.getUserId().trim().length() == 0 || cart.getProductId().trim().length() == 0 || cart.getQuantity()==0 ) {
 			logger.error("Null request, cart details not provided at /addItemToCart");
 			throw new NullParameterException("Please enter correct cart details!");
 		}
-		String status = "Item added Successfully";
-		if(orderAndCartService.addItemToCart(cart)) {
-			return status;
-		} else {
-			throw new CrudException("Cart with same UserId ProductId already exists");
+		//String status = "Item added Successfully";
+		else {
+		return orderAndCartService.addItemToCart(cart);
 		}
 	}
 	
@@ -71,12 +69,13 @@ public class OrderController {
 			response = String.class
 			)
 	@PostMapping("/placeOrder/{userId}/{addressId}/{totalCost}")
-	public String placeOrder(@PathVariable String userId, @PathVariable String addressId , @PathVariable Double totalCost) {
+	public Boolean placeOrder(@PathVariable String userId, @PathVariable String addressId , @PathVariable Double totalCost) {
 		
 		if(userId==null || addressId==null ) {
 			logger.error("Null request, please provide userId and addressId/ placeOrder");
 			throw new NullParameterException("Null request, please provide userId and addressId!");
 		}
+		else {
 		
 		String status = "Order placed successfully";
 		Order order = new Order();
@@ -84,10 +83,12 @@ public class OrderController {
 		order.setUserId(userId);
 		order.setTotalcost(totalCost);
 		if(orderAndCartService.registerOrder(order)==false) {
-			return "Cart Not Found";
+			return false;
 		}
-			return status;
-		
+		else {
+			return true;
+		}
+		}
 	}
 
 	@ApiOperation(

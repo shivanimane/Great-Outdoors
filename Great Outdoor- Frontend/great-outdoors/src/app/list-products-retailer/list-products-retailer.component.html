@@ -55,7 +55,7 @@
                     <td>{{p.quantity}}</td>
                     <td>{{p.productCategory}}</td>
                     <td><button class="btn btn-primary" (click)="addToWishlist(p.productId,p.productName,p.price)">Add to Wishlist</button></td>
-                    <td><button class="btn btn-primary" (click)="addToCart(p.productId)">Add to Cart</button></td>
+                    <td><button class="btn btn-primary" (click)="addToCart(p.productId,p.quantity,p.productName,p.price)">Add to Cart</button></td>
                   </tr>
                   </table>
                   

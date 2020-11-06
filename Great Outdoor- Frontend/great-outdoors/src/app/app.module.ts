@@ -37,7 +37,7 @@ const routes : Routes = [
   {path:'list-products-retailer/:id', component:ListProductsRetailerComponent,canActivate:[AuthGuard]},
   {path:'list-cart/:id', component:ListCartComponent},
   {path:'list-wishlist/:id', component:ListWishlistComponent,canActivate: [AuthGuard]},
-  {path:'list-orders', component:ListOrdersComponent},
+  {path:'list-orders/:id', component:ListOrdersComponent},
  // {path:'admin', component:AdminComponent},
   {path:'', redirectTo:'login', pathMatch:"full"},
   {path:'*', redirectTo:'login', pathMatch:"full"},

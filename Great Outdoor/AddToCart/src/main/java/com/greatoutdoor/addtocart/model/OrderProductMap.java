@@ -34,7 +34,7 @@ public class OrderProductMap implements Serializable{
 	public OrderProductMap() {
 	}
 
-	public OrderProductMap(String productUIN, String orderId, String productId, int productStatus, int giftStatus,
+	public OrderProductMap(String productUIN, String orderId, String productId,
 			int quantity) {
 		super();
 		this.productUIN = productUIN;

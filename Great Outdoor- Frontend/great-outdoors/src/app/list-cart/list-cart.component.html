@@ -36,15 +36,19 @@
                     <tr>
                       
                       <th>Product Id </th>
-                      <th>Quantity</th>
+                      <th>Product Name</th>
+                      <th>Product price </th>
+                      <td><button class="btn btn-primary" (click)="placeOrder()">Place Order </button></td>
                       
 
                     </tr>
                     <tr *ngFor="let c of cart">
                         
                     <td>{{c.productId}}</td>
-                    <td>{{c.quantity}}</td>
-                   <!-- ><td><button class="btn btn-primary" (click)="delete(p.productId)">Delete</button></td>-->
+                    <td>{{c.productName}}</td>
+                    <th>{{c.price}} </th>
+
+                    <td><button class="btn btn-primary" (click)="deleteFromCart(c.productId)">Delete </button></td>
                   </tr>
                   </table>
                   

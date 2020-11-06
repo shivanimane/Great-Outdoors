@@ -30,6 +30,7 @@ public class WishlistController {
 	@Autowired
 	WishlistServiceImpl service;
 
+	@CrossOrigin("http://localhost:4200")
 	@PostMapping("/addToWishlist")
 	public Wishlist addToWishlist(@RequestBody Wishlist addItem) {
 

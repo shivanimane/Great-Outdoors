@@ -49,15 +49,14 @@ public class OrderAndCartServiceImpl implements OrderAndCartService {
 	private String productURL = "http://localhost:8003/product";
 
 	@Override
-	public boolean addItemToCart(CartBean cartItem) {
-		if (cartDao.getProductsByUserIdProductId(cartItem.getUserId(), cartItem.getProductId()).isEmpty()) {
-			Cart cart = new Cart(cartItem.getUserId(), cartItem.getProductId(), cartItem.getQuantity());
-			cartDao.save(cart);
-			return true;
-		} else {
-			return false;
+	public Cart addItemToCart(CartBean cartItem) {
+		if(cartDao.getProductsByUserIdProductId(cartItem.getUserId(), cartItem.getProductId()).isEmpty()) {
+			Cart cart = new Cart(cartItem.getUserId(), cartItem.getProductId(), cartItem.getQuantity(), cartItem.getProductName(), cartItem.getPrice());
+			return cartDao.save(cart);
 		}
-
+		else {
+		return null;
+		}
 	}
 
 	@Override
@@ -110,7 +109,7 @@ public class OrderAndCartServiceImpl implements OrderAndCartService {
 
 		while (itr.hasNext()) {
 			OrderProductMap orderProductMap = new OrderProductMap(generateId.generateProductUIN(), orderId,
-					cartItems.get(index).getProductId(), 1, 0, cartItems.get(index).getQuantity());
+					cartItems.get(index).getProductId(), cartItems.get(index).getQuantity());
 			insertOrderProductMapEntity(orderProductMap);
 			index++;
 			itr.next();
@@ -119,8 +118,7 @@ public class OrderAndCartServiceImpl implements OrderAndCartService {
 		long millis = System.currentTimeMillis();
 		Date orderInitiationTime = new Date(millis);
 
-		Order newOrder = new Order(orderId, order.getUserId(), order.getAddressId(), (byte) 0, orderInitiationTime,
-				null, order.getTotalcost());
+		Order newOrder = new Order(orderId, order.getUserId(), order.getAddressId(),  orderInitiationTime, order.getTotalcost());
 
 		orderDao.save(newOrder);
 		cartDao.deleteByUserId(order.getUserId());

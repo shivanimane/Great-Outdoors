@@ -30,31 +30,58 @@ public class Cart implements Serializable{
 	@Column(name = "quantity" , nullable = false )
 	private int quantity;
 	
-	/**
-	 * 
-	 */
+
+	private String productName;
+	private double price;
 	public Cart() {
 		// TODO Auto-generated constructor stub
 	}
-
+	/**
+	 * @param d 
+	 * @param string3 
+	 * @param i 
+	 * @param string2 
+	 * @param string 
+	 * 
+	 */
+	
+	public Cart(String userId, String productId, int quantity, String productName, double price) {
+		super();
+		this.userId = userId;
+		this.productId = productId;
+		this.quantity = quantity;
+		this.productName = productName;
+		this.price = price;
+	}
 	/**
 	 * @param userId
 	 * @param productId
 	 * @param quantity
 	 */
-	public Cart(String userId, String productId, int quantity) {
-		super();
-		this.userId = userId;
-		this.productId = productId;
-		this.quantity = quantity;
-	}
-
-	/**
+		/**
 	 * @return the userId
 	 */
 	public String getUserId() {
 		return userId;
 	}
+
+	String getProductName() {
+			return productName;
+		}
+
+		void setProductName(String productName) {
+			this.productName = productName;
+		}
+
+		double getPrice() {
+			return price;
+		}
+
+		void setPrice(double price) {
+			this.price = price;
+		}
+
+	
 
 	/**
 	 * @param userId the userId to set
