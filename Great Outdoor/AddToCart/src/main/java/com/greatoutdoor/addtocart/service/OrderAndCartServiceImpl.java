@@ -98,7 +98,6 @@ public class OrderAndCartServiceImpl implements OrderAndCartService {
 		if (cartDao.count() == 0 || cartDao.getAllProducts(order.getUserId()).isEmpty()) {
 			return false;
 		}
-
 		List<Cart> cartItems = (List<Cart>) cartDao.getAllProducts(order.getUserId());
 		if (cartItems == null) {
 			return false;
@@ -106,8 +105,10 @@ public class OrderAndCartServiceImpl implements OrderAndCartService {
 		Iterator<Cart> itr = cartItems.iterator();
 		int index = 0;
 		String orderId = generateId.generateOrderId(order.getUserId());
-
 		while (itr.hasNext()) {
+			
+			
+			
 			OrderProductMap orderProductMap = new OrderProductMap(generateId.generateProductUIN(), orderId,
 					cartItems.get(index).getProductId(), cartItems.get(index).getQuantity());
 			insertOrderProductMapEntity(orderProductMap);

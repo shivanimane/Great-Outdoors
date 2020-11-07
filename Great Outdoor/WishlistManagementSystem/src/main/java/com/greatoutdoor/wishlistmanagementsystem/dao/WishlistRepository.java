@@ -26,5 +26,11 @@ public interface WishlistRepository extends CrudRepository<Wishlist,String> {
 	@Transactional
 	List<Wishlist> getWishlistByUserId(@Param("userId") String userId);
 	
+	@Modifying
+	@Query("DELETE FROM Wishlist wl WHERE wl.userId=:userId and wl.productId=:productId")
+	@Transactional
+	void deleteByUserIdProductId(@Param("userId") String userId, @Param("productId") String productId);
+	
+	
 	 
 }

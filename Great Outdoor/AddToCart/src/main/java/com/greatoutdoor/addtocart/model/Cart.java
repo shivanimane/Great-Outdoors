@@ -29,21 +29,11 @@ public class Cart implements Serializable{
 	private String productId;
 	@Column(name = "quantity" , nullable = false )
 	private int quantity;
-	
-
 	private String productName;
 	private double price;
 	public Cart() {
 		// TODO Auto-generated constructor stub
 	}
-	/**
-	 * @param d 
-	 * @param string3 
-	 * @param i 
-	 * @param string2 
-	 * @param string 
-	 * 
-	 */
 	
 	public Cart(String userId, String productId, int quantity, String productName, double price) {
 		super();

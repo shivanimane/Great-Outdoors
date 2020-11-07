@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-product-master',
@@ -8,9 +8,13 @@ import { Router } from '@angular/router';
 })
 export class ProductMasterComponent implements OnInit {
 
-  constructor(private route : Router) { }
+  userName:String;
+  constructor(private route : Router,
+      private router : ActivatedRoute
+    ) { }
 
   ngOnInit(): void {
+    this.userName = this.router.snapshot.params['username'];
   }
 
 

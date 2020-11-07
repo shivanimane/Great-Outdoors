@@ -31,16 +31,19 @@
 
                    <!-- Enter the code here -->
                    
-                  <table class="table table-striped custab">
+                   <table class="table table-striped custab">
                     <tr>
                       <th>User Id </th>
-                      <th>User Name </th>
-                      
+                      <th>Username </th>
+                      <th>Email Id</th>
+                      <th>Phone No</th>
 
                     </tr>
                     <tr *ngFor="let user of users">
                     <td>{{user.id}}</td>
                     <td>{{user.username}}</td>
+                    <td>{{user.emailId}}</td>
+                    <td>{{user.phoneNo}}</td>
                     
                     <!-- <td><button class="btn btn-primary" (click)="generateReport(f.facultyId)">Generate Report</button></td>
                     <td><button class="btn btn-danger" (click)="remove(f.facultyId)">Delete</button></td> -->

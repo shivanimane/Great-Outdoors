@@ -15,6 +15,7 @@ export class LoginComponent implements OnInit {
   login: Login;
   user: UserModel;
   id: String;
+  userName:String;
   msg:String;
 
   constructor(private route: Router, 
@@ -40,16 +41,17 @@ export class LoginComponent implements OnInit {
 
     //localStorage.setItem('user',this.employee.employeeId);
     sessionStorage.setItem('user', this.user.id);
+    sessionStorage.setItem('username',this.user.username);
     console.log(user.role);
 
     if (user.role == "admin") {
-      this.route.navigate(['admin']);
+      this.route.navigate(['admin',user.username]);
       this.Auth.setLoggedIn(true);
     } else if (user.role == "retailer") {
-      this.route.navigate(['retailer',user.id]);
+      this.route.navigate(['retailer',user.id,user.username]);
       this.Auth.setLoggedIn(true);
     } else if (user.role == "product master") {
-      this.route.navigate(['product-master']);
+      this.route.navigate(['product-master',user.username]);
       this.Auth.setLoggedIn(true);
     } else {
       

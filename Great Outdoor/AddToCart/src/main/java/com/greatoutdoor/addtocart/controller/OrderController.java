@@ -68,27 +68,24 @@ public class OrderController {
 			notes = "Retailer can place an order with this API",
 			response = String.class
 			)
-	@PostMapping("/placeOrder/{userId}/{addressId}/{totalCost}")
-	public Boolean placeOrder(@PathVariable String userId, @PathVariable String addressId , @PathVariable Double totalCost) {
+	@PostMapping("/placeOrder")
+	public Boolean placeOrder(@RequestBody Order order) {
 		
-		if(userId==null || addressId==null ) {
-			logger.error("Null request, please provide userId and addressId/ placeOrder");
-			throw new NullParameterException("Null request, please provide userId and addressId!");
-		}
-		else {
-		
+//		if(userId==null || addressId==null ) {
+//			logger.error("Null request, please provide userId and addressId/ placeOrder");
+//			throw new NullParameterException("Null request, please provide userId and addressId!");
+//		}
+//		else {
+//		
 		String status = "Order placed successfully";
-		Order order = new Order();
-		order.setAddressId(addressId);
-		order.setUserId(userId);
-		order.setTotalcost(totalCost);
+		
 		if(orderAndCartService.registerOrder(order)==false) {
 			return false;
 		}
 		else {
 			return true;
 		}
-		}
+		
 	}
 
 	@ApiOperation(

@@ -21,17 +21,16 @@ export class ListCartComponent implements OnInit {
     }
 
   ngOnInit(): void {
-    
-    
     this.id=this.activatedRoute.snapshot.params['id'];
     setTimeout(() => { this.reloadData() }, 100);
   }
-  
+ 
   
   reloadData() {
     this.service.fetchCart(this.id).subscribe(data => {
       this.cart =data;
       console.log(this.cart);
+     
     });
   }
 

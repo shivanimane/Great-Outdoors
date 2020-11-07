@@ -19,6 +19,9 @@ export class ListRetailersComponent implements OnInit {
   ngOnInit(): void {
     
     setTimeout(() => { this.reloadData() }, 100);
+    if(this.reloadData()==null){
+      alert("No retailers have been added yet");
+    }
   }
   
   

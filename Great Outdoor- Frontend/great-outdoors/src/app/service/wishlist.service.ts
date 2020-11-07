@@ -21,5 +21,9 @@ export class WishlistService {
   }
 
 
+  deleteWishlist(userId :String,productId:String){
+    return this.http.delete<String>("http://localhost:8009/wishlist/deleteWishlistByUserIdProductId/"+userId+"/"+productId);
+  }
+
 
 }

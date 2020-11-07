@@ -12,6 +12,7 @@ export class AuthService {
       sessionStorage.setItem("userId", user.id);
       // based on type of user
       sessionStorage.setItem("usertype", user.role);
+      sessionStorage.setItem("userName",user.username);
 
       return true;
     }else{
