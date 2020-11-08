@@ -13,8 +13,6 @@ import javax.persistence.Table;
 
 /**
  * @author Shivani
-
- *
  */
 
 @Entity

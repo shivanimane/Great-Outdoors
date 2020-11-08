@@ -69,24 +69,28 @@ public class OrderController {
 			response = String.class
 			)
 	@PostMapping("/placeOrder")
-	public Boolean placeOrder(@RequestBody Order order) {
+	public String placeOrder(@RequestParam String userId, @RequestParam String addressId , @RequestParam double totalCost) {
 		
-//		if(userId==null || addressId==null ) {
-//			logger.error("Null request, please provide userId and addressId/ placeOrder");
-//			throw new NullParameterException("Null request, please provide userId and addressId!");
-//		}
-//		else {
-//		
+
+		if(userId==null || addressId==null) {
+			logger.error("Null request, userId or addressId not provided at /placeOrder");
+			throw new NullParameterException("Null request, please provide userId and addressId!");
+		}
+		
 		String status = "Order placed successfully";
-		
+		Order order = new Order();
+		order.setAddressId(addressId);
+		order.setUserId(userId);
+		order.setTotalcost(totalCost);
 		if(orderAndCartService.registerOrder(order)==false) {
-			return false;
+			throw new ProductNotFoundException("Product not found");
+		} else {
+			return status;
 		}
-		else {
-			return true;
-		}
-		
 	}
+	
+
+	
 
 	@ApiOperation(
 			value = "Remove product from cart by UserId and ProductId",
