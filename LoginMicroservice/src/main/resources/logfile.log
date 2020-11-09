@@ -120,3 +120,75 @@ java.lang.Exception: bad credentials
 2020-11-09 08:01:36.454  INFO 4936 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
 2020-11-09 08:06:36.638  INFO 4936 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
 2020-11-09 08:11:36.643  INFO 4936 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-11-09 08:12:53.416  INFO 4936 --- [Thread-2] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application LOGIN-MGMT-SERVICE with eureka with status DOWN
+2020-11-09 08:12:53.416  WARN 4936 --- [Thread-2] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1604889773416, current=DOWN, previous=UP]
+2020-11-09 08:12:53.423  WARN 4936 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1604889773423, current=UP, previous=DOWN]
+2020-11-09 08:12:53.424  INFO 4936 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_LOGIN-MGMT-SERVICE/DESKTOP-DNE248H:login-mgmt-service:8007: registering service...
+2020-11-09 08:12:53.438  INFO 4936 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_LOGIN-MGMT-SERVICE/DESKTOP-DNE248H:login-mgmt-service:8007 - registration status: 204
+2020-11-09 08:12:54.542  INFO 4936 --- [Thread-2] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-11-09 08:12:54.556  INFO 4936 --- [Thread-2] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-11-09 08:12:54.577  INFO 4936 --- [Thread-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2020-11-09 08:12:54.623  INFO 4936 --- [Thread-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2020-11-09 08:12:54.630  INFO 4936 --- [Thread-2] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2020-11-09 08:12:57.643  INFO 4936 --- [Thread-2] com.netflix.discovery.DiscoveryClient    : Unregistering ...
+2020-11-09 08:12:57.651  INFO 4936 --- [Thread-2] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_LOGIN-MGMT-SERVICE/DESKTOP-DNE248H:login-mgmt-service:8007 - deregister  status: 200
+2020-11-09 08:12:57.680  INFO 4936 --- [Thread-2] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+2020-11-09 08:13:02.148  INFO 4936 --- [restartedMain] c.g.loginmicroservice.loginmicroservice  : No active profile set, falling back to default profiles: default
+2020-11-09 08:13:04.711  INFO 4936 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2020-11-09 08:13:04.824  INFO 4936 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 112ms. Found 1 JPA repository interfaces.
+2020-11-09 08:13:05.228  INFO 4936 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=5f44dd9c-f571-3fa9-adc0-de470591f2d2
+2020-11-09 08:13:06.457  INFO 4936 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8007 (http)
+2020-11-09 08:13:06.459  INFO 4936 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-11-09 08:13:06.460  INFO 4936 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.38]
+2020-11-09 08:13:06.582  INFO 4936 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-11-09 08:13:06.582  INFO 4936 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 4419 ms
+2020-11-09 08:13:09.480  INFO 4936 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-11-09 08:13:09.503  INFO 4936 --- [task-1] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-11-09 08:13:12.117  INFO 4936 --- [task-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2020-11-09 08:13:12.187  INFO 4936 --- [task-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2020-11-09 08:13:12.187  INFO 4936 --- [task-1] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2020-11-09 08:13:12.342  INFO 4936 --- [task-1] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-11-09 08:13:12.343  INFO 4936 --- [task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-11-09 08:13:12.518  WARN 4936 --- [task-2] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2020-11-09 08:13:12.751  WARN 4936 --- [restartedMain] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2020-11-09 08:13:12.751  INFO 4936 --- [restartedMain] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-11-09 08:13:12.911  WARN 4936 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-11-09 08:13:15.131  WARN 4936 --- [restartedMain] ockingLoadBalancerClientRibbonWarnLogger : You already have RibbonLoadBalancerClient on your classpath. It will be used by default. As Spring Cloud Ribbon is in maintenance mode. We recommend switching to BlockingLoadBalancerClient instead. In order to use it, set the value of `spring.cloud.loadbalancer.ribbon.enabled` to `false` or remove spring-cloud-starter-netflix-ribbon from your project.
+2020-11-09 08:13:15.178  INFO 4936 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 18 endpoint(s) beneath base path '/actuator'
+2020-11-09 08:13:15.283  INFO 4936 --- [restartedMain] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2020-11-09 08:13:15.289  INFO 4936 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2020-11-09 08:13:15.293  INFO 4936 --- [restartedMain] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
+2020-11-09 08:13:15.293  INFO 4936 --- [restartedMain] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
+2020-11-09 08:13:15.294  INFO 4936 --- [restartedMain] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
+2020-11-09 08:13:15.294  INFO 4936 --- [restartedMain] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
+2020-11-09 08:13:15.628  INFO 4936 --- [restartedMain] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-11-09 08:13:15.631  INFO 4936 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2020-11-09 08:13:15.632  INFO 4936 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2020-11-09 08:13:15.632  INFO 4936 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2020-11-09 08:13:15.632  INFO 4936 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2020-11-09 08:13:15.632  INFO 4936 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2020-11-09 08:13:15.632  INFO 4936 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2020-11-09 08:13:15.632  INFO 4936 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2020-11-09 08:13:15.637  INFO 4936 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2020-11-09 08:13:15.639  INFO 4936 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2020-11-09 08:13:15.641  INFO 4936 --- [restartedMain] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2020-11-09 08:13:15.644  INFO 4936 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1604889795644 with initial instances count: 0
+2020-11-09 08:13:15.651  INFO 4936 --- [restartedMain] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application LOGIN-MGMT-SERVICE with eureka with status UP
+2020-11-09 08:13:15.651  INFO 4936 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1604889795651, current=UP, previous=STARTING]
+2020-11-09 08:13:15.652  INFO 4936 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_LOGIN-MGMT-SERVICE/DESKTOP-DNE248H:login-mgmt-service:8007: registering service...
+2020-11-09 08:13:15.653  WARN 4936 --- [restartedMain] c.n.discovery.InstanceInfoReplicator     : Ignoring onDemand update due to rate limiter
+2020-11-09 08:13:15.663  INFO 4936 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8007 (http) with context path ''
+2020-11-09 08:13:15.667  INFO 4936 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_LOGIN-MGMT-SERVICE/DESKTOP-DNE248H:login-mgmt-service:8007 - registration status: 204
+2020-11-09 08:13:15.667  INFO 4936 --- [restartedMain] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8007
+2020-11-09 08:13:15.930  INFO 4936 --- [restartedMain] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories…
+2020-11-09 08:13:16.011  INFO 4936 --- [restartedMain] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
+2020-11-09 08:13:16.045  INFO 4936 --- [restartedMain] c.g.loginmicroservice.loginmicroservice  : Started loginmicroservice in 16.332 seconds (JVM running for 1325.271)
+2020-11-09 08:13:16.068  INFO 4936 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2020-11-09 08:13:45.657  INFO 4936 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2020-11-09 08:13:45.658  INFO 4936 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2020-11-09 08:13:45.658  INFO 4936 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2020-11-09 08:13:45.659  INFO 4936 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2020-11-09 08:13:45.659  INFO 4936 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2020-11-09 08:13:45.660  INFO 4936 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Application version is -1: false
+2020-11-09 08:13:45.660  INFO 4936 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2020-11-09 08:13:45.667  INFO 4936 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : The response status is 200
