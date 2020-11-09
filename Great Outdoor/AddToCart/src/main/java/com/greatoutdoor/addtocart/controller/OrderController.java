@@ -68,14 +68,14 @@ public class OrderController {
 			notes = "Retailer can place an order with this API",
 			response = String.class
 			)
-	@PostMapping("/placeOrder/{userId}/{addressId}/{totalCost}")
-	public Boolean placeOrder(@PathVariable String userId, @PathVariable String addressId , @PathVariable Double totalCost) {
+	@PostMapping("/placeOrder")
+	public String placeOrder(@RequestParam String userId, @RequestParam String addressId , @RequestParam double totalCost) {
 		
-		if(userId==null || addressId==null ) {
-			logger.error("Null request, please provide userId and addressId/ placeOrder");
+
+		if(userId==null || addressId==null) {
+			logger.error("Null request, userId or addressId not provided at /placeOrder");
 			throw new NullParameterException("Null request, please provide userId and addressId!");
 		}
-		else {
 		
 		String status = "Order placed successfully";
 		Order order = new Order();
@@ -83,13 +83,14 @@ public class OrderController {
 		order.setUserId(userId);
 		order.setTotalcost(totalCost);
 		if(orderAndCartService.registerOrder(order)==false) {
-			return false;
-		}
-		else {
-			return true;
-		}
+			throw new ProductNotFoundException("Product not found");
+		} else {
+			return status;
 		}
 	}
+	
+
+	
 
 	@ApiOperation(
 			value = "Remove product from cart by UserId and ProductId",

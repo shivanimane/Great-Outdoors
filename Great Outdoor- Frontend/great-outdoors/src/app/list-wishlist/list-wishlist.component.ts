@@ -33,8 +33,19 @@ export class ListWishlistComponent implements OnInit {
 
   }
 
+  deleteFromWishlist(productId : String){
+    
+    var ans =confirm("Are you sure you want to delete?");
+    if(ans){
+      this.service.deleteWishlist(this.id,productId).subscribe(response=>{
+         console.log(this.wishlist);
+         this.reloadData();
+      });
+  }
+  // alert("Product has been deleted from wishlist");
+  // this.route.navigate(['list-wishlist']);
  
- 
+}
   clickOnViewAllProducts(){
     this.route.navigate(['list-products-retailer',this.id]);
   }
@@ -48,7 +59,7 @@ export class ListWishlistComponent implements OnInit {
   }
 
   clickOnSeeAllOrders(){
-    this.route.navigate(['list-orders']);
+    this.route.navigate(['list-orders',this.id]);
   }
   logout(){
     //localStorage.clear();

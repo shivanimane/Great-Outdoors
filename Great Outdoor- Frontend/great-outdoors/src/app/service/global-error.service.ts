@@ -4,7 +4,7 @@ import { HttpErrorResponse } from '@angular/common/http';
 
 @Injectable()
 export class GlobalErrorService implements ErrorHandler{
-  errMsg: string;
+  errMsg: string; 
 
 
   constructor(private injector : Injector) { }

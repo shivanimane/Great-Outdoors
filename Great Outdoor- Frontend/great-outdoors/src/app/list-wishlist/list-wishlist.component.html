@@ -31,7 +31,7 @@
                   <p class="display-4">Dashboard-y Things</p> -->
 
                    <!-- Enter the code here -->
-                   
+                   <label><h2>Your Wishlist</h2> </label>
                   <table class="table table-striped custab">
                     <tr>
                       
@@ -46,7 +46,7 @@
                     <td>{{w.productId}}</td>
                     <td>{{w.productName}}</td>
                     <td>{{w.price}}</td>
-                   <!-- ><td><button class="btn btn-primary" (click)="delete(p.productId)">Delete</button></td>-->
+                    <td><button class="btn btn-primary" (click)="deleteFromWishlist(w.productId)">Delete </button></td>
                   </tr>
                   </table>
                   

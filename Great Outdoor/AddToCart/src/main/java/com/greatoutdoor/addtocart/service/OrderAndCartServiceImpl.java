@@ -15,6 +15,7 @@ import org.springframework.web.client.RestTemplate;
 import com.greatoutdoor.addtocart.dao.CartDao;
 import com.greatoutdoor.addtocart.dao.OrderDao;
 import com.greatoutdoor.addtocart.dao.OrderProductMapDao;
+import com.greatoutdoor.addtocart.exception.CrudException;
 import com.greatoutdoor.addtocart.model.Cart;
 import com.greatoutdoor.addtocart.model.CartBean;
 import com.greatoutdoor.addtocart.model.Order;
@@ -95,33 +96,64 @@ public class OrderAndCartServiceImpl implements OrderAndCartService {
 
 	@Override
 	public boolean registerOrder(Order order) {
-		if (cartDao.count() == 0 || cartDao.getAllProducts(order.getUserId()).isEmpty()) {
-			return false;
-		}
+//		if (cartDao.count() == 0 || cartDao.getAllProducts(order.getUserId()).isEmpty()) {
+//			return false;
+//		}
+//		List<Cart> cartItems = (List<Cart>) cartDao.getAllProducts(order.getUserId());
+//		if (cartItems == null) {
+//			return false;
+//		}
+//		Iterator<Cart> itr = cartItems.iterator();
+//		int index = 0;
+//		String orderId = generateId.generateOrderId(order.getUserId());
+//		while (itr.hasNext()) {
+//			
+//			OrderProductMap orderProductMap = new OrderProductMap(generateId.generateProductUIN(), orderId,
+//					cartItems.get(index).getProductId(), cartItems.get(index).getQuantity());
+//			insertOrderProductMapEntity(orderProductMap);
+//			index++;
+//			itr.next();
+//		}
+//
+//		long millis = System.currentTimeMillis();
+//		Date orderInitiationTime = new Date(millis);
+//
+//		Order newOrder = new Order(orderId, order.getUserId(), order.getAddressId(),  orderInitiationTime, order.getTotalcost());
+//
+//		orderDao.save(newOrder);
+//		cartDao.deleteByUserId(order.getUserId());
+//		return true;
+		
+		
 
-		List<Cart> cartItems = (List<Cart>) cartDao.getAllProducts(order.getUserId());
-		if (cartItems == null) {
-			return false;
-		}
+		//insert the item from the cart to order product map table
+		if(cartDao.count()==0) throw new CrudException("Please item add to cart to place an order!");
+		List<Cart> cartItems = (List<Cart>) cartDao.findAll();
 		Iterator<Cart> itr = cartItems.iterator();
 		int index = 0;
 		String orderId = generateId.generateOrderId(order.getUserId());
-
+		
 		while (itr.hasNext()) {
-			OrderProductMap orderProductMap = new OrderProductMap(generateId.generateProductUIN(), orderId,
-					cartItems.get(index).getProductId(), cartItems.get(index).getQuantity());
+			
+			OrderProductMap orderProductMap = new OrderProductMap(generateId.generateProductUIN(),
+			orderId, cartItems.get(index).getProductId(),cartItems.get(index).getQuantity());
 			insertOrderProductMapEntity(orderProductMap);
 			index++;
 			itr.next();
 		}
-
+		
+		
+		///////////////////////////////////////////////
+		
+		
 		long millis = System.currentTimeMillis();
 		Date orderInitiationTime = new Date(millis);
-
+		
 		Order newOrder = new Order(orderId, order.getUserId(), order.getAddressId(),  orderInitiationTime, order.getTotalcost());
-
+		
 		orderDao.save(newOrder);
 		cartDao.deleteByUserId(order.getUserId());
+		
 		return true;
 	}
 

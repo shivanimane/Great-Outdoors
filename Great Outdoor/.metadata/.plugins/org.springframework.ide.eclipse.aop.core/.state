@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aop-reference-model>
+<aop-project name="AddToCart"/>
+<aop-project name="WishlistManagementSystem"/>
+<aop-project name="MyEurekaServer"/>
+<aop-project name="ProductManagementSystem"/>
+<aop-project name="AddressManagementSystem"/>
+<aop-project name="LoginMicroservice"/>
+</aop-reference-model>

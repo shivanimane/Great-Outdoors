@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { AuthService } from '../service/auth.service';
 
 @Component({
@@ -8,8 +8,11 @@ import { AuthService } from '../service/auth.service';
   styleUrls: ['./admin.component.css']
 })
 export class AdminComponent implements OnInit {
-
-  constructor( private route : Router, private Auth: AuthService) { }
+  userName: String;
+  constructor( private route : Router, private Auth: AuthService, router :ActivatedRoute) {
+    this.userName=router.snapshot.params['userName'];
+   // this.userName=sessionStorage.getItem("userName");
+   }
 
   ngOnInit(): void {
   }

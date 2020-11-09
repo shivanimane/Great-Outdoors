@@ -48,20 +48,17 @@ public class WishlistController {
 
 	}
 
-	@DeleteMapping("/deleteProduct")
-	public String deleteProduct(@RequestBody Wishlist removeItem) {
-
-		if (removeItem == null || removeItem.getUserId().trim().length() == 0
-				|| removeItem.getProductId().trim().length() == 0) {
-			throw new NullParameterException(
-					"Null request, please provide wishlist details to remove item from wishlist!");
-
+	@DeleteMapping("/deleteWishlistByUserIdProductId/{userId}/{productId}")
+	public String deleteProduct(@PathVariable String userId,@PathVariable String productId) {
+		
+		if(userId==null || productId==null) {
+			throw new NullParameterException("Null request, please provide wishlist details to remove item from wishlist!");
 		} else {
-			String status = "Removed item";
-			if (service.deleteProduct(removeItem)) {
+			String status ="Removed item";
+			if(service.deleteProduct(userId, productId)) {
 				return status;
 			} else {
-				throw new CrudException("Product Id not found");
+				throw new CrudException("Product Id not Found");
 			}
 		}
 

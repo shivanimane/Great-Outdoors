@@ -18,6 +18,9 @@ export class ListProductMastersComponent implements OnInit {
   ngOnInit(): void {
     
     setTimeout(() => { this.reloadData() }, 100);
+    if(this.reloadData()==null){
+      alert("No product masters have been added yet");
+    }
   }
   
   

@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { ProductService } from '../service/product.service';
 import { ProductModel } from '../models/product.model'
+import { CartModel } from '../models/cart.model';
+import { NgForOf } from '@angular/common';
 
 @Component({
   selector: 'app-list-product',
@@ -21,6 +23,7 @@ products:ProductModel[]=[];
   ngOnInit(): void {
     
     setTimeout(() => { this.reloadData() }, 100);
+    
   }
   
   
@@ -29,6 +32,13 @@ products:ProductModel[]=[];
       this.products =data;
       console.log(this.products);
     });
+
+    if((this.products==null)){
+      alert("No products have been added");
+    }
+  
+
+
   }
 
   remove(index: number){
@@ -48,6 +58,10 @@ products:ProductModel[]=[];
 
   clickOnAddProduct(){
     this.route.navigate(['add-product']);
+  }
+
+  calculateTotal(cart :CartModel){
+    NgForOf
   }
 
   logout(){

@@ -24,9 +24,9 @@ import { ErrorComponent } from './error/error.component';
 
 const routes : Routes = [
   {path:'login', component:LoginComponent},
-  {path:'admin', component:AdminComponent,canActivate: [AuthGuard]},
-  {path:'product-master', component:ProductMasterComponent,canActivate: [AuthGuard]},
-  {path:'retailer/:id', component:RetailerComponent,canActivate: [AuthGuard]},
+  {path:'admin/:userName', component:AdminComponent,canActivate: [AuthGuard]},
+  {path:'product-master/:username', component:ProductMasterComponent,canActivate: [AuthGuard]},
+  {path:'retailer/:id/:username', component:RetailerComponent,canActivate: [AuthGuard]},
   {path:'add-product',component:AddProductComponent},
   {path:'list-product',component:ListProductComponent},
   {path:'add-product',component:AddProductComponent},

@@ -9,10 +9,13 @@ import { ActivatedRoute, Router } from '@angular/router';
 export class RetailerComponent implements OnInit {
 
   id:String;
+  userName:String;
   constructor(private route : Router,private activatedRoute:ActivatedRoute) { }
 
   ngOnInit(): void {
     this.id=this.activatedRoute.snapshot.params['id'];
+
+    this.userName=this.activatedRoute.snapshot.params['username'];
   }
 
   clickOnViewAllProducts(){

@@ -65,24 +65,21 @@
                   </tr>
 
                   <tr>
-                  <td><label>Category </label></td>
-                  <td>
-                    <div class="form-group">
-                    <input name="productCategory" class="form-control" 
-                    [(ngModel)]=product.productCategory 
-                    placeholder="Enter Category" 
-                    required pattern="[1-5]{1}"
-                    #productCategory="ngModel"
-                    [class.is-invalid]="productCategory.invalid && productCategory.touched && productCategory.dirty">
-                    <div *ngIf="productCategory.errors && (productCategory.invalid && productCategory.touched && productCategory.dirty)">
-                      <small class="text-danger" *ngIf="productCategory.errors.required">Category is required field</small>
-                      <small class="text-danger" *ngIf="productCategory.errors.pattern"> Category should be between 1 to 5 </small>
-                   </div>
-                   </div>                      
-               
-                    
-                    
-                    
+                    <td><label>Category </label></td>
+                    <td>
+                  <div class="form-group">
+                    <select
+                    class="form-control" name="productCategory" 
+                    [(ngModel)]=product.productCategory
+                    required>
+                      <!-- <option value="" disabled selected>Choose Category</option> -->
+                      <option value="1">Camping Equipment</option>
+                      <option value="2">Golf Equipment</option>
+                      <option value="3">Mountaineering Equipment</option> 
+                      <option value="4">Outdoor Protection</option>
+                      <option value="5">Personal Accessories</option>
+                    </select>
+                  </div>
                   </td>
                 </tr>
                   <tr>

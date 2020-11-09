@@ -23,7 +23,7 @@ public interface WishlistService {
 	 * name - delete item from the wishlist
 	 * description - it will delete available item from the wishlist
 	 */
-	boolean deleteProduct(Wishlist removeItem);
+	boolean deleteProduct(String userId, String productId);
 	
 	 /*
      * showProductsFromWishlist

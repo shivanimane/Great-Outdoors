@@ -19,6 +19,7 @@ export class ListRetailersComponent implements OnInit {
   ngOnInit(): void {
     
     setTimeout(() => { this.reloadData() }, 100);
+   
   }
   
   

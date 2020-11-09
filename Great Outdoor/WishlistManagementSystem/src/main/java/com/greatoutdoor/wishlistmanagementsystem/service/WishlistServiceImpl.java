@@ -50,11 +50,11 @@ public class WishlistServiceImpl implements WishlistService {
 	 */
 
 	@Override
-	public boolean deleteProduct(Wishlist removeItem) {
-		if (removeItem.getProductId().isEmpty() || removeItem.getUserId().isEmpty()) {
+	public boolean deleteProduct(String userId, String productId) {
+		if (userId.isEmpty() || productId.isEmpty()) {
 			return false;
 		} else {
-			repository.delete(removeItem);
+			repository.deleteByUserIdProductId(userId, productId);
 			return true;
 		}
 	}
