@@ -52,7 +52,7 @@ export class ListCartComponent implements OnInit {
     
     // this.order.totalCost=this.calculateTotalCost();
     // console.log(this.totalCost);
-    var addressId = "sagych";
+    var addressId = 0987;
     //var totalCost = Number(this.calculateTotalCost());
     var totalCost = 7000;
     var userId= this.id.toString();

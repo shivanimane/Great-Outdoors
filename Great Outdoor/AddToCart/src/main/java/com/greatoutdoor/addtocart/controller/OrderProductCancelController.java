@@ -104,7 +104,7 @@ public class OrderProductCancelController {
 		if (userId.isEmpty()) {
 			throw new NullParameterException("Please enter userID!");
 		}
-		if (orderAndCartService.getAllOrdersByUserId(userId) == null) {
+		if (orderAndCartService.getAllOrdersByUserId(userId)==null) {
 			throw new NullParameterException("User Id is Incorrect");
 		}
 		return orderAndCartService.getAllOrdersByUserId(userId);
