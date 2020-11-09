@@ -1,4 +1,7 @@
 eclipse.preferences.version=1
+<<<<<<< HEAD
+=======
 org.eclipse.jdt.core.builder.resourceCopyExclusionFilter=
 org.eclipse.jdt.core.codeComplete.visibilityCheck=enabled
+>>>>>>> 1725f637d8fc8cbfba4b5b351fd837e11a8d4d2a
 org.eclipse.jdt.core.compiler.codegen.inlineJsrBytecode=enabled

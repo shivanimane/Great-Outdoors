@@ -1,4 +1,9 @@
+<<<<<<< HEAD
+GitRepositoriesView.GitDirectories=C\:\\Users\\user\\Documents\\Great-Outdoors\\.git;
+GitRepositoriesView.GitDirectories.relative=C\:\\Users\\user\\Documents\\Great-Outdoors\\.git;
+=======
 GitRepositoriesView.GitDirectories=C\:\\Users\\HP\\Desktop\\Great-Outdoors\\.git;
 GitRepositoriesView.GitDirectories.relative=C\:\\Users\\HP\\Desktop\\Great-Outdoors\\.git;
+>>>>>>> 1725f637d8fc8cbfba4b5b351fd837e11a8d4d2a
 core_autoIgnoreDerivedResources=false
 eclipse.preferences.version=1
